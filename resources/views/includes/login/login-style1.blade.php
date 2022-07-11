@@ -12,8 +12,6 @@
 <!-- login Content -->
 <section class="page-area pro-content">
     <div class="container">
-
-
         <div class="row">
             @if(getSetting()['authenticate_with_email_password'] == '1')
             <div class="col-12 col-sm-12 col-md-6">
@@ -146,7 +144,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-

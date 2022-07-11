@@ -5,11 +5,11 @@
 
 
 .product-2x {
-    
+
     margin-bottom: 30px;
     height: 343px;
-    
-     
+
+
     .featured-tag {
         position: absolute;
         top: 19px;
@@ -28,7 +28,7 @@
         top: 20px;
         z-index: 9;
         .badge {
-            font-family: "Roboto", sans-serif;
+            font-family: "Kanit", sans-serif;
             position: absolute;
             right: 0;
             top: -5px;
@@ -55,7 +55,7 @@
                 color:color-yiq($body-bg-secondary);
             }
         }
-        
+
     }
     article {
         padding-left: 15px;
@@ -84,7 +84,7 @@
             border-radius: $border-radius;
             z-index: 9;
          }
-    
+
         .icon-liked {
             display: none;
             position: absolute;
@@ -92,7 +92,7 @@
             top: 20px;
             z-index: 9;
             .badge {
-                font-family: "Roboto", sans-serif;
+                font-family: "Kanit", sans-serif;
                 position: absolute;
                 right: 0;
                 top: -5px;
@@ -113,13 +113,13 @@
                 margin-left: 7px;
                 margin-right: 7px;
                 cursor: pointer;
-    
+
                 &:hover{
                     background-color: $body-bg-secondary;
                     color:color-yiq($body-bg-secondary);
                 }
             }
-            
+
         }
         .cart-detail-btn{
             display: none;
@@ -176,7 +176,7 @@
         .buttons {
             float: left;
             width: 100%;
-           
+
             .btn{
                 width: 110px;
             }

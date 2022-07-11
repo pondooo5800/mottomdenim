@@ -12,8 +12,8 @@
                 <span class="d-none compare-icon"></span>
                 <span class="d-none quick-view-icon"></span>
 
-                
-                
+
+
                 <div class="content">
                     <span class="tag product-card-category">
                     </span>
@@ -41,7 +41,7 @@
 
 
                         <a class="btn-secondary btn icon swipe-to-top  product-card-link">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
 
                     </div>

@@ -1,6 +1,6 @@
  <!-- Bootstrap Caption Carousel Content Full Width -->
  <section class="carousel-content">
-      
+
   <div id="carouselExampleWithCaptions2" class="carousel slide shimmer-background" data-ride="carousel">
     <ol class="carousel-indicators" style="direction:ltr;">
       <li id="slider-bullets-0" data-target="#carouselExampleWithCaptions2" data-slide-to="0" class="active"></li>
@@ -14,7 +14,7 @@
       <li id="slider-bullets-8" class="d-none" data-target="#carouselExampleWithCaptions2" data-slide-to="8"></li>
       <li id="slider-bullets-9" class="d-none" data-target="#carouselExampleWithCaptions2" data-slide-to="9"></li>
     </ol>
-  
+
     <template id="slider-navigation-template">
       <div class="carousel-item slider-navigation-active">
         <img class="d-block w-100 slider-navigation-image" src="" alt="">

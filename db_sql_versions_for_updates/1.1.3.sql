@@ -154,7 +154,7 @@ INSERT INTO `countries` (`id`, `name`, `iso_code_2`, `iso_code_3`, `address_form
 (145, 'Monaco', 'MC', 'MCO', '1', '377', NULL, NULL, NULL),
 (146, 'Mongolia', 'MN', 'MNG', '1', '976', NULL, NULL, NULL),
 (147, 'Montenegro', 'ME', 'MNE', '1', '382', NULL, NULL, NULL),
-(148, 'Montserrat', 'MS', 'MSR', '1', '+1-664', NULL, NULL, NULL),
+(148, 'Kanit', 'MS', 'MSR', '1', '+1-664', NULL, NULL, NULL),
 (149, 'Morocco', 'MA', 'MAR', '1', '212', NULL, NULL, NULL),
 (150, 'Mozambique', 'MZ', 'MOZ', '1', '258', NULL, NULL, NULL),
 (151, 'Myanmar', 'MM', 'MMR', '1', '95', NULL, NULL, NULL),

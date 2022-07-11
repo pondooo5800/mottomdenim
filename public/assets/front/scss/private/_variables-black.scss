@@ -33,20 +33,20 @@ $cyan:    #17a2b8 !default;
 
 $primary:       #fff !default;  // Main color or Primary color of the website
 $secondary:   #000 !default;  // Main color for buttons
-   
+
 $primary-dark: $secondary;
 $primary-light: #022e46;
 
 $secondary-dark:  $secondary;
-$secondary-hover: #080808; //icon-hover 
+$secondary-hover: #080808; //icon-hover
 $success:       $green !default;
 $info:          $blue !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-200 !default;  // For only use background color of the website
 $dark:          $gray-800 !default;
- 
-   
+
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
@@ -90,29 +90,34 @@ $border-radius-sm:            0 !default;
 $bg-footer: #fff;
 $bg-social: $primary;
 
-@font-face { font-family: 'Montserrat-Regular';
-   
-    src: url('../../webfonts/Montserrat-Regular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
-     url('../../webfonts/Montserrat-Regular.woff?v=4.7.0') format('woff'), 
-     url('../../webfonts/Montserrat-Regular.ttf?v=4.7.0') format('truetype'),
-      url('../../webfonts/Montserrat-Regular.svg?v=4.7.0#Montserrat-Regular') format('svg');
-     font-weight: normal; font-style: normal;
-     }
-
-     @font-face { font-family: 'Montserrat-Bold';
-
-        src: url('../../webfonts/Montserrat-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
-
-         url('../../webfonts/Montserrat-Bold.woff?v=4.7.0') format('woff'), 
-         url('../../webfonts/Montserrat-Bold.ttf?v=4.7.0') format('truetype'),
-          url('../../webfonts/Montserrat-Bold.svg?v=4.7.0#/Montserrat-Bold') format('svg');
-         font-weight: normal; font-style: normal;
-         }
-
-
-
+/* kanit-regular - thai_latin */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../webfonts/kanit-v12-thai_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../../webfonts/kanit-v12-thai_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../webfonts/kanit-v12-thai_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../webfonts/kanit-v12-thai_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../webfonts/kanit-v12-thai_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../webfonts/kanit-v12-thai_latin-regular.svg#Kanit') format('svg'); /* Legacy iOS */
+}
+/* kanit-700 - thai_latin */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../webfonts/kanit-v12-thai_latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../../webfonts/kanit-v12-thai_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../webfonts/kanit-v12-thai_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../webfonts/kanit-v12-thai_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../../webfonts/kanit-v12-thai_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../webfonts/kanit-v12-thai_latin-700.svg#Kanit') format('svg'); /* Legacy iOS */
+}
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Roboto', sans-serif !default;
+$font-family-sans-serif:      'Kanit', sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 
@@ -120,7 +125,7 @@ $font-size-base:               0.875rem !default; // Assumes the browser default
 $font-size-lg:                ($font-size-base + 0.125) !default;
 $font-size-sm:                $font-size-base  !default;
 
-$font-family-base-bold:        'Roboto', sans-serif !default;
+$font-family-base-bold:        'Kanit', sans-serif !default;
 
 
 $font-weight-normal:          400 !default;

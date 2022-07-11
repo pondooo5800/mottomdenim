@@ -9,7 +9,7 @@
 
                         <a  class="btn icon active swipe-to-top product-card-link" data-toggle="tooltip"
                             data-placement="bottom" title="" data-original-title="Add to Cart">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
                         <a href="javascript:void(0)" class="wishlist-icon btn-secondary listing-none icon swipe-to-top"
                             data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wishlist">

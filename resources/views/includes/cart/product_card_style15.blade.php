@@ -2,13 +2,13 @@
   <div class="div-class">
 <div class="product product12">
   <article>
-   
+
     <div class="thumb">
       <div class="badges">
       </div>
       <div class="product-hover d-none d-lg-flex d-xl-flex">
           <div class="icons">
-           
+
               <a href="javascript:void(0)" class="wishlist-icon icon active swipe-to-top" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wishlist">
                 <i class="fas fa-heart"></i>
               </a>
@@ -16,11 +16,11 @@
               <i class="fas fa-eye"></i></div>
             <a href="javascript:void(0)" class="compare-icon icon swipe-to-top" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Compare"><i class="fas fa-align-right" data-fa-transform="rotate-90"></i></a>
           </div>
-           
+
         </div>
         <div class="mobile-icons d-lg-none d-xl-none">
             <div class="icons">
-              <div class="icon-liked">  
+              <div class="icon-liked">
                 <a href="javascript:void(0)" class="wishlist-icon-2 icon active">
                   <i class="fas fa-heart"></i>
                 </a>
@@ -31,14 +31,14 @@
           </div>
       <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
     </div>
-    
+
     <div class="content">
-      <span class="tag product-card-category">                          
+      <span class="tag product-card-category">
       </span>
       <h5 class="title"><a href="javascript:void(0)" class="product-card-name"></a></h5>
       <p class="para product-card-desc"></p>
-      <div class="price product-card-price">               
-      </div>  
+      <div class="price product-card-price">
+      </div>
       <div class="pro-counter">
         <div class="input-group item-quantity">
 
@@ -57,13 +57,13 @@
           </span>
       </div>
             <a class="btn-secondary btn icon swipe-to-top product-card-link">
-              <i class="fas fa-shopping-bag"></i>
+              <i class="fas fa-shopping-cart"></i>
             </a>
-    
+
       </div>
-    
-    </div>                 
- 
+
+    </div>
+
   </article>
   <div class="d-none display-rating" ></div>
   <div class="d-none display-rating1" ></div>

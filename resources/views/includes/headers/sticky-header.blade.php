@@ -2,9 +2,9 @@
 <header id="stickyHeader" class="header-area header-sticky d-none">
     <div class="header-sticky-inner  bg-sticky-bar">
       <div class="container">
-  
+
         <div class="row align-items-center">
-          
+
           <div class="col-12 col-lg-2">
             <div class="logo">
               <a href="index.html">
@@ -23,8 +23,8 @@
                   @php $header_menu = json_decode(($header_menu->menu), true); $menuloop = 0; @endphp
                   @foreach($header_menu as $menu[$menuloop])
                   @if(count($menu[$menuloop]['children']) == 0)
-      
-      
+
+
                   @php $link = '#' @endphp
                   @if($menu[$menuloop]['type'] == 'exlink')
                       @php $link = $menu[$menuloop]['exlink'] @endphp
@@ -34,11 +34,11 @@
                       @php $link = url('/shop').'?category='.$menu[$menuloop]['category'] @endphp
                   @elseif($menu[$menuloop]['type'] == 'link')
                       @php $link = url('/').$menu[$menuloop]['link'] @endphp
-                  
+
                   @elseif($menu[$menuloop]['type'] == 'page')
                       @php $link = url('/').$menu[$menuloop]['page'] @endphp
                   @endif
-                  
+
                   <li class="nav-item">
                     <a class="nav-link " href="{{$link}}">
                       <?php $index = 0; ?>
@@ -49,7 +49,7 @@
                     </a>
                   </li>
                   @else
-      
+
                   @php $link = '#' @endphp
                   @if($menu[$menuloop]['type'] == 'exlink')
                       @php $link = $menu[$menuloop]['exlink'] @endphp
@@ -62,7 +62,7 @@
                   @elseif($menu[$menuloop]['type'] == 'page')
                       @php $link = url('/').$menu[$menuloop]['page'] @endphp
                   @endif
-                  
+
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="{{$link}}">
                       <?php $index = 0; ?>
@@ -84,7 +84,7 @@
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-3">
           <ul class="pro-header-right-options">
-                          
+
                           <li class="dropdown search-field">
                               <button class="btn btn-light dropdown-toggle" type="button" id="dropdownAccountButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fas fa-search"></i>
@@ -98,26 +98,26 @@
                                           </button>
                                       </div>
                                     </form>
-                                
+
                               </div>
                             </li>
-                     
+
                         <li>
                           <a href="{{ url('/wishlist') }}" class="btn btn-light"  data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.header-wishlist') }}">
                               <i class="far fa-heart"></i>
                               <span class="badge badge-secondary wishlist-count">0</span>
                           </a>
 
-                          
-                        </li>
-      
-                        <li class="dropdown head-cart-content-fixed">
-                          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownCartButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                            <i class="fas fa-shopping-bag"></i>
-                            <span class="badge badge-secondary total-menu-cart-product-count">0</span>
-                          </button> 
 
-                          
+                        </li>
+
+                        <li class="dropdown head-cart-content-fixed">
+                          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownCartButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge badge-secondary total-menu-cart-product-count">0</span>
+                          </button>
+
+
                           <template id="top-cart-product-template">
                             <li class="top-cart-product-id">
                               <div class="item-thumb">
@@ -149,13 +149,13 @@
 
 
                           </div>
-                              
+
                         </li>
                     </ul>
-  
-  
+
+
           </div>
-          
+
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
                                 <i class="fas fa-heart"></i>
                             </button>
                             <button class="btn-secondary icon displayy-none swipe-to-top add-to-card-bag">
-                                <i class="fas fa-shopping-bag"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </button>
                             <button class="btn-secondary icon swipe-to-top quick-view-icon" data-toggle="modal"
                                 data-target="#quickViewModal">

@@ -35,10 +35,10 @@
 
                         <h5 class="title"><a href="javascript:void(0)" class="product-card-name"></a></h5>
                         <p class="para product-card-desc"></p>
-                        <div class="price product-card-price">               
+                        <div class="price product-card-price">
                         </div>
                         <a class="btn-secondary btn icon swipe-to-top product-card-link">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                           </a>
                     </div>
                 </div>

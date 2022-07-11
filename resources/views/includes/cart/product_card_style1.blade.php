@@ -2,56 +2,95 @@
     <div class="div-class">
         <div class="product product3">
             <article>
-                <div class="thumb">
-                    <div class="badges">
-                    </div>
-                    <div class="product-hover d-none d-lg-flex d-xl-flex">
-                        <div class="icons">
+                <style>
+                    .img-add-cart .btn {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        text-align: center;
+                    }
 
-                            <a href="javascript:void(0)" class="icon active swipe-to-top wishlist-icon"
-                                data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wishlist">
-                                <i class="fas fa-heart"></i>
-                            </a>
-                            <div class="icon swipe-to-top quick-view-icon" data-toggle="modal"
-                                data-target="#quickViewModal" data-tooltip="tooltip" data-placement="bottom" title=""
-                                data-original-title="Quick View">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <a href="javascript:void(0)" class="icon swipe-to-top compare-icon" data-toggle="tooltip"
-                                data-placement="bottom" title="" data-original-title="Compare"><i
-                                    class="fas fa-align-right" data-fa-transform="rotate-90"></i></a>
+                    .bottom-right {
+                        position: absolute;
+                        bottom: 30px;
+                        right: 20px;
+                    }
+                    .bottom-right:hover .btn {
+                    opacity: 0.3;
+                    }
+                    .heart:hover  {
+                    opacity: 0.3;
+                    }
+                </style>
+                <div class="content  content-relative">
+                    {{-- <span class="tag product-card-category"></span> --}}
+                    <div class="thumb" >
+                        <div class="badges">
                         </div>
+                        {{-- <div class="product-hover d-none d-lg-flex d-xl-flex">
+                            <div class="icons">
 
-                    </div>
-                    <div class="mobile-icons d-lg-none d-xl-none">
-                        <div class="icons">
-                            <div class="icon-liked">
-                                <a href="javascript:void(0)" class="icon active wishlist-icon-2">
+                                <a href="javascript:void(0)" class="icon active swipe-to-top wishlist-icon"
+                                    data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wishlist">
                                     <i class="fas fa-heart"></i>
                                 </a>
+                                <div class="icon swipe-to-top quick-view-icon" data-toggle="modal"
+                                    data-target="#quickViewModal" data-tooltip="tooltip" data-placement="bottom" title=""
+                                    data-original-title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <a href="javascript:void(0)" class="icon swipe-to-top compare-icon" data-toggle="tooltip"
+                                    data-placement="bottom" title="" data-original-title="Compare"><i
+                                        class="fas fa-align-right" data-fa-transform="rotate-90"></i></a>
                             </div>
-                            <div class="icon quick-view-icon" data-toggle="modal" data-target="#quickViewModal"><i
-                                    class="fas fa-eye"></i></div>
-                            <a href="javascript:void(0)" class="icon compare-icon"><i class="fas fa-align-right"
-                                    data-fa-transform="rotate-90"></i></a>
+                        </div> --}}
+                        <div class="mobile-icons d-lg-none d-xl-none">
+                            <div class="icons">
+                                <div class="icon-liked">
+                                    <a href="javascript:void(0)" class="icon active wishlist-icon-2">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                                <div class="icon quick-view-icon" data-toggle="modal" data-target="#quickViewModal"><i
+                                        class="fas fa-eye"></i></div>
+                                <a href="javascript:void(0)" class="icon compare-icon"><i class="fas fa-align-right"
+                                        data-fa-transform="rotate-90"></i></a>
+                            </div>
+                        </div>
+                        <div class="img-add-cart">
+                            <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
+                            <div class="bottom-right">
+                                <a class="btn product-card-link" href="javascript:void(0)"><img
+                                        style="width: 40px;height: 40px;"
+                                        src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
+                                        style="width:42px;height:42px;"></a>
+                            </div>
+
+
                         </div>
                     </div>
-                    <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
-                </div>
+                    <div style="padding-top: 10px">
+                        <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="Wishlist">
+                        <i style="font-size: 18px" class="far fa-heart"></i>
+                    </a>
 
-                <div class="content  content-relative">
-                    <span class="tag product-card-category">
-
-                    </span>
-                    <h5 class="title text-center"><a href="javascript:void(0)" class="product-card-name"></a></h5>
+                    </div>
+                    <p style="font-size: 22px" class="title text-center"><a href="javascript:void(0)"
+                            class="product-card-name"></a></p>
                     <p class="para product-card-desc"></p>
-                    <div class="price product-card-price">
+                    <div style="font-size: 18px" class="price product-card-price">
                     </div>
                     <div class=" btn-hover new-design">
-                        <a class="btn  btn-secondary  swipe-to-top product-card-link" href="javascript:void(0)"
+                        {{-- <a class="btn  btn-secondary  swipe-to-top product-card-link" href="javascript:void(0)"
                             data-toggle="tooltip" data-placement="bottom" title=""
-                            data-original-title="View Detail">View Detail</a>
-
+                            data-original-title="View Detail">View Detail</a> --}}
                     </div>
                 </div>
 

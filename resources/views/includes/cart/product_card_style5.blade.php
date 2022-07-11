@@ -22,7 +22,7 @@
                                 <i class="fas fa-eye"></i>
                             </div>
                             {{-- <a class="btn-secondary btn icon swipe-to-top p-0 product-card-link">
-                                <i class="fas fa-shopping-bag"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </a> --}}
                         </div>
                         <div class="price price-none product-card-price">
@@ -59,11 +59,11 @@
                                 <i class="fas fa-eye"></i>
                             </div>
                             <a class="btn-secondary btn icon swipe-to-top p-0 product-card-link" >
-                                <i class="fas fa-shopping-bag"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </a>
 
                             <a class="btn-secondary btn icon swipe-to-top p-0 add-to-card-bag" >
-                                <i class="fas fa-shopping-bag"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </a>
                         </div>
 

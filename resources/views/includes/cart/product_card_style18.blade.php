@@ -33,7 +33,7 @@
                     <div class="price product-card-price">
                     </div>
                     <a class="btn-secondary btn icon swipe-to-top product-card-link">
-                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-shopping-cart"></i>
                       </a>
                 </div>
 

@@ -1,12 +1,12 @@
  //....................Modal section...............
- 
+
  .product-page{
      .pro-timer{
          margin: 15px 0;
      }
-        
+
 .pro-options{
-  
+
     margin-bottom: 15px;
     .attributes{
         display: flex;
@@ -48,7 +48,7 @@
             line-height: 1.5;
         }
     }
- 
+
     .pre-tag {
         font-size: $font-size-sm;
         text-transform: uppercase;
@@ -66,7 +66,7 @@
     .pro-infos{
     margin-bottom: 10px;
     .pro-single-info{
-        
+
         font-family: $font-family-base;
         font-size: $font-size-base;
         color: $body-color;
@@ -120,9 +120,9 @@
             padding: 5px;
         }
      }
-   
+
     .list {
-        
+
         list-style: none;
         padding: 2px 0px 0 0;
         display: flex;
@@ -155,12 +155,12 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            overflow: hidden;  
+            overflow: hidden;
 
-          
+
         }
         .badge {
-            font-family: "Roboto", sans-serif;
+            font-family: "Kanit", sans-serif;
             position: absolute;
             right: -8px;
             top: -8px;
@@ -187,7 +187,7 @@
                 background-color:$white;
                 width: 100%;
                 color: color-yiq($gray-300);
-             
+
             }
             &::before{
                 font-family:"Font Awesome 5 Free";
@@ -206,12 +206,12 @@
             width: 24%;
         }
     }
-   
+
     .product-buttons{
-      
+
         margin-bottom: 30px;
         margin-top: 30px;
-       
+
         h2{
             span{
                 margin-left: 15px;
@@ -223,7 +223,7 @@
                 font-weight: $font-weight-bolder;
             }
         }
-       
+
     }
     .tab-list{
         .nav-index {
@@ -240,7 +240,7 @@
         .tab-pane{
             .tabs-pera{
                 padding: 10px;
-                border: $border-width solid #d1d8df; 
+                border: $border-width solid #d1d8df;
                 background-color: $white;
                 p {
                     margin-bottom: 19.8px;
@@ -253,31 +253,31 @@
         border: $border-width solid $border-color;
         background-color: $gray-100;
         padding:15px 15px 15px 15px;
-     
+
         .banner-single {
             padding: 20px 0px 20px 0px;
             .fas{
                 color: $secondary;
             }
             .block {
-              
+
                 margin: 0;
                 h5 {
                    font-family: $font-family-base-bold;
                    line-height: 1.5;
                 }
             }
-         
-           
+
+
         }
-         
-      
+
+
     }
 .pro-rating{
     margin: 5px 0;
 }
  }
- 
+
 .Vertical-pro{
     .product article .thumb {
         height: auto;
@@ -298,7 +298,7 @@
         }
         .product-buttons{
             display: block;
-           
+
             .buttons{
                 width: auto;
             }
@@ -311,13 +311,13 @@
     }
  }
 
- 
+
     .pro-content{
         .pro-rating{
             line-height: 35px;
             display: flex;
             align-items: center;
-           
+
             .fas{
                 color: $secondary;
             }
@@ -352,7 +352,7 @@
             color: $secondary;
         }
     }
-    
 
-  
+
+
 }

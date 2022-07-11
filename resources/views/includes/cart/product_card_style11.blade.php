@@ -9,7 +9,7 @@
                     <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
                     <div class="product-action">
                         <a class="btn-secondary btn icon swipe-to-top add-to-card-bag">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
                         <div class="btn  btn-secondary icon swipe-to-top quick-view-icon" data-toggle="modal"
                             data-target="#quickViewModal" data-tooltip="tooltip" data-placement="bottom" title=""
@@ -28,7 +28,7 @@
                     <div class="pricetag">
                         <div class="price price-none product-card-price" style="font-size: 19px;">
                         </div>
-                        
+
 
                         <div class="pro-rating d-g-none">
                             <fieldset class="disabled-ratings display-rating"></fieldset>

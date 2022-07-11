@@ -3,6 +3,7 @@
 @include(isset(getSetting()['login']) ? 'includes.login.login-'.getSetting()['login'] : 'includes.login.login-style1')
 
 @endsection
+<?php /*
 @section('script')
 <script>
     loggedIn = $.trim(localStorage.getItem("customerLoggedin"));
@@ -81,7 +82,7 @@
         if(cartSession == null || cartSession == 'null'){
             cartSession = '';
         }
-        
+
         $.ajax({
             type: 'post',
             url: "{{ url('') }}" + '/api/client/customer_register',
@@ -144,7 +145,7 @@
         if(cartSession == null || cartSession == 'null'){
             cartSession = '';
         }
-        
+
         $.ajax({
             type: 'post',
             url: "{{ url('') }}" + '/api/client/customer_login',
@@ -191,3 +192,4 @@
     }
 </script>
 @endsection
+*/?>

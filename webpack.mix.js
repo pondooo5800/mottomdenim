@@ -19,7 +19,7 @@ const mix = require('laravel-mix');
 
 let productionSourceMaps = true;
     mix.js('resources/js/app.js', 'public/js').vue()
-    
+
     .sass('public/assets/front/scss/style.scss', 'public/assets/front/css/',  [
         //
     ])
@@ -95,7 +95,7 @@ let productionSourceMaps = true;
     .sass('public/assets/front/scss/yellow.scss', 'public/assets/front/css/',  [
         //
     ])
-    
+
    .sass('public/assets/scss/style.scss', 'public/assets/css/',  [
         //
     ])

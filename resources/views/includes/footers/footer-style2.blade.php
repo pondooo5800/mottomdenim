@@ -3,74 +3,121 @@
   <footer id="footerTwo" class="footer-area footer-two  d-lg-block d-xl-block">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-3">
+        {{-- <div class="col-12 col-lg-3">
           <div class="single-footer">
-            <h5>{{ trans('lables.footer-about-store') }}</h5>
-            <div class="row">
-              <div class="col-12 col-lg-8">
-                <hr>
-              </div>
-            </div>
+            <h2 style="color: #B4B3B3;font-weight: lighter;">{{ trans('lables.footer-about-store') }}</h2>
+
             <ul class="contact-list  pl-0 mb-0">
               <li> <i class="fas fa-map-marker"></i><span>{{isset(getSetting()['address']) ? getSetting()['address'] : '#' }}</span> </li>
               <li> <i class="fas fa-phone"></i><span>({{isset(getSetting()['phone_number']) ? getSetting()['phone_number'] : '#' }})</span> </li>
               <li> <i class="fas fa-envelope"></i><span> <a href="mailto:{{isset(getSetting()['email']) ? getSetting()['email'] : '#' }}">{{isset(getSetting()['email']) ? getSetting()['email'] : '#' }}</a> </span> </li>
-        
+
             </ul>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        </div> --}}
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="footer-block">
               <div class="single-footer single-footer-left">
-                <h5>{{ trans('lables.footer-our-services') }}</h5>
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                      <hr>
-                    </div>
-                  </div>
-                  <ul class="links-list pl-0">
-                    <li> <a href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-home') }}">{{ trans('lables.footer-home') }}</a> </li>
-                    <li> <a href="{{ url('/shop') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shop') }}">{{ trans('lables.footer-shop') }}</a> </li>
-                    <li> <a href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">{{ trans('lables.footer-shopping-cart') }}</a> </li>           
-                    <li> <a href="{{ url('/wishlist') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-wishlist") }}">{{  trans("lables.header-wishlist") }}</a> </li>
-                    <li> <a href="{{ url('/compare') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a> </li>          
-                  </ul>
-              </div>
-              
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="single-footer single-footer-right">
-            <h5>{{ trans('lables.footer-information') }}</h5>
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                  <hr>
-                </div>
-              </div>
-            <ul class="links-list pl-0 mb-0">
-
-              @foreach($data['pages'] as $page)
-              @if(isset($page->page_detail))
-              <li> <a href="{{ url("/page")."/".$page->slug }}" data-toggle="tooltip" data-placement="left" title="{{ $page->page_detail[0]->title }}">{{ $page->page_detail[0]->title }}</a> </li>
-              @endif
-              @endforeach
-            
-            </ul>
-          </div>
-        </div>
-        
-        <div class="col-12 col-lg-3">
-          <div class="single-footer">
-             
-              
-              <div class="socials">
-                  <h5>{{ trans('lables.footer-follow-us') }}</h5>
-                  <div class="row">
-                      <div class="col-12 col-lg-8">
-                        <hr>
+                <h2 style="color: #B4B3B3;font-weight: lighter;">{{ trans('lables.footer-about-store') }}</h2>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <ul class="links-list pl-0">
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้ามาใหม่</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าขายดี</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าลดราคา</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Mottom</a> </li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <ul class="links-list pl-0">
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Cheval</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">บทความ</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">ติดต่อ</a> </li>
+                        </ul>
                       </div>
                     </div>
-                  <ul class="list">
+                  </div>
+                    {{-- <li> <a href="{{ url('/shop') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shop') }}">{{ trans('lables.footer-shop') }}</a> </li>
+                    <li> <a href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">{{ trans('lables.footer-shopping-cart') }}</a> </li>
+                    <li> <a href="{{ url('/wishlist') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-wishlist") }}">{{  trans("lables.header-wishlist") }}</a> </li>
+                    <li> <a href="{{ url('/compare') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a> </li> --}}
+              </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="single-footer">
+
+
+              <div class="socials">
+                <h2 style="color: #B4B3B3;font-weight: lighter;">ร่วมกับเรา</h2>
+                  <div class="row">
+                      <div class="col-12 col-lg-8">
+                        <h6 style="color: #B4B3B3;font-weight: lighter;">สมัครเพื่อรับส่วนลด</h6>
+                      </div>
+                    </div>
+                    <form id="">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="input-group">
+                                    <input
+                                        style="
+                                width: 60%;
+                                height: 40px;
+                                margin: 0 auto;
+                                margin-top:10px;
+                                background-color: #F3F1F1;
+                                border: snow;
+                                border-radius: 20px;"
+                                        type="text" class="form-control" id=""
+                                        placeholder="ชื่อ นามสกุล">
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="input-group">
+                                    <input
+                                        style="
+                                width: 60%;
+                                height: 40px;
+                                margin: 0 auto;
+                                margin-top:10px;
+                                background-color: #F3F1F1;
+                                border: snow;
+                                border-radius: 20px;"
+                                        type="text" class="form-control" id=""
+                                        placeholder="อีเมล">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <div style="display: flex;justify-content: end;">
+                                    <button
+                                        class="btn btn-secondary swipe-to-top"
+                                        id="loginAccount">สมัครสมาชิก</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer-info">
+                                    <span style="color:#B4B3B3"> ©&nbsp;2022 Mottom Denim.
+                                        Powered by Shopify</span>
+                                  </div>
+                                  <div class="footer-image">
+                                    <img style="height: 35px" class="img-fluid" src="{{ asset('assets/front/images/miscellaneous/payments2.png') }}">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                  {{-- <ul class="list">
 
                         @if (isset(getSetting()['facebook_url']))
                         <li><a href="{{isset(getSetting()['facebook_url']) ? getSetting()['facebook_url'] : '#' }}" class="fab fa-facebook-f" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-facebook') }}"></a></li>
@@ -88,31 +135,31 @@
                         <li><a href="{{isset(getSetting()['instagram_url']) ? getSetting()['instagram_url'] : '#' }}" class="fab fa-instagram" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-instagram') }}"></a></li>
                         @endif
 
-                    </ul>
+                    </ul> --}}
               </div>
-            
+
           </div>
         </div>
       </div>
     </div>
     <div class="container-fluid p-0">
-        <div class="copyright-content">
-            <div class="container">
+        <div class="copyright-content" style="background-color: #fff">
+            {{-- <div class="container">
               <div class="row align-items-center">
                   <div class="col-12 col-md-6">
                     <div class="footer-image">
                         <img class="img-fluid" src="{{ asset('assets/front/images/miscellaneous/payments.png') }}">
                     </div>
-                      
+
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="footer-info">
                       ©&nbsp;{{ trans('lables.footer-company') }}
                     </div>
-                      
+
                   </div>
               </div>
-            </div>
+            </div> --}}
           </div>
     </div>
 </footer>

@@ -85,7 +85,7 @@ Route::group(['middleware' => ['general','installer']], function () {
     Route::get('paytm-pay', 'Web\IndexController@paytmPayment');
     Route::get('order-web-view', 'Web\IndexController@orderWebView');
     Route::get('lang/{locale}', 'LocalizationController@index');
-    
+
 
 });
 
@@ -136,8 +136,8 @@ Route::group(['middleware' => ['general','installer']], function () {
 
 
 
-    
 
-    
+
+
 
 });

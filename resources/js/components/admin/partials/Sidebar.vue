@@ -13,13 +13,13 @@
         <router-link to="/admin/dashboard" class="brand-logo">
           <img
             class="brand-image"
-            style="height: 25px"
+            style="height: 72px"
             alt="Logo"
             src="/assets/images/misc/r.png"
           />
           <span class="brand-text"
             ><img
-              style="height: 25px"
+              style="height: 72px"
               alt="Logo"
               src="/assets/images/misc/logo.png"
           /></span>
@@ -429,7 +429,7 @@
                           <i class="fas fa-chevron-right fa-rotate-90"></i>
                         </a>
                         <!-- <div class="collapse nav-collapse" id="catalogProduct" data-parent="#accordion1">
-                                                
+
                                             </div> -->
                         <ul
                           class="nav flex-column"
@@ -2033,9 +2033,9 @@
                         <span class="nav-text">Sale Report</span>
                       </a>
                     </li> -->
-                    
-                    
-                    
+
+
+
                     <li class="nav-item">
                       <router-link
                       to="/admin/supplier-report"
@@ -2098,7 +2098,7 @@
                       </router-link>
                     </li>
 
-                    
+
                     <li class="nav-item">
                       <router-link
                       to="/admin/order-report"

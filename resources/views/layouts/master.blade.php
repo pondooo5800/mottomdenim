@@ -29,7 +29,9 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
 
 
 
@@ -37,7 +39,7 @@
 
 <body class="animation-s1 {{ $data['direction'] === 'rtl' ? 'bodyrtl' : '' }} ">
 
-    @include('extras.preloader')
+    {{-- @include('extras.preloader') --}}
     @include(isset(getSetting()['header_style']) ? 'includes.headers.header-'.getSetting()['header_style'] :
     'includes.headers.header-style1')
 
@@ -71,7 +73,7 @@
     @php
         $language_id = $data['selectedLenguage'];
         $locale = session()->get('locale');
-        //dd ($locale);
+        // dd ($locale);
     @endphp
     <script>
         toastr.options = {
@@ -99,6 +101,7 @@
         if (loggedIn != '1') {
             $(".auth-login").remove();
         } else {
+            $(".login-registerModal").remove();
             $(".without-auth-login").remove();
             $(".welcomeUsername").html(customerFname + " " + customerLname);
             $('.profile-username').html(customerFname + " " + customerLname);
@@ -121,7 +124,7 @@
             $('.mobile-language option[value="' + localStorage.getItem("languageId") + '"]').attr('selected', 'selected');
         }
 
-        
+
 
         currency = localStorage.getItem("currency");
         currencyCode = localStorage.getItem("currencyCode");
@@ -331,7 +334,7 @@
                                         images +='src="/gallary/'+ data.data.product_gallary_detail[g].gallary_name + '" alt="image">';
                                         images +='</div>';
                                     }
-                                   
+
                                 }
                                 clone.querySelector(".carasol-images").innerHTML = images;
 
@@ -366,7 +369,7 @@
                                 .replace(/<\/?[^>]+>/gi, '').substring(0, 250)
                         }
                         clone.querySelector(".quick-view-product-id").innerHTML = data.data.product_id;
-                        
+
                         var bages = '';
                         if(data.data.discount_percentage > 0)
                             bages +='<span class="badge badge-danger">'+data.data.discount_percentage+'%</span>';
@@ -374,7 +377,7 @@
                             bages +='<span class="badge badge-success">Featured</span>';
                         if(data.data.new != "0")
                             bages +='<span class="badge badge-info ">New</span>';
-                        
+
                         clone.querySelector(".badges").innerHTML = bages;
 
 
@@ -411,7 +414,7 @@
                         }
 
 
-                        
+
                         $(".quick-view-modal-show").html('');
                         $(".quick-view-modal-show").append(clone);
                     }
@@ -635,7 +638,6 @@
             if (quantity > 1)
                 $('#quantity-input').val(parseInt(quantity) - 1);
         });
-
         $(".language-default").click(function(e) {
             e.preventDefault();
             languageId = $(this).attr('data-id');
@@ -728,7 +730,7 @@
                         localStorage.removeItem("customerFname", '');
                         localStorage.removeItem("customerLname", '');
                         location.reload();
-                        
+
                     }
                 },
                 error: function(data) {
@@ -966,6 +968,193 @@
             $('.quantity-input').val('1');
         })
     </script>
+<script>
+    loggedIn = $.trim(localStorage.getItem("customerLoggedin"));
+    // if(loggedIn == '1'){
+    //     window.location.href = "{{url('/')}}";
+    // }
+
+    $("#createAccount").click(function(e) {
+        e.preventDefault();
+        creatAcount();
+    });
+
+
+    $(".google-click").click(function() {
+        localStorage.setItem("sociallite",'google');
+    });
+
+    $(".facebook-click").click(function() {
+        localStorage.setItem("sociallite",'facebook');
+    });
+
+    @if(isset($_GET["code"]) && $_GET["code"] != '')
+        code = "{{ isset($_GET['code']) ? $_GET['code'] : '' }}"
+        scope = ''
+        authuser = "{{ isset($_GET['authuser']) ? $_GET['authuser'] : ''}}"
+        prompt = "{{ isset($_GET['prompt']) ? $_GET['prompt'] : '' }}"
+        sociallite = localStorage.getItem("sociallite");
+        $.ajax({
+            type: 'get',
+            url: "{{ url('') }}" + '/api/client/customer_login/'+sociallite+'/callback?code='+code+'&scope='+scope+'&authuser='+authuser+'&prompt='+prompt,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                clientid: "{{isset($setting['client_id']) ? $setting['client_id'] : ''}}",
+                clientsecret: "{{isset($setting['client_secret']) ? $setting['client_secret'] : ''}}",
+            },
+            beforeSend: function() {},
+            success: function(data) {
+                if(data.status == 'Success'){
+                    localStorage.setItem("customerToken",data.data.token);
+                    localStorage.setItem("customerHash",data.data.hash);
+                    localStorage.setItem("customerId",data.data.id);
+                    localStorage.setItem("customerEmail",data.data.email);
+                    localStorage.setItem("customerFname",data.data.first_name);
+                    localStorage.setItem("customerLname",data.data.last_name);
+                    localStorage.setItem("customerLoggedin",'1');
+                    localStorage.setItem("cartSession",'');
+                    window.location.href = "/";
+                }
+            },
+            error: function(data) {
+                console.log(data.responseJSON.errors);
+                if(data.status == 422){
+                    $.each( data.responseJSON.errors, function( index, value ){
+                        $("#registerForm").find("."+index).html(value)
+                        $("#registerForm").find("."+index).removeClass('d-none');
+                    });
+                }
+            },
+        });
+    @endif
+
+    function creatAcount() {
+        firstname = $("#registerFirstName").val();
+        lastname = $("#registerLastName").val();
+        email = $("#registerEmail").val();
+        pwd = $("#registerPassword").val();
+        confirmpwd = $("#registerConfirmPassword").val();
+        $(".errors").addClass('d-none');
+        customerLogin = $.trim(localStorage.getItem("customerLoggedin"));
+        if(customerLogin == '1'){
+            toastr.error('{{ trans("already-logged-in") }}');
+            return;
+        }
+
+        cartSession = $.trim(localStorage.getItem("cartSession"));
+        if(cartSession == null || cartSession == 'null'){
+            cartSession = '';
+        }
+
+        $.ajax({
+            type: 'post',
+            url: "{{ url('') }}" + '/api/client/customer_register',
+            data:{
+                first_name: firstname,
+                last_name: lastname,
+                email: email,
+                password: pwd,
+                confirm_password: confirmpwd,
+                session_id:cartSession,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                clientid: "{{isset($setting['client_id']) ? $setting['client_id'] : ''}}",
+                clientsecret: "{{isset($setting['client_secret']) ? $setting['client_secret'] : ''}}",
+            },
+            beforeSend: function() {},
+            success: function(data) {
+                if(data.status == 'Success'){
+                    localStorage.setItem("customerToken",data.data.token);
+                    localStorage.setItem("customerHash",data.data.hash);
+                    localStorage.setItem("customerId",data.data.id);
+                    localStorage.setItem("customerEmail",data.data.email);
+                    localStorage.setItem("customerFname",data.data.first_name);
+                    localStorage.setItem("customerLname",data.data.last_name);
+                    localStorage.setItem("customerLoggedin",'1');
+                    localStorage.setItem("cartSession",'');
+                    window.location.href = "/";
+                }
+            },
+            error: function(data) {
+                console.log(data.responseJSON.errors);
+                if(data.status == 422){
+                    $.each( data.responseJSON.errors, function( index, value ){
+                        $("#registerForm").find("."+index).html(value)
+                        $("#registerForm").find("."+index).removeClass('d-none');
+                    });
+                }
+            },
+        });
+    }
+
+    $("#loginAccount").click(function(e) {
+        e.preventDefault();
+        loginAcount();
+    })
+
+    function loginAcount() {
+        email = $("#loginEmail").val();
+        password = $("#loginPassword").val();
+        $(".errors").addClass('d-none');
+        customerLogin = $.trim(localStorage.getItem("customerLoggedin"));
+        if(customerLogin == '1'){
+            toastr.error('{{ trans("already-logged-in") }}');
+
+            return;
+        }
+
+        cartSession = $.trim(localStorage.getItem("cartSession"));
+        if(cartSession == null || cartSession == 'null'){
+            cartSession = '';
+        }
+
+        $.ajax({
+            type: 'post',
+            url: "{{ url('') }}" + '/api/client/customer_login',
+            data:{
+                email: email,
+                password: password,
+                session_id:cartSession,
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                clientid: "{{isset($setting['client_id']) ? $setting['client_id'] : ''}}",
+                clientsecret: "{{isset($setting['client_secret']) ? $setting['client_secret'] : ''}}",
+            },
+            beforeSend: function() {},
+            success: function(data) {
+                if(data.status == 'Success'){
+                    localStorage.setItem("customerToken",data.data.token);
+                    localStorage.setItem("customerHash",data.data.hash);
+                    localStorage.setItem("customerLoggedin",'1');
+                    localStorage.setItem("customerId",data.data.id);
+                    localStorage.setItem("customerEmail",data.data.email);
+                    localStorage.setItem("customerFname",data.data.first_name);
+                    localStorage.setItem("customerLname",data.data.last_name);
+                    localStorage.setItem("cartSession",'');
+                    window.location.href = '/';
+                }
+            },
+            error: function(data) {
+                console.log(data);
+                if(data.status == 422){
+                    if(data.responseJSON.status == 'Error'){
+                        $("#loginForm").find(".password").html(data.responseJSON.message)
+                        $("#loginForm").find(".password").removeClass('d-none');
+                    }
+                }
+                if(data.status == 422){
+                    $.each( data.responseJSON.errors, function( index, value ){
+                        $("#loginForm").find("."+index).html(value)
+                        $("#loginForm").find("."+index).removeClass('d-none');
+                    });
+                }
+            },
+        });
+    }
+</script>
+
 
     @yield('script')
 </body>

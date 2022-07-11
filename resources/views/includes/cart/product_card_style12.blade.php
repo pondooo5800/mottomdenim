@@ -3,16 +3,16 @@
     <div class="product product12 ratingstar ">
   <article>
     <div class="thumb">
-      <div class="badges"> 
+      <div class="badges">
       </div>
-  
+
       <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
     </div>
     <span class="d-none wishlist-icon"></span>
     <span class="d-none compare-icon"></span>
     <span class="d-none quick-view-icon"></span>
     <div class="content">
-      <span class="tag product-card-category">                            
+      <span class="tag product-card-category">
       </span>
 
       <div class="pro-rating rating-none">
@@ -25,15 +25,15 @@
         <fieldset class="disabled-ratings display-rating1">
         </fieldset>
         </div>
-      
-      <div class="price product-card-price">            
-      </div>  
-   
+
+      <div class="price product-card-price">
+      </div>
+
       <a class="btn-secondary btn icon swipe-to-top product-card-link" onclick="notificationCart();">
-          <i class="fas fa-shopping-bag"></i> Add to Cart
-          </a> 
-    </div>                 
- 
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+          </a>
+    </div>
+
   </article>
 </div>
 </div>

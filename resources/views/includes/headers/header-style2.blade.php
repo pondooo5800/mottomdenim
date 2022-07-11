@@ -162,7 +162,7 @@
                                   <button class="btn dropdown-toggle" type="button" id="headerOneCartButton"
                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       <div class="cart-left">
-                                          <i class="fas fa-shopping-bag"></i>
+                                          <i class="fas fa-shopping-cart"></i>
                                           <span class="badge badge-secondary total-menu-cart-product-count">0</span>
                                       </div>
 

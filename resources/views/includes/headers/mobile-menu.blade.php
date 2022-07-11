@@ -1,7 +1,7 @@
 <!-- header mobile -->
 
 <header id="headerMobile" class="header-area header-mobile d-lg-none d-xl-none">
-    
+
     @if (trans("lables.header-top-offer") != '')
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <div class="container">
@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12">
-  
+
             <nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0">
               <div class="navbar-lang">
                 <div class="select-control">
@@ -38,12 +38,12 @@
                     @endforeach
                   </select>
                 </div>
-  
+
               </div>
               <div class="contact d-none d-md-block">
                 <i class="fas fa-phone"></i> {{  trans("lables.header-header2-phone") }} ({{ isset(getSetting()['phone_number']) ? getSetting()['phone_number'] : 'N/A' }})
               </div>
-  
+
             </nav>
           </div>
         </div>
@@ -51,7 +51,7 @@
     </div>
     <div class="header-maxi bg-header-bar ">
       <div class="container">
-  
+
         <div class="row align-items-center">
           <div class="col-2 pr-0">
             <div class="navigation-mobile-container">
@@ -66,7 +66,7 @@
                   <div class="logout">
                     <a href="{{ url('/login') }}">{{  trans("lables.header-login") }}</a>
                   </div>
-  
+
                 </div>
                 <div class="logout-main auth-login">
                   <div class="welcome">
@@ -76,13 +76,13 @@
                   <div class="logout">
                     <a class="log_out" href="javascript:void(0)">{{  trans("lables.header-logout") }}</a>
                   </div>
-  
+
                 </div>
                 @php  $menuloop = 0; @endphp
                 @foreach($header_menu as $menu[$menuloop])
                 @if(count($menu[$menuloop]['children']) == 0)
-    
-    
+
+
                 @php $link = '#' @endphp
                 @if($menu[$menuloop]['type'] == 'exlink')
                     @php $link = $menu[$menuloop]['exlink'] @endphp
@@ -94,11 +94,11 @@
                     @php $link = url('/').$menu[$menuloop]['link'] @endphp
                 @elseif($menu[$menuloop]['type'] == 'contentpage')
                     @php $link = url('/page/').$menu[$menuloop]['contentpage'] @endphp
-                
+
                 @elseif($menu[$menuloop]['type'] == 'page')
                     @php $link = url('/').$menu[$menuloop]['page'] @endphp
                 @endif
-                
+
                 <a href="{{ url($link) }}" class="main-manu btn btn-primary">
                   <?php $index = 0; ?>
                   @if(isset($menu[$menuloop]['language_id']))
@@ -107,7 +107,7 @@
                   {{$menu[$menuloop]['name'][$index]}}
                 </a>
                 @else
-    
+
                 @php $link = '#' @endphp
                 @if($menu[$menuloop]['type'] == 'exlink')
                     @php $link = $menu[$menuloop]['exlink'] @endphp
@@ -133,37 +133,37 @@
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/compare') }}" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a>
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/orders') }}" title="{{  trans("lables.header-order") }}">{{  trans("lables.header-order") }}</a>
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/shipping-address') }}" title="{{  trans("lables.header-shipping-address") }}">{{  trans("lables.header-shipping-address") }}</a>
-                        <a class="main-manu btn btn-primary auth-login" href="{{ url('/change-password') }}" title="{{  trans("lables.header-change-password") }}">{{  trans("lables.header-change-password") }}</a>       
+                        <a class="main-manu btn btn-primary auth-login" href="{{ url('/change-password') }}" title="{{  trans("lables.header-change-password") }}">{{  trans("lables.header-change-password") }}</a>
                         <a class="main-manu btn btn-primary auth-login log_out" href="javascript:void(0)" title="{{  trans("lables.header-logout") }}">{{  trans("lables.header-logout") }}</a>
 
-               
+
               </nav>
             </div>
-  
+
           </div>
-  
-  
-  
+
+
+
           <div class="col-8">
             <a href="{{url('/')}}" class="logo" data-toggle="tooltip" data-placement="bottom" title="{{isset(getSetting()['site_name']) ? getSetting()['site_name'] : 'Logo' }}">
               <img class="img-fluid" src="{{isset(getSetting()['site_logo']) ? getSetting()['site_logo'] : asset('01-logo.png') }}" alt="{{isset(getSetting()['site_name']) ? getSetting()['site_name'] : 'Logo' }}">
             </a>
           </div>
-  
+
           <div class="col-2 pl-0">
             <ul class="pro-header-right-options">
-              
+
               <li class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="headerOneCartButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="cart-left">
-                    <i class="fas fa-shopping-bag"></i>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="badge badge-secondary total-menu-cart-product-count">0</span>
                   </div>
                 </button>
                 <template id="top-cart-product-template">
               <li class="top-cart-product-id">
                 <div class="item-thumb">
-  
+
                   <div class="image">
                     <img class="img-fluid top-cart-product-image" src="" alt="Product Image">
                   </div>
@@ -188,8 +188,8 @@
                 <ul class="shopping-cart-items top-cart-product-show">
                   <li>{{  trans("lables.header-emptycart") }}</li>
                 </ul>
-  
-  
+
+
               </div>
               </li>
             </ul>
@@ -204,7 +204,7 @@
             <div class="select-control">
               <select class="form-control">
                 @foreach($data['category'] as $categories)
-                <option value="{{isset($categories->detail[0]->category_id)}}">{{isset($categories->detail[0]->category_name) ? $categories->detail[0]->category_name : ''}}&nbsp;&nbsp;</option>      
+                <option value="{{isset($categories->detail[0]->category_id)}}">{{isset($categories->detail[0]->category_name) ? $categories->detail[0]->category_name : ''}}&nbsp;&nbsp;</option>
                 @endforeach
               </select>
             </div>

@@ -21,7 +21,7 @@
                         </div>
 
                         {{-- <a class="btn-secondary display-none icon swipe-to-top product-card-link">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                         </a> --}}
                     </div>
                     <a class="btn  btn-secondary listing-none swipe-to-top product-card-link" href="javascript:void(0)"

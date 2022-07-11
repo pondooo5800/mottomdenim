@@ -229,7 +229,7 @@
 
 
 
-    
+
     <div class="col-md-12">
         <button @click="updateSetting()" type="submit" class="btn btn-primary">Submit</button>
     </div>

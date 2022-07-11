@@ -53,7 +53,7 @@
                             </span>
                         </div>
                        <a class="btn-secondary btn icon swipe-to-top  add-to-card-bag">
-                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
 
 

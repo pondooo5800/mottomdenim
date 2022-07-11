@@ -1,7 +1,7 @@
 
       <ul class="navbar-nav">
         @php  $temp = '0' @endphp
-        
+
         @if(isset($header_menu->menu))
         @php $header_menu = json_decode(($header_menu->menu), true); $menuloop = 0; @endphp
         @foreach($header_menu as $menu[$menuloop])
@@ -22,9 +22,9 @@
         @elseif($menu[$menuloop]['type'] == 'page')
             @php $link = url('/').$menu[$menuloop]['page'] @endphp
         @endif
-        
+
         <li class="nav-item">
-          <a class="nav-link " href="{{$link}}">
+          <a style="color: #333333;font-size: 20px;font-weight: lighter" class="nav-link " href="{{$link}}">
                 <?php $index = 0; ?>
                 @if(isset($menu[$menuloop]['language_id']))
                   @php $index = array_search($data['selectedLenguage'],$menu[$menuloop]['language_id']) @endphp
@@ -48,7 +48,7 @@
         @elseif($menu[$menuloop]['type'] == 'page')
             @php $link = url('/').$menu[$menuloop]['page'] @endphp
         @endif
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="{{$link}}">
                 <?php $index = 0; ?>
@@ -65,4 +65,3 @@
         @endforeach
         @endif
       </ul>
-  

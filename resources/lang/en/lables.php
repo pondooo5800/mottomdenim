@@ -16,8 +16,8 @@ return [
 
     'general-backtotop' => 'Back To Top',
 
-    
-    
+
+
     'header-top-offer' => 'Get<strong> UPTO 10% OFF </strong>On Your 1st Order
     <div class="pro-link-dropdown js-toppanel-link-dropdown">
       <a href="/shop" class="pro-dropdown-toggle" style="cursor:pointer">
@@ -63,7 +63,7 @@ return [
     'home-new-arrival-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis tempus feugiat maximus.",
 
     'home-news-title'=>"NEWS & EVENTS",
-    'home-news-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    'home-news-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Morbi venenatis felis tempus feugiat maximus.",
 
     'home-tab-title'=>"WELCOME TO STORE",
@@ -74,9 +74,9 @@ return [
 
     'home-tab-special'=>"Special",
     'home-tab-most-liked' => 'Most Liked',
-    
+
     'home-tab-top-title'=>"TOP SELLING OF THE WEEK ",
-    'home-tab-top-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    'home-tab-top-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Morbi venenatis felis tempus feugiat maximus.",
 
     'home-servics-free-shipping'=>"Free Shipping",
@@ -123,17 +123,19 @@ return [
     'footer-google' => 'Google',
     'footer-linkedin' => 'LinkedIn',
     'footer-instagram' => 'Instagram',
-
-
-    
-
+    'check-me' =>'Check me out',
 
 
 
-    
 
 
-    
+
+
+
+
+
+
+
 
 
 
@@ -158,7 +160,7 @@ return [
     'cart-page-discount'=>'Discount(Coupon)',
     'cart-page-total'=>'Total',
     'cart-coupon-applied' => 'Coupon Applied',
-    
+
 
     'product-detail-product'=>"Product",
     'product-detail-related-product-title'=>'Related Products',
@@ -215,7 +217,7 @@ return [
     'checkout-same-ship-bill-address-text'=>'Same shipping and billing address.',
     'checkout-location' => 'Location',
     'checkout-location-placeholder'=>'Please enter your location or click here to open map',
-    
+
     'login-sign-up' => 'Sign Up',
     'login-login' => 'Login',
     'login-email' =>'Email Address',
@@ -235,7 +237,7 @@ return [
     'profile-side-menue-shipping-address' =>'Shipping Address',
     'profile-side-menue-change-password' =>'Change Password',
     'profile-side-menue-logout' =>'Logout',
-    
+
 
     'profile-email'=> "Email",
     'profile-my-account'=> "My Account",
@@ -260,8 +262,8 @@ return [
     'orders-cancel'=>'Cancel Order',
     'orders-view-detail'=>'View Detail',
 
-    
-    
+
+
 
     'order-detail' =>"Order Detail",
     'order-detail-heading'=>"Order Information",
@@ -324,7 +326,7 @@ return [
     'forget-password-email'=>'Email',
     'forget-password-verify'=>"varify email",
 
-  
+
     'bread-crumb-home'=>"Home",
     'bread-crumb-shop'=>'Shop',
     'bread-shopping-cart'=>'SHOPPING CART',
@@ -340,7 +342,7 @@ return [
 
     'wishlist-add-success' => 'Product Added To Wishlist!',
     'wishlist-remove' => 'Product Remove From Wishlist!',
-    
+
 
     'contact-fname' => 'First Name',
     'contact-lname' => 'Last Name',

@@ -4,7 +4,7 @@
     @include(isset(getSetting()['slider_style']) ? 'includes.sliders.slider-'.getSetting()['slider_style'] :
     'includes.sliders.slider-style1')
 
-
+    {{-- <?php echo"<pre>";print_r(homePageBuilderJson());?> --}}
     @foreach (homePageBuilderJson() as $template)
         @if (!$template['skip'] && $template['display'])
             @include('sections.home-'.$template['template_postfix'].'-section')
@@ -33,7 +33,7 @@
             fetchProduct(url, appendTo);
 
             var url = "{{ url('') }}" +
-                '/api/client/products?limit=12&getCategory=1&getDetail=1&language_id=' + languageId +
+                '/api/client/products?limit=4&getCategory=1&getDetail=1&language_id=' + languageId +
                 '&sortBy=id&sortType=DESC&currency=' + localStorage.getItem("currency");
             appendTo = 'new-arrival';
             fetchProduct(url, appendTo);
@@ -76,25 +76,26 @@
                 success: function(data) {
                     if (data.status == 'Success') {
                         const templ = document.getElementById("product-card-template");
-
                         for (i = 0; i < data.data.length; i++) {
+                            console.log(data.data.length);
+
                             const clone = templ.content.cloneNode(true);
                             // clone.querySelector(".single-text-chat-li").classList.add("bg-blue-100");
-                            
+
                             clone.querySelector(".wishlist-icon").setAttribute('data-id', data.data[i]
                                 .product_id);
                             clone.querySelector(".wishlist-icon").setAttribute('onclick', 'addWishlist(this)');
-                            
+
                             clone.querySelector(".wishlist-icon").setAttribute('data-type', data.data[i]
                                 .product_type);
 
                             clone.querySelector(".wishlist-icon-2").setAttribute('data-id', data.data[i]
                                 .product_id);
                             clone.querySelector(".wishlist-icon-2").setAttribute('onclick', 'addWishlist(this)');
-                            
+
                             clone.querySelector(".wishlist-icon-2").setAttribute('data-type', data.data[i]
                                 .product_type);
-                                
+
                             clone.querySelector(".compare-icon").setAttribute('data-id', data.data[i]
                                 .product_id);
                             clone.querySelector(".compare-icon").setAttribute('data-type', data.data[i]
@@ -113,19 +114,19 @@
                             clone.querySelector(".qty-input").setAttribute('id', 'quantity'+i);
                             clone.querySelector(".item-quantity").classList.add('itemqty'+i);
 
-                            
+
 
                             var bages = '';
                             if(data.data[i].discount_percentage > 0)
                                 bages +='<span class="badge badge-danger">'+data.data[i].discount_percentage+'%</span>';
-                            if(data.data[i].is_featured != "0")
-                                bages +='<span class="badge badge-success">Featured</span>';
+                            // if(data.data[i].is_featured != "0")
+                            //     bages +='<span class="badge badge-success">Featured</span>';
                             if(data.data[i].new != "0")
                                 bages +='<span class="badge badge-info ">New</span>';
-                            
+
                             clone.querySelector(".badges").innerHTML = bages;
 
-                            
+
                             rating = '';
                             if(data.data[i].product_rating == 1){
                                 rating = '<label class="full fa " for="star1" title="Awesome - 1 stars"></label><label class="full fa " for="star_2" title="Awesome - 2 stars"></label><label class="full fa " for="star_3" title="Awesome - 3 stars"></label><label class="full fa " for="star_4" title="Awesome - 4 stars"></label><label class="full fa active" for="star_5" title="Awesome - 5 stars"></label>'
@@ -145,7 +146,7 @@
                             else{
                                 rating = '<label class="full fa " for="star1" title="Awesome - 1 stars"></label><label class="full fa " for="star_2" title="Awesome - 2 stars"></label><label class="full fa " for="star_3" title="Awesome - 3 stars"></label><label class="full fa " for="star_4" title="Awesome - 4 stars"></label><label class="full fa " for="star_5" title="Awesome - 5 stars"></label>'
                             }
-                            
+
                             clone.querySelector(".display-rating").innerHTML = rating;
                             clone.querySelector(".display-rating1").innerHTML = rating;
 
@@ -162,19 +163,20 @@
                                 clone.querySelector(".product-card-image").setAttribute('alt', data.data[i]
                                     .detail[0].title);
                             }
-                            if (data.data[i].category != null && data.data[i].category != 'null' && data.data[i]
-                                .category != '') {
-                                if (data.data[i].category[0].category_detail != null && data.data[i].category[0]
-                                    .category_detail != 'null' && data.data[i].category[0].category_detail != ''
-                                ) {
-                                    if (data.data[i].category[0].category_detail.detail != null && data.data[i]
-                                        .category[0].category_detail.detail != 'null' && data.data[i].category[
-                                            0].category_detail.detail != '') {
-                                        clone.querySelector(".product-card-category").innerHTML = data.data[i]
-                                            .category[0].category_detail.detail[0].name;
-                                    }
-                                }
-                            }
+                            // if (data.data[i].category != null && data.data[i].category != 'null' && data.data[i]
+                            //     .category != '')
+                            //     {
+                            //     if (data.data[i].category[0].category_detail != null && data.data[i].category[0]
+                            //         .category_detail != 'null' && data.data[i].category[0].category_detail != ''
+                            //     ) {
+                            //         if (data.data[i].category[0].category_detail.detail != null && data.data[i]
+                            //             .category[0].category_detail.detail != 'null' && data.data[i].category[
+                            //                 0].category_detail.detail != '') {
+                            //             clone.querySelector(".product-card-category").innerHTML = data.data[i]
+                            //                 .category[0].category_detail.detail[0].name;
+                            //         }
+                            //     }
+                            // }
                             if (data.data[i].detail != null && data.data[i].detail != 'null' && data.data[i]
                                 .detail != '') {
                                 clone.querySelector(".product-card-name").innerHTML = data.data[i].detail[0]
@@ -183,10 +185,13 @@
                                     data
                                     .data[i].product_id + '/' + data
                                     .data[i].product_slug);
+                                clone.querySelector(".product-card-link").setAttribute('href', '/product/' +
+                                    data
+                                    .data[i].product_id + '/' + data
+                                    .data[i].product_slug);
                                 var desc = data.data[i].detail[0].desc;
                                 clone.querySelector(".product-card-desc").innerHTML = desc.substring(0, 50);
                             }
-
                             if (data.data[i].product_type == 'simple') {
                                 if (data.data[i].product_discount_price == '' || data.data[i]
                                     .product_discount_price == null || data.data[i].product_discount_price ==
@@ -194,9 +199,8 @@
                                     clone.querySelector(".product-card-price").innerHTML = data.data[i]
                                         .product_price_symbol;
                                 } else {
-                                    clone.querySelector(".product-card-price").innerHTML =
-                                    data.data[i]
-                                        .product_discount_price_symbol + '<span>' +data.data[i].product_price_symbol + '</span>';
+                                    clone.querySelector(".product-card-price").innerHTML = '<span style="color:red!important;text-decoration:none!important;">' +data.data[i].product_discount_price_symbol + '</span>'
+                                     + '<span>' +data.data[i].product_price_symbol + '</span>';
                                 }
                             } else {
                                 console.log(data.data[i].product_variable_price_symbol,"variable price");
@@ -206,14 +210,14 @@
 
 
                             if (data.data[i].product_type == 'simple') {
-                                clone.querySelector(".product-card-link").setAttribute('onclick',
-                                    "addToCart(this)");
-                                clone.querySelector(".product-card-link").setAttribute('data-id', data.data[i]
-                                    .product_id);
-                                clone.querySelector(".product-card-link").setAttribute('data-field', i);
-                                clone.querySelector(".product-card-link").setAttribute('data-type', data.data[i]
-                                    .product_type);
-                                clone.querySelector(".product-card-link").innerHTML = 'Add To Cart';
+                                // clone.querySelector(".product-card-link").setAttribute('onclick',
+                                //     "addToCart(this)");
+                                // clone.querySelector(".product-card-link").setAttribute('data-id', data.data[i]
+                                //     .product_id);
+                                // clone.querySelector(".product-card-link").setAttribute('data-field', i);
+                                // clone.querySelector(".product-card-link").setAttribute('data-type', data.data[i]
+                                //     .product_type);
+                                // clone.querySelector(".product-card-link").innerHTML = 'Add To Cart';
 
                                 clone.querySelector(".add-to-card-bag").setAttribute('onclick', "addToCart(this)");
                                 clone.querySelector(".add-to-card-bag").setAttribute('data-id', data.data[i].product_id);
@@ -222,19 +226,19 @@
 
                             } else {
                                 // $().addClass();
-                                clone.querySelector('.itemqty'+i).classList.add('d-none');
-                                clone.querySelector(".add-to-card-bag").classList.add('d-none');
-                                clone.querySelector(".product-card-link").classList.remove('d-g-none');
-                                clone.querySelector(".product-card-link").classList.remove('listing-none');
-                                clone.querySelector(".product-card-link").innerHTML = 'View Detail';   
-                                clone.querySelector(".product-card-link").setAttribute('href', '/product/' +
-                                    data
-                                    .data[i].product_id + '/' + data
-                                    .data[i].product_slug);
+                                // clone.querySelector('.itemqty'+i).classList.add('d-none');
+                                // clone.querySelector(".add-to-card-bag").classList.add('d-none');
+                                // clone.querySelector(".product-card-link").classList.remove('d-g-none');
+                                // clone.querySelector(".product-card-link").classList.remove('listing-none');
+                                // clone.querySelector(".product-card-link").innerHTML = 'View Detail';
+                                // clone.querySelector(".product-card-link").setAttribute('href', '/product/' +
+                                //     data
+                                //     .data[i].product_id + '/' + data
+                                //     .data[i].product_slug);
                             }
 
                             $("." + appendTo).append(clone);
-                            
+
                             if (appendTo == 'new-arrival' || appendTo == 'weekly-sale') {
                                 $(".div-class").addClass('col-12 col-sm-6 col-lg-3');
                             }
@@ -264,7 +268,7 @@
                     if (data.status == 'Success') {
                         console.log(data,"final data");
                         var htmlToRender ="<article><div class='badges'><span class='badge badge-success'>Featured</span></div><div class='detail'>";
-                        
+
                             htmlToRender +='<h5 class="title"><a  href="/product/'+data
                                     .data[0].product_id +'/'+data
                                     .data[0].product_slug+'">'+data.data[0].detail[0]
@@ -273,9 +277,9 @@
 
                             htmlToRender +='<p class="discription">'+data.data[0].detail[0]
                                     .desc+'</p>';
-                            
-                            
-                            
+
+
+
 
                             if (data.data[0].product_type == 'simple') {
                                 if (data.data[0].product_discount_price == '' || data.data[0]
@@ -298,7 +302,7 @@
                             htmlToRender +='<div class="pro-sub-buttons"><div class="buttons"><button type="button" class="btn  btn-link " data-id='+data.data[0]
                                 .product_id+' onclick="addWishlist(this)" data-type='+data.data[0]
                                 .product_type+'><i class="fas fa-heart"></i>Add to Wishlist</button>';
-                                
+
                             htmlToRender +='<button type="button" class="btn btn-link" data-id='+data.data[0]
                                 .product_id+' data-type='+data.data[0]
                                 .product_type+' onclick="addCompare(this)" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add to Compare"><i class="fas fa-align-right"></i>Add to Compare</button></div></div></div>';
@@ -307,13 +311,13 @@
                                 htmlToRender +='<button type="button" data-id="'+data.data[0].product_id+'" data-field="'+0+'" data-type="'+data.data[0].product_type+'" onclick="addToCart(this)" class="btn btn-block btn-secondary cart swipe-to-top" >Add to Cart</button>';
 
                             } else {
-                                
+
                                 htmlToRender +='<a href="/product/'+data
                                     .data[0].product_id +'/'+data
                                     .data[0].product_slug+'" onclick="addToCart(this)" class="btn btn-block btn-secondary cart swipe-to-top" >View Detail</a>';
-        
+
                             }
-                            
+
                             htmlToRender +='</div>';
 
                              if (data.data[0].product_gallary != null && data.data[0].product_gallary !=
@@ -326,7 +330,7 @@
                                 }
                             }
                             htmlToRender +='</picture></article>';
-                           
+
 
                         $('#weekly-sale-first-div').html(htmlToRender);
                     }
@@ -461,7 +465,7 @@
                                 .slider_textcontent);
                             clone.querySelector(".carousel-caption").classList.add(data.data[i]
                                 .slider_text);
-                                
+
                             if (i == 0) {
                                 clone.querySelector(".slider-navigation-active").classList.add("active");
                             }

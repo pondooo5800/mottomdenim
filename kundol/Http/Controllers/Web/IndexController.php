@@ -531,7 +531,7 @@ class IndexController extends Controller
             ]
         );
 
-        
+
 
         DefaultAccount::insertOrIgnore(
             [
