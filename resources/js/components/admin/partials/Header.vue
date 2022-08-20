@@ -33,11 +33,11 @@
             </div>
             <!--end::Header Menu Wrapper-->
             <!--begin::Topbar-->
-            
+
             <div class="topbar">
-                <div class="posicon d-lg-block d-none" v-if="$parent.permissions.includes('pos')">
+                <!-- <div class="posicon d-lg-block d-none" v-if="$parent.permissions.includes('pos')">
                     <router-link to="/admin/pos" class="btn btn-primary white mr-2">POS</router-link>
-                </div>
+                </div> -->
                 <div class="posicon d-lg-block d-none">
                     <div class="dropdown" :class="{ 'show': showdropdown }">
 
@@ -64,7 +64,7 @@
 												<circle cx="12" cy="7" r="4"></circle>
 											</svg>
 										</span>
-										Edit Profile
+										แก้ไขโปรไฟล์
 									</router-link>
 
 									<a href="#" class="dropdown-item" @click="logOut()">
@@ -74,7 +74,7 @@
 												<line x1="12" y1="2" x2="12" y2="12"></line>
 											</svg>
 										</span>
-										Logout
+										ออกจากระบบ
 									</a>
 								</div>
 
@@ -98,7 +98,7 @@ export default {
            showdropdown:false,
            username:""
        }
-       
+
    },
     methods: {
         logOut() {
@@ -111,7 +111,7 @@ export default {
             })
         },
         setBurgerMenu(){
-            
+
             var classList = document.body.classList.value.split(' ');
             console.log(classList);
             if(classList.indexOf('aside-minimize') === -1)
@@ -126,7 +126,7 @@ export default {
         }
     },
     mounted() {
-     
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

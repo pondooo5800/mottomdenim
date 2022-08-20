@@ -10,7 +10,7 @@
             <div class="card-header align-items-center border-bottom-dark px-0">
               <div class="card-title mb-0">
                 <h3 class="card-label mb-0 font-weight-bold text-body">
-                  Manage Gallery
+                  จัดการรูปภาพ
                 </h3>
               </div>
             </div>
@@ -18,7 +18,7 @@
           <br />
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-12">
           <div class="gallary-categories">
             <ul
@@ -38,7 +38,7 @@
                   aria-selected="true"
                   @click="gallaryByTagId('')"
                 >
-                  All
+                  ทั้งหมด
                 </a>
               </li>
               <li class="nav-item" v-for="tag in tags">
@@ -59,7 +59,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-12">
           <div
@@ -75,10 +75,10 @@
                     id="checkbox1"
                     @change="check($event)"
                   />
-                  <label for="checkbox1">
-                    Select All
+                  <label for="checkbox1" style="padding-left: 10px;">
+                    เลือกทั้งหมด
                     <small class="text-muted"
-                      >({{ this.selectedImages.length }} Item Selected)</small
+                      >({{ this.selectedImages.length }} รายการ)</small
                     ></label
                   >
                 </div>
@@ -91,7 +91,7 @@
                   id="confirm-color"
                   @click="deletegallary()"
                 >
-                  Delete
+                  ลบ
                 </button>
 
                 <button
@@ -102,7 +102,7 @@
                   data-target="#imagepopup"
                   @click="toggleModal()"
                 >
-                  Add New
+                  เพิ่ม
                 </button>
                 <!--Basic Modal -->
                 <div
@@ -122,7 +122,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="myModalLabel1">
-                          Add File Here
+                          เพิ่มไฟล์
                         </h3>
                         <button
                           type="button"
@@ -153,8 +153,7 @@
                       </div>
                       <div class="modal-body">
                         <p>
-                          Click in the box for upload images (we accept JPG, PNG
-                          & GIF).
+                            คลิกในกล่องเพื่ออัปโหลดภาพ (JPG, PNG และ GIF)
                         </p>
                         <div class="avatar-upload mb-3">
                           <div class="avatar-edit">
@@ -193,7 +192,7 @@
                           data-dismiss="modal"
                           @click="toggleModal()"
                         >
-                          <span class="">Close</span>
+                          <span class="">ปิด</span>
                         </button>
                         <button
                           type="button"
@@ -201,7 +200,7 @@
                           data-dismiss="modal"
                           @click="addUpdategallary()"
                         >
-                          <span class="">Submit</span>
+                          <span class="">ตกลง</span>
                         </button>
                       </div>
                     </div>

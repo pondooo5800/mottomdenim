@@ -90,34 +90,34 @@ $border-radius-sm:            0 !default;
 $bg-footer: #fff;
 $bg-social: $primary;
 
-/* kanit-regular - thai_latin */
+/* IBM-Plex-Sans-Thai-regular - thai_latin */
 @font-face {
-  font-family: 'Kanit';
+  font-family: 'IBM-Plex-Sans-Thai';
   font-style: normal;
   font-weight: 400;
-  src: url('../../webfonts/kanit-v12-thai_latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../../webfonts/IBM-Plex-Sans-Thai-Regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../../webfonts/kanit-v12-thai_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../webfonts/kanit-v12-thai_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../../webfonts/kanit-v12-thai_latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../../webfonts/kanit-v12-thai_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../../webfonts/kanit-v12-thai_latin-regular.svg#Kanit') format('svg'); /* Legacy iOS */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Regular.svg#IBM-Plex-Sans-Thai') format('svg'); /* Legacy iOS */
 }
-/* kanit-700 - thai_latin */
+/* IBM-Plex-Sans-Thai-700 - thai_latin */
 @font-face {
-  font-family: 'Kanit';
+  font-family: 'IBM-Plex-Sans-Thai';
   font-style: normal;
   font-weight: 700;
-  src: url('../../webfonts/kanit-v12-thai_latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../../webfonts/IBM-Plex-Sans-Thai-Bold.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../../webfonts/kanit-v12-thai_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../webfonts/kanit-v12-thai_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../../webfonts/kanit-v12-thai_latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../../webfonts/kanit-v12-thai_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../../webfonts/kanit-v12-thai_latin-700.svg#Kanit') format('svg'); /* Legacy iOS */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../webfonts/IBM-Plex-Sans-Thai-Bold.svg#IBM-Plex-Sans-Thai') format('svg'); /* Legacy iOS */
 }
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Kanit', sans-serif !default;
+$font-family-sans-serif:      'IBM-Plex-Sans-Thai', sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 
@@ -125,7 +125,7 @@ $font-size-base:               0.875rem !default; // Assumes the browser default
 $font-size-lg:                ($font-size-base + 0.125) !default;
 $font-size-sm:                $font-size-base  !default;
 
-$font-family-base-bold:        'Kanit', sans-serif !default;
+$font-family-base-bold:        'IBM-Plex-Sans-Thai', sans-serif !default;
 
 
 $font-weight-normal:          400 !default;

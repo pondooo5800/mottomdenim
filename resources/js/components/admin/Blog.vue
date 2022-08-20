@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Blog
+                                            บทความ
                                         </h3>
                                     </div>
                                     <div class="icons d-flex">
@@ -51,10 +51,10 @@
                                 <div class="card-body">
                                     <div>
                                         <div class=" table-responsive" id="printableTable">
-                                        
+
                                             <div id="productblogTable_wrapper" class="dataTables_wrapper no-footer">
 
-                                            <div class="dataTables_length" id="productblogTable_length"><label>Show 
+                                            <div class="dataTables_length" id="productblogTable_length"><label>แสดง
                                             <select name="productblogTable_length"  class="" v-model="limit" v-on:change="fetchblogs()">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -63,10 +63,10 @@
                                             <option value="200">200</option>
                                             <option value="500">500</option>
                                             <option value="1000">1000</option>
-                                            </select> entries</label></div>
+                                            </select> รายการ</label></div>
 
                                             <div id="productblogTable_filter" class="dataTables_filter">
-                                                <label>Search:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchblogs()"></label>
+                                                <label>ค้นหา:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchblogs()"></label>
                                                 <button
                                                 v-if="this.searchParameter != ''"
                                                 @click="clearSearch"
@@ -79,24 +79,24 @@
                                                     <thead class="text-body">
                                                         <tr role="row">
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending"  @click="sorting('id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'id' ? 'sorting_desc' : 'sorting'">
-                                                                ID
+                                                                รหัสบทความ
                                                             </th>
-                                                            
+
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="blog: activate to sort column ascending"  @click="sorting('name')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'name'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'name' ? 'sorting_desc' : 'sorting'">
-                                                            Name
+                                                            ชื่อ
                                                             </th>
-                                                            <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="blog: activate to sort column ascending"  @click="sorting('is_featured')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'is_featured'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'is_featured' ? 'sorting_desc' : 'sorting'">
+                                                            <!-- <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="blog: activate to sort column ascending"  @click="sorting('is_featured')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'is_featured'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'is_featured' ? 'sorting_desc' : 'sorting'">
                                                                 Featured
-                                                            </th>
+                                                            </th> -->
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Image
+                                                                รูปภาพ
                                                             </th>
-                                                             
+
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Description
+                                                                รายละเอียด
                                                             </th>
                                                             <th v-if="$parent.permissions.includes('blog-manage')" class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" >
-                                                                Action
+                                                                เครื่องมือ
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -105,13 +105,13 @@
                                                             <td class="sorting_1">
                                                                 {{blog.blog_id}}
                                                             </td>
-                                                            
+
                                                             <td>
                                                                 {{ blog.detail[0].name }}
                                                             </td>
-                                                            <td>
+                                                            <!-- <td>
                                                                 {{ blog.is_featured == 1 ? "Featured":"Unfeatured"}}
-                                                            </td>
+                                                            </td> -->
                                                              <td>
                                                                  <img :src="blog.gallary ? '/gallary/'+blog.gallary.gallary_name:''" style="width:60px" />
                                                             </td>
@@ -125,13 +125,13 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                
+
                                                 <ul class="pagination pagination-sm m-0 float-right">
-                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link"  @click="fetchcategorys(pagination.prev_page_url)">Previous</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link"  @click="fetchcategorys(pagination.prev_page_url)">ก่อนหน้า</button></li>
 
-                                                    <li class="disabled"><a class="page-link text-dark" href="#">Page {{ pagination.current_page }} of {{ pagination.last_page }}</a></li>
+                                                    <li class="disabled"><a class="page-link text-dark" href="#">หน้า {{ pagination.current_page }} ถึง {{ pagination.last_page }}</a></li>
 
-                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link"  @click="fetchblogs(pagination.next_page_url)">Next</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link"  @click="fetchblogs(pagination.next_page_url)">ถัดไป</button></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -147,7 +147,7 @@
 
     <div class="offcanvas offcanvas-right kt-color-panel p-5 kt_notes_panel" v-if="display_form" :class="display_form ? 'offcanvas-on' : ''">
         <div class="offcanvas-header d-flex align-items-center justify-content-between pb-3">
-            <h4 class="font-size-h4 font-weight-bold m-0">{{ this.edit ? "Edit Blog" : "Add blog" }}</h4>
+            <h4 class="font-size-h4 font-weight-bold m-0">{{ this.edit ? "แก้ไข" : "เพิ่ม" }}</h4>
             <a href="#" class="btn btn-sm btn-icon btn-light btn-hover-primary kt_notes_panel_close" v-on:click="clearForm()">
                 <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
@@ -178,22 +178,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Blog Category</label>
+                        <label>หมวดหมู่</label>
                         <fieldset class="form-group mb-3">
                             <select class="js-example-basic-single js-states form-control bg-transparent" v-model='blog.blog_category_id' >
                                 <option value="">Select Category</option>
-                                <option 
+                                <option
                                 v-for='category in categories' :value='category.blog_category_id'
                                 v-bind:key="category.blog_category_id" :selected='blog.blog_category_id === category.blog_category_id'>{{ category.blog_detail ? category.blog_detail[0].name : '' }}</option>
                             </select>
                             <small class="form-text text-danger" v-if="errors.has('blog_category_id')" v-text="errors.get('blog_category_id')"></small>
-                            
+
                         </fieldset>
                     </div>
-                    
+
 
                     <div class="form-group " >
-                        <label class="text-dark">Slug</label>
+                        <label class="text-dark">Keyword SEO</label>
                         <input type="text" :name="blog.slug" v-model="blog.slug" class="form-control" />
                         <small class="form-text text-danger" v-if="errors.has('slug')" v-text="errors.get('slug')"></small>
                     </div>
@@ -206,15 +206,15 @@
                         <small class="form-text text-danger" v-if="errors.has('is_active')" v-text="errors.get('is_active')"></small>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" @click="toggleImageSelect()">Upload blog Media</button>
-                        <small id="textHelp" class="form-text text-muted">Select Image file from gallary.</small>
+                        <button type="button" class="btn btn-primary" @click="toggleImageSelect()">อัปโหลดรูปภาพ</button>
+                        <small id="textHelp" class="form-text text-muted">เลือกรูปภาพจากแกลอรี่</small>
                         <small class="form-text text-danger" v-if="errors.has('gallary_id')" v-text="errors.get('gallary_id')"></small>
 
                         <img v-if="gallary_path != ''" :src="gallary_path" style="width:100px;height:100px;"/>
                     </div>
                 </div>
             </div>
-            <button type="button" @click="addUpdateblog()" class="btn btn-primary">Submit</button>
+            <button type="button" @click="addUpdateblog()" class="btn btn-primary">บันทึก</button>
         </form>
     </div>
     <attach-image @toggleImageSelect="toggleImageSelect" :showModal="showModal" @setImage="setImage"/>
@@ -287,7 +287,7 @@ export default {
                         for(var i = 0 ; i < res.data.data.length; i++){
                             this.blog.language_id.push(res.data.data[i].id);
                             if(res.data.data[i].is_default){
-                                this.selectedLanguage = res.data.data[i].id;   
+                                this.selectedLanguage = res.data.data[i].id;
                             }
                         }
                     }
@@ -298,7 +298,7 @@ export default {
             let vm = this;
             page_url = page_url || "/api/admin/blog_news";
             var arr = page_url.split('?');
-            
+
             if (arr.length > 1) {
                 page_url += '&limit='+this.limit;
             }
@@ -404,14 +404,14 @@ export default {
                     this.blog.is_featured = res.data.data.is_featured;
                     this.blog = Object.assign({}, this.blog, { is_featured: res.data.data.is_featured })
                     this.gallary_path ='/gallary/'+res.data.data.gallary.gallary_name;
-                    
-                    
+
+
                 }
 
             })
             .catch(err => console.log(err));
-            
-            
+
+
         },
         clearForm() {
             this.display_form = 0;
@@ -456,7 +456,7 @@ export default {
         }
     },
     mounted() {
-        
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

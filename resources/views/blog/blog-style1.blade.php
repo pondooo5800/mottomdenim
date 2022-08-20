@@ -1,36 +1,62 @@
-<div class="container-fuild">
-    <nav aria-label="breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.bread-blog') }}</li>
-            </ol>
-        </div>
-    </nav>
+
+     <div class="container-fuild">
+        <nav aria-label="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.bread-blog') }}</li>
+                </ol>
+            </div>
+        </nav>
+    </div>
+    <br>
+<br>
+<div class="container">
+    <div class="fullwidth-banner"
+        style="background-attachment: unset;background-size: contain;background-image: url('{{ asset('gallary/blog.jpg') }}');">
+    </div>
 </div>
+
+
 
     <section class="pro-content">
         <div class="container">
-            <div class="page-heading-title">
+            <div class="page-heading-title" style="text-align: center">
                 <h2> {{ trans('lables.bread-blog') }}
                 </h2>
 
             </div>
         </div>
 
+        <!-- Site Content -->
         <section class="blog-content">
             <div class="container">
 
                 <div class="blog-area">
 
                     <div class="row">
-                        <div class="col-12 col-lg-4  d-lg-block d-xl-block blog-menu">
+
+                        <div class="col-12">
+                            <div class="row blogs_div">
+
+                            </div>
+                        </div>
+                        {{-- <div class="col-12 col-lg-8">
+                            <div class="row blogs_div">
+
+                            </div>
+                        </div> --}}
+                        {{-- <div class="col-12 col-lg-8">
+                            <div class="row blogs_div">
+
+                            </div>
+                        </div> --}}
+
+                        {{-- <div class="col-12 col-lg-4  d-lg-block d-xl-block blog-menu">
                             <div class="right-menu-categories category-div category-list">
-                        
                             </div>
-                            <div class="category-div featured-blog">
-                                
-                            </div>
+                            <div class="category-div featured-blog"></div>
+
                             <div class="category-div">
 
                                 <ul class="socials">
@@ -53,21 +79,12 @@
                             </div>
 
 
-                        </div>
-                        <div class="col-12 col-lg-8">
-                            <div class="row blogs_div">
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="pagination justify-content-between "></div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        </div> --}}
                     </div>
 
                 </div>
+
             </div>
+
         </section>
     </section>

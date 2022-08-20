@@ -27,6 +27,22 @@
                     .heart:hover  {
                     opacity: 0.3;
                     }
+                    .figure {
+                            position: relative;
+                        }
+                        .figure img.image-hover {
+                          position: absolute;
+                          top: 0;
+                          right: 0;
+                          left: 0;
+                          bottom: 0;
+                          object-fit: contain;
+                          opacity: 0;
+                          transition: opacity .2s;
+                        }
+                        .figure:hover img.image-hover {
+                          opacity: 1;
+                        }
                 </style>
                 <div class="content  content-relative">
                     {{-- <span class="tag product-card-category"></span> --}}
@@ -64,7 +80,11 @@
                             </div>
                         </div>
                         <div class="img-add-cart">
-                            <img class="img-fluid product-card-image" src="" alt="Modern Single Sofa">
+                            <div class="figure">
+                                <img class="image-main img-fluid product-card-image " src="">
+                                <img class="image-hover img-fluid product-card-image-sub" src="">
+                              </div>
+                            {{-- <img class="img-fluid product-card-image " src="" alt="Modern Single Sofa"> --}}
                             <div class="bottom-right">
                                 <a class="btn product-card-link" href="javascript:void(0)"><img
                                         style="width: 40px;height: 40px;"

@@ -42,7 +42,7 @@
             class="content d-flex flex-column flex-column-fluid"
             id="tc_content"
           >
-            <BreadCrumb />
+            <!-- <BreadCrumb /> -->
             <!--begin::Entry-->
             <div class="d-flex flex-column-fluid">
               <!--begin::Container-->
@@ -104,11 +104,11 @@ export default {
   },
   methods: {
     removeOverlay() {
-      
+
           document.body.classList.remove('aside-minimize');
 					document.getElementById("tc_aside").classList.remove('aside-on');
 					document.getElementById("aside-overlay").classList.remove('active');
-        
+
     },
 
     setBurgerMenu() {
@@ -138,12 +138,12 @@ export default {
   },
   mounted() {
     this.fetchSetting();
-    
+
   },
   created() {
     if (localStorage.getItem("permissions")) {
       this.permissions = localStorage.getItem("permissions").split(",");
-      
+
         if (
             this.$route.name !== "dashboard" &&
             !this.permissions.includes(this.$route.name)

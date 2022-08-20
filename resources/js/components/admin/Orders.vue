@@ -26,7 +26,7 @@
                   >
                     <div class="card-title mb-0">
                       <h3 class="card-label mb-0 font-weight-bold text-body">
-                        Order
+                        คำสั่งซื้อ
                       </h3>
                     </div>
                   </div>
@@ -45,7 +45,7 @@
                         >
                           <div class="dataTables_length" id="sale_length">
                             <label
-                              >Show
+                              >แสดง
                               <select
                                 name="sale_length"
                                 class=""
@@ -57,13 +57,13 @@
                                 <option value="50">50</option>
                                 <option value="100">100</option>
                               </select>
-                              entries</label
+                              รายการ</label
                             >
                           </div>
 
                           <div id="sale_filter" class="dataTables_filter">
                             <label
-                              >Search:<input
+                              >ค้นหา:<input
                                 type="test"
                                 class=""
                                 placeholder=""
@@ -89,7 +89,7 @@
                                   aria-label="sale: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Order id
+                                  รหัสคำสั่งซื้อ
                                 </th>
                                 <th
                                   class="sorting"
@@ -100,19 +100,7 @@
                                   aria-label="sale: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Order Status
-                                </th>
-
-                                <th
-                                  class="sorting"
-                                  tabindex="0"
-
-                                  rowspan="1"
-                                  colspan="1"
-                                  aria-label="sale: activate to sort column ascending"
-                                  style="width: 95.5288px"
-                                >
-                                  Order Price
+                                  สถานะ
                                 </th>
 
                                 <th
@@ -124,7 +112,19 @@
                                   aria-label="sale: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Order Date
+                                  ราคา
+                                </th>
+
+                                <th
+                                  class="sorting"
+                                  tabindex="0"
+
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="sale: activate to sort column ascending"
+                                  style="width: 95.5288px"
+                                >
+                                  วันที่
                                 </th>
                                 <th
                                   class="sorting"
@@ -135,7 +135,7 @@
                                   aria-label="sale: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Payment Method
+                                  ประเภทการชำระเงิน
                                 </th>
                                 <th
                                   class="sorting"
@@ -146,7 +146,7 @@
                                   aria-label="sale: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Action
+                                  เครื่องมือ
                                 </th>
                               </tr>
                             </thead>
@@ -197,13 +197,13 @@
                                 class="page-link"
                                 href="#"
                                 @click="fetchorders(pagination.prev_page_url)"
-                                >Previous</a
+                                >ก่อนหน้า</a
                               >
                             </li>
 
                             <li class="disabled">
                               <a class="page-link text-dark" href="#"
-                                >Page {{ pagination.current_page }} of
+                                >หน้า {{ pagination.current_page }} ถึง
                                 {{ pagination.last_page }}</a
                               >
                             </li>
@@ -218,7 +218,7 @@
                                 class="page-link"
                                 href="#"
                                 @click="fetchorders(pagination.next_page_url)"
-                                >Next</a
+                                >ถัดไป</a
                               >
                             </li>
                           </ul>

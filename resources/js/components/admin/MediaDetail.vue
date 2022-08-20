@@ -9,7 +9,7 @@
                         <div class="card card-custom gutter-b bg-transparent shadow-none border-0">
                             <div class="card-header align-items-center  border-bottom-dark px-0">
                                 <div class="card-title mb-0">
-                                    <h3 class="card-label mb-0 font-weight-bold text-body">Image Detail
+                                    <h3 class="card-label mb-0 font-weight-bold text-body">รายละเอียดรูป
                                     </h3>
                                 </div>
                                 <div class="icons d-flex">
@@ -38,15 +38,15 @@
 
                                                 <div class="thumbnail h-100 d-flex flex-column justify-content-center">
                                                     <h4 class="text-primary">Actual Size(
-                                                        {{ gallary.detail ? gallary.detail[0].gallary_type =='large' ?   gallary.detail[0].gallary_height +'*'+  gallary.detail[0].gallary_width : '' :"" }} 
-                                                        
+                                                        {{ gallary.detail ? gallary.detail[0].gallary_type =='large' ?   gallary.detail[0].gallary_height +'*'+  gallary.detail[0].gallary_width : '' :"" }}
+
                                                         )</h4>
                                                     <div class="thumbnail-input-detail mt-3 w-100">
                                                         <div class="form-group row align-items-center justify-content-center">
                                                             <div class="col-12">
                                                                 <label class="form-label">Path</label>
                                                                 <input type="text" id="first-name" class="form-control" name="fname" placeholder="image path" :value='"/gallary/"+gallary.gallary_name' />
-                                                               
+
                                                             </div>
 
                                                         </div>
@@ -108,7 +108,7 @@
                                                         </div>
                                                         <div class="form-group row align-items-center justify-content-center">
                                                             <div class="col-12 d-flex justify-content-end">
-                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[0].id, 'large')">Regenrate</button>
+                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[0].id, 'large')">สร้างใหม่</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -155,7 +155,7 @@
                                                         </div>
                                                         <div class="form-group row align-items-center justify-content-center">
                                                             <div class="col-12 d-flex justify-content-end">
-                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[1].id, 'medium')">Regenrate</button>
+                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[1].id, 'medium')">สร้างใหม่</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -203,7 +203,7 @@
                                                         </div>
                                                         <div class="form-group row align-items-center justify-content-center">
                                                             <div class="col-12 d-flex justify-content-end">
-                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[2].id, 'thumbnail')">Regenrate</button>
+                                                                <button class="btn btn-secondary white" @click="resizeSingleImage(gallary.detail[2].id, 'thumbnail')">สร้างใหม่</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -249,7 +249,7 @@ export default {
     },
 
     methods: {
-        
+
         fetchgallaries(id) {
             this.$parent.loading = true;
             let vm = this;
@@ -281,14 +281,14 @@ export default {
                 this.resize_medium.height = this.gallary.detail[1].gallary_height;
                 this.resize_large.width = this.gallary.detail[0].gallary_width;
                 this.resize_large.height = this.gallary.detail[0].gallary_height;
-                
+
             }).finally(() => (this.$parent.loading = false));
         },
         resizeSingleImage(id, type) {
             this.$parent.loading = true;
             let vm = this;
             var page_url = "/api/admin/gallary/resize_single_image";
-            
+
             this.request_method = 'post';
             var responseData = {};
 
@@ -309,7 +309,7 @@ export default {
                 } else {
                     this.$toaster.error(res.data.message)
                 }
-                
+
             }).finally(() => (this.$parent.loading = false));
         },
         updateTags(){

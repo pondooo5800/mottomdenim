@@ -106,7 +106,34 @@ class IndexController extends Controller
         $data['attribute'] = $attribute;
         $data['price_range'] = ['0-500', '500-1000', '1000-2000'];
         $data['brand'] = $brand;
-        return view('shop', compact('data'));
+                $languageId = $data['selectedLenguage'];
+
+                $categoryURL = request()->get('category');
+                $slug = '';
+                if ($categoryURL == 4) {
+                    $slug = 'mottom-blogs';
+                }
+                $page = new Page;
+                $page = $page->getPageDetailByLanguageId($languageId);
+                $page = $page->where('slug', $slug);
+                $page = $page->first();
+        return view('shop', compact('data','page'));
+    }
+
+    public function shop_new_arrival()
+    {
+        $homeService = new HomeService;
+        $data = $homeService->homeIndex();
+        $attribute = new Attribute;
+        $languageId = $data['selectedLenguage'];
+        $attribute = $attribute->getAttributeDetailByLanguageId($languageId);
+        $attribute = $attribute->getVariationDetailByLanguageId($languageId);
+        $attribute = $attribute->get();
+        $brand = Brand::all();
+        $data['attribute'] = $attribute;
+        $data['price_range'] = ['0-500', '500-1000', '1000-2000'];
+        $data['brand'] = $brand;
+        return view('shop-new-arrival', compact('data'));
     }
 
     public function cartPage()
@@ -282,9 +309,11 @@ class IndexController extends Controller
         $languageId = $data['selectedLenguage'];
 
         $page = new Page;
-        $page = $page->getPageDetailByLanguageId($languageId);
-        $page = $page->where('slug', $slug);
-        $page = $page->first();
+        // $page = $page->getPageDetailByLanguageId($languageId);
+        // $page = $page->where('slug', $slug);
+        // $page = $page->first();
+       echo "<pre>"; print_r($page);
+       die();
 
         // return $page;
         return view('page', compact('data', 'setting', 'page'));

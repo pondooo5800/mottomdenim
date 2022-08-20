@@ -3,14 +3,14 @@
     <div class="card card-custom gutter-b bg-white border-0">
       <div class="card-header border-0 align-items-center">
         <h3 class="card-label mb-0 font-weight-bold text-body">
-          Advance Information
+         ข้อมูลขั้นสูง
         </h3>
       </div>
       <div class="card-body">
         <form>
           <div class="form-group row">
             <div class="col-md-6">
-              <label>Product Type</label>
+              <label>ประเภทสินค้า</label>
               <fieldset class="form-group mb-3">
                 <select
                   @change="setProductType($event.target.value)"
@@ -23,19 +23,19 @@
                   "
                   v-model="product_type"
                 >
-                  <option value="" disabled>Select Product Type</option>
+                  <!-- <option value="" disabled>Select Product Type</option> -->
                   <option
                     value="simple"
                     :disabled="product_type == 'variable' && edit"
                   >
                     Simple
                   </option>
-                  <option
+                  <!-- <option
                     value="variable"
                     :disabled="product_type == 'simple' && edit"
                   >
                     Variable
-                  </option>
+                  </option> -->
                 </select>
                 <small
                   class="form-text text-danger"
@@ -87,7 +87,7 @@
                 v-text="errors.get('product_status')"
               ></small>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
               <label>&nbsp;</label>
               <div
                 class="
@@ -169,9 +169,9 @@
                 v-if="errors.has('is_featured')"
                 v-text="errors.get('is_featured')"
               ></small>
-            </div>
+            </div> -->
             <div class="col-md-6">
-              <label>Units</label>
+              <label>หน่วยผลิตภัณฑ์</label>
               <fieldset class="form-group mb-3">
                 <select
                   @change="setUnit($event.target.value)"
@@ -203,7 +203,7 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Brands</label>
+              <label>แบรนด์สินค้า</label>
               <fieldset class="form-group mb-3">
                 <select
                   @change="setBrand($event.target.value)"
@@ -229,13 +229,13 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Product Weight</label>
+              <label>น้ำหนัก</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="text"
                   id="weight"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Weight"
+                  placeholder="น้ำหนัก"
                   v-on:input="setProductWeight($event.target.value)"
                   v-model="product_weight"
                 />
@@ -247,12 +247,12 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Price</label>
+              <label>ราคา</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="number"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Price"
+                  placeholder="ราคา"
                   v-on:input="setPrice($event.target.value)"
                   v-model="price"
                 />
@@ -264,12 +264,12 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Discount Price</label>
+              <label>ราคาส่วนลด</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="number"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Discount Price"
+                  placeholder="ราคาส่วนลด"
                   v-on:input="setDiscountPrice($event.target.value)"
                   v-model="discount_price"
                 />
@@ -281,13 +281,13 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Minimum Order</label>
+              <label>จำนวนสั่งซื้อขั้นต่ำ</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="text"
                   id="type"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Minimum Order"
+                  placeholder="จำนวนสั่งซื้อขั้นต่ำ"
                   v-on:input="setProductMinOrder($event.target.value)"
                   v-model="product_min_order"
                 />
@@ -299,13 +299,13 @@
               ></small>
             </div>
             <div class="col-md-6">
-              <label>Maximum Order</label>
+              <label>จำนวนสั่งซื้อขสูงสุด</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="text"
                   id="type-max"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Maximum Order"
+                  placeholder="จำนวนสั่งซื้อขสูงสุด"
                   v-on:input="setProductMaxOrder($event.target.value)"
                   v-model="product_max_order"
                 />
@@ -318,13 +318,13 @@
             </div>
 
             <div class="col-md-6">
-              <label>SKU</label>
+              <label>รหัสสินค้า SKU</label>
               <fieldset class="form-group mb-3">
                 <input
                   type="text"
                   id="type-max"
                   class="form-control round bg-transparent text-dark"
-                  placeholder="Enter Sku"
+                  placeholder="รหัสสินค้า SKU"
                   v-on:input="setProductsku($event.target.value)"
                   v-model="sku"
                 />
@@ -544,7 +544,7 @@
           @click.prevent="setActive('info-tab')"
           :class="{ active: isActive('info-tab') }"
           class="btn btn-dark swipe-to-top cta"
-          >Back</a
+          >ย้อนกลับ</a
         >
         <a
           data-toggle="pill"
@@ -552,7 +552,7 @@
           class="btn btn-primary cta"
           @click.prevent="setActive('seo-tab')"
           :class="{ active: isActive('seo-tab') }"
-          >Continue</a
+          >ถัดไป</a
         >
       </div>
     </div>
@@ -853,7 +853,7 @@ export default {
           var sku_name = "combination_sku_";
           var gallary_name = "combination_gallary_";
           for (var j = 0; j < res[i].length; j++) {
-            
+
             variation_id.push(parseInt(res[i][j]));
             if (res[i].length - 1 == j) {
               price_name = price_name + res[i][j];

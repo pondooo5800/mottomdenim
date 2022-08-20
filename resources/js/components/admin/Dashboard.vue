@@ -21,7 +21,7 @@
           "
         >
           <div class="card-body">
-            <h3 class="text-body font-weight-bold">Orders</h3>
+            <h3 class="text-body font-weight-bold">คำสั่งซื้อ</h3>
             <div class="mt-3">
               <div class="d-flex align-items-center">
                 <span class="text-dark font-weight-bold font-size-h1 mr-3"
@@ -48,7 +48,7 @@
                 </span>
               </div>
               <div class="text-black-50 mt-3">
-                Compare to last year ({{ lastYear }})
+                เปรียบเทียบกับปีที่แล้ว ({{ lastYear }})
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
           "
         >
           <div class="card-body">
-            <h3 class="text-body font-weight-bold">Products</h3>
+            <h3 class="text-body font-weight-bold">สินค้า</h3>
             <div class="mt-3">
               <div class="d-flex align-items-center">
                 <span class="text-dark font-weight-bold font-size-h1 mr-3"
@@ -95,8 +95,8 @@
                   ></i>
                 </span>
               </div>
-              <div class="text-black-50 mt-3">
-                Compare to last year ({{ lastYear }})
+               <div class="text-black-50 mt-3">
+                เปรียบเทียบกับปีที่แล้ว ({{ lastYear }})
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
           "
         >
           <div class="card-body">
-            <h3 class="text-body font-weight-bold">Users</h3>
+            <h3 class="text-body font-weight-bold">ผู้ใช้งาน</h3>
             <div class="mt-3">
               <div class="d-flex align-items-center">
                 <span class="text-dark font-weight-bold font-size-h1 mr-3"
@@ -143,8 +143,8 @@
                   ></i>
                 </span>
               </div>
-              <div class="text-black-50 mt-3">
-                Compare to last year ({{ lastYear }})
+               <div class="text-black-50 mt-3">
+                เปรียบเทียบกับปีที่แล้ว ({{ lastYear }})
               </div>
             </div>
           </div>
@@ -161,11 +161,11 @@
           "
         >
           <div class="card-body">
-            <h3 class="text-body font-weight-bold">Sales</h3>
+            <h3 class="text-body font-weight-bold">ยอดขาย</h3>
             <div class="mt-3">
               <div class="d-flex align-items-center">
                 <span class="text-dark font-weight-bold font-size-h1 mr-3"
-                  >$<span class="counter">
+                  >฿<span class="counter">
                     {{ totalSales }}
                   </span></span
                 >
@@ -187,8 +187,8 @@
                   ></i>
                 </span>
               </div>
-              <div class="text-black-50 mt-3">
-                Compare to last year ({{ lastYear }})
+               <div class="text-black-50 mt-3">
+                เปรียบเทียบกับปีที่แล้ว ({{ lastYear }})
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@
         <div class="card card-custom gutter-b bg-white border-0">
           <div class="card-header align-items-center border-0">
             <div class="card-title mb-0">
-              <h3 class="card-label text-body font-weight-bold mb-0">Users</h3>
+              <h3 class="card-label text-body font-weight-bold mb-0">สถิติผู้เข้าใช้งาน</h3>
             </div>
           </div>
           <div class="card-body pt-3">
@@ -222,7 +222,7 @@
           <div class="card-header align-items-center border-0">
             <div class="card-title mb-0">
               <h3 class="card-label text-body font-weight-bold mb-0">
-                Last Update
+                ข้อมูลล่าสุด
               </h3>
             </div>
           </div>
@@ -268,9 +268,9 @@
                     </svg>
                   </span>
                   <div class="list-content">
-                    <span class="list-title text-body">Total Products</span>
+                    <span class="list-title text-body">สินค้าทั้งหมด</span>
                     <small class="text-muted d-block"
-                      >{{ thisWeekProducts }} New Products</small
+                      >{{ thisWeekProducts }} สินค้าใหม่</small
                     >
                   </div>
                 </div>
@@ -316,9 +316,9 @@
                     </svg>
                   </span>
                   <div class="list-content">
-                    <span class="list-title text-body">Total Sales</span>
+                    <span class="list-title text-body">ยอดขายทั้งหมด</span>
                     <small class="text-muted d-block"
-                      >{{ thisWeekSales }} New Sales</small
+                      >{{ thisWeekSales }} ยอดขายใหม่</small
                     >
                   </div>
                 </div>
@@ -365,9 +365,9 @@
                     </svg>
                   </span>
                   <div class="list-content">
-                    <span class="list-title text-body">Total Order</span>
+                    <span class="list-title text-body">ยอดสั่งซื้อ</span>
                     <small class="text-muted d-block"
-                      >{{ thisWeekOrders }} New Sales</small
+                      >{{ thisWeekOrders }} ยอดสั่งซื้อใหม่</small
                     >
                   </div>
                 </div>
@@ -414,9 +414,9 @@
                     </svg>
                   </span>
                   <div class="list-content">
-                    <span class="list-title text-body">Total Users</span>
+                    <span class="list-title text-body">ผู้ใช้ทั้งหมด</span>
                     <small class="text-muted d-block"
-                      >{{ thisWeekCustomer }}New Users</small
+                      >{{ thisWeekCustomer }} ผู้ใช้ใหม่</small
                     >
                   </div>
                 </div>
@@ -448,7 +448,7 @@
           <div class="card-header align-items-center border-0">
             <div class="card-title mb-0">
               <h3 class="card-label font-weight-bold mb-0 text-body">
-                Monthly Sales
+                ยอดขายรายเดือน
               </h3>
             </div>
           </div>
@@ -518,7 +518,7 @@ export default {
       thisWeekSales: 0,
       series: [
         {
-          name: "Customers",
+          name: "ลูกค้า",
           data: [],
         },
       ],
@@ -552,7 +552,7 @@ export default {
       },
       saleSeries: [
         {
-          name: "Customers",
+          name: "ลูกค้า",
           data: [],
         },
       ],

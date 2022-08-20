@@ -4,12 +4,12 @@
 <metadata>
 Created by FontForge 20090622 at Thu Sep 19 10:47:11 2019
  By deploy user
-Copyright 2011 The Kanit Project Authors (https://github.com/JulietaUla/Kanit)
+Copyright 2011 The IBM-Plex-Sans-Thai Project Authors (https://github.com/JulietaUla/IBM-Plex-Sans-Thai)
 </metadata>
 <defs>
-<font id="Kanit-Bold" horiz-adv-x="0" >
+<font id="IBM-Plex-Sans-Thai-Bold" horiz-adv-x="0" >
   <font-face
-    font-family="Kanit"
+    font-family="IBM-Plex-Sans-Thai"
     font-weight="700"
     font-stretch="normal"
     units-per-em="1000"

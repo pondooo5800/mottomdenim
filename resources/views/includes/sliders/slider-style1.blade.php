@@ -16,18 +16,20 @@
     </ol>
 
     <template id="slider-navigation-template">
+        <a href="javascript:void(0)"  class="slider-navigation-url">
       <div class="carousel-item slider-navigation-active">
         <img class="d-block w-100 slider-navigation-image" src="" alt="">
         <div class="carousel-caption d-none d-md-flex  ">
             <div class="text-deco1">
-                <h2 class="slider-navigation-title"></h2>
-                <p class="slider-navigation-desc"></p>
-                <a href="javascript:void(0)"  class="slider-navigation-url btn btn-secondary swipe-to-top">
+                {{-- <h2 class="slider-navigation-title"></h2>
+                <p class="slider-navigation-desc"></p> --}}
+                {{-- <a href="javascript:void(0)"  class="slider-navigation-url btn btn-secondary swipe-to-top">
                   {{  trans("lables.home-slider-button-title") }}
-                </a>
+                </a> --}}
               </div>
           </div>
       </div>
+    </a>
     </template>
 
     <div class="carousel-inner slider-navigation-show"></div>

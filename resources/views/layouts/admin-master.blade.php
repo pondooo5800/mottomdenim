@@ -10,7 +10,7 @@
 	<link href="{{asset('assets/api/pace/pace-theme-flat-top.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/api/mcustomscrollbar/jquery.mCustomScrollbar.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/api/datatable/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="{{asset('assets/images/misc/r.png')}}" />
+	<link rel="shortcut icon" href="{{asset('assets/images/misc/logo1.png')}}" />
 </head>
 
 <body id="tc_body" class="header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-fixed ">

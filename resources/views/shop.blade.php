@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('content')
+{{-- @include('includes.shop.shop-style1') --}}
+
 @include(isset(getSetting()['shop']) ? 'includes.shop.shop-'.getSetting()['shop'] : 'includes.shop.shop-style1')
 
     <style>
@@ -55,6 +57,7 @@
 
             if (category != "")
                 url += "&productCategories=" + category;
+                categoryURL = category;
             if (varations != "")
                 url += "&variations=" + varations;
             if (price_range != "") {
@@ -62,7 +65,6 @@
                 url += "&price_from=" + price_range[0];
                 url += "&price_to=" + price_range[1];
             }
-
             if (sortBy != "" && sortType != "")
                 url += "&sortBy=" + sortBy + "&sortType=" + sortType;
             var searchinput = "{{ isset($_GET['search']) ? $_GET['search'] : '' }}";
@@ -101,8 +103,35 @@
 
                         $('.pagination').html(pagination);
                         const templ = document.getElementById("product-card-template");
+                            console.log(data);
                         for (i = 0; i < data.data.length; i++) {
                             const clone = templ.content.cloneNode(true);
+                            // if(categoryURL = 1){
+                            //     if(data.data[i].discount_percentage != 0 ){
+                            //                                     clone.querySelector(".div-class").setAttribute('style',
+                            //                                         "display: none;");
+                            //                                 }
+                            //                             }else
+                            // if(categoryURL = 2){
+                            //     if(data.data[i].discount_percentage == 0 ){
+                            //                                     clone.querySelector(".div-class").setAttribute('style',
+                            //                                         "display: none;");
+                            //                                 }
+                            //                             }
+                            // }else if (categoryURL = 2) {
+                            //     // if(data.data[i].discount_percentage  0 ){
+                            //     //                                 clone.querySelector(".div-class").setAttribute('style',
+                            //     //                                     "display: none;");
+                            //     //                             }
+                            // }
+                            // else
+                            // if(categoryURL = 2){
+                            //     if(data.data[i].discount_percentage = 0 ){
+                            //                                     clone.querySelector(".div-class").setAttribute('style',
+                            //                                         "display: none;");
+                            //                                 }                                // clone.querySelector(".div-class").setAttribute('style',
+                            // }
+
                             // clone.querySelector(".single-text-chat-li").classList.add("bg-blue-100");
                             clone.querySelector(".div-class").classList.add('col-12');
                             if (shopStyle.split('style')[1] == 1)
@@ -186,11 +215,11 @@
                             var bages = '';
                             if(data.data[i].discount_percentage > 0)
                                 bages +='<span class="badge badge-danger">'+data.data[i].discount_percentage+'%</span>';
-                            if(data.data[i].is_featured != "0")
-                                bages +='<span class="badge badge-success">Featured</span>';
-                            if(data.data[i].new != "0")
-                                bages +='<span class="badge badge-info ">New</span>';
-                            
+                            // if(data.data[i].is_featured != "0")
+                            //     bages +='<span class="badge badge-success">Featured</span>';
+                            // if(data.data[i].new != "0")
+                            //     bages +='<span class="badge badge-info ">New</span>';
+
                             clone.querySelector(".badges").innerHTML = bages;
 
                             if (data.data[i].product_type == 'simple') {
@@ -200,7 +229,7 @@
                                     .product_id);
                                 clone.querySelector(".product-card-link").setAttribute('data-type', data.data[i]
                                     .product_type);
-                                clone.querySelector(".product-card-link").innerHTML = 'Add To Cart';
+                                clone.querySelector(".product-card-link").innerHTML = '<img src="{{ asset("assets/images/add-01.png") }}"width=\"42px\" height=\"42px\">';
                                 clone.querySelector(".product-card-link").setAttribute('data-field', i);
 
                                 clone.querySelector(".add-to-card-bag").setAttribute('onclick',

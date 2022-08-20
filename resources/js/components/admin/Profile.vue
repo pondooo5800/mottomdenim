@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Profile
+                                            โปรไฟล์
                                         </h3>
                                     </div>
                                 </div>
@@ -22,14 +22,14 @@
                             <div class="card card-custom gutter-b bg-white border-0">
                                 <div class="card-body">
                                     <div class="col-md-12">
-                                        <label>Email</label>
+                                        <label>อีเมล</label>
                                         <div class="form-group">
                                             <input type="email" readonly v-model="user.email" class="form-control"/>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
-                                        <label>Name</label>
+                                        <label>ชื่อ</label>
                                         <div class="form-group">
                                             <input type="text" v-model="user.name"  class="form-control"/>
                                             <small class="form-text text-danger" v-if="errors.has('name')" v-text="errors.get('name')"></small>
@@ -37,14 +37,14 @@
                                     </div>
 
                                      <div class="col-md-12">
-                                        <label>Password</label>
+                                        <label>รหัสผ่าน</label>
                                         <div class="form-group">
                                             <input type="text" v-model="user.password" class="form-control" />
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-12">
-                                        <button class="btn btn-primary" @click="updateProfile()">Submit</button>
+                                        <button class="btn btn-primary" @click="updateProfile()">บันทึก</button>
                                     </div>
                                 </div>
                             </div>

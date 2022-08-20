@@ -1,7 +1,7 @@
 <template>
 <div class="card card-custom gutter-b bg-white border-0">
     <div class="card-header border-0 align-items-center">
-        <h3 class="card-label mb-0 font-weight-bold text-body">Bussiness Setting
+        <h3 class="card-label mb-0 font-weight-bold text-body">ตั้งค่า
         </h3>
     </div>
     <div class="card-body">

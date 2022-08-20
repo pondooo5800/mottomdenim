@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Product Category
+                                            หมวดหมู่ สินค้า
                                         </h3>
                                     </div>
                                     <div class="icons d-flex">
@@ -35,10 +35,10 @@
                                 <div class="card-body">
                                     <div>
                                         <div class=" table-responsive" id="printableTable">
-                                        
+
                                             <div id="productcategoryTable_wrapper" class="dataTables_wrapper no-footer">
 
-                                            <div class="dataTables_length" id="productcategoryTable_length"><label>Show 
+                                            <div class="dataTables_length" id="productcategoryTable_length"><label>แสดง
                                             <select name="productcategoryTable_length"  class="" v-model="limit" v-on:change="fetchcategorys()">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -47,29 +47,29 @@
                                             <option value="200">200</option>
                                             <option value="500">500</option>
                                             <option value="1000">1000</option>
-                                            </select> entries</label></div>
+                                            </select> รายการ</label></div>
 
                                             <div id="productcategoryTable_filter" class="dataTables_filter">
-                                                <label>Search:<input type="search" class="" placeholder=""  v-model="searchParameter" @keyup="fetchcategorys()"></label>
+                                                <label>ค้นหา:<input type="search" class="" placeholder=""  v-model="searchParameter" @keyup="fetchcategorys()"></label>
                                                 <button v-if="this.searchParameter != ''" @click="clearSearch">clear</button>
                                             </div>
                                                 <table id="productcategoryTable" class="display dataTable no-footer" role="grid">
                                                     <thead class="text-body">
                                                         <tr role="row">
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending"  @click="sorting('id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'id' ? 'sorting_desc' : 'sorting'">
-                                                                ID
+                                                                รหัสหมวดหมู่สินค้า
                                                             </th>
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="category: activate to sort column ascending"  @click="sorting('category_name')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'category_name'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'category_name' ? 'sorting_desc' : 'sorting'">
-                                                            Name
+                                                            ชื่อ
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Description
+                                                                รายละเอียด
                                                             </th>
-                                                            <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
+                                                            <!-- <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
                                                                 Slug
-                                                            </th>
+                                                            </th> -->
                                                             <th v-if="$parent.permissions.includes('product-category-manage')" class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" >
-                                                                Action
+                                                                เครื่องมือ
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -84,9 +84,9 @@
                                                             <td>
                                                                 {{ category.detail[0] ? category.detail[0].description : '' }}
                                                             </td>
-                                                            <td>
+                                                            <!-- <td>
                                                                 {{ category.slug}}
-                                                            </td>
+                                                            </td> -->
                                                             <td v-if="$parent.permissions.includes('product-category-manage')">
                                                             <a href="javascript:void(0)" class=" click-edit" id="click-edit1" data-toggle="tooltip" title="" data-placement="right" data-original-title="Check out more demos" @click="editcategory(category)"><i class="fa fa-edit"></i></a>
                                                                         <a class="" href="#" @click="deletecategory(category.id)"><i class="fa fa-trash"></i></a>
@@ -95,11 +95,11 @@
                                                     </tbody>
                                                 </table>
                                                 <ul class="pagination pagination-sm m-0 float-right">
-                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchcategorys(pagination.prev_page_url)">Previous</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchcategorys(pagination.prev_page_url)">ก่อนหน้า</button></li>
 
-                                                    <li class="disabled"><button class="page-link text-dark" href="#">Page {{ pagination.current_page }} of {{ pagination.last_page }}</button></li>
+                                                    <li class="disabled"><button class="page-link text-dark" href="#">หน้า {{ pagination.current_page }} ถึง {{ pagination.last_page }}</button></li>
 
-                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchcategorys(pagination.next_page_url)">Next</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchcategorys(pagination.next_page_url)">ถัดไป</button></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@
 
     <div class="offcanvas offcanvas-right kt-color-panel p-5 kt_notes_panel" v-if="display_form" :class="display_form ? 'offcanvas-on' : ''">
         <div class="offcanvas-header d-flex align-items-center justify-content-between pb-3">
-            <h4 class="font-size-h4 font-weight-bold m-0">Add category</h4>
+            <h4 class="font-size-h4 font-weight-bold m-0">เพิ่ม</h4>
             <a href="#" class="btn btn-sm btn-icon btn-light btn-hover-primary kt_notes_panel_close" v-on:click="clearForm()">
                 <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
@@ -147,49 +147,49 @@
                     </div>
 
                     <div class="form-group ">
-                        <label>Parent Category</label>
+                        <label>หมวดหมู่ย่อย</label>
                         <fieldset class="form-group mb-3">
                             <select class="js-example-basic-single js-states form-control bg-transparent" v-model='category.parent' >
                                 <option value="">Select Category</option>
-                                <option 
+                                <option
                                 v-for='parent in allcategories' :value='parent.id'
                                 v-bind:selected="category.parent == parent.id"
                                 v-bind:key="parent.id">{{ parent.detail[0] ? parent.detail[0].name : '' }}</option>
                             </select>
-                            
+
                         </fieldset>
                     </div>
-                    
+
 
                      <div class="form-group " >
-                        <label class="text-dark">Slug</label>
+                        <label class="text-dark">Keyword SEO</label>
                         <input type="text" :name="category.category_slug" v-model="category.category_slug" class="form-control" />
                         <small class="form-text text-danger" v-if="errors.has('category_slug')" v-text="errors.get('category_slug')"></small>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" @click="toggleImageSelect()">Upload Category Media</button>
-                        <small id="textHelp" class="form-text text-muted">Select Image file from gallary.</small>
+                        <button type="button" class="btn btn-primary" @click="toggleImageSelect()">อัปโหลดรูปภาพ</button>
+                        <small id="textHelp" class="form-text text-muted">เลือกรูปภาพจากแกลอรี่</small>
                         <small class="form-text text-danger" v-if="errors.has('gallary_id')" v-text="errors.get('gallary_id')"></small>
 
                         <img v-if="gallary_path != ''" :src="gallary_path" style="width:100px;height:100px;"/>
                     </div>
 
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" @click="toggleImageSelectIcon()">Upload Category Icon</button>
-                        <small id="textHelp" class="form-text text-muted">Select Image file from gallary.</small>
+                        <button type="button" class="btn btn-primary" @click="toggleImageSelectIcon()">อัปโหลดไอคอน</button>
+                        <small id="textHelp" class="form-text text-muted">เลือกรูปภาพจากแกลอรี่</small>
                         <small class="form-text text-danger" v-if="errors.has('category_icon')" v-text="errors.get('category_icon')"></small>
 
                         <img v-if="icon_path != ''" :src="icon_path" style="width:100px;height:100px;"/>
                     </div>
                 </div>
             </div>
-            <button type="button" @click="addUpdatecategory()" class="btn btn-primary mt-3">Submit</button>
+            <button type="button" @click="addUpdatecategory()" class="btn btn-primary mt-3">ตกลง</button>
         </form>
     </div>
     <attach-image @toggleImageSelect="toggleImageSelect" :showModal="showModal" @setImage="setImage"/>
 
 
-    
+
     <attach-image @toggleImageSelect="toggleImageSelectIcon" :showModal="showModalIcon" @setImage="setIcon"/>
 </div>
 </template>
@@ -259,7 +259,7 @@ export default {
                         for(var i = 0 ; i < res.data.data.length; i++){
                             this.category.language_id.push(res.data.data[i].id);
                             if(res.data.data[i].is_default){
-                                this.selectedLanguage = res.data.data[i].id;   
+                                this.selectedLanguage = res.data.data[i].id;
                             }
                         }
                     }
@@ -270,7 +270,7 @@ export default {
             let vm = this;
             page_url = page_url || "/api/admin/category";
             var arr = page_url.split('?');
-            
+
             if (arr.length > 1) {
                 page_url += '&limit='+this.limit;
             }
@@ -300,7 +300,7 @@ export default {
             else{
                 page_url += '?limit=200000';
             }
-            
+
             page_url += '&sortBy='+this.sortBy+'&sortType='+this.sortType+'&getDetail=1&getGallary=1';
             axios.get(page_url, this.token).then(res => {
                 this.allcategories = res.data.data;
@@ -332,7 +332,7 @@ export default {
                         if (error.response.status == 422) {
 						if(error.response.data.status == 'Error'){
                              this.$toaster.error(error.response.data.message)
-						} 
+						}
 					}
                     })
                     .finally(() => (this.$parent.loading = false));
@@ -412,13 +412,13 @@ export default {
                     this.category.parent = res.data.data.parent_id;
                     this.category = Object.assign({}, this.category, { category_slug: res.data.data.slug })
 
-                    
+
                 }
 
             })
             .catch(err => console.log(err));
-            
-            
+
+
         },
         clearForm() {
             this.errors = new ErrorHandling();
@@ -468,7 +468,7 @@ export default {
 
     },
     mounted() {
-        
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

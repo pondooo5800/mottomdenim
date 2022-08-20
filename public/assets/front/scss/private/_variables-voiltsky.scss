@@ -90,22 +90,22 @@ $border-radius-sm:            0 !default;
 $bg-footer: #fff;
 $bg-social: $primary;
 
-@font-face { font-family: 'Kanit-Regular';
+@font-face { font-family: 'IBM-Plex-Sans-Thai-Regular';
 
-    src: url('../../webfonts/Kanit-Regular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
-     url('../../webfonts/Kanit-Regular.woff?v=4.7.0') format('woff'),
-     url('../../webfonts/Kanit-Regular.ttf?v=4.7.0') format('truetype'),
-      url('../../webfonts/Kanit-Regular.svg?v=4.7.0#Kanit-Regular') format('svg');
+    src: url('../../webfonts/IBM-Plex-Sans-Thai-Regular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+     url('../../webfonts/IBM-Plex-Sans-Thai-Regular.woff?v=4.7.0') format('woff'),
+     url('../../webfonts/IBM-Plex-Sans-Thai-Regular.ttf?v=4.7.0') format('truetype'),
+      url('../../webfonts/IBM-Plex-Sans-Thai-Regular.svg?v=4.7.0#IBM-Plex-Sans-Thai-Regular') format('svg');
      font-weight: normal; font-style: normal;
      }
 
-     @font-face { font-family: 'Kanit-Bold';
+     @font-face { font-family: 'IBM-Plex-Sans-Thai-Bold';
 
-        src: url('../../webfonts/Kanit-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+        src: url('../../webfonts/IBM-Plex-Sans-Thai-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
 
-         url('../../webfonts/Kanit-Bold.woff?v=4.7.0') format('woff'),
-         url('../../webfonts/Kanit-Bold.ttf?v=4.7.0') format('truetype'),
-          url('../../webfonts/Kanit-Bold.svg?v=4.7.0#/Kanit-Bold') format('svg');
+         url('../../webfonts/IBM-Plex-Sans-Thai-Bold.woff?v=4.7.0') format('woff'),
+         url('../../webfonts/IBM-Plex-Sans-Thai-Bold.ttf?v=4.7.0') format('truetype'),
+          url('../../webfonts/IBM-Plex-Sans-Thai-Bold.svg?v=4.7.0#/IBM-Plex-Sans-Thai-Bold') format('svg');
          font-weight: normal; font-style: normal;
          }
 

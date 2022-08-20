@@ -30,6 +30,11 @@
   text-align: center;
 }
   </style>
+      {{-- <?php
+    echo "<pre>";
+print_r(trans());
+    ?> --}}
+
   <section class="new-products-content pro-content" >
     <div class="container">
       <div class="products-area">
@@ -63,24 +68,29 @@
             <div class="pro-heading-title"style="text-align: center">
                 <div class="container">
                     <div class="row">
+                        <a href="{{ url('/shop?category=4') }}">
                       <div class="col-sm">
                          <div class="mottom">
                     <img style="height: 380px;
                     width: 380px;
                     border-radius: 0px;
-                    " src="{{ asset('assets/images/TopBanner.png') }}" alt="mottom">
-                    <a href="{{ url('/mottom') }}" class="btn">Mottom</a>
+                    " src="{{ asset('/images/mottom.jpg') }}" alt="mottom">
+                    {{-- <a href="{{ url('/mottom') }}" class="btn">Mottom</a> --}}
                   </div>
+                </a>
+                  {{-- src="{{ asset('assets/images/TopBanner.png') }}" --}}
                   <br>
                       </div>
                       <div class="col-sm">
+                        <a href="{{ url('/shop?category=5') }}">
                         <div class="cheval">
                     <img style="height: 380px;
                     width: 380px;
                     border-radius: 0px;
-                    " src="{{ asset('assets/images/TopBanner.png') }}" alt="cheval">
-                    <a href="{{ url('/cheval') }}" class="btn">Cheval</a>
+                    " src="{{ asset('/images/cheval.jpg') }}" alt="cheval">
+                    {{-- <a href="{{ url('/cheval') }}" class="btn">Cheval</a> --}}
                   </div>
+                        </a>
                       </div>
                     </div>
                   </div>

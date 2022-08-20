@@ -12,9 +12,9 @@
                     <li class="nav-item">
                         <a class="nav-link" @click.prevent="setActive('general')" :class="{ active: isActive('general') }" href="#general">General</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" @click.prevent="setActive('theme')" :class="{ active: isActive('theme') }" href="#theme">Theme Setting</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" @click.prevent="setActive('seo')" :class="{ active: isActive('seo') }" href="#seo">SEO Settings</a>
                     </li>

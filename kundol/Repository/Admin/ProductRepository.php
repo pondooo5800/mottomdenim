@@ -26,6 +26,9 @@ class ProductRepository implements ProductInterface
     {
         $product = Product::type();
         try {
+            // print_r($_GET);
+            // echo"<br>";
+
             if (isset($_GET['limit']) && is_numeric($_GET['limit']) && $_GET['limit'] > 0) {
                 $numOfResult = $_GET['limit'];
             } else {
@@ -36,11 +39,11 @@ class ProductRepository implements ProductInterface
                 $language = Language::languageId($_GET['language_id'])->firstOrFail();
                 $languageId = $language->id;
             }
-
             if (isset($_GET['getAllData']) && $_GET['getAllData'] == '1') {
                 $product = $product->getProductDetailByLanguageId($languageId);
                 return $this->successResponse(ProductResource::collection($product->select('id')->get()), 'Data Get Successfully!');
             }
+
             $product = $product->with('product_attribute.attribute.attribute_detail')->with('gallary');
 
             $product = $product->getAttributeDetailByLanguage($languageId);
@@ -146,6 +149,13 @@ class ProductRepository implements ProductInterface
                 });
             }
             // return $product->toSql();
+            // print_r("numOfResult=" .$numOfResult);
+            // echo"<br>";
+            // print_r("language=" .$languageId);
+            // echo"<br>";
+            // print_r("product=" .$product);
+            // die();
+
 
             return $this->successResponse(ProductResource::collection($product->paginate($numOfResult)), 'Data Get Successfully!');
         } catch (Exception $e) {
@@ -284,7 +294,7 @@ class ProductRepository implements ProductInterface
             $product_result = $productService->simpleProductDetailData($parms, $sql->id, 'store');
 
             if ($parms['product_type'] == 'variable' && $sql) {
-                
+
                 $variable_result = $productService->variableProductDetailData($parms, $sql->id, 'store');
                 if ($variable_result) {
                     $productService->saveProductGallaryImage($sql->id, $parms['gallary_detail_id']);
@@ -310,7 +320,7 @@ class ProductRepository implements ProductInterface
     public function update(array $parms, $product)
     {
         // return $parms['gallary_detail_id'];
-        
+
         if ($parms['product_type'] == 'digital') {
             if (isset($parms['digital_file']) && $parms['digital_file'] != '') {
                 $destinationPath = public_path('/digital');

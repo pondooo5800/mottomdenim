@@ -45,7 +45,7 @@ return [
     'header-total' => 'Total',
     'header-checkout' => 'Checkout',
     'header-view-cart' => 'View Cart',
-    'header-search-products' => 'Search Products',
+    'header-search-products' => 'Search',
     'header-call-us-now' => 'Call Us Now',
     'header-free-shipping' => 'Free Shipping',
     'header-over-order' => 'On order over $99',
@@ -139,6 +139,9 @@ return [
 
 
     'shop-shop'=>'Shop',
+    'shop-new-arrivar'=>'สินค้ามาใหม่',
+    'shop-sell'=>'สินค้าลดราคา',
+    'shop-best-seller'=>'สินค้าขายดี',
     'shop-display' => 'Display',
     'shop-category' => 'Category',
     'shop-price' =>'Price',
@@ -326,17 +329,18 @@ return [
     'forget-password-verify'=>"varify email",
 
 
-    'bread-crumb-home'=>"Home",
+    'bread-crumb-home'=>"หน้าแรก",
     'bread-crumb-shop'=>'Shop',
+    'bread-crumb-shop-new-arrival'=>'สินค้ามาใหม่',
     'bread-shopping-cart'=>'SHOPPING CART',
     'bread-product-page'=>'Product Page',
-    'bread-blog'=>'Blog',
+    'bread-blog'=>'บทความ',
     'bread-checkout'=>'Checkout',
     'bread-login'=>'login',
     'bread-compare'=>'Compare',
     'bread-profile'=>'Profile',
     'bread-order'=>'Order',
-    'bread-contact'=>'Contact Us',
+    'bread-contact'=>'ติดต่อ',
 
 
     'wishlist-add-success' => 'Product Added To Wishlist!',

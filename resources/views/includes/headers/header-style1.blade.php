@@ -118,7 +118,7 @@
                     <form class="form-inline">
                         <div class="search-field-module">
                             <button style="border-color:#fff;  background-color: #fff;color: #B4B3B3;
-                            font-weight: lighter;" class="btn btn-secondary dropdown-toggle selected_category"
+                            font-weight: bold;" class="btn btn-secondary dropdown-toggle selected_category"
                                 type="button" id="headerOneCartButton" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false" data-toggle="tooltip" data-placement="bottom"
                                 title="{{ trans('lables.header-all-categories') }}">
@@ -134,8 +134,8 @@
 
                             </div>
                             <div class="search-field-wrap">
-                                <input type="search"
-                                    placeholder="{{ isset($_GET['search']) ? $_GET['search'] : trans('lables.header-search-products') . '...' }}"
+                                <input type="search" style="font-weight: lighter;"
+                                    placeholder="{{ isset($_GET['search']) ? $_GET['search'] : trans('lables.header-search-products').'...' }}"
                                     data-toggle="tooltip" data-placement="bottom" title="Search Item" id="search-input">
                                 <button style="border-color:#fff;  background-color: #fff;color: #B4B3B3;" class="btn btn-secondary" id="search_button" data-toggle="tooltip"
                                     data-placement="bottom" title="{{ trans('lables.header-search-products') }}">
@@ -450,12 +450,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div style="display: flex;justify-content: space-between;">
-                                            <button style="border-radius: 20px;"
+                                            <button style="border-radius: 20px;background-color: #0a4166;border: snow;"
                                                 class="btn btn-secondary swipe-to-top"
                                                 id="createAccount">{{ trans('lables.login-create-account') }}</button>
                                             <div style="text-decoration-line: underline;">
                                                 <a data-toggle="modal" href="#create-accountModal"><span
-                                                        style="color:#000">{{ trans('lables.login-login') }}</span></a>
+                                                        style="color:#000;font-weight: lighter">{{ trans('lables.login-login') }}</span></a>
                                             </div>
 
                                         </div>

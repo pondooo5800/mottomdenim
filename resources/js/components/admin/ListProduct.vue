@@ -26,7 +26,7 @@
                   >
                     <div class="card-title mb-0">
                       <h3 class="card-label mb-0 font-weight-bold text-body">
-                        Product List
+                       รายการ
                       </h3>
                     </div>
                     <div class="icons d-flex">
@@ -84,10 +84,10 @@
                         >
                           <div class="dataTables_length" id="product_length">
                             <label
-                              >Show
+                              >แสดง
                               <select
                                 name="product_length"
-                                
+
                                 class=""
                                 v-model="limit"
                                 v-on:change="fetchproducts()"
@@ -100,17 +100,17 @@
                                 <option value="500">500</option>
                                 <option value="1000">1000</option>
                               </select>
-                              entries</label
+                              รายการ</label
                             >
                           </div>
 
                           <div id="product_filter" class="dataTables_filter">
                             <label
-                              >Search:<input
+                              >ค้นหา:<input
                                 type="text"
                                 class=""
                                 placeholder=""
-                                
+
                                 v-model="searchParameter"
                                 @keyup="fetchproducts()"
                             /></label>
@@ -127,7 +127,7 @@
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -146,12 +146,12 @@
                                       : 'sorting'
                                   "
                                 >
-                                  ID
+                                  รหัสรายการสินค้า
                                 </th>
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -170,23 +170,23 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Name
+                                  ชื่อ
                                 </th>
                                 <th
                                   class="no-sort sorting_disabled"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-label="product: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Product Image
+                                 รูปภาพ
                                 </th>
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -205,12 +205,12 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Category
+                                  หมวดหมู่
                                 </th>
-                                <th
+                                <!-- <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -229,12 +229,12 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Type
-                                </th>
+                                  ประเภท
+                                </th> -->
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -253,13 +253,13 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Price
+                                  ราคา
                                 </th>
 
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -278,12 +278,12 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Discount Price
+                                  ส่วนลด
                                 </th>
                                 <th
                                   class="sorting"
                                   tabindex="0"
-                                  
+
                                   rowspan="1"
                                   colspan="1"
                                   aria-sort="ascending"
@@ -302,7 +302,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Status
+                                  สถานะ
                                 </th>
                                 <th
                                   v-if="
@@ -316,7 +316,7 @@
                                   aria-label="Action"
                                   style="width: 53.1891px"
                                 >
-                                  Action
+                                  เครื่องมือ
                                 </th>
                               </tr>
                             </thead>
@@ -363,16 +363,16 @@
                                       : ""
                                   }}
                                 </td>
-                                <td>
+                                <!-- <td>
                                   {{ product.product_type }}
-                                </td>
+                                </td> -->
                                 <td>
                                   {{ product.product_price }}
                                 </td>
                                 <td>
                                   {{ product.product_discount_price }}
                                 </td>
-                                
+
                                 <td>
                                   {{ product.product_status }}
                                 </td>
@@ -418,13 +418,13 @@
                                 class="page-link"
                                 href="#"
                                 @click="fetchproducts(pagination.prev_page_url)"
-                                >Previous</a
+                                >ก่อนหน้า</a
                               >
                             </li>
 
                             <li class="disabled">
                               <a class="page-link text-dark" href="#"
-                                >Page {{ pagination.current_page }} of
+                                >หน้า {{ pagination.current_page }} ถึง
                                 {{ pagination.last_page }}</a
                               >
                             </li>
@@ -439,7 +439,7 @@
                                 class="page-link"
                                 href="#"
                                 @click="fetchproducts(pagination.next_page_url)"
-                                >Next</a
+                                >ถัดไป</a
                               >
                             </li>
                           </ul>
@@ -469,7 +469,7 @@
           pb-3
         "
       >
-        <h4 class="font-size-h4 font-weight-bold m-0">Add product</h4>
+        <h4 class="font-size-h4 font-weight-bold m-0">เพิ่ม</h4>
         <a
           href="#"
           class="
@@ -702,6 +702,7 @@ export default {
   },
   mounted() {
     var token = localStorage.getItem("token");
+    console.log(token);
     this.token = {
       headers: {
         Authorization: `Bearer ${token}`,

@@ -55,8 +55,9 @@
                         const templ = document.getElementById("blog-template");
                         console.log(data.data);
                         for (i = 0; i < data.data.length; i++) {
+                            console.log(data.data[i].gallary.gallary_name);
                             const clone = templ.content.cloneNode(true);
-                            clone.querySelector(".blog-template-date").innerHTML = data.data[i].date;
+                            // clone.querySelector(".blog-template-date").innerHTML = data.data[i].date;
                             clone.querySelector(".blog-template-image-link").setAttribute('href',
                                 '/blog-detail/' + data.data[i].slug);
                             clone.querySelector(".blog-template-readmore-link").setAttribute('href',
@@ -66,12 +67,12 @@
                                 clone.querySelector(".blog-template-image").setAttribute('src', '/gallary/' +
                                     data.data[i].gallary.gallary_name);
                             }
-                            if (data.data[i].category != null) {
-                                if (data.data[i].category.blog_detail != null) {
-                                    clone.querySelector(".blog-template-category").innerHTML = data.data[i]
-                                        .category.blog_detail[0].name;
-                                }
-                            }
+                            // if (data.data[i].category != null) {
+                            //     if (data.data[i].category.blog_detail != null) {
+                            //         clone.querySelector(".blog-template-category").innerHTML = data.data[i]
+                            //             .category.blog_detail[0].name;
+                            //     }
+                            // }
                             if (data.data[i].detail != null) {
                                 clone.querySelector(".blog-template-title").innerHTML = data.data[i].detail[0]
                                     .name;

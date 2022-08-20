@@ -39,7 +39,7 @@ class AvailableQty extends Command
      */
     public function handle()
     {
-        // 
+        //
         \Artisan::call('cache:clear');
         \Artisan::call('config:clear');
         \Artisan::call('route:clear');

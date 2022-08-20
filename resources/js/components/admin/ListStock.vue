@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Stock List
+                                           รายการ สต๊อกสินค้า
                                         </h3>
                                     </div>
                                      <div class="icons d-flex">
@@ -51,10 +51,10 @@
                                 <div class="card-body">
                                     <div>
                                         <div class=" table-responsive" id="printableTable">
-                                        
+
                                             <div id="sale_wrapper" class="dataTables_wrapper no-footer">
 
-                                            <div class="dataTables_length" id="sale_length"><label>Show 
+                                            <div class="dataTables_length" id="sale_length"><label>แสดง
                                             <select name="sale_length"  class="" v-model="limit" v-on:change="fetchstocks()">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -63,41 +63,41 @@
                                             <option value="200">200</option>
                                             <option value="500">500</option>
                                             <option value="1000">1000</option>
-                                            </select> entries</label></div>
+                                            </select> รายการ</label></div>
 
                                             <div id="sale_filter" class="dataTables_filter">
-                                                <label>Search:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchstocks()"></label>
+                                                <label>ค้นหา:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchstocks()"></label>
                                                 <button v-if="this.searchParameter != ''" @click="clearSearch">clear</button>
                                                 </div>
                                                 <table id="sale" class="display dataTable no-footer" sale="grid">
                                                     <thead class="text-body">
                                                         <tr sale="row">
-                                                            
+
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'id' ? 'sorting_desc' : 'sorting'">
-                                                                ID
+                                                                รหัสสต๊อกสินค้า
                                                             </th>
 
                                                            <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('created_at')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'created_at'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'created_at' ? 'sorting_desc' : 'sorting'">
-                                                                Created At
+                                                                วันที่เพิ่ม
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('product_id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'product_id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'product_id' ? 'sorting_desc' : 'sorting'">
-                                                                Product
+                                                                สินค้า
                                                             </th>
-                                                            <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('warehouse_id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'warehouse_id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'warehouse_id' ? 'sorting_desc' : 'sorting'">
+                                                            <!-- <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('warehouse_id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'warehouse_id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'warehouse_id' ? 'sorting_desc' : 'sorting'">
                                                                 Warehouse
-                                                            </th>
-                                                            
+                                                            </th> -->
+
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('stock_status')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'stock_status'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'stock_status' ? 'sorting_desc' : 'sorting'">
-                                                                Status
+                                                                สถานะ
                                                             </th>
 
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" @click="sorting('qty')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'qty'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'qty' ? 'sorting_desc' : 'sorting'">
-                                                                Quantity
+                                                                จำนวน
                                                             </th>
 
-                                                            
+
                                                             <th  class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;">
-                                                                Type/Reason
+                                                               ประเภท
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -109,13 +109,13 @@
                                                             <td>
                                                                 {{ stock.created_at }}
                                                             </td>
-                                                            
+
                                                             <td >
                                                                 <router-link :to="'/admin/product/'+stock.product_id">{{  stock.product != null ? stock.product.detail != null ? stock.product.detail.length > 0 ? stock.product.detail[0].title : "" : "" :"" }}</router-link>
                                                             </td>
-                                                            <td>
+                                                            <!-- <td>
                                                                 {{ stock.warehouse ? stock.warehouse.warehouse_name : "" }}
-                                                            </td>
+                                                            </td> -->
 
 
                                                             <td>
@@ -131,11 +131,11 @@
                                                     </tbody>
                                                 </table>
                                                 <ul class="pagination pagination-sm m-0 float-right">
-                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchstocks(pagination.prev_page_url)">Previous</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchstocks(pagination.prev_page_url)">ก่อนหน้า</button></li>
 
-                                                    <li class="disabled"><button class="page-link text-dark" href="#">Page {{ pagination.current_page }} of {{ pagination.last_page }}</button></li>
+                                                    <li class="disabled"><button class="page-link text-dark" href="#">หน้า {{ pagination.current_page }} ถึง {{ pagination.last_page }}</button></li>
 
-                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchstocks(pagination.next_page_url)">Next</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchstocks(pagination.next_page_url)">ถัดไป</button></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@
                         <label class="text-dark" for="is_default">Set as default </label>
                         <small class="form-text text-danger" v-if="errors.has('is_default')" v-text="errors.get('is_default')"></small>
                     </div>
-                    
+
                 </div>
             </div>
             <button type="button" @click="addUpdatesale()" class="btn btn-primary">Submit</button>
@@ -227,7 +227,7 @@ export default {
             let vm = this;
             page_url = page_url || "/api/admin/stock";
             var arr = page_url.split('?');
-            
+
             if (arr.length > 1) {
                 page_url += '&limit='+this.limit;
             }
@@ -239,7 +239,7 @@ export default {
             }
             page_url += '&sortBy='+this.sortBy+'&sortType='+this.sortType;
             page_url +='&getProduct=1';
-            
+
 
             var responseData = {};
 
@@ -278,7 +278,7 @@ export default {
                 });
                 nameToReturn +=")";
                 return nameToReturn;
-            } 
+            }
         },
         sorting(sortBy){
             this.sortBy = sortBy;
@@ -291,7 +291,7 @@ export default {
         }
     },
     mounted() {
-     
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

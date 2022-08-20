@@ -26,7 +26,7 @@
                   >
                     <div class="card-title mb-0">
                       <h3 class="card-label mb-0 font-weight-bold text-body">
-                        Stock History
+                        รายงานประวัติการสต๊อกสินค้า
                       </h3>
                     </div>
                   </div>
@@ -37,7 +37,7 @@
               <div class="col-12">
                 <div class="card card-custom gutter-b bg-white border-0">
                   <div class="card-body">
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-md-3">
                         <label>Type</label>
                         <select class="form-control" v-model="stock_type">
@@ -62,7 +62,7 @@
                           Filter
                         </button>
                       </div>
-                    </div>
+                    </div> -->
                     <div>
                       <div class="table-responsive" id="printableTable">
                         <div
@@ -71,7 +71,7 @@
                         >
                           <div class="dataTables_length" id="sale_length">
                             <label
-                              >Show
+                              >แสดง
                               <select
                                 name="sale_length"
                                 class=""
@@ -86,7 +86,7 @@
                                 <option value="500">500</option>
                                 <option value="1000">1000</option>
                               </select>
-                              entries</label
+                              รายการ</label
                             >
                           </div>
                           <table
@@ -115,7 +115,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  ID
+                                  รหัส
                                 </th>
 
                                 <th
@@ -137,7 +137,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Created At
+                                  วันที่เพิ่ม
                                 </th>
                                 <th
                                   class="no-sort sorting_disabled"
@@ -158,7 +158,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Product
+                                  สินค้า
                                 </th>
                                 <th
                                   class="no-sort sorting_disabled"
@@ -179,7 +179,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Warehouse
+                                  คลังสินค้า
                                 </th>
 
                                 <th
@@ -201,7 +201,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Status
+                                  สถานะ
                                 </th>
 
                                 <th
@@ -223,7 +223,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Quantity
+                                  จำนวน
                                 </th>
 
                                 <th
@@ -233,7 +233,7 @@
                                   aria-label="Action"
                                   style="width: 53.1891px"
                                 >
-                                  Type/Reason
+                                  ประเภท
                                 </th>
                               </tr>
                             </thead>
@@ -266,13 +266,13 @@
                                 </td>
 
                                 <!-- <td v-if="stock.product.product_type == 'variable'">
-                                                                 
+
                                                                      <span v-for="(combinationdtl,i) in stock.product.combination_detail" v-bind:key="i">
                                                                          <span v-for="(variation,j) in combinationdtl.combination" v-bind:key="j">
                                                                              {{ variation.detail[0].name }}
                                                                          </span>
                                                                      </span>
-                                                                
+
                                                             </td> -->
 
                                 <td>
@@ -298,13 +298,13 @@
                                 href="#"
                                 @click="fetchstocks(pagination.prev_page_url)"
                               >
-                                Previous
+                                ก่อนหน้า
                               </button>
                             </li>
 
                             <li class="disabled">
                               <button class="page-link text-dark" href="#">
-                                Page {{ pagination.current_page }} of
+                                หน้า {{ pagination.current_page }} ถึง
                                 {{ pagination.last_page }}
                               </button>
                             </li>
@@ -320,7 +320,7 @@
                                 href="#"
                                 @click="fetchstocks(pagination.next_page_url)"
                               >
-                                Next
+                                ถัดไป
                               </button>
                             </li>
                           </ul>
@@ -534,7 +534,7 @@ export default {
                               }
                               arr = res.data.data[k];
                               arr.title = res.data.data[k].product.detail.length > 0 ? res.data.data[k].product.detail[0].title + ' (' + combination_name + ')' : '';
-                              
+
                               this.stocks.push(arr);
                               arr = {};
                           }

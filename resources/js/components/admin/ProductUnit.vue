@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Product Unit
+                                            หน่วยผลิตภัณฑ์
                                         </h3>
                                     </div>
                                     <div class="icons d-flex">
@@ -51,10 +51,10 @@
                                 <div class="card-body">
                                     <div>
                                         <div class=" table-responsive" id="printableTable">
-                                        
+
                                             <div id="productUnitTable_wrapper" class="dataTables_wrapper no-footer">
 
-                                            <div class="dataTables_length" id="productUnitTable_length"><label>Show 
+                                            <div class="dataTables_length" id="productUnitTable_length"><label>แสดง
                                             <select name="productUnitTable_length"  class="" v-model="limit" v-on:change="fetchunits()">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -63,28 +63,28 @@
                                             <option value="200">200</option>
                                             <option value="500">500</option>
                                             <option value="1000">1000</option>
-                                            </select> entries</label></div>
+                                            </select> รายการ</label></div>
 
                                             <div id="productUnitTable_filter" class="dataTables_filter">
                                                     <label>
-                                                        Search:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchunits()"></label>
+                                                        ค้นหา:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchunits()"></label>
                                                         <button v-if="this.searchParameter != ''" @click="clearSearch">clear</button>
-                                                
+
                                                 </div>
                                                 <table id="productUnitTable" class="display dataTable no-footer" role="grid">
                                                     <thead class="text-body">
                                                         <tr role="row">
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending" style="width: 31.25px;" @click="sorting('id')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'id'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'id' ? 'sorting_desc' : 'sorting'">
-                                                                ID
+                                                                รหัสหน่วยผลิตภัณฑ์
                                                             </th>
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="unit: activate to sort column ascending" style="width: 95.5288px;" @click="sorting('name')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'name'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'name' ? 'sorting_desc' : 'sorting'">
-                                                            Name
+                                                            ชื่อ
                                                             </th>
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="unit: activate to sort column ascending" style="width: 95.5288px;" @click="sorting('is_active')" :class="(this.$data.sortType == 'asc' || this.$data.sortType == 'ASC') && this.$data.sortBy == 'is_active'  ? 'sorting_asc' : (this.$data.sortType == 'desc' || this.$data.sortType == 'DESC') && this.$data.sortBy == 'is_active' ? 'sorting_desc' : 'sorting'">
-                                                            Status
+                                                            สถานะ
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 53.1891px;" v-if="$parent.permissions.includes('product-unit-manage')">
-                                                                Action
+                                                                เครื่องมือ
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -107,11 +107,11 @@
                                                     </tbody>
                                                 </table>
                                                 <ul class="pagination pagination-sm m-0 float-right">
-                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchunits(pagination.prev_page_url)">Previous</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchunits(pagination.prev_page_url)">ก่อนหน้า</button></li>
 
-                                                    <li class="disabled"><button class="page-link text-dark" href="#">Page {{ pagination.current_page }} of {{ pagination.last_page }}</button></li>
+                                                    <li class="disabled"><button class="page-link text-dark" href="#">หน้า {{ pagination.current_page }} ถึง {{ pagination.last_page }}</button></li>
 
-                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchunits(pagination.next_page_url)">Next</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchunits(pagination.next_page_url)">ถัดไป</button></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -127,7 +127,7 @@
 
     <div class="offcanvas offcanvas-right kt-color-panel p-5 kt_notes_panel" v-if="display_form" :class="display_form ? 'offcanvas-on' : ''">
         <div class="offcanvas-header d-flex align-items-center justify-content-between pb-3">
-            <h4 class="font-size-h4 font-weight-bold m-0">Add unit</h4>
+            <h4 class="font-size-h4 font-weight-bold m-0">เพื่ม</h4>
             <a href="#" class="btn btn-sm btn-icon btn-light btn-hover-primary kt_notes_panel_close" v-on:click="clearForm()">
                 <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
@@ -149,7 +149,7 @@
                         <small class="form-text text-danger" v-if="errors.has('name')" v-text="errors.get('name')"></small>
                     </div>
                     <div class="form-group ">
-                        <label>Status</label>
+                        <label>สถานะ</label>
                         <fieldset class="form-group mb-3">
                             <select class="js-example-basic-single js-states form-control bg-transparent" v-model="unit.is_active">
                                 <option value="1">Active</option>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" @click="addUpdateunit()" class="btn btn-primary">Submit</button>
+            <button type="button" @click="addUpdateunit()" class="btn btn-primary">ตกลง</button>
         </form>
     </div>
 </div>
@@ -216,7 +216,7 @@ export default {
                         for(var i = 0 ; i < res.data.data.length; i++){
                             this.unit.language_id.push(res.data.data[i].id);
                             if(res.data.data[i].is_default){
-                                this.selectedLanguage = res.data.data[i].id;   
+                                this.selectedLanguage = res.data.data[i].id;
                             }
                         }
                     }
@@ -227,7 +227,7 @@ export default {
             let vm = this;
             page_url = page_url || "/api/admin/unit";
             var arr = page_url.split('?');
-            
+
             if (arr.length > 1) {
                 page_url += '&limit='+this.limit;
             }
@@ -271,7 +271,7 @@ export default {
                         if (error.response.status == 422) {
 						if(error.response.data.status == 'Error'){
                              this.$toaster.error(error.response.data.message)
-						} 
+						}
 					}
                     })
                     .finally(() => (this.$parent.loading = false));
@@ -334,8 +334,8 @@ export default {
             })
             .catch(err => console.log(err))
             .finally(() => (this.$parent.loading = false));
-            
-            
+
+
         },
         clearForm() {
             this.display_form = 0;
@@ -359,7 +359,7 @@ export default {
         }
     },
     mounted() {
-        
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

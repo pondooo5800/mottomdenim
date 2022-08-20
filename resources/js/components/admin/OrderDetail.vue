@@ -20,7 +20,7 @@
                 >
                   <div class="card-title mb-0">
                     <h3 class="card-label mb-0 font-weight-bold text-body">
-                      Order
+                      รหัสคำสั่งซื้อ
                       <span class="text-black-50">#{{ orders.order_id }}</span>
                     </h3>
                   </div>
@@ -61,7 +61,7 @@
                               d="M5 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
                             />
                           </svg>
-                          Detail</a
+                          รายละเอียด</a
                         >
                       </li>
                       <li class="nav-item">
@@ -91,7 +91,7 @@
                               d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
                             />
                           </svg>
-                          Invoice
+                          ใบแจ้งหนี้
                         </a>
                       </li>
                       <li class="nav-item">
@@ -121,7 +121,7 @@
                               d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"
                             />
                           </svg>
-                          Status
+                          สถานะ
                         </a>
                       </li>
                       <li class="nav-item" v-if="setting.is_deliveryboyapp_purchased === '1'">
@@ -155,7 +155,7 @@
                               d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
                             />
                           </svg>
-                          Delivery
+                          จัดส่ง
                         </a>
                       </li>
                       <li class="nav-item">
@@ -189,7 +189,7 @@
                               d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
                             />
                           </svg>
-                          Notes
+                          หมายเหตุ
                         </a>
                       </li>
                       <li class="nav-item">
@@ -223,7 +223,7 @@
                               d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
                             />
                           </svg>
-                          Message
+                          ข้อความ
                         </a>
                       </li>
                     </ul>
@@ -248,7 +248,7 @@
                           <h3
                             class="card-label mb-0 font-weight-bold text-body"
                           >
-                            Customer
+                            ลูกค้า
                           </h3>
                         </div>
                       </div>
@@ -288,7 +288,7 @@
                                   pr-2
                                 "
                               >
-                                Name:{{
+                                ชื่อ:{{
                                   orders.customer_id.customer_first_name +
                                   " " +
                                   orders.customer_id.customer_last_name
@@ -321,7 +321,7 @@
                                   pr-2
                                 "
                               >
-                                Email:{{
+                                อีเมล:{{
                                   orders.customer_id.customer_email
                                 }}
                                </h5>
@@ -338,7 +338,7 @@
                                   pl-2
                                   pr-2
                                 ">
-                            Placed On : {{ orders.order_date }}
+                            วันที่ : {{ orders.order_date }}
                           </h5>
                         </div>
                       </div>
@@ -363,7 +363,7 @@
                               text-body
                             "
                           >
-                            Payment Method
+                            ประเภทการชำระเงิน
                           </h4>
                           <input
                             type="text"
@@ -372,7 +372,7 @@
                             :placeholder="orders.payment_method"
                             disabled=""
                           />
-                          <h5
+                          <!-- <h5
                             class="
                               font-size-h5
                               mt-3
@@ -387,7 +387,7 @@
                                 ? orders.transaction_id
                                 : "none"
                             }}</span>
-                          </h5>
+                          </h5> -->
                           <h5
                             class="
                               font-size-h5
@@ -397,7 +397,7 @@
                               text-body
                             "
                           >
-                            Amount:
+                            จำนวน:
                             <span class="text-dark font-size-base">{{
                               orders.order_price
                             }}</span>
@@ -412,7 +412,7 @@
                               text-body
                             "
                           >
-                            Shipping Method
+                            ประเภทการจัดส่ง
                           </h4>
                           <input
                             type="text"
@@ -444,7 +444,7 @@
                               text-body
                             "
                           >
-                            Date:
+                            วันที่:
                             <span class="text-dark font-size-base"
                               >{{orders.order_date}}</span
                             >
@@ -468,7 +468,7 @@
                               text-body
                             "
                           >
-                            Billing Address
+                            ที่อยู่เรียกเก็บเงิน
                           </h4>
                           <h5
                             class="
@@ -479,7 +479,7 @@
                               text-body
                             "
                           >
-                            First Name:
+                            ชื่อ:
                             <span class="text-dark">{{
                               orders.billing_first_name
                             }}</span>
@@ -493,7 +493,7 @@
                               text-body
                             "
                           >
-                            Last Name:
+                            นามสกุล:
                             <span class="text-dark font-size-base">{{
                               orders.billing_last_name
                             }}</span>
@@ -507,7 +507,7 @@
                               text-body
                             "
                           >
-                            Address:
+                            ที่อยู่:
                             <span class="text-dark font-size-base">{{
                               orders.billing_street_aadress
                             }}</span>
@@ -521,12 +521,12 @@
                               text-body
                             "
                           >
-                            City:
+                            อำเมือง:
                             <span class="text-dark font-size-base">{{
                               orders.billing_city
                             }}</span>
                           </h5>
-                          <h5
+                          <!-- <h5
                             class="
                               font-size-h5
                               mt-3
@@ -539,7 +539,7 @@
                             <span class="text-dark font-size-base">{{
                               orders.billing_country1.country_name
                             }}</span>
-                          </h5>
+                          </h5> -->
                           <h5
                             class="
                               font-size-h5
@@ -549,7 +549,7 @@
                               text-body
                             "
                           >
-                            State:
+                            จังหวัด:
                             <span class="text-dark font-size-base">{{
                               orders.billing_state1.name
                             }}</span>
@@ -563,7 +563,7 @@
                               text-body
                             "
                           >
-                            Zip Code:
+                            รหัสไปรษณีย์:
                             <span class="text-dark font-size-base">{{
                               orders.billing_postcode
                             }}</span>
@@ -577,7 +577,7 @@
                               text-body
                             "
                           >
-                            Phone:
+                            เบอร์โทรศัพท์:
                             <span class="text-dark font-size-base">{{
                               orders.billing_phone
                             }}</span>
@@ -592,7 +592,7 @@
                               text-body
                             "
                           >
-                            Shipping Address
+                            ที่อยู่จัดส่ง
                           </h4>
                           <h5
                             class="
@@ -603,7 +603,7 @@
                               text-body
                             "
                           >
-                            First Name:
+                            ชื่อ:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_first_name
                             }}</span>
@@ -617,7 +617,7 @@
                               text-body
                             "
                           >
-                            Last Name:
+                            นามสกุล:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_last_name
                             }}</span>
@@ -631,7 +631,7 @@
                               text-body
                             "
                           >
-                            Address:
+                            ที่อยู่:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_street_aadress
                             }}</span>
@@ -650,7 +650,7 @@
                               orders.delivery_city
                             }}</span>
                           </h5>
-                          <h5
+                          <!-- <h5
                             class="
                               font-size-h5
                               mt-3
@@ -663,7 +663,7 @@
                             <span class="text-dark font-size-base">{{
                               orders.delivery_country1.country_name
                             }}</span>
-                          </h5>
+                          </h5> -->
                           <h5
                             class="
                               font-size-h5
@@ -673,7 +673,7 @@
                               text-body
                             "
                           >
-                            State:
+                            จังหวัด:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_state1.name
                             }}</span>
@@ -687,7 +687,7 @@
                               text-body
                             "
                           >
-                            Zip Code:
+                            รหัสไปรษณีย์:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_postcode
                             }}</span>
@@ -701,7 +701,7 @@
                               text-body
                             "
                           >
-                            Phone:
+                            เบอร์โทรศัพท์:
                             <span class="text-dark font-size-base">{{
                               orders.delivery_phone
                             }}</span>
@@ -717,11 +717,11 @@
                             <thead>
                               <tr class="d-flex">
                                 <th class="col-2"></th>
-                                <th class="col-3">ITEM"S</th>
-                                <th class="col-2">PRICE</th>
-                                <th class="col-2">Discount PRICE</th>
-                                <th class="col-1">QTY</th>
-                                <th class="col-2">SUBTOTAL</th>
+                                <th class="col-3">รายการ</th>
+                                <th class="col-2">ราคา</th>
+                                <th class="col-2">ส่วนลด</th>
+                                <th class="col-1">จำนวน</th>
+                                <th class="col-2">รวม</th>
                               </tr>
                             </thead>
                             <tbody id="order-show-detail">
@@ -853,7 +853,7 @@
                                           text-dark
                                         "
                                       >
-                                        SUBTOTAL
+                                        รวม
                                       </th>
                                       <td
                                         class="
@@ -883,7 +883,7 @@
                                           text-dark
                                         "
                                       >
-                                        DISCOUNT
+                                        ส่วนลด
                                       </th>
                                       <td
                                         class="
@@ -913,7 +913,7 @@
                                           text-dark
                                         "
                                       >
-                                        TAX
+                                        ภาษี
                                       </th>
                                       <td
                                         class="
@@ -926,7 +926,7 @@
                                       >
                                         {{ tax_total }}
                                       </td>
-                                      
+
 
                                     </tr>
                                     <tr
@@ -945,7 +945,7 @@
                                           text-dark
                                         "
                                       >
-                                        SHIPPING
+                                        ค่าส่ง
                                       </th>
                                       <td
                                         class="
@@ -958,7 +958,7 @@
                                       >
                                         {{ shipping_cost }}
                                       </td>
-                                      
+
 
                                     </tr>
                                     <tr
@@ -977,7 +977,7 @@
                                           text-dark
                                         "
                                       >
-                                        COUPON DISCOUNT
+                                        โค๊ดส่วนลด
                                       </th>
                                       <td
                                         class="
@@ -991,7 +991,7 @@
                                         {{ coupon_amount }}
                                       </td>
                                     </tr>
-                                    
+
                                     <tr
                                       class="
                                         d-flex
@@ -1009,7 +1009,7 @@
                                           text-dark
                                         "
                                       >
-                                        TOTAL
+                                        รวมทั้งหมด
                                       </th>
                                       <td
                                         class="
@@ -1063,13 +1063,13 @@
                             align-items-center
                           "
                         >
-                          <h3 class="font-size-h3 text-white">Invoice</h3>
+                          <h3 class="font-size-h3 text-white">ใบแจ้งหนี้</h3>
                           <h4 class="font-size-h4 text-white">
                             {{ orders.order_id }}
                           </h4>
                         </div>
                         <div class="card-user-detail padding-top pl-3 w-250px">
-                          
+
                           <h5 class="font-size-h5 text-dark">
                             {{ orders.customer_id.customer_first_name+" "+orders.customer_id.customer_last_name }}
                           </h5>
@@ -1082,20 +1082,20 @@
                             <h5 class="font-size-h5 text-dark">
                             {{ orders.delivery_phone }}
                           </h5>
-                          
+
                         </div>
                       </div>
 
                       <div class="padding-top">
                         <h5 class="font-size-h5 text-black-50">
-                          Placed On <span>{{ orders.order_date }}</span>
+                          วันที่ <span>{{ orders.order_date }}</span>
                         </h5>
                         <hr />
-                        <h3 class="font-size-h5 font-size-bold text-body">
+                        <h3 class="font-size-h5 font-size-bold text-body text-center">
                             {{ this.$parent.globalSettings.site_name }}
                         </h3>
                         <a href="#">
-                          <img :src="this.$parent.globalSettings.site_logo" alt="logo" />
+                          <img :src="this.$parent.globalSettings.site_logo" alt="logo" style="height:60px"  />
                         </a>
                       </div>
                     </div>
@@ -1106,11 +1106,11 @@
                             <thead>
                               <tr class="d-flex">
                                 <th class="col-2"></th>
-                                <th class="col-3">ITEM"S</th>
-                                <th class="col-2">PRICE</th>
-                                <th class="col-2">Discount PRICE</th>
-                                <th class="col-1">QTY</th>
-                                <th class="col-2">SUBTOTAL</th>
+                                <th class="col-3">รายการ</th>
+                                <th class="col-2">ราคา</th>
+                                <th class="col-2">ส่วนลด</th>
+                                <th class="col-1">จำนวน</th>
+                                <th class="col-2">รวม</th>
                               </tr>
                             </thead>
                             <tbody id="order-show-detail">
@@ -1162,7 +1162,7 @@
                                   <div class="input-group">
                                     {{ detail.product_qty }}
                                   </div>
-                                  
+
                                 </td>
                                 <td
                                   class="tag-s col-12 col-md-2 order-sub-price"
@@ -1243,7 +1243,7 @@
                                           text-dark
                                         "
                                       >
-                                        SUBTOTAL
+                                        รวม
                                       </th>
                                       <td
                                         class="
@@ -1273,7 +1273,7 @@
                                           text-dark
                                         "
                                       >
-                                        DISCOUNT
+                                        ส่วนลด
                                       </th>
                                       <td
                                         class="
@@ -1303,7 +1303,7 @@
                                           text-dark
                                         "
                                       >
-                                        TAX
+                                        ภาษี
                                       </th>
                                       <td
                                         class="
@@ -1333,7 +1333,7 @@
                                           text-dark
                                         "
                                       >
-                                        SHIPPING
+                                        ค่าส่ง
                                       </th>
                                       <td
                                         class="
@@ -1363,7 +1363,7 @@
                                           text-dark
                                         "
                                       >
-                                        COUPON DISCOUNT
+                                        โค๊ดส่วนลด
                                       </th>
                                       <td
                                         class="
@@ -1377,7 +1377,7 @@
                                         {{ coupon_amount }}
                                       </td>
                                     </tr>
-                                    
+
                                     <tr
                                       class="
                                         d-flex
@@ -1395,7 +1395,7 @@
                                           text-dark
                                         "
                                       >
-                                        TOTAL
+                                        รวมทั้งหมด
                                       </th>
                                       <td
                                         class="
@@ -1436,13 +1436,13 @@
                                   class="text-center border-0 col-6"
                                   scope="col"
                                 >
-                                  DATE ADDED
+                                  วันที่
                                 </th>
                                 <th
                                   class="text-center border-0 col-6"
                                   scope="col"
                                 >
-                                  STATUS
+                                  สถานะ
                                 </th>
                               </tr>
                             </thead>
@@ -1471,11 +1471,11 @@
                           >
                             <div class="col-xl-6 col-lg-8 col-12 status-detail">
                               <label class="col-form-label mr-3"
-                                >Order Status</label
+                                >สถานะการสั่งซื้อ</label
                               >
                               <fieldset class="form-group">
                                 <select
-                              
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Pending'"
@@ -1488,7 +1488,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     Pending
                                   </option>
 
@@ -1500,7 +1500,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     In Process
                                   </option>
 
@@ -1512,7 +1512,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     Dispatched
                                   </option>
                                   <option
@@ -1545,7 +1545,7 @@
 
 
                                 <select
-                              
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Inprocess'"
@@ -1558,7 +1558,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     In Process
                                   </option>
 
@@ -1570,7 +1570,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     Dispatched
                                   </option>
                                   <option
@@ -1602,7 +1602,7 @@
                                 </select>
 
                                 <select
-                              
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Dispatched'"
@@ -1616,7 +1616,7 @@
                                         : ''
                                     "
                                   >
-                                  
+
                                     Dispatched
                                   </option>
                                   <option
@@ -1648,7 +1648,7 @@
                                 </select>
 
                                 <select
-                                  
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Complete'"
@@ -1674,7 +1674,7 @@
                                 </select>
 
                                 <select
-                                  
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Cancel'"
@@ -1690,7 +1690,7 @@
                                 </select>
 
                                 <select
-                                  
+
                                   class="form-control"
                                   v-model="order_status"
                                   v-if="order_status == 'Return'"
@@ -1706,14 +1706,14 @@
                                 </select>
                                 <br />
 
-                          <button class="btn btn-primary" id="subbutton" style="float:right"  
+                          <button class="btn btn-primary" id="subbutton" style="float:right"
                           v-if="db_order_status != 'Cancel' && db_order_status != 'Return'"
                           @click="statusUpdate()
                           ">Submit</button>
                               </fieldset>
                             </div>
                           </div>
-                          
+
                         </div>
                       </div>
                     </div>
@@ -1745,9 +1745,9 @@
                                 >Assign Order To Delivery Boy</label
                               >
                               <fieldset class="form-group">
-                               
+
                                 <select
-                                  
+
                                   class="form-control"
                                   v-model="delivery_boy_id"
                                 >
@@ -1874,7 +1874,7 @@
                                     </svg>
                                   </span>
                                   <h5 class="mt-3 text-dark font-size-h5">
-                                    Add Notes
+                                    เพิ่มหมายเหตุ
                                   </h5>
                                 </div>
                               </div>
@@ -1919,7 +1919,7 @@
                               v-for="comment in orders.order_comments"
                             >
                               <div class="media">
-                               
+
                                 <div class="media-body ml-3" v-if="comment.customer != null">
                                   <div
                                     class="d-flex justify-content-between mb-1"
@@ -1968,7 +1968,7 @@
                                       text-black-50 text-right
                                     "
                                   >
-                                    {{ comment.created_at }} 
+                                    {{ comment.created_at }}
                                   </h5>
                                 </div>
                                 <fieldset class="form-label-group">
@@ -2008,7 +2008,7 @@
                                 ></textarea>
                                 <small class="form-text text-danger" v-if="errors.has('message')" v-text="errors.get('message')"></small>
 
-                                
+
                               </fieldset>
                               <div class="addclip-input pr-3 pb-2">
                                 <button class="btn btn-primary" @click="saveComments()">Send</button>
@@ -2029,7 +2029,7 @@
 
     <div id="kt_notes_panel" class="offcanvas offcanvas-right kt-color-panel p-5 offcanvas-on" v-if="display_form == 1">
 		<div class="offcanvas-header d-flex align-items-center justify-content-between pb-3">
-			<h4 class="font-size-h4 font-weight-bold m-0">Add Note
+			<h4 class="font-size-h4 font-weight-bold m-0">เพิ่มหมายเหตุ
 			</h4>
 			<a href="#" class="btn btn-sm btn-icon btn-light btn-hover-primary" id="kt_notes_panel_close" @click="display_form = !display_form">
 				<svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -2039,18 +2039,18 @@
 		</div>
 		<form id="myform" novalidate="novalidate">
 			<div class="form-group">
-			  <label class="text-dark" for="exampleInputText1">Title of a Note</label>
+			  <label class="text-dark" for="exampleInputText1">เรื่อง</label>
 			  <input type="text" name="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" v-model="notes_title">
 			  <small class="form-text text-danger" v-if="errors.has('title')" v-text="errors.get('title')"></small>
 
 			</div>
 			<div class="form-group">
-			  <label class="text-dark">Note</label>
-			  <textarea class="form-control" id="label-textarea2" rows="6" placeholder="Write A Text" v-model="notes"></textarea>
+			  <label class="text-dark">หมายเหตุ</label>
+			  <textarea class="form-control" id="label-textarea2" rows="6" placeholder="" v-model="notes"></textarea>
         <small class="form-text text-danger" v-if="errors.has('notes')" v-text="errors.get('notes')"></small>
 
 			</div>
-			<button type="button" class="btn btn-primary" @click="saveNotes()">Add Note</button>
+			<button type="button" class="btn btn-primary" @click="saveNotes()">เพิ่มหมายเหตุ</button>
 		  </form>
 	</div>
   </div>
@@ -2113,8 +2113,8 @@ export default {
             this.delivery_boy_id = this.orders.delivery_boy_id;
             this.tax_total = this.orders.total_tax;
             this.shipping_cost = this.orders.shipping_cost;
-          
-          var sub_total = 0;  
+
+          var sub_total = 0;
           var total_discount = 0;
           for (var i = 0; i < this.orders.order_detail.length; i++) {
             if (this.orders.order_detail[i].product_discount > 0)
@@ -2123,15 +2123,15 @@ export default {
               console.log(total_discount);
             }
             sub_total = sub_total + (parseFloat(this.orders.order_detail[i].product_price) * parseFloat(this.orders.order_detail[i].product_qty));
-            
+
           }
           this.discountTotal = "-"+parseFloat(total_discount).toFixed(2);
           this.subtotal = parseFloat(sub_total).toFixed(2);
           this.total = this.orders.order_price;
           this.coupon_amount = (this.orders.coupon_amount != null && this.orders.coupon_amount != 'null' && this.orders.coupon_amount != '') ? this.orders.coupon_amount : '0.00';
           this.coupon_amount = "-"+this.coupon_amount;
-          
-          
+
+
         })
         .finally(() => (this.$parent.loading = false));
     },
@@ -2252,8 +2252,8 @@ export default {
         .finally(() => console.log("working"));
     },
   },
-  mounted() { 
-    
+  mounted() {
+
     var token = localStorage.getItem("token");
     this.token = {
       headers: {
@@ -2264,7 +2264,7 @@ export default {
     this.fetchDeliveryBoys();
     this.fetchSetting();
 
-    
+
   },
   props: ["loading","globalSettings"],
 };

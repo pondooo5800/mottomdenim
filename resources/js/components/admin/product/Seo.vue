@@ -27,8 +27,8 @@
   </div>
   <div class="row">
     <div class="col-12 d-flex justify-content-end">
-      <a href="#" data-toggle="pill" @click.prevent="setActive('ad-info-tab')" :class="{ active: isActive('ad-info-tab') }" class="btn btn-dark swipe-to-top cta ">Back</a>
-      <a href="#" data-toggle="pill" @click.prevent="addProduct()" class="btn btn-primary  ml-2">Save</a>
+      <a href="#" data-toggle="pill" @click.prevent="setActive('ad-info-tab')" :class="{ active: isActive('ad-info-tab') }" class="btn btn-dark swipe-to-top cta ">ย้อนกลับ</a>
+      <a href="#" data-toggle="pill" @click.prevent="addProduct()" class="btn btn-primary  ml-2">บันทึก</a>
     </div>
   </div>
 </div>

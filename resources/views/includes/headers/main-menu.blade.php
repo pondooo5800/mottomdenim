@@ -22,9 +22,8 @@
         @elseif($menu[$menuloop]['type'] == 'page')
             @php $link = url('/').$menu[$menuloop]['page'] @endphp
         @endif
-
         <li class="nav-item">
-          <a style="color: #333333;font-size: 20px;font-weight: lighter" class="nav-link " href="{{$link}}">
+          <a style="color: #333333;font-size: 20px;font-weight: normal" class="nav-link " href="{{$link}}">
                 <?php $index = 0; ?>
                 @if(isset($menu[$menuloop]['language_id']))
                   @php $index = array_search($data['selectedLenguage'],$menu[$menuloop]['language_id']) @endphp

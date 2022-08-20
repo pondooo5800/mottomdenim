@@ -77,7 +77,6 @@
                     if (data.status == 'Success') {
                         const templ = document.getElementById("product-card-template");
                         for (i = 0; i < data.data.length; i++) {
-                            console.log(data.data.length);
 
                             const clone = templ.content.cloneNode(true);
                             // clone.querySelector(".single-text-chat-li").classList.add("bg-blue-100");
@@ -150,12 +149,19 @@
                             clone.querySelector(".display-rating").innerHTML = rating;
                             clone.querySelector(".display-rating1").innerHTML = rating;
 
+                            // console.log(data.data[i].product_gallary.detail[1].gallary_path);
+                            // console.log(data.data[i].product_gallary_detail[1].detail[1].gallary_path);
+                            // console.log(data.data[i].product_gallary_detail.length);
                             if (data.data[i].product_gallary != null && data.data[i].product_gallary !=
                                 'null' && data.data[i].product_gallary != '') {
                                 if (data.data[i].product_gallary.detail != null && data.data[i].product_gallary
                                     .detail != 'null' && data.data[i].product_gallary.detail != '') {
                                     clone.querySelector(".product-card-image").setAttribute('src', data.data[i]
                                         .product_gallary.detail[1].gallary_path);
+                                        if (data.data[i].product_gallary_detail.length > 1) {
+                                            clone.querySelector(".product-card-image-sub").setAttribute('src', data.data[i]
+                                            .product_gallary_detail[1].detail[1].gallary_path);
+                                        }
                                 }
                             }
                             if (data.data[i].detail != null && data.data[i].detail != 'null' && data.data[i]
@@ -203,7 +209,7 @@
                                      + '<span>' +data.data[i].product_price_symbol + '</span>';
                                 }
                             } else {
-                                console.log(data.data[i].product_variable_price_symbol,"variable price");
+                                // console.log(data.data[i].product_variable_price_symbol,"variable price");
                                     clone.querySelector(".product-card-price").innerHTML = data.data[i].product_variable_price_symbol;
                             }
 
@@ -452,10 +458,10 @@
 
                             const clone = templ.content.cloneNode(true);
                             // clone.querySelector(".single-text-chat-li").classList.add("bg-blue-100");
-                            clone.querySelector(".slider-navigation-title").innerHTML = data.data[i]
-                                .slider_title;
-                            clone.querySelector(".slider-navigation-desc").innerHTML = data.data[i]
-                                .slider_description;
+                            // clone.querySelector(".slider-navigation-title").innerHTML = data.data[i]
+                            //     .slider_title;
+                            // clone.querySelector(".slider-navigation-desc").innerHTML = data.data[i]
+                            //     .slider_description;
                             clone.querySelector(".slider-navigation-url").setAttribute('href', data.data[i]
                                 .slider_url);
 

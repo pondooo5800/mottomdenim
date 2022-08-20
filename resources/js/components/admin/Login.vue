@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid h-100 bg-image" style="background-image: url(/assets/images/misc/bg-login.png);">
+<div class="container-fluid h-100 bg-image" style="background-image: url(/assets/images/misc/bg.png);">
 		<div class="d-flex justify-content-center align-items-center h-100">
 			<div class="row w-100 justify-content-center">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-4">
@@ -8,13 +8,10 @@
 							class="card-header align-items-center  justify-content-center border-0 h-100px flex-column">
 							<div class="card-title mb-0">
 								<h3 class="card-label font-weight-bold mb-0 text-body">
-									<img src="/assets/images/misc/logo.png" alt="logo">
+									<img src="/assets/images/misc/logo.png" alt="logo" style="width: 250px;">
 								</h3>
 
 							</div>
-							<h5 class="font-size-h5 mb-0 mt-3 text-dark">
-								Please login to your account.
-							</h5>
 
 						</div>
 						<div class="card-body p-0">
@@ -77,7 +74,7 @@
 
 								<br /><br />
 								<button type="submit" class="btn btn-primary text-white font-weight-bold w-100 py-3">
-									Login
+									เข้าสู่ระบบ
 								</button>
 							</form>
 						</div>
@@ -112,7 +109,7 @@ import ErrorHandling from './../../ErrorHandling'
 					console.log(res.data.user.warehouses);
 					if (res.data.status == 'Success') {
 						var warehouse = [];
-						
+
 						res.data.user.warehouses.forEach(w => {
 							warehouse.push(w.id)
 						});
@@ -123,7 +120,7 @@ import ErrorHandling from './../../ErrorHandling'
 
 						localStorage.setItem('name',res.data.user.name);
 						localStorage.setItem('permissions',res.data.user_permisions);
-						
+
 
 						this.$router.push('/admin/dashboard');
 					}
@@ -139,7 +136,7 @@ import ErrorHandling from './../../ErrorHandling'
 
 						localStorage.setItem('name',res.data.user.name);
 						localStorage.setItem('permissions',res.data.user_permisions);
-						
+
 
 						this.$router.push('/admin/dashboard');
 					}

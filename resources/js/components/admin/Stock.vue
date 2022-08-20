@@ -11,10 +11,10 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Add Stock
+                                           เพิ่ม สต๊อกสินค้า
                                         </h3>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -23,19 +23,19 @@
                             <div class="card card-custom gutter-b bg-white border-0">
                                 <div class="card-body">
                                     <div class="col-md-12">
-                                        <label class="text-body">Products</label>
+                                        <label class="text-body">สินค้า</label>
                                         <fieldset class="form-group mb-3 d-flex">
-                                            <multiselect 
+                                            <multiselect
                                                 v-model="product_id"
-                                                :options="products" 
-                                                :custom-label="nameWithLang" 
-                                                placeholder="Select Product" 
-                                                label="name" 
+                                                :options="products"
+                                                :custom-label="nameWithLang"
+                                                placeholder="Select Product"
+                                                label="name"
                                                 track-by="product_id"
                                                 :multiple="true"
                                                 :taggable="true"
-                                                @select="addProduct" 
-                                                @remove="removeItem"  
+                                                @select="addProduct"
+                                                @remove="removeItem"
                                             >
                                             </multiselect>
                                         </fieldset>
@@ -45,11 +45,11 @@
                                     <div class="col-md-12" v-if="combination_products.length > 0">
                                         <label class="text-body">Select Variation Product</label>
                                         <fieldset class="form-group mb-3 d-flex">
-                                            <multiselect  
+                                            <multiselect
                                                 v-model="combination_product_id"
-                                                :options="combination_products" 
-                                                placeholder="Select Product" 
-                                                label="title" 
+                                                :options="combination_products"
+                                                placeholder="Select Product"
+                                                label="title"
                                                 track-by="product_combination_id"
                                                 :multiple="true"
                                                 :taggable="true"
@@ -61,17 +61,17 @@
                                         <small class="form-text text-danger" v-if="errors.has('product_id')" v-text="errors.get('product_id')"></small>
                                     </div>
 
-                                    
+
                                     <div class="col-12" v-if="display_table">
                                         <div class="table-responsive">
                                             <table class="table table-striped  text-body">
                                                 <thead>
                                                     <tr>
-                                                        <th class="border-0  header-heading" scope="col">Name</th>
+                                                        <th class="border-0  header-heading" scope="col">ชื่อ</th>
                                                         <th class="border-0  header-heading" scope="col">WareHouse</th>
-                                                        <th class="border-0  header-heading" scope="col">Stock Status</th>
-                                                        <th class="border-0  header-heading" scope="col">Quantity</th>
-                                                        <th class="border-0  header-heading" scope="col">Price</th>
+                                                        <th class="border-0  header-heading" scope="col">สถานะ</th>
+                                                        <th class="border-0  header-heading" scope="col">จำนวน</th>
+                                                        <th class="border-0  header-heading" scope="col">ราคา</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -88,7 +88,7 @@
 
                                                         </td>
                                                         <td>
-                                                            
+
                                                             <select v-model="stock.stock_status[index]" class=" js-states form-control bg-transparent">
                                                                 <option value="" disabled>Select Status</option>
                                                                 <option value="IN">IN</option>
@@ -133,7 +133,7 @@
                         <div class="col-lg-12 col-xl-12">
                             <div class="card card-custom gutter-b bg-white border-0">
                                 <div class="card-body">
-                                    <div class="col-md-12"><button class="btn btn-primary" @click="addstock()">Submit</button></div>
+                                    <div class="col-md-12"><button class="btn btn-primary" @click="addstock()">บันทึก</button></div>
                                 </div>
                             </div>
                         </div>
@@ -375,7 +375,7 @@ export default {
       // check if key exists
       const hasKey = "product_combination_id" in removedOption;
       if (hasKey) {
-        if(removedOption.product_combination_id != null && removedOption.product_combination_id != ''){          
+        if(removedOption.product_combination_id != null && removedOption.product_combination_id != ''){
           this.selectedProducts.forEach((el,index) => {
             if(el.product_combination_id == removedOption.product_combination_id){
               this.selectedProducts.splice(index,1);
@@ -385,7 +385,7 @@ export default {
 
             }
           })
-          
+
 
           this.combination_product_id = this.combination_product_id.filter(function (el) {
               return el.product_id != removedOption.product_id &&  el.product_combination_id != removedOption.product_combination_id;

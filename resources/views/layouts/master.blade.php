@@ -29,14 +29,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
-
-
 
 </head>
-
 <body class="animation-s1 {{ $data['direction'] === 'rtl' ? 'bodyrtl' : '' }} ">
 
     {{-- @include('extras.preloader') --}}

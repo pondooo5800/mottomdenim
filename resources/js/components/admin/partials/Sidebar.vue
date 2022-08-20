@@ -7,19 +7,19 @@
       id="tc_aside"
     >
       <!--begin::Brand-->
-      <div class="brand flex-column-auto" id="tc_brand">
+      <div class="brand flex-column-auto" id="tc_brand" style="justify-content:center">
         <!--begin::Logo-->
 
         <router-link to="/admin/dashboard" class="brand-logo">
           <img
             class="brand-image"
-            style="height: 72px"
+            style="height: 50px"
             alt="Logo"
-            src="/assets/images/misc/r.png"
+            src="/assets/images/misc/logo.png"
           />
           <span class="brand-text"
             ><img
-              style="height: 72px"
+              style="height: 70px"
               alt="Logo"
               src="/assets/images/misc/logo.png"
           /></span>
@@ -66,7 +66,7 @@
                       <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                   </span>
-                  <span class="nav-text"> Dashboard </span>
+                  <span class="nav-text"> หน้าหลัก </span>
                 </router-link>
               </li>
 
@@ -109,7 +109,7 @@
                       <polyline points="21 15 16 10 5 21"></polyline>
                     </svg>
                   </span>
-                  <span class="nav-text">Media</span>
+                  <span class="nav-text">สื่อ</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -119,7 +119,7 @@
                   data-parent="#accordion"
                 >
                   <ul class="nav flex-column">
-                    <li
+                    <!-- <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('media-settings')"
                     >
@@ -150,9 +150,9 @@
                           </svg>
                         </span>
 
-                        <span class="nav-text">Media Settings</span>
+                        <span class="nav-text">ตั้งค่า Media</span>
                       </router-link>
-                    </li>
+                    </li> -->
 
                     <li
                       class="nav-item"
@@ -184,7 +184,7 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Manage Media</span>
+                        <span class="nav-text">จัดการ สื่อ</span>
                       </router-link>
                     </li>
                   </ul>
@@ -207,7 +207,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-boxes font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Catalog</span>
+                  <span class="nav-text">แคตตาล็อก</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -248,10 +248,10 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Product Units</span>
+                          <span class="nav-text">หน่วยผลิตภัณฑ์</span>
                         </router-link>
                       </li>
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="
                           $parent.permissions.includes('product-attribute-list')
@@ -321,7 +321,7 @@
                           </span>
                           <span class="nav-text">Product Variations</span>
                         </router-link>
-                      </li>
+                      </li> -->
                       <li
                         class="nav-item"
                         v-if="
@@ -354,7 +354,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Product Brands</span>
+                          <span class="nav-text">แบรนด์สินค้า</span>
                         </router-link>
                       </li>
 
@@ -390,7 +390,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Product Categories</span>
+                          <span class="nav-text">หมวดหมู่</span>
                         </router-link>
                       </li>
 
@@ -425,7 +425,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Products</span>
+                          <span class="nav-text">สินค้า</span>
                           <i class="fas fa-chevron-right fa-rotate-90"></i>
                         </a>
                         <!-- <div class="collapse nav-collapse" id="catalogProduct" data-parent="#accordion1">
@@ -447,7 +447,7 @@
                               to="/admin/products"
                               class="nav-link mini-sub-nav-link"
                             >
-                              <span class="nav-text">List Products</span>
+                              <span class="nav-text">รายการสินค้า</span>
                             </router-link>
                           </li>
 
@@ -461,7 +461,7 @@
                               to="/admin/add-product"
                               class="nav-link mini-sub-nav-link"
                             >
-                              <span class="nav-text">Add Product</span>
+                              <span class="nav-text">เพิ่ม สินค้า</span>
                             </router-link>
                           </li>
                         </ul>
@@ -508,7 +508,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Product Reviews</span>
+                          <span class="nav-text">รีวิว สินค้า</span>
                         </router-link>
                       </li>
                     </ul>
@@ -529,7 +529,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-boxes font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Stock / Inventory</span>
+                  <span class="nav-text">สต๊อกสินค้า</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
 
@@ -571,7 +571,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">List Stock</span>
+                          <span class="nav-text">รายการสต๊อกสินค้า</span>
                         </router-link>
                       </li>
                       <li
@@ -604,10 +604,10 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Add Stock</span>
+                          <span class="nav-text">เพื่มสต๊อกสินค้า</span>
                         </router-link>
                       </li>
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="
                           $parent.permissions.includes('stock-transfer-list')
@@ -676,7 +676,7 @@
                           </span>
                           <span class="nav-text">Add Stock Transfer</span>
                         </router-link>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -684,7 +684,7 @@
 
               <!--begin::Nav Quotations -->
 
-              <li
+              <!-- <li
                 class="nav-item"
                 v-if="$parent.permissions.includes('quotation-list')"
               >
@@ -844,11 +844,11 @@
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> -->
 
               <!--begin::Nav Purchase -->
 
-              <li
+              <!-- <li
                 class="nav-item"
                 v-if="$parent.permissions.includes('purchase-list')"
               >
@@ -940,7 +940,7 @@
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> -->
 
               <!--begin::Nav Sell / Orders -->
 
@@ -958,7 +958,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-clipboard-check font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Sell / Orders</span>
+                  <span class="nav-text">ออเดอร์</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -1031,10 +1031,10 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Orders</span>
+                        <span class="nav-text">ออเดอร์</span>
                       </router-link>
                     </li>
-                    <li
+                    <!-- <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('sale-manage')"
                     >
@@ -1066,8 +1066,8 @@
                         </span>
                         <span class="nav-text">Add Sale</span>
                       </router-link>
-                    </li>
-                    <li
+                    </li> -->
+                    <!-- <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('pos')"
                     >
@@ -1096,13 +1096,13 @@
                         </span>
                         <span class="nav-text">POS</span>
                       </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </li>
 
               <!--begin::Nav Returns -->
-              <li
+              <!-- <li
                 class="nav-item"
                 v-if="$parent.permissions.includes('return')"
               >
@@ -1126,7 +1126,7 @@
                   data-parent="#accordion"
                 >
                   <ul class="nav flex-column">
-                    <!-- <li
+                    <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('sale-return-list')"
                     >
@@ -1158,7 +1158,7 @@
                         </span>
                         <span class="nav-text">Sale Returns</span>
                       </router-link>
-                    </li> -->
+                    </li>
                     <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('sale-return-manage')"
@@ -1192,7 +1192,7 @@
                         <span class="nav-text">Add Sale Returns</span>
                       </router-link>
                     </li>
-                    <!-- <li
+                    <li
                       class="nav-item"
                       v-if="
                         $parent.permissions.includes('purchase-return-list')
@@ -1226,7 +1226,7 @@
                         </span>
                         <span class="nav-text">Purchase Returns</span>
                       </router-link>
-                    </li> -->
+                    </li>
                     <li
                       class="nav-item"
                       v-if="
@@ -1264,10 +1264,10 @@
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> -->
 
               <!--begin::Nav Accounts -->
-              <li
+              <!-- <li
                 class="nav-item"
                 v-if="$parent.permissions.includes('account')"
               >
@@ -1494,7 +1494,7 @@
                       </router-link>
                     </li>
 
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                                         <a href="accounts-balance-sheet.html" class="nav-link sub-nav-link">
                                             <span class="svg-icon nav-icon d-flex justify-content-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
@@ -1533,10 +1533,10 @@
                                             </span>
                                             <span class="nav-text">Payment Account Report</span>
                                         </a>
-                                    </li> -->
+                                    </li>
                   </ul>
                 </div>
-              </li>
+              </li> -->
 
               <!--begin::Nav Blog -->
 
@@ -1580,7 +1580,7 @@
                       <polyline points="21 15 16 10 5 21"></polyline>
                     </svg>
                   </span>
-                  <span class="nav-text">News / Blogs</span>
+                  <span class="nav-text">บทความ</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -1620,10 +1620,10 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Manage Blogs</span>
+                        <span class="nav-text">จัดการบทความ</span>
                       </router-link>
                     </li>
-                    <li
+                    <!-- <li
                       class="nav-item"
                       v-if="$parent.permissions.includes('blog-manage')"
                     >
@@ -1656,14 +1656,14 @@
 
                         <span class="nav-text">Blog Categories</span>
                       </router-link>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </li>
 
               <!--begin::Nav Content Page -->
 
-              <li
+              <!-- <li
                 class="nav-item"
                 v-if="$parent.permissions.includes('content-page-manage')"
               >
@@ -1750,7 +1750,7 @@
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li> -->
 
               <!--begin::Nav People -->
               <li
@@ -1767,7 +1767,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-user-friends font-size-h4"></i>
                   </span>
-                  <span class="nav-text">People</span>
+                  <span class="nav-text">จัดการสิทธิผู้ใช้งาน</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -1778,7 +1778,7 @@
                 >
                   <div id="accordion2">
                     <ul class="nav flex-column">
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="$parent.permissions.includes('role-list')"
                       >
@@ -1810,7 +1810,7 @@
                           </span>
                           <span class="nav-text">Role</span>
                         </router-link>
-                      </li>
+                      </li> -->
                       <!-- <li class="nav-item">
                                             <router-link to="/admin/biller" class="nav-link sub-nav-link">
                                                 <span class="svg-icon nav-icon d-flex justify-content-center">
@@ -1851,11 +1851,11 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Customers</span>
+                          <span class="nav-text">ลูกค้า</span>
                         </router-link>
                       </li>
 
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="$parent.permissions.includes('supplier-list')"
                       >
@@ -1887,7 +1887,7 @@
                           </span>
                           <span class="nav-text">Suppliers</span>
                         </router-link>
-                      </li>
+                      </li> -->
 
                       <li
                         class="nav-item"
@@ -1919,7 +1919,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Users</span>
+                          <span class="nav-text">ผู้ใช้งาน(เจ้าหน้าที่)</span>
                         </router-link>
                       </li>
                     </ul>
@@ -1937,7 +1937,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-chart-line font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Reports</span>
+                  <span class="nav-text">รายงาน</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -1974,10 +1974,10 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Profit / Loss</span>
+                        <span class="nav-text">รายได้</span>
                       </router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <router-link to="/admin/purchase-report"
                         class="nav-link sub-nav-link"
                       >
@@ -2005,7 +2005,7 @@
                         </span>
                         <span class="nav-text">Purchase Report</span>
                       </router-link>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item">
                       <a href="sale-report.html" class="nav-link sub-nav-link">
                         <span
@@ -2036,7 +2036,7 @@
 
 
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <router-link
                       to="/admin/supplier-report"
                         class="nav-link sub-nav-link"
@@ -2065,7 +2065,7 @@
                         </span>
                         <span class="nav-text">Supplier Report</span>
                       </router-link>
-                    </li>
+                    </li> -->
 
                      <li class="nav-item">
                       <router-link
@@ -2094,7 +2094,7 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Stock History Report</span>
+                        <span class="nav-text">ประวัติการสต๊อกสินค้า</span>
                       </router-link>
                     </li>
 
@@ -2126,7 +2126,7 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Customer Report</span>
+                        <span class="nav-text">ลูกค้า</span>
                       </router-link>
                     </li>
                     <li class="nav-item">
@@ -2153,10 +2153,10 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Stock Report</span>
+                        <span class="nav-text">สต๊อกสินค้า</span>
                       </router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <router-link
                         to="/admin/out-of-stock-report"
                         class="nav-link sub-nav-link"
@@ -2183,10 +2183,10 @@
                             />
                           </svg>
                         </span>
-                        <span class="nav-text">Out Of Stock Report</span>
+                        <span class="nav-text">สต๊อกสินค้าที่หมด</span>
                       </router-link>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                       <router-link
                         to="/admin/stock-transfer-report"
                         class="nav-link sub-nav-link"
@@ -2215,8 +2215,8 @@
                         </span>
                         <span class="nav-text">Stock Transfer Report</span>
                       </router-link>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                       <router-link to="/admin/expense-report"
                         class="nav-link sub-nav-link"
                       >
@@ -2244,7 +2244,7 @@
                         </span>
                         <span class="nav-text">Expense Report</span>
                       </router-link>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </li>
@@ -2265,7 +2265,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-cogs font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Business Settings</span>
+                  <span class="nav-text">ตั้งค่า</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -2310,7 +2310,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">General Settings</span>
+                          <span class="nav-text">ตั้งค่าข้อมูลทั่วไป</span>
                         </router-link>
                       </li>
 
@@ -2344,7 +2344,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Warehouse</span>
+                          <span class="nav-text">คลังสินค้า</span>
                         </router-link>
                       </li>
                       <li
@@ -2377,10 +2377,10 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Language</span>
+                          <span class="nav-text">ภาษา</span>
                         </router-link>
                       </li>
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="$parent.permissions.includes('currency-list')"
                       >
@@ -2412,8 +2412,8 @@
                           </span>
                           <span class="nav-text">Currency</span>
                         </router-link>
-                      </li>
-                      <li
+                      </li> -->
+                      <!-- <li
                         class="nav-item"
                         v-if="
                           $parent.permissions.includes('payment-methods-list')
@@ -2447,7 +2447,7 @@
                           </span>
                           <span class="nav-text">Payment Methods</span>
                         </router-link>
-                      </li>
+                      </li> -->
 
                       <li
                         class="nav-item"
@@ -2481,7 +2481,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Shipping Methods</span>
+                          <span class="nav-text">การจัดส่ง</span>
                         </router-link>
                       </li>
                       <li
@@ -2514,7 +2514,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Tax Settings</span>
+                          <span class="nav-text">ภาษี</span>
                         </router-link>
                       </li>
                       <li
@@ -2549,7 +2549,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Tax Rate Settings</span>
+                          <span class="nav-text">เรตภาษี</span>
                         </router-link>
                       </li>
 
@@ -2583,7 +2583,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Coupon Settings</span>
+                          <span class="nav-text">คูปอง</span>
                         </router-link>
                       </li>
                     </ul>
@@ -2609,7 +2609,7 @@
                   <span class="svg-icon nav-icon">
                     <i class="fas fa-cogs font-size-h4"></i>
                   </span>
-                  <span class="nav-text">Website Settings</span>
+                  <span class="nav-text">ตั้งค่าเว็บไซต์</span>
                   <i class="fas fa-chevron-right fa-rotate-90"></i>
                 </a>
                 <div
@@ -2654,10 +2654,10 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">General Settings</span>
+                          <span class="nav-text">ข้อมูลทั่วไป</span>
                         </router-link>
                       </li>
-                      <li
+                      <!-- <li
                         class="nav-item"
                         v-if="$parent.permissions.includes('home-page-builder')"
                       >
@@ -2693,7 +2693,7 @@
                           </span>
                           <span class="nav-text">Home Page Builder</span>
                         </router-link>
-                      </li>
+                      </li> -->
                       <li
                         class="nav-item"
                         v-if="$parent.permissions.includes('menu-builder')"
@@ -2728,7 +2728,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Menu Builder</span>
+                          <span class="nav-text">เมนู</span>
                         </router-link>
                       </li>
                       <li
@@ -2767,7 +2767,7 @@
                               />
                             </svg>
                           </span>
-                          <span class="nav-text">Slider Banners</span>
+                          <span class="nav-text">สไลด์</span>
                         </router-link>
                       </li>
                       <li

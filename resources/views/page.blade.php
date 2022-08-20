@@ -1,6 +1,5 @@
 @extends('layouts.master')
 @section('content')
-
     @if (isset($page->page_detail))
 
         <section class="pro-content">
@@ -23,7 +22,7 @@
                 </div>
             </section>
 
-        </section>       
+        </section>
     @else
         <h2>comming soon</h2>
     @endif

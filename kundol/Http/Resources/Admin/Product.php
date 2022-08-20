@@ -34,14 +34,14 @@ class Product extends JsonResource
                 'detail' => ProductDetailResource::collection($this->whenLoaded('detail')),
             ];
         }
-        
+
         $daysToAdd = isset(getSetting()['new_bage_on_product_card_visibility']) ? getSetting()['new_bage_on_product_card_visibility'] : 30;
         $new = false;
         $createdAtExtended = $this->created_at->addDays($daysToAdd);
         $currentDate = Carbon::now();
         $new = $createdAtExtended->gt($currentDate);
 
-        
+
 
         $this->exchange_rate = 1;
         $currency = [];
@@ -56,9 +56,9 @@ class Product extends JsonResource
         $discountPercentage = 0;
         if ($this->price > 0)
         {
-            $discountPercentage = $this->discount_price > 0 ? 
+            $discountPercentage = $this->discount_price > 0 ?
             round( (($this->price - $this->discount_price)/$this->price)*100) : 0;
-        }    
+        }
         if (\Request::route()->getName() == 'products.index') {
             $imagesOrder = $this->productGallaryDetail()->orderBy('id', 'asc')->pluck('gallary_id');
             $images = collect();
@@ -105,9 +105,9 @@ class Product extends JsonResource
                 'reviews' => ReviewResource::collection($this->review),
                 'comments' => CommentResource::collection($this->comment),
                 'product_price_symbol' => !isset($currency->symbol_position) ? $this->price * $this->exchange_rate : ($currency->symbol_position == 'right' ? ($this->price * $this->exchange_rate) . ' ' . $currency->code : $currency->code . ' ' . ($this->price * $this->exchange_rate)),
-                'product_variable_price_symbol' => 
-                !isset($currency->symbol_position) ? $variableMinPrice * $this->exchange_rate .'-'.$variableMaxPrice * $this->exchange_rate: 
-                ($currency->symbol_position == 'right' 
+                'product_variable_price_symbol' =>
+                !isset($currency->symbol_position) ? $variableMinPrice * $this->exchange_rate .'-'.$variableMaxPrice * $this->exchange_rate:
+                ($currency->symbol_position == 'right'
                 ? '('.($variableMinPrice * $this->exchange_rate) . ' ' . $currency->code .'-'.($variableMaxPrice * $this->exchange_rate) . ' ' . $currency->code.')' : '('.$currency->code . ' ' . ($variableMinPrice * $this->exchange_rate).'-'.$currency->code . ' ' . ($variableMaxPrice * $this->exchange_rate).')'),
             ];
         }

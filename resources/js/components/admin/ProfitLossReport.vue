@@ -26,7 +26,7 @@
                   >
                     <div class="card-title mb-0">
                       <h3 class="card-label mb-0 font-weight-bold text-body">
-                        Profit And Loss Report
+                        รายงานรายได้
                       </h3>
                     </div>
                     <div class="icons d-flex"></div>
@@ -41,7 +41,7 @@
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
-                          <label>Warehouse Id</label>
+                          <label>คลังสินค้า</label>
                           <select class="form-control" v-model="warehouse_id">
                             <option value="">all</option>
                             <option
@@ -55,7 +55,7 @@
                       </div>
 
                       <div class="col-md-3">
-                        <label>Category</label>
+                        <label>หมวดหมู่</label>
 
                         <select class="form-control" v-model="category_id">
                           <option value="">all</option>
@@ -69,7 +69,7 @@
                       </div>
 
                       <div class="col-md-3">
-                        <label>Product Id</label>
+                        <label>สินค้า</label>
                         <select class="form-control" v-model="product_id">
                           <option value="">all</option>
                           <option
@@ -102,7 +102,7 @@
                             id="productUnitTable_length"
                           >
                             <label
-                              >Show
+                              >แสดง
                               <select
                                 name="productUnitTable_length"
                                 class=""
@@ -117,7 +117,7 @@
                                 <option value="500">500</option>
                                 <option value="1000">1000</option>
                               </select>
-                              entries</label
+                              รายการ</label
                             >
                           </div>
                           <table
@@ -148,7 +148,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Pid
+                                  รหัส
                                 </th>
                                 <th
                                   class="sorting"
@@ -158,7 +158,7 @@
                                   aria-label="stock: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Product Name
+                                  ชื่อสินค้า
                                 </th>
                                 <th
                                   class="sorting"
@@ -168,7 +168,7 @@
                                   aria-label="Phone No: activate to sort column ascending"
                                   style="width: 81.8109px"
                                 >
-                                  Profit
+                                  กำไร
                                 </th>
                                 <th
                                   class="no-sort sorting_disabled"
@@ -177,7 +177,7 @@
                                   aria-label="Action"
                                   style="width: 53.1891px"
                                 >
-                                  Loss
+                                  ขาดทุน
                                 </th>
                               </tr>
                             </thead>
@@ -251,13 +251,13 @@
                                   fetchStockOnHand(pagination.prev_page_url)
                                 "
                               >
-                                Previous
+                                ก่อนหน้า
                               </button>
                             </li>
 
                             <li class="disabled">
                               <a class="page-link text-dark" href="#"
-                                >Page {{ pagination.current_page }} of
+                                >หน้า {{ pagination.current_page }} ถึง
                                 {{ pagination.last_page }}</a
                               >
                             </li>
@@ -275,7 +275,7 @@
                                   fetchStockOnHand(pagination.next_page_url)
                                 "
                               >
-                                Next
+                                ถัดไป
                               </button>
                             </li>
                           </ul>

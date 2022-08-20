@@ -11,10 +11,10 @@
                         <div class="card-header align-items-center  border-bottom-dark px-0">
                            <div class="card-title mb-0">
                               <h3 class="card-label mb-0 font-weight-bold text-body">
-                                 {{this.$route.params.id ? 'Edit' : 'Add'}} Product
+                                 {{this.$route.params.id ? 'แก้ไข' : 'เพิ่ม'}} สินค้า
                               </h3>
                            </div>
-                           
+
                         </div>
                         <div class="card-body pb-0 pt-4 ">
                            <div class="d-flex justify-content-center">
@@ -26,7 +26,7 @@
                                           <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"></path>
                                           <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"></path>
                                        </svg>
-                                       Basic Info
+                                       ข้อมูลทั่วไป
                                     </a>
                                  </li>
                                  <li class="nav-item">
@@ -35,7 +35,7 @@
                                           <path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"></path>
                                           <path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"></path>
                                        </svg>
-                                       Advance Info
+                                      ข้อมูลขั้นสูง
                                     </a>
                                  </li>
                                  <li class="nav-item">
@@ -147,7 +147,7 @@ export default {
                   this.product.category_id.splice(this.product.category_id.indexOf(value),value);
                }
            }
-           
+
         },
         setTitle(value, index){
             this.product.title[index] = value;
@@ -224,7 +224,7 @@ export default {
            this.product[name] = value;
         },
         setCombinationSku(name, value){
-         //   alert(value+'  '+name); 
+         //   alert(value+'  '+name);
            this.product[name] = value;
         },
         addProduct() {
@@ -271,7 +271,7 @@ export default {
                      this.$toaster.error(error.response.data.message)
 						}
 						else{
-                     
+
                      console.log(error.response.data.errors);
                      const propertyNames = Object.keys(error.response.data.errors);
                      propertyNames.forEach(key => {
@@ -287,12 +287,12 @@ export default {
         fetchProduct(id) {
             this.$parent.loading = true;
             var page_url = "/api/admin/product/"+id+"?getCategory=1&getDetail=1";
-            
+
             var responseData = {};
 
             axios.get(page_url, this.token).then(res => {
                this.edit = true;
-               
+
                this.product.seo_meta_tag = res.data.data.seo_meta_tag;
                this.product.seo_desc = res.data.data.seo_desc;
                this.product.sku = res.data.data.product_sku;
@@ -307,7 +307,7 @@ export default {
                this.product.product_type = res.data.data.product_type;
                this.product.product_status = res.data.data.product_status;
                this.product.brand_id = res.data.data.product_brand == null ? '' : res.data.data.product_brand.brand_id;
-               
+
                if(res.data.data.category != null){
                   for(var i =0; i < res.data.data.category.length; i++){
                      this.product.category_id.push(res.data.data.category[i].category_detail.id);
@@ -375,12 +375,12 @@ export default {
       //               }
       //           })
       //           .finally(() => (this.$parent.$parent.loading = false));
-            
+
       //   },
 
     },
     mounted() {
-        
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {
@@ -394,7 +394,7 @@ export default {
         }
 
       //   this.getLastSku();
-     
+
     }
 };
 </script>

@@ -585,17 +585,25 @@
 }
 
 @charset "UTF-8";
+/* IBM-Plex-Sans-Thai-regular - thai_latin */
 @font-face {
-  font-family: "kanit-Regular";
-  src: url(/fonts/kanit-Regular.eot?5ce9af918dfe272afe4bf0fbe8db8f4f?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Regular.woff?ed43f025376d3a35b3c7b4ed3f2a44ad) format("woff"), url(/fonts/kanit-Regular.ttf?3cd786652b8a2e9d41f210cb1a527ff6) format("truetype"), url(/fonts/kanit-Regular.svg?53f17df2c8e31c44e2769bbcc14857c9#kanit-Regular) format("svg");
-  font-weight: normal;
+  font-family: "IBM-Plex-Sans-Thai";
   font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2);
+  /* IE9 Compat Modes */
+  src: local(""), url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff2?8af554bfc651d9c772e91c2002999c4c) format("woff2"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai) format("svg");
+  /* Legacy iOS */
 }
+/* IBM-Plex-Sans-Thai-700 - thai_latin */
 @font-face {
-  font-family: "kanit-Bold";
-  src: url(/fonts/kanit-Bold.eot?555bdf5e257a575fcb15e9e2053b1e5e?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Bold.woff?bad9ae1fd1f6513d0a145d7a409b48ac) format("woff"), url(/fonts/kanit-Bold.ttf?079ca05d3ded9bc107ab8a8da013be22) format("truetype"), url(/fonts/kanit-Bold.svg?0a853e321098feca19cd0bc844807e95#/kanit-Bold) format("svg");
-  font-weight: normal;
+  font-family: "IBM-Plex-Sans-Thai";
   font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35);
+  /* IE9 Compat Modes */
+  src: local(""), url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff2?9271e4af47ca578ad2b006d1e927712d) format("woff2"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#IBM-Plex-Sans-Thai) format("svg");
+  /* Legacy iOS */
 }
 /*!
  * Font Awesome Free 6.1.0 by @fontawesome - https://fontawesome.com
@@ -13653,7 +13661,7 @@ readers do not read off random characters that represent icons */
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "kanit", sans-serif;
+  --font-family-sans-serif: "IBM-Plex-Sans-Thai", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -13676,7 +13684,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -19221,7 +19229,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -19323,7 +19331,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -23641,7 +23649,7 @@ h3 {
 }
 p {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 
 .date-tag {
@@ -23690,11 +23698,11 @@ html.boxed body {
 html, body {
   padding: 0;
   margin: 0;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 
 h2, h3, h4, h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 700;
 }
 
@@ -23755,7 +23763,7 @@ a:hover {
   margin-top: -11px;
 }
 .pro-content .pro-heading-title h2 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 1.5;
   text-transform: uppercase;
   text-align: center;
@@ -23776,7 +23784,7 @@ a:hover {
   padding-bottom: 35px;
 }
 .page-heading-title h2 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
@@ -23864,7 +23872,7 @@ a:hover {
 }
 
 a {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 
 .btn, a {
@@ -25244,10 +25252,10 @@ a:hover, .btn-link:hover {
 }
 
 .btn-secondary:hover {
-  background-color: #0A4166;
+  background-color: #000;
 }
 .btn-secondary:before {
-  background-color: #0A4166;
+  background-color: black;
 }
 
 .btn-primary:hover {
@@ -25405,7 +25413,7 @@ a:hover, .btn-link:hover {
           animation: slide-down 0.7s;
   text-align: center;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   padding: 0px 10px 3px 10px;
   margin-top: -60px;
   -webkit-animation: news-ani 1.2s forwards;
@@ -25453,7 +25461,7 @@ a:hover, .btn-link:hover {
 }
 #newsletterModal .modal-body .promo-box .text-01 {
   z-index: 999;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 5px;
@@ -25694,7 +25702,7 @@ iframe#instagram-embed-0 .logged-in .Header {
   align-items: flex-end;
 }
 .modal .modal-dialog .modal-body .pro-description .pro-price ins {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25705,7 +25713,7 @@ iframe#instagram-embed-0 .logged-in .Header {
   line-height: 1;
 }
 .modal .modal-dialog .modal-body .pro-description .pro-price del {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #6c757d;
   text-decoration: line-through;
   margin-left: 10px;
@@ -25864,12 +25872,12 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   z-index: 99;
 }
 .banners-content .container-fluid .banner-caption h2, .banners-content .container-sm .banner-caption h2, .banners-content .container-md .banner-caption h2, .banners-content .container-lg .banner-caption h2, .banners-content .container-xl .banner-caption h2 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   margin: 0;
 }
 .banners-content .container-fluid .banner-caption h2 small, .banners-content .container-sm .banner-caption h2 small, .banners-content .container-md .banner-caption h2 small, .banners-content .container-lg .banner-caption h2 small, .banners-content .container-xl .banner-caption h2 small {
   display: block;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
 }
 .banners-content .container-fluid .banner-caption h4, .banners-content .container-sm .banner-caption h4, .banners-content .container-md .banner-caption h4, .banners-content .container-lg .banner-caption h4, .banners-content .container-xl .banner-caption h4 {
@@ -26032,13 +26040,13 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .fullwidth-banner .parallax-banner-text h2 {
   font-size: 5rem;
   line-height: 1;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #fff;
   margin: 0;
 }
 .fullwidth-banner .parallax-banner-text h4 {
   font-size: 40px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 600;
   color: #fff;
   line-height: 1.5;
@@ -26080,7 +26088,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   z-index: 9;
 }
 .product-2x .icon-liked .badge {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   position: absolute;
   right: 0;
   top: -5px;
@@ -26140,7 +26148,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   z-index: 9;
 }
 .product-2x article .icon-liked .badge {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   position: absolute;
   right: 0;
   top: -5px;
@@ -26258,7 +26266,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   display: none;
 }
 .product article .content .tag {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #6c757d;
   text-transform: uppercase;
@@ -26270,7 +26278,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   text-align: center;
 }
 .product article .content .title {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26290,7 +26298,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   outline: none;
 }
 .product article .content .price {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26460,7 +26468,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 }
 .product-ad article .pro-options .selection-color ul li, .product-ad article .pro-options .selection-size ul li {
   margin-right: 5px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #6c757d;
   line-height: 12px;
   margin-top: 1px;
@@ -26483,7 +26491,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-right: 5px;
 }
 .product-ad article .tag {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #6c757d;
   text-transform: uppercase;
@@ -26579,7 +26587,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-bottom: 0;
 }
 .product-ad .detail .price {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26696,7 +26704,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: #dee2e6;
   border: 1px solid #dee2e6;
   color: #212529;
@@ -26820,7 +26828,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   align-items: center;
 }
 .product2 .pricetag .price {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26902,7 +26910,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   color: #6c757d;
 }
 .product2 article .content .tag {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #6c757d;
   text-transform: uppercase;
@@ -26913,7 +26921,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   text-align: left;
 }
 .product2 article .content .title {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28828,7 +28836,7 @@ article:hover .btn-hover {
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   border-bottom: 1px solid #dee2e6;
   color: #111;
   padding: 5px 15px;
@@ -29055,22 +29063,22 @@ article:hover .btn-hover {
 }
 .paymentcard .formpaytree input {
   margin-bottom: 20px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #111;
   font-size: 1rem;
   text-align: center;
 }
 .paymentcard .formpaytree input::-moz-placeholder {
   color: #ced4da;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .paymentcard .formpaytree input:-ms-input-placeholder {
   color: #ced4da;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .paymentcard .formpaytree input::placeholder {
   color: #ced4da;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 
 @media screen and (max-width: 576px) {
@@ -29112,7 +29120,7 @@ article:hover .btn-hover {
   top: 4px;
   left: 0px;
   padding: 3px 3px 2px 3px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: #dc3545;
   color: #fff;
   line-height: 10px;
@@ -29160,7 +29168,7 @@ article:hover .btn-hover {
   padding: 0 30px;
 }
 .header-area .alert .pro-description .pro-info strong {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .header-area .alert .pro-description .pro-info .pro-link-dropdown.js-toppanel-link-dropdown {
   display: inline-block;
@@ -29171,7 +29179,7 @@ article:hover .btn-hover {
   position: relative;
   background: 0 0;
   border: none;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #212529;
   text-decoration: underline;
   padding: 0;
@@ -29226,7 +29234,7 @@ article:hover .btn-hover {
 .header-one .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #fff;
   padding-left: 0;
@@ -29308,7 +29316,6 @@ article:hover .btn-hover {
 }
 .header-one .header-maxi {
   padding: 25px 0;
-  padding-bottom: 0px;
 }
 .header-one .header-maxi .search-field-module {
   position: relative;
@@ -29380,7 +29387,7 @@ article:hover .btn-hover {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -29459,7 +29466,7 @@ article:hover .btn-hover {
 .header-one .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-one .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -29580,7 +29587,7 @@ article:hover .btn-hover {
   padding: 0;
 }
 .header-one .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -29627,7 +29634,7 @@ article:hover .btn-hover {
 .header-one .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -29638,7 +29645,7 @@ article:hover .btn-hover {
 }
 .header-one .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -29728,7 +29735,7 @@ article:hover .btn-hover {
   padding: 5px 33px;
 }
 .header-one .header-navbar nav .navbar-collapse ul .nav-item .nav-link {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #fff;
   padding-top: 1.2rem;
@@ -29784,7 +29791,7 @@ article:hover .btn-hover {
 .header-two .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #fff;
   padding-left: 0;
@@ -29956,7 +29963,7 @@ article:hover .btn-hover {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -30035,7 +30042,7 @@ article:hover .btn-hover {
 .header-two .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-two .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -30156,7 +30163,7 @@ article:hover .btn-hover {
   padding: 0;
 }
 .header-two .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -30212,7 +30219,7 @@ article:hover .btn-hover {
 .header-two .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -30223,7 +30230,7 @@ article:hover .btn-hover {
 }
 .header-two .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -30429,7 +30436,7 @@ li:hover > .mega-dropdown-item::before {
 .header-three .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -30604,7 +30611,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -30683,7 +30690,7 @@ li:hover > .mega-dropdown-item::before {
 .header-three .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-three .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -30804,7 +30811,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-three .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -30863,7 +30870,7 @@ li:hover > .mega-dropdown-item::before {
 .header-three .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -30874,7 +30881,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-three .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -31079,7 +31086,7 @@ li:hover > .mega-dropdown-item::before {
 .header-four .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -31244,7 +31251,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -31323,7 +31330,7 @@ li:hover > .mega-dropdown-item::before {
 .header-four .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-four .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -31444,7 +31451,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-four .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -31500,7 +31507,7 @@ li:hover > .mega-dropdown-item::before {
 .header-four .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -31511,7 +31518,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-four .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -31716,7 +31723,7 @@ li:hover > .mega-dropdown-item::before {
 .header-five .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -31881,7 +31888,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -31960,7 +31967,7 @@ li:hover > .mega-dropdown-item::before {
 .header-five .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-five .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -32081,7 +32088,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-five .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -32137,7 +32144,7 @@ li:hover > .mega-dropdown-item::before {
 .header-five .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -32148,7 +32155,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-five .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -32352,7 +32359,7 @@ li:hover > .mega-dropdown-item::before {
 .header-six .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #fff;
   padding-left: 0;
@@ -32524,7 +32531,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -32603,7 +32610,7 @@ li:hover > .mega-dropdown-item::before {
 .header-six .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-six .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -32724,7 +32731,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-six .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -32783,7 +32790,7 @@ li:hover > .mega-dropdown-item::before {
 .header-six .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -32794,7 +32801,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-six .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -33000,7 +33007,7 @@ li:hover > .mega-dropdown-item::before {
 .header-seven .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -33175,7 +33182,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -33254,7 +33261,7 @@ li:hover > .mega-dropdown-item::before {
 .header-seven .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-seven .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -33375,7 +33382,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-seven .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -33434,7 +33441,7 @@ li:hover > .mega-dropdown-item::before {
 .header-seven .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -33445,7 +33452,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-seven .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -33649,7 +33656,7 @@ li:hover > .mega-dropdown-item::before {
 .header-eight .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -33814,7 +33821,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -33893,7 +33900,7 @@ li:hover > .mega-dropdown-item::before {
 .header-eight .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 15px;
 }
 .header-eight .header-maxi .pro-header-right-options li .cart-right .cart-item {
@@ -34014,7 +34021,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-eight .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -34073,7 +34080,7 @@ li:hover > .mega-dropdown-item::before {
 .header-eight .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -34084,7 +34091,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-eight .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -34430,7 +34437,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -34563,7 +34570,7 @@ li:hover > .mega-dropdown-item::before {
 .header-ten .header-mini .dropdown .btn.dropdown-toggle {
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: transparent;
   color: #212529;
   padding-left: 0;
@@ -34724,7 +34731,7 @@ li:hover > .mega-dropdown-item::before {
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -34803,7 +34810,7 @@ li:hover > .mega-dropdown-item::before {
 .header-ten .header-maxi .pro-header-right-options li .cart-right .title-cart {
   color: #212529;
   font-weight: 600;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .header-ten .header-maxi .pro-header-right-options li .cart-right .cart-item {
   color: #212529;
@@ -34927,7 +34934,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-ten .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -34971,7 +34978,7 @@ li:hover > .mega-dropdown-item::before {
 .header-ten .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -34982,7 +34989,7 @@ li:hover > .mega-dropdown-item::before {
 }
 .header-ten .header-navbar nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -35376,7 +35383,7 @@ li:hover > .mega-dropdown-item::before {
   padding: 0;
 }
 .header-mobile .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -35802,7 +35809,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   padding: 0;
 }
 .sticky-header .header-sticky-inner .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
@@ -35842,7 +35849,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
 .sticky-header .header-sticky-inner nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header {
   padding-left: 0;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 800;
   color: #212529;
   margin: 0;
@@ -35853,7 +35860,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
 }
 .sticky-header .header-sticky-inner nav .navbar-collapse ul .mega-dropdown .mega-dropdown-menu .dropdown-header a {
   color: #212529;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0;
@@ -35946,7 +35953,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   padding: 5px 33px;
 }
 .sticky-header .header-sticky-inner nav .navbar-collapse ul .nav-item .nav-link {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -35959,7 +35966,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   top: 16px;
   left: 0px;
   padding: 3px 3px 2px 3px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: #dc3545;
   color: #fff;
   line-height: 10px;
@@ -36129,7 +36136,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   margin-bottom: 1.5rem;
 }
 .footer-one .single-footer h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   margin-bottom: 30px;
@@ -36397,7 +36404,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -36631,7 +36638,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -36882,7 +36889,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -37215,7 +37222,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -37474,7 +37481,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -37654,7 +37661,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -37892,7 +37899,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -38130,7 +38137,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   background-color: #fff;
   color: #6c757d;
   font-weight: 400;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   height: 50px;
   width: 100%;
   border: none;
@@ -38524,7 +38531,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   border: 1px solid #dee2e6;
   padding: 5px 10px;
   text-decoration: none;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -38561,7 +38568,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   margin-right: 7px;
 }
 .right-menu h2 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -38580,7 +38587,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   margin-top: 30px;
 }
 .right-menu .color-range-main h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -38631,7 +38638,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   margin-top: 30px;
 }
 .right-menu .size-range-main h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -39087,7 +39094,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   align-items: flex-end;
 }
 .modal .modal-dialog .modal-body .pro-description .pro-price ins {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39098,7 +39105,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
   line-height: 1;
 }
 .modal .modal-dialog .modal-body .pro-description .pro-price del {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #6c757d;
   text-decoration: line-through;
   margin-left: 10px;
@@ -39237,7 +39244,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   padding: 33px 0 92px;
 }
 .empty-content .pro-empty-page h2 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   color: #ced4da;
   font-size: 36px;
   line-height: 43px;
@@ -39245,7 +39252,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin: 0;
 }
 .empty-content .pro-empty-page h1 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 64px;
   line-height: 77px;
 }
@@ -39401,7 +39408,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   width: 64%;
 }
 .pro-fs-content .pro-description .pro-info {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 20px;
   line-height: 1.5;
   color: #dc3545;
@@ -39411,7 +39418,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   text-transform: uppercase;
 }
 .pro-fs-content .pro-description .tag {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #6c757d;
   text-transform: uppercase;
@@ -39420,7 +39427,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   line-height: 1.5;
 }
 .pro-fs-content .pro-description .pro-title {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   z-index: 2;
   white-space: normal;
   overflow: hidden;
@@ -39432,7 +39439,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-bottom: 0;
 }
 .pro-fs-content .pro-description .price {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -39926,7 +39933,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-bottom: 35px;
 }
 .product-page h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 1.5;
   padding: 10px 0 10px 0;
   margin: 0;
@@ -39964,7 +39971,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-bottom: 10px;
 }
 .product-page .pro-infos .pro-single-info {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #111;
   margin-right: 10px;
@@ -39973,7 +39980,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-bottom: 10px;
 }
 .product-page .pro-infos .pro-single-info a {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #111;
   font-weight: 400;
@@ -40053,7 +40060,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   overflow: hidden;
 }
 .product-page .list-main .icon-liked .badge {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   position: absolute;
   right: -8px;
   top: -8px;
@@ -40138,7 +40145,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin: 0;
 }
 .product-page .bg-banner-content .banner-single .block h5 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 1.5;
 }
 .product-page .pro-rating {
@@ -40234,7 +40241,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .cart-area .table thead tr th {
   text-transform: uppercase;
   border: none;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .cart-area .table thead tr th[align=center] {
   text-align: center;
@@ -40388,7 +40395,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   text-align: left;
 }
 .order-one-content .table tr td .description h3 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
 }
 .order-one-content .table tr td .description .price {
@@ -40399,7 +40406,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   margin-bottom: 5px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
   margin-bottom: 5px;
 }
@@ -40722,7 +40729,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .profile-content .media-main .media-body .detail span {
   display: block;
   font-size: 0.875rem;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .profile-content form {
   float: left;
@@ -40768,7 +40775,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   padding-right: 0;
 }
 .checkout-area .checkout-module .checkoutd-nav .nav-item {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   width: calc(25% - 17px);
   margin-right: 15px;
 }
@@ -40874,7 +40881,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .checkout-area .right-table thead tr th {
   text-transform: uppercase;
   border: none;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .checkout-area .right-table thead tr th[align=center] {
   text-align: center;
@@ -41020,7 +41027,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-right: 1rem;
 }
 .wishlist-content .media-main .media-body .texting h3 {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
 }
 .wishlist-content .media-main .media-body .texting .price {
@@ -41031,7 +41038,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   margin-bottom: 5px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 1rem;
   margin-bottom: 5px;
 }
@@ -41302,7 +41309,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   padding-bottom: 37px;
 }
 .contact-content .contact-info li a {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   line-height: 1.5;
 }
 .contact-content .contact-info li .fas {
@@ -41325,7 +41332,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   display: block;
   justify-content: center;
   text-align: center;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   margin-bottom: 25px;
 }
 .contact-content .contact-logo li .fas {
@@ -41337,7 +41344,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .contact-content .contact-logo li span {
   display: block;
   text-align: left;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .contact-content .contact-logo li:last-child {
   margin-bottom: 0;
@@ -41353,7 +41360,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   margin-top: 0;
 }
 .contact-content .form-start form label {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -41401,7 +41408,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 }
 .blog-content .post-date {
   margin-bottom: 30px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
 }
 .blog-content .post-date i {
   margin-right: 5px;
@@ -41427,7 +41434,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   border: 1px solid #dee2e6;
   padding: 5px 10px;
   text-decoration: none;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -41542,7 +41549,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   text-align: center;
 }
 .blog .blog-detial .tag {
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   font-size: 0.875rem;
   color: #6c757d;
   text-transform: uppercase;
@@ -41597,14 +41604,14 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   }
 }
 @font-face {
-  font-family: "kanit-Regular";
-  src: url(/fonts/kanit-Regular.eot?5ce9af918dfe272afe4bf0fbe8db8f4f?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Regular.woff?ed43f025376d3a35b3c7b4ed3f2a44ad) format("woff"), url(/fonts/kanit-Regular.ttf?3cd786652b8a2e9d41f210cb1a527ff6) format("truetype"), url(/fonts/kanit-Regular.svg?53f17df2c8e31c44e2769bbcc14857c9#kanit-Regular) format("svg");
+  font-family: "IBM-Plex-Sans-Thai-Regular";
+  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai-Regular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "kanit-Bold";
-  src: url(/fonts/kanit-Bold.eot?555bdf5e257a575fcb15e9e2053b1e5e?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Bold.woff?bad9ae1fd1f6513d0a145d7a409b48ac) format("woff"), url(/fonts/kanit-Bold.ttf?079ca05d3ded9bc107ab8a8da013be22) format("truetype"), url(/fonts/kanit-Bold.svg?0a853e321098feca19cd0bc844807e95#/kanit-Bold) format("svg");
+  font-family: "IBM-Plex-Sans-Thai-Bold";
+  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#/IBM-Plex-Sans-Thai-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -42859,7 +42866,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
     position: relative;
   }
   .product article .mobile-icons .icon-liked .badge {
-    font-family: "kanit", sans-serif;
+    font-family: "IBM-Plex-Sans-Thai", sans-serif;
     border-radius: 0;
     position: absolute;
     right: -10px;
@@ -42915,7 +42922,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
     position: relative;
   }
   .product article .mobile-icons .icon-liked .badge {
-    font-family: "kanit", sans-serif;
+    font-family: "IBM-Plex-Sans-Thai", sans-serif;
     border-radius: 0;
     position: absolute;
     right: -10px;
@@ -43076,14 +43083,14 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   }
 }
 @font-face {
-  font-family: "kanit-Regular";
-  src: url(/fonts/kanit-Regular.eot?5ce9af918dfe272afe4bf0fbe8db8f4f?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Regular.woff?ed43f025376d3a35b3c7b4ed3f2a44ad) format("woff"), url(/fonts/kanit-Regular.ttf?3cd786652b8a2e9d41f210cb1a527ff6) format("truetype"), url(/fonts/kanit-Regular.svg?53f17df2c8e31c44e2769bbcc14857c9#kanit-Regular) format("svg");
+  font-family: "IBM-Plex-Sans-Thai-Regular";
+  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai-Regular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "kanit-Bold";
-  src: url(/fonts/kanit-Bold.eot?555bdf5e257a575fcb15e9e2053b1e5e?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/kanit-Bold.woff?bad9ae1fd1f6513d0a145d7a409b48ac) format("woff"), url(/fonts/kanit-Bold.ttf?079ca05d3ded9bc107ab8a8da013be22) format("truetype"), url(/fonts/kanit-Bold.svg?0a853e321098feca19cd0bc844807e95#/kanit-Bold) format("svg");
+  font-family: "IBM-Plex-Sans-Thai-Bold";
+  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#/IBM-Plex-Sans-Thai-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -43199,7 +43206,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   left: auto;
   right: 0;
   padding: 3px 3px 2px 3px;
-  font-family: "kanit", sans-serif;
+  font-family: "IBM-Plex-Sans-Thai", sans-serif;
   background-color: #dc3545;
   color: #fff;
   line-height: 10px;

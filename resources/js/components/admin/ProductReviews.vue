@@ -11,7 +11,7 @@
                                 <div class="card-header align-items-center  border-bottom-dark px-0">
                                     <div class="card-title mb-0">
                                         <h3 class="card-label mb-0 font-weight-bold text-body">
-                                            Product Reviews
+                                            รีวิว สินค้า
                                         </h3>
                                     </div>
                                     <div class="icons d-flex">
@@ -26,10 +26,10 @@
                                 <div class="card-body">
                                     <div>
                                         <div class=" table-responsive" id="printableTable">
-                                        
+
                                             <div id="productreviewTable_wrapper" class="dataTables_wrapper no-footer">
 
-                                            <div class="dataTables_length" id="productreviewTable_length"><label>Show 
+                                            <div class="dataTables_length" id="productreviewTable_length"><label>แสดง
                                             <select name="productreviewTable_length"  class="" v-model="limit" v-on:change="fetchreviews()">
                                             <option value="10">10</option>
                                             <option value="25">25</option>
@@ -38,10 +38,10 @@
                                             <option value="200">200</option>
                                             <option value="500">500</option>
                                             <option value="1000">1000</option>
-                                            </select> entries</label></div>
+                                            </select> รายการ</label></div>
 
                                             <div id="productreviewTable_filter" class="dataTables_filter">
-                                                <label>Search:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchreviews()"></label>
+                                                <label>ค้นหา:<input type="text" class="" placeholder=""  v-model="searchParameter" @keyup="fetchreviews()"></label>
                                                 <button v-if="this.searchParameter != ''" @click="clearSearch">clear</button>
 
                                             </div>
@@ -49,26 +49,26 @@
                                                     <thead class="text-body">
                                                         <tr role="row">
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending">
-                                                                id
+                                                                รหัสรีวิวสินค้า
                                                             </th>
                                                             <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending">
-                                                                Customer Review
+                                                                รีวิวลูกค้า
                                                             </th>
                                                            <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending">
-                                                                Customer Email
+                                                               อีเมล
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Customer Name
+                                                                ชื่อ
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" >
-                                                                Rating
+                                                                เรตติ้ง
                                                             </th>
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Product name
+                                                                ชื่อสินค้า
                                                             </th>
 
                                                             <th class="no-sort sorting_disabled" rowspan="1" colspan="1">
-                                                                Status
+                                                                สถานะ
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -86,7 +86,7 @@
                                                             <td>
                                                                 {{ review.customer ? review.customer.customer_first_name +' '+ review.customer.customer_last_name : "" }}
                                                             </td>
-                                                            
+
 
                                                             <td class="sorting_1">
                                                                 {{review.rating}}
@@ -106,11 +106,11 @@
                                                     </tbody>
                                                 </table>
                                                 <ul class="pagination pagination-sm m-0 float-right">
-                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchreviews(pagination.prev_page_url)">Previous</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.prev_page_url}]"><button class="page-link" href="#" @click="fetchreviews(pagination.prev_page_url)">ก่อนหน้า</button></li>
 
-                                                    <li class="disabled"><button class="page-link text-dark" href="#">Page {{ pagination.current_page }} of {{ pagination.last_page }}</button></li>
+                                                    <li class="disabled"><button class="page-link text-dark" href="#">หน้า {{ pagination.current_page }} of {{ pagination.last_page }}</button></li>
 
-                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchreviews(pagination.next_page_url)">Next</button></li>
+                                                    <li v-bind:class="[{disabled: !pagination.next_page_url}]" class="page-item"><button class="page-link" href="#" @click="fetchreviews(pagination.next_page_url)">ถัดไป</button></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -195,13 +195,13 @@ export default {
     },
 
     methods: {
-       
+
         fetchreviews(page_url) {
             this.$parent.loading = true;
             let vm = this;
             page_url = page_url || "/api/admin/review";
             var arr = page_url.split('?');
-            
+
             if (arr.length > 1) {
                 page_url += '&limit='+this.limit;
             }
@@ -216,7 +216,7 @@ export default {
 
             axios.get(page_url, this.token).then(res => {
                 this.reviews = res.data.data;
-                
+
                 vm.makePagination(res.data.meta, res.data.links);
                 console.log(this.reviews,"reviews");
             })
@@ -295,7 +295,7 @@ export default {
         }
     },
     mounted() {
-        
+
         var token = localStorage.getItem('token');
         this.token = {
             headers: {

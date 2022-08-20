@@ -21,7 +21,7 @@
     <div class="card card-custom gutter-b bg-white border-0">
       <div class="card-header border-0 align-items-center">
         <h3 class="card-label mb-0 font-weight-bold text-body">
-          General Information
+          ข้อมูลทั่วไป
         </h3>
       </div>
       <div class="card-body" id="printableTable">
@@ -64,29 +64,29 @@
                 href="#"
                 @click="toggleImageSelect()"
                 class="btn btn-primary cta"
-                >Add Media</a
+                >เพิ่มรูปภาพ</a
               >
             <hr >
 
             </div>
-              
+
             </div>
           </div>
           <div class="col-md-6 col-12">
-            <label>Categories</label>
-            <multiselect v-model="category_id" 
-            :options="categories" 
-            :custom-label="nameWithLang" 
-            placeholder="Select one" 
-            label="name" 
+            <label>หมวดหมู่สินค้า</label>
+            <multiselect v-model="category_id"
+            :options="categories"
+            :custom-label="nameWithLang"
+            placeholder="Select one"
+            label="name"
             track-by="id"
             :multiple="true"
             :taggable="true"
             @input="setCat"
             @remove='removeCat'
-            
+
             >
-            
+
             </multiselect>
             <!-- <select
               class="single-select w-100 mb-3 categories-select ms-offscreen"
@@ -216,7 +216,7 @@
           class="btn btn-primary cta"
           @click.prevent="setActive('ad-info-tab')"
           :class="{ active: isActive('ad-info-tab') }"
-          >Continue</a
+          >ถัดไป</a
         >
       </div>
     </div>
@@ -354,7 +354,7 @@ export default {
     //     this.currentSelectedIndex = index;
     // },
     removeImage(index){
-      
+
         this.gallary_detail_path.splice(index,1);
         this.gallary_detail_id.splice(index,1);
         this.$emit("setGallaryIdInChild", this.gallary_detail_id);
@@ -384,7 +384,7 @@ export default {
   mounted() {
     this.fetchCategories();
     this.fetchLanguages();
-    
+
   },
   props: ["product", "errors", 'edit'],
 };

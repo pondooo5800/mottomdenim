@@ -26,7 +26,7 @@
                   >
                     <div class="card-title mb-0">
                       <h3 class="card-label mb-0 font-weight-bold text-body">
-                        Out Of Stock
+                        สต๊อกสินค้าที่หมด
                       </h3>
                     </div>
                     <div class="icons d-flex"></div>
@@ -41,7 +41,7 @@
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
-                          <label>Warehouse Id</label>
+                          <label>คลังสินค้า</label>
                           <select class="form-control" v-model="warehouse_id">
                             <option value="">all</option>
                             <option v-for="warehouse in warehouses" :value="warehouse.warehouse_id">
@@ -52,7 +52,7 @@
                       </div>
 
                       <div class="col-md-3">
-                          <label>Category</label>
+                          <label>หมวดหมู่</label>
 
                          <select class="form-control" v-model="category_id">
                             <option value="">all</option>
@@ -63,7 +63,7 @@
                       </div>
 
                       <div class="col-md-3">
-                        <label>Product Id</label>
+                        <label>สินค้า</label>
                         <select class="form-control" v-model="product_id">
                             <option value="">all</option>
                             <option v-for="product in products" :value="product.product_id">
@@ -87,7 +87,7 @@
                             id="productUnitTable_length"
                           >
                             <label
-                              >Show
+                              >แสดง
                               <select
                                 name="productUnitTable_length"
                                 class=""
@@ -102,7 +102,7 @@
                                 <option value="500">500</option>
                                 <option value="1000">1000</option>
                               </select>
-                              entries</label
+                              รายการ</label
                             >
                           </div>
                           <table
@@ -133,7 +133,7 @@
                                       : 'sorting'
                                   "
                                 >
-                                  Pid
+                                  รหัส
                                 </th>
                                 <th
                                   class="sorting"
@@ -143,7 +143,7 @@
                                   aria-label="stock: activate to sort column ascending"
                                   style="width: 95.5288px"
                                 >
-                                  Product Name
+                                  สินค้า
                                 </th>
                                 <th
                                   class="sorting"
@@ -153,31 +153,31 @@
                                   aria-label="Phone No: activate to sort column ascending"
                                   style="width: 81.8109px"
                                 >
-                                  In Stock
+                                  จำนวนทั้งหมด
                                 </th>
                                 <th
-                                  
+
                                   class="no-sort sorting_disabled"
                                   rowspan="1"
                                   colspan="1"
                                   aria-label="Action"
                                   style="width: 53.1891px"
                                 >
-                                  Out Stock
+                                 จำนวนที่ขาย
                                 </th>
 
                                 <th
-                                  
+
                                   class="no-sort sorting_disabled"
                                   rowspan="1"
                                   colspan="1"
                                   aria-label="Action"
                                   style="width: 53.1891px"
                                 >
-                                  Stock On Hand
+                                  จำนวนที่มีอยู่
                                 </th>
 
-                                
+
                               </tr>
                             </thead>
                             <tbody class="kt-table-tbody text-dark">
@@ -208,7 +208,7 @@
                                 <td>
                                   {{ stock.remaining ? stock.remaining : 0 }}
                                 </td>
-                                
+
                               </tr>
                             </tbody>
                           </table>

@@ -5,7 +5,7 @@
       <div class="row">
         {{-- <div class="col-12 col-lg-3">
           <div class="single-footer">
-            <h2 style="color: #B4B3B3;font-weight: lighter;">{{ trans('lables.footer-about-store') }}</h2>
+            <h2 style="color: #B4B3B3;font-weight: normal;">{{ trans('lables.footer-about-store') }}</h2>
 
             <ul class="contact-list  pl-0 mb-0">
               <li> <i class="fas fa-map-marker"></i><span>{{isset(getSetting()['address']) ? getSetting()['address'] : '#' }}</span> </li>
@@ -18,22 +18,22 @@
         <div class="col-12 col-md-6 col-lg-6">
           <div class="footer-block">
               <div class="single-footer single-footer-left">
-                <h2 style="color: #B4B3B3;font-weight: lighter;">{{ trans('lables.footer-about-store') }}</h2>
+                <h2 style="color: #B4B3B3;font-weight: normal;">{{ trans('lables.footer-about-store') }}</h2>
                 <div class="container">
                     <div class="row">
                       <div class="col">
                         <ul class="links-list pl-0">
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้ามาใหม่</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าขายดี</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าลดราคา</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Mottom</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้ามาใหม่</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าขายดี</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าลดราคา</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Mottom</a> </li>
                         </ul>
                       </div>
                       <div class="col">
                         <ul class="links-list pl-0">
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Cheval</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">บทความ</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:lighter" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">ติดต่อ</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Cheval</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">บทความ</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">ติดต่อ</a> </li>
                         </ul>
                       </div>
                     </div>
@@ -52,10 +52,10 @@
 
 
               <div class="socials">
-                <h2 style="color: #B4B3B3;font-weight: lighter;">ร่วมกับเรา</h2>
+                <h2 style="color: #B4B3B3;font-weight: normal;">ร่วมกับเรา</h2>
                   <div class="row">
                       <div class="col-12 col-lg-8">
-                        <h6 style="color: #B4B3B3;font-weight: lighter;">สมัครเพื่อรับส่วนลด</h6>
+                        <h6 style="color: #B4B3B3;font-weight: normal;">สมัครเพื่อรับส่วนลด</h6>
                       </div>
                     </div>
                     <form id="">
