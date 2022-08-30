@@ -25,17 +25,17 @@
   </div>
 
   <section class="pro-content">
-    <div class="container">
+    {{-- <div class="container">
       <div class="page-heading-title">
           <h2> {{ trans('lables.product-detail-product') }}
           </h2>
       </div>
-  </div>
+  </div> --}}
 
   <section class="product-page">
 
   </section>
 
-  @include('includes.productdetail.related-product-section');
+  {{-- @include('includes.productdetail.related-product-section'); --}}
 
   </section>

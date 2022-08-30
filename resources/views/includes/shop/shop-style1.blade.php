@@ -3,39 +3,43 @@
     $categoryURL = request()->get('category');
     // dd($categoryURL);
 ?>
+<?php  switch ($categoryURL) {
+    case 1:
+    $img_banner = "gallary/new_product.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-new-arrival');
+    break;
+    case 2:
+    $img_banner = "gallary/sell_product.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-sell');
+    break;
+    case 3:
+    $img_banner = "gallary/best_selle.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-best-seller');
+    break;
+    case 4:
+    $img_banner = "gallary/mottom.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-mottom');
+    break;
+    case 5:
+    $img_banner = "gallary/cheval.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-cheval');
+    break;
+    case '':
+    $img_banner = "gallary/new_product.jpg";
+    break;
+}?>
 <div class="container-fuild">
     <nav aria-label="breadcrumb" style="background-color: #fff">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.bread-crumb-shop') }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $breadcrumb  }}</li>
             </ol>
         </div>
     </nav>
 </div>
 <br>
 <br>
-<?php  switch ($categoryURL) {
-    case 1:
-    $img_banner = "gallary/new_product.jpg";
-    break;
-    case 2:
-    $img_banner = "gallary/sell_product.jpg";
-    break;
-    case 3:
-    $img_banner = "gallary/best_selle.jpg";
-    break;
-    case 4:
-    $img_banner = "gallary/mottom.jpg";
-    break;
-    case 5:
-    $img_banner = "gallary/cheval.jpg";
-    break;
-    case '':
-    $img_banner = "gallary/new_product.jpg";
-    break;
-}?>
-
 <div class="container">
     <div class="fullwidth-banner"style="background-attachment: unset;background-size: contain;background-image: url('{{ asset($img_banner) }}');">
     </div>

@@ -106,11 +106,11 @@
                         clone.querySelector(".wishlist-icon").setAttribute('data-id', data.data.product_id);
                         clone.querySelector(".wishlist-icon").setAttribute('onclick', 'addWishlist(this)');
                         clone.querySelector(".wishlist-icon").setAttribute('data-type', data.data.product_type);
-                        clone.querySelector(".compare-icon").setAttribute('data-id', data.data.product_id);
-                        clone.querySelector(".compare-icon").setAttribute('data-type', data.data.product_type);
-                        clone.querySelector(".compare-icon").setAttribute('onclick', 'addCompare(this)');
-                        clone.querySelector(".product-detail-section-product-id").innerHTML = data.data
-                            .product_id;
+                        // clone.querySelector(".compare-icon").setAttribute('data-id', data.data.product_id);
+                        // clone.querySelector(".compare-icon").setAttribute('data-type', data.data.product_type);
+                        // clone.querySelector(".compare-icon").setAttribute('onclick', 'addCompare(this)');
+                        // clone.querySelector(".product-detail-section-product-id").innerHTML = data.data
+                        //     .product_id;
 
                         clone.querySelector(".add-to-cart").setAttribute('onclick', 'addToCart(this)');
                         clone.querySelector(".add-to-cart").setAttribute('data-id', data.data.product_id);
@@ -171,18 +171,18 @@
                             clone.querySelector(".slider-nav").innerHTML = image_list;
 
                         }
-                        if (data.data.category != null) {
-                            if (data.data.category[0].category_detail != null) {
-                                if (data.data.category[0].category_detail.detail != null) {
-                                    clone.querySelector(".product-detail-section-cateogory-link").setAttribute(
-                                        'href', "/shop");
+                        // if (data.data.category != null) {
+                        //     if (data.data.category[0].category_detail != null) {
+                        //         if (data.data.category[0].category_detail.detail != null) {
+                        //             clone.querySelector(".product-detail-section-cateogory-link").setAttribute(
+                        //                 'href', "/shop");
 
-                                    clone.querySelector(".product-detail-section-cateogory-link").innerHTML =
-                                        data.data.category[0].category_detail.detail[0].name;
+                        //             clone.querySelector(".product-detail-section-cateogory-link").innerHTML =
+                        //                 data.data.category[0].category_detail.detail[0].name;
 
-                                }
-                            }
-                        }
+                        //         }
+                        //     }
+                        // }
                         if (data.data.detail != null) {
                             clone.querySelector(".pro-title").innerHTML = data.data.detail[0].title;
                             clone.querySelector(".description").innerHTML = data.data.detail[0].desc;
@@ -250,7 +250,7 @@
                         }
                         if (data.data.reviews !== null) {
                             clone.querySelector(".review-count").innerHTML = data.data.reviews.length +
-                                " Reviews";
+                                " รีวิว";
                             rating = '';
                             sum = 0;
                             for (review = 0; review < data.data.reviews.length; review++) {
@@ -424,10 +424,10 @@
                             clone.querySelector(".wishlist-icon").setAttribute('onclick', 'addWishlist(this)');
                             clone.querySelector(".wishlist-icon").setAttribute('data-type', data.data[i]
                                 .product_type);
-                            clone.querySelector(".compare-icon").setAttribute('data-id', data.data[i]
-                                .product_id);
-                            clone.querySelector(".compare-icon").setAttribute('data-type', data.data[i]
-                                .product_type);
+                            // clone.querySelector(".compare-icon").setAttribute('data-id', data.data[i]
+                            //     .product_id);
+                            // clone.querySelector(".compare-icon").setAttribute('data-type', data.data[i]
+                            //     .product_type);
                             clone.querySelector(".compare-icon").setAttribute('onclick', 'addCompare(this)');
                             clone.querySelector(".quick-view-icon").setAttribute('data-id', data.data[i]
                                 .product_id);

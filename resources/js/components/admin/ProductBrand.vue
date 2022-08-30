@@ -131,13 +131,13 @@
                         <small class="form-text text-danger" v-if="errors.has('name')" v-text="errors.get('name')"></small>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <button type="button" class="btn btn-primary" @click="toggleImageSelect()">อัปโหลดรูปภาพ</button>
                         <small id="textHelp" class="form-text text-muted">เลือกรูปภาพจากแกลอรี่</small>
                         <small class="form-text text-danger" v-if="errors.has('gallary_id')" v-text="errors.get('gallary_id')"></small>
 
                         <img v-if="gallary_path != ''" :src="gallary_path" style="width:100px;height:100px;"/>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label>สถานะ</label>
                         <fieldset class="form-group mb-3">

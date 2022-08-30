@@ -32,7 +32,7 @@
   </style>
       {{-- <?php
     echo "<pre>";
-print_r(trans());
+print_r(trans('lables'));
     ?> --}}
 
   <section class="new-products-content pro-content" >

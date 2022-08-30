@@ -23,19 +23,19 @@
                   "
                   v-model="product_type"
                 >
-                  <!-- <option value="" disabled>Select Product Type</option> -->
+                  <option value="" disabled>เลือกรูปแบบสินค้า</option>
                   <option
                     value="simple"
                     :disabled="product_type == 'variable' && edit"
                   >
                     Simple
                   </option>
-                  <!-- <option
+                  <option
                     value="variable"
                     :disabled="product_type == 'simple' && edit"
                   >
                     Variable
-                  </option> -->
+                  </option>
                 </select>
                 <small
                   class="form-text text-danger"

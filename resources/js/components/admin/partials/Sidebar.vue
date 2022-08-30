@@ -251,7 +251,7 @@
                           <span class="nav-text">หน่วยผลิตภัณฑ์</span>
                         </router-link>
                       </li>
-                      <!-- <li
+                      <li
                         class="nav-item"
                         v-if="
                           $parent.permissions.includes('product-attribute-list')
@@ -321,7 +321,7 @@
                           </span>
                           <span class="nav-text">Product Variations</span>
                         </router-link>
-                      </li> -->
+                      </li>
                       <li
                         class="nav-item"
                         v-if="
