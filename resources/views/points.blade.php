@@ -1,5 +1,15 @@
 @extends('layouts.master')
 @section('content')
+<div class="container-fuild">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.header-points') }}</li>
+            </ol>
+        </div>
+    </nav>
+</div>
     <!-- wishlist Content -->
     <section class="wishlist-content pro-content">
 
@@ -8,7 +18,7 @@
                 <div class="col-12 col-lg-3">
                     <div class="heading">
                         <h2>
-                            My Account
+                            {{ trans('lables.profile-my-account') }}
                         </h2>
                         <hr>
                     </div>
@@ -19,7 +29,7 @@
                 <div class="col-12 col-lg-9 ">
                     <div class="heading">
                         <h2>
-                            Points
+                            {{ trans('lables.header-points') }}
                         </h2>
                         <hr>
                     </div>

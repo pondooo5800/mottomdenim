@@ -26,6 +26,7 @@
     break;
     case '':
     $img_banner = "gallary/new_product.jpg";
+    $breadcrumb = trans('lables.bread-crumb-shop-new-arrival');
     break;
 }?>
 <div class="container-fuild">
@@ -81,8 +82,21 @@
 
     @endif
     </div>
-    <?php if ($categoryURL == 4 || $categoryURL == 5 ) { ?>
-        <section class="contact-content">
+    <?php if ($categoryURL == 4) { ?>
+        <div class="container">
+            <div class="products-area">
+              <div class="row justify-content-center">
+                <div class="col-12" style="text-align: center">
+                      <iframe width="100%" height="480" src="https://www.youtube.com/embed/_MH9bvrWTec" title="YouTube video player"
+                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                      </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        {{-- <section class="contact-content">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12">
@@ -98,8 +112,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <br>
+        </section> --}}
+        {{-- <br> --}}
         <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-3">
@@ -307,7 +321,7 @@
         </div>
     </section>
 
-    <?php if ($categoryURL == 4 || $categoryURL == 5 ) { ?>
+    <?php if ($categoryURL == 4) { ?>
 
     <div class="container">
         <div class="pagination justify-content-between ">

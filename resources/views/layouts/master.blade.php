@@ -28,10 +28,62 @@
         href="{{ isset(getSetting()['color']) ? asset('assets/front/css/' . getSetting()['color'] . '.css') : asset('assets/front/css/style.css') }}">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+        <style>
+            .sidebar-social {
+                margin: 0;
+                padding: 0;
+            }
+
+            .sidebar-social ul {
+                margin: 0;
+                padding: 5px;
+            }
+
+            .sidebar-social li {
+                text-align: center;
+                width: 20%;
+                margin-bottom: 3px!important;
+                display: table-cell;
+                font-size: 10px;
+                padding:0;
+            }
+            .sidebar-social i {
+              display: block;
+              margin: 0 auto 10px auto;
+                width: 32px;
+                height: 32px;
+                margin: 10px auto 0;
+                line-height: 32px;
+                text-align: center;
+                font-size: 20px;
+                color: #444444;
+              margin-top:0;
+              padding-top:5px;
+            }
+            .sidebar-social a{
+              text-decoration:none;
+              width:100%;
+              height:100%;
+              display:block;
+              margin:0;
+              padding:0;
+            }
+
+            .sidebar-social a span{
+              padding:5px 0 10px 0;
+              display:block;
+              text-transform:uppercase;
+              letter-spacing:1px;
+              font-family: IBM-Plex-Sans-Thai, sans-serif;color: #494F69;font-size: 14px;font-weight: normal
+            }
+            .sidebar-social a:hover span.text-menu { color: #000; }
+
+        </style>
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="animation-s1 {{ $data['direction'] === 'rtl' ? 'bodyrtl' : '' }} ">
+<body class="animation-s1 {{ $data['direction'] === 'rtl' ? 'bodyrtl' : '' }} " style="background-color: #fff">
 
     {{-- @include('extras.preloader') --}}
     @include(isset(getSetting()['header_style']) ? 'includes.headers.header-'.getSetting()['header_style'] :
@@ -56,6 +108,7 @@
 
 
     @include('extras.settings')
+        {{-- @include('extras.cookie-pop-up') --}}
     @include('modals.product-quick-view')
 
     <!-- All custom scripts here -->

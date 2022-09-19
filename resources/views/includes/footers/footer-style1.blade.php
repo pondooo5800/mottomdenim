@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
           <div class="col-12 col-lg-4">
-           
+
               <figure>
                 <a href="{{url('/')}}" class="logo" data-toggle="tooltip" data-placement="bottom" title="{{isset(getSetting()['site_name']) ? getSetting()['site_name'] : 'Logo' }}">
                   <img class="img-fluid" src="{{isset(getSetting()['site_logo']) ? getSetting()['site_logo'] : asset('01-logo.png') }}" alt="{{isset(getSetting()['site_name']) ? getSetting()['site_name'] : 'Logo' }}">
@@ -16,9 +16,9 @@
                 </li>
             </ul>
                   <p>{{isset(getSetting()['about_us']) ? getSetting()['about_us'] : 'N/A' }}</p>
-              
+
                     <ul class="socials">
-                        
+
                         @if (isset(getSetting()['facebook_url']) && !empty(getSetting()['facebook_url']))
                         <li><a href="{{isset(getSetting()['facebook_url']) ? getSetting()['facebook_url'] : '#' }}" class="fab fb fa-facebook-square" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-facebook') }}"></a></li>
                         @endif
@@ -34,7 +34,7 @@
                         @if (isset(getSetting()['instagram_url']) && !empty(getSetting()['facebook_url']))
                         <li><a href="{{isset(getSetting()['instagram_url']) ? getSetting()['instagram_url'] : '#' }}" class="fab ig fa-instagram" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-instagram') }}"></a></li>
                         @endif
-                    
+
                     </ul>
             </div>
             <div class="col-12 col-lg-2">
@@ -44,13 +44,13 @@
                     </h5>
                   </div>
                 <div class="single-footer single-footer-left">
-             
+
                   <ul class="links-list pl-0">
                     <li> <a href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-home') }}">{{ trans('lables.footer-home') }}</a> </li>
                     <li> <a href="{{ url('/shop') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shop') }}">{{ trans('lables.footer-shop') }}</a> </li>
-                    <li> <a href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">{{ trans('lables.footer-shopping-cart') }}</a> </li>           
+                    <li> <a href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">{{ trans('lables.footer-shopping-cart') }}</a> </li>
                     <li> <a href="{{ url('/wishlist') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-wishlist") }}">{{  trans("lables.header-wishlist") }}</a> </li>
-                    <li> <a href="{{ url('/compare') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a> </li>          
+                    <li> <a href="{{ url('/compare') }}" data-toggle="tooltip" data-placement="left" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a> </li>
                   </ul>
                 </div>
           </div>
@@ -60,13 +60,13 @@
                       {{ trans('lables.footer-personalization') }}
                   </h5>
                 </div>
-      
+
             <ul class="links-list pl-0">
               @foreach($data['pages'] as $page)
               @if(isset($page->page_detail))
               <li> <a href="{{ url("/page")."/".$page->slug }}" data-toggle="tooltip" data-placement="left" title="{{ $page->page_detail[0]->title }}">{{ $page->page_detail[0]->title }}</a> </li>
               @endif
-              @endforeach                             
+              @endforeach
             </ul>
           </div>
         <div class="col-12 col-lg-4">
@@ -93,11 +93,11 @@
                   <div class="footer-info">
                       ©&nbsp;{{ trans('lables.footer-company') }}
                   </div>
-                    
+
                 </div>
             </div>
           </div>
         </div>
     </div>
   </footer>
-  </section>  
+  </section>

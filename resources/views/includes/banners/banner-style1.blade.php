@@ -1,6 +1,6 @@
     <div class="banner-one banner_div banners-content">
           <div class="container">
-            <div class="group-banners">
+            <div class="group-banners" style="text-align: center">
                 <div class="row">
                   <div class="col-12 col-md-3">
                     <figure class="banner-image ">

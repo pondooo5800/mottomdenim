@@ -149,7 +149,7 @@ return [
     'shop-apply'=>'Apply',
     'shop-reset'=>'reset',
 
-
+    'cart-add'=>'Add to cart',
     'cart-page-shopping-cart'=>'Shopping Cart',
     'cart-page-apply'=>'Apply',
     'cart-page-continue-shopping'=>'CONTINUE SHOPPING',
@@ -245,6 +245,8 @@ return [
     'profile-first-name' => "First Name",
     'profile-last-name' => 'Last Name',
     'profile-gender' => 'Gender',
+    'profile-select-male' => 'Male',
+    'profile-select-female' => 'Female',
     'profile-dob' => 'DOB',
     'profile-phone' => 'Phone',
     'profile-update' => 'Update',
@@ -261,6 +263,7 @@ return [
     'orders-delete'=>'Do you want to cancel order?',
     'orders-cancel'=>'Cancel Order',
     'orders-view-detail'=>'View Detail',
+    'orders-pending'=>'Pending',
 
 
 
@@ -290,6 +293,8 @@ return [
     'order-detail-shipping' => 'SHIPPING',
     'order-detail-coupon-discount' => 'COUPON DISCOUNT',
     'order-detail-total' => 'TOTAL',
+    'order-detail-save-comments' => 'Save comments',
+
 
 
     'thank-you-title'=>'Thank You',
@@ -312,6 +317,8 @@ return [
     'shipping-address-city' =>'City',
     'shipping-address-postal-code' =>'Postal Code',
     'shipping-address-add-address' =>'Submit',
+    'shipping-address-edit-address' =>'Edit',
+    'shipping-address-del-address' =>'Delete',
 
 
 

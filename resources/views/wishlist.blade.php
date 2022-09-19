@@ -1,6 +1,17 @@
 @extends('layouts.master')
 @section('content')
 <!-- wishlist Content -->
+<div class="container-fuild">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.profile-side-menue-wishlist') }}</li>
+            </ol>
+        </div>
+    </nav>
+</div>
 <section class="wishlist-content pro-content">
 
     <div class="container">
@@ -8,7 +19,7 @@
             <div class="col-12 col-lg-3">
                 <div class="heading">
                     <h2>
-                        My Account
+                        {{ trans('lables.profile-my-account') }}
                     </h2>
                     <hr>
                 </div>
@@ -19,7 +30,7 @@
             <div class="col-12 col-lg-9 ">
                 <div class="heading">
                     <h2>
-                        Wishlist Products
+                        {{ trans('lables.profile-side-menue-wishlist') }}
                     </h2>
                     <hr>
                 </div>
@@ -48,31 +59,31 @@
                         <div class="input-group item-quantity">
 
                             <input type="text" value="1" id="quantity2" name="quantity" class="form-control cartItem-qty">
-    
+
                             <span class="input-group-btn">
                                 <button type="button" value="quantity" class="quantity-right-plus btn cartItem-qty-1" data-type="plus" data-field="">
-    
+
                                     <span class="fas fa-plus"></span>
                                 </button>
-    
+
                                 <button type="button" value="quantity" class="quantity-left-minus btn cartItem-qty-2" data-type="minus" data-field="">
                                     <span class="fas fa-minus"></span>
                                 </button>
-    
-    
+
+
                             </span>
-    
-    
+
+
                         </div>
                         <a href="javascript:void(0)" class="btn btn-secondary swipe-to-top wishlist-product-btn">
-                            ADD TO CART
+                            {{ trans('lables.cart-add') }}
                         </a>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 detail">
 
                     {{-- <div class="share"><a href="javascript:void(0)">Share &nbsp;<i class="fas fa-share"></i></a> </div> --}}
-                    <div class="share"><a href="javascript:void(0)" class="wishlist-remove">Remove &nbsp;<i class="fas fa-trash-alt"></i></a>
+                    <div class="share"><a href="javascript:void(0)" class="wishlist-remove">{{ trans('lables.wishlist-remove') }} &nbsp;<i class="fas fa-trash-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -187,7 +198,7 @@
                                     .product_combination[0].product_price_symbol+'</span>';
                             }
                         }
-                        
+
                         if (data.data[i].products.product_type == 'simple') {
                             clone.querySelector(".wishlist-product-btn").setAttribute('onclick', "addToCart(this)");
                             clone.querySelector(".wishlist-product-btn").setAttribute('data-id', data.data[i].products.product_id);
@@ -242,7 +253,7 @@
         });
 
     }
-    
+
     $(document).on('click', '.quantity-right-plus', function() {
         var row_id = $(this).attr('data-field');
 

@@ -65,6 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:user-api', 'scopes:use
     Route::resource('tax', 'API\Admin\TaxController', ['names' => ['index' => 'admin.tax.index', 'store' => 'admin.tax.store', 'update' => 'admin.tax.update', 'destroy' => 'admin.tax.delete']])->except(['edit', 'create']);
     Route::resource('tax_rate', 'API\Admin\TaxRateController', ['names' => ['index' => 'admin.tax_rate.index', 'store' => 'admin.tax_rate.store', 'update' => 'admin.tax_rate.update', 'destroy' => 'admin.tax_rate.delete']])->except(['edit', 'create']);
     Route::resource('state', 'API\Admin\StateController', ['names' => ['index' => 'admin.state.index']])->only(['index', 'show']);
+    Route::resource('city', 'API\Admin\CityController', ['names' => ['index' => 'admin.city.index']])->only(['index', 'show']);
 
     Route::resource('payment_method', 'API\Admin\PaymentMethodController', ['names' => ['index' => 'admin.payment_method.index', 'store' => 'admin.payment_method.store', 'update' => 'admin.payment_method.update', 'destroy' => 'admin.payment_method.delete']])->only(['index', 'show', 'update']);
 
@@ -194,6 +195,7 @@ Route::group(['prefix' => 'client', 'middleware' => ['checkClientCredentials']],
     Route::delete('cart/guest/delete', 'API\Web\CartController@destroy');
     Route::resource('country', 'API\Admin\CountryController', ['names' => ['index' => 'client.country.index']])->only(['index', 'show']);
     Route::resource('state', 'API\Admin\StateController', ['names' => ['index' => 'client.state.index']])->only(['index', 'show']);
+    Route::resource('city', 'API\Admin\CityController', ['names' => ['index' => 'client.city.index']])->only(['index', 'show']);
     Route::resource('products', 'API\Admin\ProductController')->only(['index', 'show']);
     Route::post('products/price-range', 'API\Admin\ProductController@priceRange');
     Route::resource('category', 'API\Admin\CategoryController', ['names' => ['index' => 'client.category.index', 'show' => 'client.category.show']])->except(['store', 'update', 'destroy', 'edit', 'create']);

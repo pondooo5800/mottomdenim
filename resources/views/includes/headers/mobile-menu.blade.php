@@ -2,7 +2,7 @@
 
 <header id="headerMobile" class="header-area header-mobile d-lg-none d-xl-none">
 
-    @if (trans("lables.header-top-offer") != '')
+    {{-- @if (trans("lables.header-top-offer") != '')
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <div class="container">
         <div class="pro-description">
@@ -15,14 +15,36 @@
         </div>
       </div>
     </div>
-    @endif
-
-    <div class="header-mini bg-top-bar">
+    @endif --}}
+    {{-- <div class="header-mini bg-top-bar" style="background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 text-end">
+                    <div class="navbar-lang" style="justify-content: end">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle language-default-name" type="button"
+                                style="color: black">
+                                English
+                            </button>
+                            <div class="dropdown-menu">
+                                @foreach ($data['language'] as $languages)
+                                <a style="color: black" class="dropdown-item language-default"
+                                    href=" {{ url('/lang/' . $languages->code) }}" data-id={{ $languages->id }}
+                                    data-name="{{ $languages->name }}">{{ $languages->name }}</a>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+<br>
+    <div class="header-mini bg-top-bar" style="background-color: white">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12">
-
-            <nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0">
+            <nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0" style="justify-content: end">
               <div class="navbar-lang">
                 <div class="select-control">
                   <select class="form-control mobile-language">
@@ -31,18 +53,18 @@
                     @endforeach
                   </select>
                 </div>
-                <div class="select-control currency">
+                {{-- <div class="select-control currency">
                   <select class="form-control ">
                     @foreach($data['currency'] as $currencies)
                     <option value="{{$currencies->id}}">{{$currencies->title}}</option>
                     @endforeach
                   </select>
-                </div>
+                </div> --}}
 
               </div>
-              <div class="contact d-none d-md-block">
+              {{-- <div class="contact d-none d-md-block">
                 <i class="fas fa-phone"></i> {{  trans("lables.header-header2-phone") }} ({{ isset(getSetting()['phone_number']) ? getSetting()['phone_number'] : 'N/A' }})
-              </div>
+              </div> --}}
 
             </nav>
           </div>
@@ -60,9 +82,9 @@
               </a>
               <nav id="navigation-mobile">
                 <div class="logout-main without-auth-login">
-                  <div class="welcome">
+                  {{-- <div class="welcome">
                     <span class="welcomeUsername">{{  trans("lables.header-welcome-user") }}</span>
-                  </div>
+                  </div> --}}
                   <div class="logout">
                     <a href="{{ url('/login') }}">{{  trans("lables.header-login") }}</a>
                   </div>
@@ -70,7 +92,7 @@
                 </div>
                 <div class="logout-main auth-login">
                   <div class="welcome">
-                    <span>{{  trans("lables.header-welcome-text") }}</span>
+                    {{-- <span>{{  trans("lables.header-welcome-text") }}</span> --}}
                     <span class="welcomeUsername">{{  trans("lables.header-welcome-user") }}</span>
                   </div>
                   <div class="logout">
@@ -130,7 +152,7 @@
 
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/profile') }}" title="{{  trans("lables.header-profile") }}">{{  trans("lables.header-profile") }}</a>
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/wishlist') }}" title="{{  trans("lables.header-wishlist") }}">{{  trans("lables.header-wishlist") }}</a>
-                        <a class="main-manu btn btn-primary auth-login" href="{{ url('/compare') }}" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a>
+                        {{-- <a class="main-manu btn btn-primary auth-login" href="{{ url('/compare') }}" title="{{  trans("lables.header-compare") }}">{{  trans("lables.header-compare") }}</a> --}}
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/orders') }}" title="{{  trans("lables.header-order") }}">{{  trans("lables.header-order") }}</a>
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/shipping-address') }}" title="{{  trans("lables.header-shipping-address") }}">{{  trans("lables.header-shipping-address") }}</a>
                         <a class="main-manu btn btn-primary auth-login" href="{{ url('/change-password') }}" title="{{  trans("lables.header-change-password") }}">{{  trans("lables.header-change-password") }}</a>
@@ -156,7 +178,7 @@
               <li class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="headerOneCartButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="cart-left">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i style="color: #495069" class="fas fa-shopping-cart"></i>
                     <span class="badge badge-secondary total-menu-cart-product-count">0</span>
                   </div>
                 </button>
@@ -197,22 +219,23 @@
         </div>
       </div>
     </div>
-    <div class="header-navbar bg-menu-bar">
+    <div class="header-navbar bg-menu-bar" style="background-color:#495069">
       <div class="container">
         <form class="form-inline">
           <div class="search">
-            <div class="select-control">
+            {{-- <div class="select-control">
               <select class="form-control">
                 @foreach($data['category'] as $categories)
                 <option value="{{isset($categories->detail[0]->category_id)}}">{{isset($categories->detail[0]->category_name) ? $categories->detail[0]->category_name : ''}}&nbsp;&nbsp;</option>
                 @endforeach
               </select>
-            </div>
-            <input type="search" placeholder="{{ trans('lables.header-search-products') }}...">
-            <button class="btn btn-secondary" type="submit">
+            </div> --}}
+            <input style="float: none;" type="search" placeholder="{{ trans('lables.header-search-products') }}...">
+            <button style="background-color:#495069" class="btn btn-secondary" type="submit">
               <i class="fa fa-search"></i></button>
           </div>
         </form>
       </div>
     </div>
   </header>
+  <br>

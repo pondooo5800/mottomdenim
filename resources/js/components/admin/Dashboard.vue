@@ -270,7 +270,7 @@
                   <div class="list-content">
                     <span class="list-title text-body">สินค้าทั้งหมด</span>
                     <small class="text-muted d-block"
-                      >{{ thisWeekProducts }} สินค้าใหม่</small
+                      >{{ thisWeekProducts }} สินค้ามาใหม่</small
                     >
                   </div>
                 </div>

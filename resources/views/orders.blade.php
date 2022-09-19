@@ -3,7 +3,7 @@
 
 <!-- -My Order content -->
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -40,15 +40,15 @@
 
                     <thead>
                         <tr class="d-flex">
-                            
-                            
+
+
                             <th class="col-12 col-md-2">{{ trans('lables.orders-order-id') }}</th>
                             <th class="col-12 col-md-2">{{ trans('lables.order-detail-order-amount') }}</th>
                             <th class="col-12 col-md-2">{{ trans('lables.orders-date') }}</th>
                             <th class="col-12 col-md-3">{{ trans('lables.orders-status') }}</th>
                             <th class="col-12 col-md-3">{{ trans('lables.orders-detail') }}</th>
 
-                            
+
 
                         </tr>
                     </thead>
@@ -67,7 +67,7 @@
                             <li class="loader-page-item"><a href="javascript:void(0)">
                                     <i class="fa fa-angle-double-left" style="font-size:12px"></i></a>
                             </li>
-                           
+
                         </ol>
                     </div>
                 </div> --}}
@@ -85,7 +85,7 @@
         <td class="col-12 col-md-3 order-status"></td>
         <td class="col-12 col-md-3 order-detail"></td>
 
-        
+
     </tr>
 </template>
 
@@ -140,7 +140,7 @@
                         clone.querySelector(".order-date").innerHTML = order[0];
                         // clone.querySelector(".order-notes").innerHTML = data.data[i].order_notes;
                         clone.querySelector(".order-no").innerHTML = data.data[i].order_id;
-                        
+
                         if (data.data[i].currency != null && data.data[i].currency != 'null' && data.data[i].currency != '') {
                             if (data.data[i].currency.symbol_position == 'left') {
                                 price = (data.data[i].order_price * +data.data[i].currency.exchange_rate);
@@ -154,13 +154,13 @@
                         }
                         clone.querySelector(".order-amount").innerHTML = price;
                         // clone.querySelector(".order-price").innerHTML = price;
-                        
+
                         // clone.querySelector(".order-product-name").setAttribute('href', '/orders/'+data.data[i].order_id);
-                        
+
                         clone.querySelector(".order-status").innerHTML = data.data[i].order_status === 'Pending' ? data.data[i].order_status + '/ <button href="/orders/'+data.data[i].order_id+'" onClick="cancelStatus('+data.data[i].order_id+')" style="font-size:10px" class="btn p-2  btn-danger">{{ trans("lables.orders-cancel") }}</button>' : data.data[i].order_status;
 
                         clone.querySelector(".order-detail").innerHTML = '<a href="/orders/'+data.data[i].order_id+'">{{ trans("lables.orders-view-detail") }}</a>';
-                        
+
                         if (data.data[i].order_detail != null && data.data[i].order_detail != 'null' && data.data[i].order_detail != '') {
                             if (data.data[i].order_detail[0].product != null && data.data[i].order_detail[0].product != 'null' && data.data[i].order_detail[0].product != '') {
                                 if (data.data[i].order_detail[0].product.product_type == 'variable') {
@@ -223,8 +223,8 @@
                 },
                 error: function(data) {},
             });
-        }    
-        // 
+        }
+        //
     }
 </script>
 @endsection

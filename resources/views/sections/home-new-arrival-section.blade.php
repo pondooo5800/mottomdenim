@@ -1,41 +1,55 @@
-  <!-- NEW Arrival -->
-  <style>
-
-.mottom .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-.cheval .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-  </style>
-      {{-- <?php
-    echo "<pre>";
-print_r(trans('lables'));
-    ?> --}}
-
   <section class="new-products-content pro-content" >
+    <div class="banner-six banner_div banners-content">
+
+        <div class="container">
+            <div class="group-banners">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-md-6">
+                      <div class="imagespace">
+                      <figure class="banner-image ">
+                          <a href="" class="banner-link5"><img style="object-fit: contain;height: 570px;" class="responsive" src="{{ asset('/images/maskgroup/mask_group1.png') }}" alt="Banner Image"></a>
+                      </figure>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <div class="row">
+                          <div class="col-12 col-lg-6 col-md-6">
+                            <div class="imagespace">
+                            <figure class="banner-image ">
+                              <a href="" class="banner-link1"><img style="object-fit: contain; class="responsive" src="{{ asset('/images/maskgroup/mask_group2.png') }}" alt="Banner Image"></a>
+                            </figure>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 col-md-6">
+                            <div class="imagespace">
+                            <figure class="banner-image ">
+                              <a href="" class="banner-link2"><img style="object-fit: contain; class="responsive" src="{{ asset('/images/maskgroup/mask_group3.png') }}" alt="Banner Image"></a>
+                            </figure>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6 col-md-6">
+                            <div class="imagespace">
+                            <figure class="banner-image ">
+                                <a href="" class="banner-link3"><img style="object-fit: contain; class="responsive" src="{{ asset('/images/maskgroup/mask_group4.png') }}" alt="Banner Image"></a>
+                            </figure>
+                            </div>
+                            </div>
+                            <div class="col-12 col-lg-6 col-md-6">
+                              <div class="imagespace">
+                              <figure class="banner-image ">
+                                  <a href="" class="banner-link4"><img style="object-fit: contain; class="responsive" src="{{ asset('/images/maskgroup/mask_group5.png') }}" alt="Banner Image"></a>
+                                </figure>
+                              </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+
     <div class="container">
       <div class="products-area">
         <div class="row justify-content-center">
@@ -43,7 +57,6 @@ print_r(trans('lables'));
             <div class="pro-heading-title">
               <h2> {{ trans('lables.home-new-arrival-title') }}
               </h2>
-              {{-- <p>{{ trans('lables.home-new-arrival-description') }}</p> --}}
             </div>
           </div>
         </div>
@@ -54,47 +67,28 @@ print_r(trans('lables'));
         </div>
       </div>
     </div>
+    <br>
     <div class="container">
       <div class="products-area">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-6">
             <div class="pro-heading-title" style="text-align: center">
-                <a href="{{ url('/shop') }}" style="border-radius: 20px; border-width: 2px;
+                <a href="{{ url('/shop?category=1') }}" style="border-radius: 20px; border-width: 2px;
                 border-color: #B4B3B3;"
                 class="btn btn-light swipe-to-top">ดูทั้งหมด</a>
             </div>
           </div>
-          <div class="col-12" style="padding-top: 20px">
-            <div class="pro-heading-title"style="text-align: center">
-                <div class="container">
-                    <div class="row">
-                        <a href="{{ url('/shop?category=4') }}">
-                      <div class="col-sm">
-                         <div class="mottom">
-                    <img style="height: 380px;
-                    width: 380px;
-                    border-radius: 0px;
-                    " src="{{ asset('/images/mottom.jpg') }}" alt="mottom">
-                    {{-- <a href="{{ url('/mottom') }}" class="btn">Mottom</a> --}}
-                  </div>
-                </a>
-                  {{-- src="{{ asset('assets/images/TopBanner.png') }}" --}}
-                  <br>
-                      </div>
-                      <div class="col-sm">
-                        <a href="{{ url('/shop?category=5') }}">
-                        <div class="cheval">
-                    <img style="height: 380px;
-                    width: 380px;
-                    border-radius: 0px;
-                    " src="{{ asset('/images/cheval.jpg') }}" alt="cheval">
-                    {{-- <a href="{{ url('/cheval') }}" class="btn">Cheval</a> --}}
-                  </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="products-area">
+        <div class="row justify-content-center">
+          <div class="col-12" style="text-align: center">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/_MH9bvrWTec" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                </iframe>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 
     <div class="container-fuild">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" style="background-color: #fff">
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a>
@@ -18,6 +18,10 @@
         <!-- Profile Content -->
         <section class="profile-content">
             <div class="container">
+                <div class="page-heading-title" style="text-align: center">
+                    <h2> {{ trans('lables.bread-profile') }}
+                    </h2>
+                </div>
                 <div class="row">
 
                     <div class="col-12 media-main">
@@ -27,12 +31,13 @@
                                     <div class="col-12 col-sm-4 col-md-6">
                                         <h4 class="profile-username">
                                         </h4>
+                                        <p class="mb-0">{{ trans('lables.profile-email') }}:<span
+                                            class="profile-user-email">info@yourcompanyname.com</span></p>
                                     </div>
-                                    <div class="col-12 col-sm-8 col-md-6 detail">
-
+                                    {{-- <div class="col-12 col-sm-8 col-md-6 detail">
                                         <p class="mb-0">{{ trans('lables.profile-email') }}:<span
                                                 class="profile-user-email">info@yourcompanyname.com</span></p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
 
@@ -86,8 +91,8 @@
 
 
                                     <select class="form-control " id="gender">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
+                                        <option value="Male">{{ trans('lables.profile-select-male') }}</option>
+                                        <option value="Female">{{ trans('lables.profile-select-female') }}</option>
                                     </select>
                                     <div class="invalid-feedback">
 
@@ -98,7 +103,7 @@
                                     class="col-sm-2 col-form-label">{{ trans('lables.profile-dob') }}</label>
                                 <div class=" col-sm-4">
                                     <div class="input-group date">
-                                        <input type="date" class="form-control datepicker" id="bday">
+                                        <input type="date" class="form-control datepicker" id="dob">
                                         <div class="invalid-feedback">
 
                                         </div>
@@ -201,7 +206,7 @@
 
         $("#profileForm").submit(function(e) {
             e.preventDefault();
-            var birth = $('#bday').val();
+            var birth = $('#dob').val();
             if (birth != "") {
 
                 var record = birth;
@@ -222,6 +227,7 @@
                     return
                 }
             }
+
 
             first_name = $("#profileForm").find("#first_name").val();
             last_name = $("#profileForm").find("#last_name").val();
@@ -267,13 +273,17 @@
             dob = $("#profileForm").find("#dob").val();
             phone = $("#profileForm").find("#phone").val();
             method = $("#profileForm").find("#method").val();
+            console.log(gender);
+            console.log(dob);
+            console.log(phone);
+            console.log(method);
             if (method == 'post') {
                 url = '/api/client/customer_address_book';
             } else {
                 ids = $("#profileForm").find("#addres_id").val();
                 url = '/api/client/customer_address_book/' + ids;
             }
-
+            console.log(url);
             $.ajax({
                 type: method,
                 url: "{{ url('') }}" + url,

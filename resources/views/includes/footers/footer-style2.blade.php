@@ -23,17 +23,16 @@
                     <div class="row">
                       <div class="col">
                         <ul class="links-list pl-0">
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้ามาใหม่</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าขายดี</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าลดราคา</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Mottom</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้ามาใหม่</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าขายดี</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">สินค้าลดราคา</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Mottom</a> </li>
                         </ul>
                       </div>
                       <div class="col">
                         <ul class="links-list pl-0">
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">Cheval</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">บทความ</a> </li>
-                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/cart') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">ติดต่อ</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">บทความ</a> </li>
+                        <li> <a style="color: #B4B3B3;font-weight:normal" href="{{ url('/') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-shopping-cart') }}">ติดต่อ</a> </li>
                         </ul>
                       </div>
                     </div>
@@ -52,58 +51,7 @@
 
 
               <div class="socials">
-                <h2 style="color: #B4B3B3;font-weight: normal;">ร่วมกับเรา</h2>
-                  <div class="row">
-                      <div class="col-12 col-lg-8">
-                        <h6 style="color: #B4B3B3;font-weight: normal;">สมัครเพื่อรับส่วนลด</h6>
-                      </div>
-                    </div>
-                    <form id="">
-                        <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <div class="input-group">
-                                    <input
-                                        style="
-                                width: 60%;
-                                height: 40px;
-                                margin: 0 auto;
-                                margin-top:10px;
-                                background-color: #F3F1F1;
-                                border: snow;
-                                border-radius: 20px;"
-                                        type="text" class="form-control" id=""
-                                        placeholder="ชื่อ นามสกุล">
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="input-group">
-                                    <input
-                                        style="
-                                width: 60%;
-                                height: 40px;
-                                margin: 0 auto;
-                                margin-top:10px;
-                                background-color: #F3F1F1;
-                                border: snow;
-                                border-radius: 20px;"
-                                        type="text" class="form-control" id=""
-                                        placeholder="อีเมล">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                        <div class="row">
-                            <div class="col-12">
-                                <div style="display: flex;justify-content: end;">
-                                    <button
-                                        class="btn btn-secondary swipe-to-top"
-                                        id="loginAccount">สมัครสมาชิก</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
+                        <div class="row" style="text-align: end">
                             <div class="col-12">
                                 <div class="footer-info">
                                     <span style="color:#B4B3B3"> ©&nbsp;2022 Mottom Denim.
@@ -113,9 +61,7 @@
                                     <img style="height: 35px" class="img-fluid" src="{{ asset('assets/front/images/miscellaneous/payments2.png') }}">
                                 </div>
                             </div>
-
                         </div>
-                    </form>
 
                   {{-- <ul class="list">
 

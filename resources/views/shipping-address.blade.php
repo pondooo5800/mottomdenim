@@ -5,7 +5,7 @@
 <!--Shipping Content -->
 
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb"style="background-color: #fff">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -40,7 +40,7 @@
                     <table class="table shipping-table">
                         <thead>
                             <tr>
-                                <th scope="col">{{ trans('lables.shipping-address-default') }}</th>
+                                <th  scope="col">{{ trans('lables.shipping-address-default') }}</th>
                                 <th scope="col">{{ trans('lables.shipping-address-first-name') }}</th>
                                 <th scope="col">{{ trans('lables.shipping-address-last-name') }}</th>
                                 <th scope="col">{{ trans('lables.shipping-address-country-state-city') }}</th>
@@ -54,28 +54,28 @@
 
                     <template id="shipping-address-listing-template">
                         <tr class="shipping-address-listing-id">
-                            <td>
+                            <td style=" vertical-align: top">
                                 <div class="form-check">
                                     <input class="form-check-input shipping-address-listing-is-default" name="radiobtn" type="radio">
                                 </div>
                             </td>
-                            <td>
+                            <td style="text-align: initial;">
                                 <label class="form-check-label shipping-address-listing-first-name">
                                 </label>
                             </td>
-                            <td>
+                            <td style="text-align: initial;">
                                 <label class="form-check-label shipping-address-listing-last-name">
                                 </label>
                             </td>
-                            <td>
+                            <td style="text-align: initial;">
                                 <label class="form-check-label shipping-address-listing-country-state-city">
                                 </label>
                             </td>
 
                             <td class="edit-tag">
                                 <ul>
-                                    <li><a href="javascript:void(0)" class="shipping-address-listing-edit-btn"> <i class="fas fa-pen"></i> Edit</a></li>
-                                    <li><a href="javascript:void(0)" class="shipping-address-listing-delete-btn"> <i class="fas fa-trash-alt"></i> Remove</a></li>
+                                    <li><a href="javascript:void(0)" class="shipping-address-listing-edit-btn"> <i class="fas fa-pen"></i> {{ trans('lables.shipping-address-edit-address') }}</a></li>
+                                    <li><a href="javascript:void(0)" class="shipping-address-listing-delete-btn"> <i class="fas fa-trash-alt"></i> {{ trans('lables.shipping-address-del-address') }}</a></li>
                                 </ul>
 
                             </td>
@@ -95,14 +95,14 @@
                                     <label for="">{{ trans('lables.shipping-address-first-name') }}</label>
                                     <input type="text" class="form-control" id="first_name" placeholder="{{ trans('lables.shipping-address-first-name') }}">
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="">{{ trans('lables.shipping-address-last-name') }}</label>
                                     <input type="text" class="form-control" id="last_name" placeholder="{{ trans('lables.shipping-address-last-name') }}">
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                     <label for=""> {{ trans('lables.shipping-address-stret-address') }}</label>
                                     <input type="text" class="form-control" id="street_address" placeholder="{{ trans('lables.shipping-address-stret-address') }}">
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="form-group select-control col-md-6">
@@ -120,7 +120,7 @@
                                     <select class="form-control " id="country_id" onchange="states()">
                                     </select>
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -128,17 +128,19 @@
 
                                 <div class="form-group select-control col-md-6">
                                     <label for="">{{ trans('lables.shipping-address-state') }}</label>
-                                    <select class="form-control " id="state_id">
+                                    <select class="form-control " id="state_id" onchange="states_city()">
                                     </select>
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="form-group select-control col-md-6">
                                     <label for=""> {{ trans('lables.shipping-address-city') }}</label>
-                                    <input type="text" class="form-control " id="city" placeholder="{{ trans('lables.shipping-address-city') }}"/>
+                                    <select class="form-control" id="city">
+                                    </select>
+                                    {{-- <input type="text" class="form-control " id="city" placeholder="{{ trans('lables.shipping-address-city') }}"/> --}}
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +150,7 @@
                                     <label for=""> {{ trans('lables.shipping-address-postal-code') }}</label>
                                     <input type="text" class="form-control" id="postcode" placeholder="{{ trans('lables.shipping-address-postal-code') }}">
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                                 @if(isset(getSetting()['is_deliveryboyapp_purchased']) && getSetting()['is_deliveryboyapp_purchased'] == '1')
@@ -157,7 +159,7 @@
                                     <input type="text" class="form-control" data-toggle="modal" data-target="#mapModal" name="location"
                                     id="location" aria-describedby="addressHelp" placeholder="{{ trans('lables.shipping-address-latlong') }}">
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                                 @endif
@@ -166,6 +168,7 @@
                             <input type="hidden" class="form-control" id="method">
                             <input type="hidden" class="form-control" id="country_id_hidden">
                             <input type="hidden" class="form-control" id="state_id_hidden">
+                            <input type="hidden" class="form-control" id="city_id_hidden">
                             <input type="hidden" class="form-control" id="addres_id">
                             <input type="hidden" class="form-control" id="gender">
                             <input type="hidden" class="form-control" id="dob">
@@ -403,7 +406,7 @@
             $("#state_id").html('');
             return;
         }
-        
+
         $.ajax({
             type: 'get',
             url: "{{ url('') }}/api/client/state?country_id="+country_id+'&getAllData=1',
@@ -426,6 +429,44 @@
                     }
                     $("#state_id").html(html);
                     $("#state_id_hidden").val('');
+                } else if (data.status == 'Error') {
+                    toastr.error('{{ trans("response.some_thing_went_wrong") }}');
+                }
+            },
+            error: function(data) {
+            },
+        });
+    }
+    function states_city(){
+        state_id = $("#state_id").val();
+        if(state_id == ''){
+            $("#city").html('');
+            return;
+        }
+
+        $.ajax({
+            type: 'get',
+            url: "{{ url('') }}/api/client/city?states_id="+state_id+'&getAllData=1',
+            headers: {
+                'Authorization': 'Bearer ' + customerToken,
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                clientid: "{{ isset(getSetting()['client_id']) ? getSetting()['client_id'] : '' }}",
+                clientsecret: "{{ isset(getSetting()['client_secret']) ? getSetting()['client_secret'] : '' }}",
+            },
+            beforeSend: function() {},
+            success: function(data) {
+                console.log(data);
+                if (data.status == 'Success') {
+                    html = '<option value="">Select</option>';
+                    for(i=0;i<data.data.length;i++){
+                        selected = '';
+                        if($.trim($("#city_id_hidden").val()) != '' && $.trim($("#city_id_hidden").val()) == data.data[i].id){
+                            selected = 'selected';
+                        }
+                        html += '<option value="'+data.data[i].id+'" '+selected+'>'+data.data[i].name+'</option>';
+                    }
+                    $("#city").html(html);
+                    $("#city_id_hidden").val('');
                 } else if (data.status == 'Error') {
                     toastr.error('{{ trans("response.some_thing_went_wrong") }}');
                 }
@@ -477,12 +518,14 @@
             },
             beforeSend: function() {},
             success: function(data) {
+                console.log(data);
+
                 if (data.status == 'Success') {
                     $("#shippingAddressForm").find("#first_name").val(data.data.first_name);
                     $("#shippingAddressForm").find("#last_name").val(data.data.last_name);
                     $("#shippingAddressForm").find("#postcode").val(data.data.postcode);
                     $("#shippingAddressForm").find("#location").val(data.data.latlong);
-                    
+
                     country = state = '';
                     if(data.data.country_id != 'null' && data.data.country_id != null && data.data.country_id != ''){
                         country = data.data.country_id.country_id;
@@ -493,7 +536,7 @@
                     countries();
                     $("#shippingAddressForm").find("#country_id_hidden").val(country);
                     $("#shippingAddressForm").find("#state_id_hidden").val(state);
-                    $("#shippingAddressForm").find("#city").val(data.data.city);
+                    $("#shippingAddressForm").find("#city_id_hidden").val(city);
                     $("#shippingAddressForm").find("#street_address").val(data.data.street_address);
                     $("#shippingAddressForm").find("#gender").val(data.data.gender);
                     $("#shippingAddressForm").find("#dob").val(data.data.dob);
@@ -623,12 +666,12 @@
                         // }
                         $('#mapModal').hide();
                         $('.modal-backdrop').hide();
-                        setTimeout(function() { 
+                        setTimeout(function() {
                             // $('#location').focus();
                             $('#location').get(0).focus();
-                           
+
                         }, 500);
-                       
+
 
                     } else {
                         console.log('No results found');

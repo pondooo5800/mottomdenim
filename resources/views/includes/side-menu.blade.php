@@ -12,12 +12,12 @@
         </a>
     </li>
 
-    <li class="list-group-item">
+    {{-- <li class="list-group-item">
         <a class="nav-link" href="{{ url('/compare') }}">
             <i class="fas fa-align-right"></i>
             {{ trans('lables.profile-side-menue-compare') }}
         </a>
-    </li>
+    </li> --}}
 
     <li class="list-group-item">
         <a class="nav-link" href="{{ url('/orders') }}">
@@ -26,15 +26,14 @@
         </a>
     </li>
 
-    <li class="list-group-item">
+    {{-- <li class="list-group-item">
         @if (isset(getSetting()['point_setting']) && getSetting()['point_setting'] == 'enable')
             <a class="nav-link" href="{{ url('/points') }}">
                 <i class="fas fa-shopping-cart"></i>
                 {{ trans('lables.header-points') }}
             </a>
         @endif
-
-    </li>
+    </li> --}}
 
     <li class="list-group-item">
         <a class="nav-link" href="{{ url('/shipping-address') }}">

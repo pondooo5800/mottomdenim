@@ -3,7 +3,7 @@
 
 <!-- Shop Page One content -->
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb"style="background-color: #fff">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -92,7 +92,7 @@
                         </table>
 
                     </div>
-                    
+
                 </div>
 
                 <div class="row">
@@ -142,7 +142,7 @@
                         </table>
 
                     </div>
-                    
+
                 </div>
 
                 <table class="table items">
@@ -163,40 +163,40 @@
 
                 <table class="table order-id">
                     <tbody>
-                        
+
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-subtotal') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-subtotal') }}</td>
                             <td class="col-2 right bold order-subtotal"></td>
                         </tr>
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-discount') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-discount') }}</td>
                             <td class="col-2 right order-discount"></td>
                         </tr>
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-tax') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-tax') }}</td>
                             <td class="col-2 right order-tax"></td>
                         </tr>
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-shipping') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-shipping') }}</td>
                             <td class="col-2 right order-shipping"></td>
                         </tr>
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-coupon-discount') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-coupon-discount') }}</td>
                             <td class="col-2 right coupon-amount"></td>
                         </tr>
-                        
+
                         <tr>
                             <td class="col-7"></td>
-                            <td class="col-3 bold">{{ trans('lables.order-detail-total') }}</td> 
+                            <td class="col-3 bold">{{ trans('lables.order-detail-total') }}</td>
                             <td class="col-2 right bold order-total"></td>
                         </tr>
-                         
-                        
+
+
                         </tbody>
                     </table>
 
@@ -206,7 +206,7 @@
                             <div class="form-group">
                                 <label for="comment">{{ trans('lables.order-detail-comments') }}</label>
                                 <textarea class="form-control" id="comment" rows="3" placeholder="{{ trans('lables.order-detail-comments') }}"></textarea>
-                                <button type="button" class="btn-secondary  swipe-to-top" id="saveComments" onclick="saveComments()">Save Comment</button>
+                                <button type="button" class="btn-secondary  swipe-to-top" id="saveComments" onclick="saveComments()">{{ trans('lables.order-detail-save-comments') }}</button>
                             </div>
                         </div>
                     </div>
@@ -278,17 +278,17 @@
                     const templ = document.getElementById("order-show-detail-template");
                     $("#order-show-detail").html('');
                     order = data.data.order_date.split('T');
-                    $(".order-date").html(order[0]); 
+                    $(".order-date").html(order[0]);
                     $(".order-no").html(data.data.order_id);
                     $(".order-status").html(data.data.order_status);
 
                     $(".order-delivery-address").html(data.data.delivery_street_aadress);
                     city = state = postcode = country =  '';
-                    
+
                     if(data.data.delivery_city != null && data.data.delivery_city != 'null' && data.data.delivery_city != ''){
                         city = data.data.delivery_city;
                     }
-                    
+
                     if(data.data.delivery_postcode != null && data.data.delivery_postcode != 'null' && data.data.delivery_postcode != ''){
                         postcode = ', '+data.data.delivery_postcode;
                     }
@@ -299,19 +299,19 @@
                     if(data.data.delivery_state1 != null && data.data.delivery_state1 != 'null' && data.data.delivery_state1 != ''){
                         state = ', '+data.data.delivery_state1.name;
                     }
-                    
+
                     detail_address = city + state + postcode + country;
-                    
+
                     $(".order-delivery-detail").html(detail_address);
 
 
                     $(".order-billing-address").html(data.data.billing_street_aadress);
                     city = state = postcode = country =  '';
-                    
+
                     if(data.data.billing_city != null && data.data.billing_city != 'null' && data.data.billing_city != ''){
                         city = data.data.billing_city;
                     }
-                    
+
                     if(data.data.billing_postcode != null && data.data.billing_postcode != 'null' && data.data.billing_postcode != ''){
                         postcode = ', '+data.data.billing_postcode;
                     }
@@ -325,16 +325,16 @@
                     detail_address = city + state + postcode + country;
 
                     $(".order-billing-detail").html(detail_address);
-                    
+
                     $(".order-transaction_id").html((data.data.transaction_id != null && data.data.transaction_id != 'null' && data.data.transaction_id != '')?data.data.transaction_id:"N/A");
 
-                    
-                    
+
+
                     // $(".order-shipping-method").html(data.data.shipping_method);
 
-                    
+
                     // clone.querySelector(".order-product-name").setAttribute('href', '/orders/' + data.data.order_id);
-                    
+
                     subtotal = total_discount = coupon_amount = 0.00;
 
                     if (data.data.order_detail != null && data.data.order_detail != 'null' && data.data.order_detail != '') {
@@ -361,7 +361,7 @@
                                     if (data.data.order_detail[k].product.detail != null && data.data.order_detail[k].product.detail != 'null' && data.data.order_detail[k].product.detail != '') {
                                         clone.querySelector(".order-image").setAttribute('src',
                                             '/gallary/' + data.data.order_detail[k].product.product_gallary.gallary_name);
-                                        
+
                                             clone.querySelector(".order-image").setAttribute('alt', data.data.order_detail[k].product.product_gallary.gallary_name);
 
                                         clone.querySelector(".order-product-name").innerHTML = data.data.order_detail[k].product.detail[0].title;
@@ -369,15 +369,15 @@
                                     }
                                 }
                             }
-                            
+
                             price = data.data.order_detail[k].product_price;
                             discountprice = (data.data.order_detail[k].product_discount > 0) ? +data.data.order_detail[k].product_discount : "-";
                             sub_total = data.data.order_detail[k].product_total * data.data.order_detail[k].product_qty;
                             subtotal = subtotal + data.data.order_detail[k].product_price * data.data.order_detail[k].product_qty;
 
                             if (data.data.coupon_amount != null && data.data.coupon_amount != 'null' && data.data.coupon_amount != '') {
-                                coupon_amount = data.data.coupon_amount;    
-                            }     
+                                coupon_amount = data.data.coupon_amount;
+                            }
 
                             if (data.data.order_detail[k].product_discount > 0)
                             {
@@ -395,7 +395,7 @@
                                     if (discountprice != "-")
                                         discountprice = data.data.currency_id.code +''+ discountprice;
                                 }
-                            
+
 
                             clone.querySelector(".order-price").innerHTML = price;
                             clone.querySelector(".order-discountprice").innerHTML = discountprice;
@@ -466,7 +466,7 @@
                     toastr.error(data.responseJSON.errors.comment[0])
                     console.log(data.responseJSON.errors.comment[0],'if error')
                 },
-            });    
+            });
     }
 </script>
 @endsection
