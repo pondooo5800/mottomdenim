@@ -19,7 +19,7 @@ class CustomerAddressBookRequest extends FormRequest
             $id = $this->customer_address_book['id'];
         }
         $isDeliveryboy = isset(getSetting()['is_deliveryboyapp_purchased']) && getSetting()['is_deliveryboyapp_purchased'] == '1' ? 'required|string|max:191,' : 'nullable|string|max:191,';
-        
+
         return [
             'gender' => 'nullable|in:Male,Female,Other',
             'first_name' => 'exclude_if:is_default_type,default_action|required',
@@ -30,9 +30,10 @@ class CustomerAddressBookRequest extends FormRequest
             'suburb' => $rule1,
             'postcode' => $rule1,
             'dob' => 'nullable|date|date_format:Y-m-d',
-            'city' => 'exclude_if:type,profile|required|string|max:191',
+            // 'city' => 'exclude_if:type,profile|required|string|max:191',
             'country_id' => 'exclude_if:type,profile|required|exists:countries,id',
             'state_id' => 'nullable|integer|exists:states,id',
+            'city_id' => 'exclude_if:type,profile|exists:citys,id',
             'lattitude' => $rule1,
             'longitude' => $rule1,
             'latlong' => $isDeliveryboy . $id,

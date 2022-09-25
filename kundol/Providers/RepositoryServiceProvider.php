@@ -177,7 +177,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(AuthInterface::class, AuthRepository::class);
         $this->app->bind(VariationInterface::class, VariationRepository::class);
         $this->app->bind(CurrencyInterface::class, CurrencyRepository::class);
-        $this->app->bind(CityInterface::class, CityRepository::class);
         $this->app->bind(RoleInterface::class, RoleRepository::class);
         $this->app->bind(LanguageInterface::class, LanguageRepository::class);
         $this->app->bind(MenuInterface::class, MenuRepository::class);
@@ -195,6 +194,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(TaxRateInterface::class, TaxRateRepository::class);
         $this->app->bind(CountryInterface::class, CountryRepository::class);
         $this->app->bind(StateInterface::class, StateRepository::class);
+        $this->app->bind(CityInterface::class, CityRepository::class);
         $this->app->bind(PaymentMethodInterface::class, PaymentMethodRepository::class);
         $this->app->bind(GallaryInterface::class, GallaryRepository::class);
         $this->app->bind(ProductInterface::class, ProductRepository::class);

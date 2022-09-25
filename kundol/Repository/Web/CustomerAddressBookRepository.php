@@ -19,6 +19,7 @@ class CustomerAddressBookRepository implements CustomerAddressBookInterface
         try {
             $customerAddressBook = new CustomerAddressBook;
             $customerAddressBook = $customerAddressBook->with('customer');
+
             if (isset($_GET['limit']) && is_numeric($_GET['limit']) && $_GET['limit'] > 0) {
                 $numOfResult = $_GET['limit'];
             } else {
@@ -29,7 +30,7 @@ class CustomerAddressBookRepository implements CustomerAddressBookInterface
                 $customerAddressBook = $customerAddressBook->where('is_default', '1');
             }
 
-            $sortBy = ['gender', 'company', 'street_address', 'suburb', 'postcode', 'dob', 'city', 'country_id', 'state_id', 'lattitude', 'longitude'];
+            $sortBy = ['gender', 'company', 'street_address', 'suburb', 'postcode', 'dob', 'city_id', 'country_id', 'state_id', 'lattitude', 'longitude'];
             $sortType = ['ASC', 'DESC', 'asc', 'desc'];
             if (isset($_GET['sortBy']) && $_GET['sortBy'] != '' && isset($_GET['sortType']) && $_GET['sortType'] != '' && in_array($_GET['sortBy'], $sortBy) && in_array($_GET['sortType'], $sortType)) {
                 $customerAddressBook = $customerAddressBook->orderBy($_GET['sortBy'], $_GET['sortType']);
@@ -42,7 +43,6 @@ class CustomerAddressBookRepository implements CustomerAddressBookInterface
 
     public function show($customerAddressBook)
     {
-
         try {
             return $this->successResponse(new CustomerAddressBookResource($customerAddressBook), 'Data Get Successfully!');
         } catch (Exception $e) {
@@ -60,7 +60,7 @@ class CustomerAddressBookRepository implements CustomerAddressBookInterface
             }
             if(!isset($parms['customer_id']))
                 $parms['customer_id'] = \Auth::id();
-                
+
             $sql =  new CustomerAddressBook;
             $sql = $sql->create($parms);
         } catch (Exception $e) {

@@ -16,8 +16,8 @@ class CityRepository implements CityInterface
         try {
             $city = new City;
             if (isset($_GET['getAllData']) && $_GET['getAllData'] == '1') {
-                if (isset($_GET['states_id']) && is_numeric($_GET['states_id']) && $_GET['states_id'] > 0) {
-                    $city = $city->stateId($_GET['states_id']);
+                if (isset($_GET['state_id']) && is_numeric($_GET['state_id']) && $_GET['state_id'] > 0) {
+                    $city = $city->stateId($_GET['state_id']);
                 }
                 return $this->successResponse(CityResource::collection($city->get()), 'Data Get Successfully!');
 
@@ -26,8 +26,8 @@ class CityRepository implements CityInterface
             if (isset($_GET['getState']) && $_GET['getState'] == '1') {
                 $city = $city->with('state');
             }
-            if (isset($_GET['states_id']) && is_numeric($_GET['states_id']) && $_GET['states_id'] > 0) {
-                $city = $city->stateId($_GET['states_id']);
+            if (isset($_GET['state_id']) && is_numeric($_GET['state_id']) && $_GET['state_id'] > 0) {
+                $city = $city->stateId($_GET['state_id']);
             }
             if (isset($_GET['searchParameter']) && $_GET['searchParameter'] != '') {
                 $city = $city->searchParameter($_GET['searchParameter']);

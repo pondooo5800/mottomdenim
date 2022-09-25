@@ -11,7 +11,7 @@ class City extends Model
     protected $table = 'citys';
     protected $fillable = [
         'name',
-        'states_id',
+        'state_id',
     ];
 
     public function scopeCityId($query, $id)
@@ -26,11 +26,11 @@ class City extends Model
 
     public function scopeStateId($query, $id)
     {
-        return $query->where('states_id', $id);
+        return $query->where('state_id', $id);
     }
 
     public function state()
     {
-        return $this->belongsTo('App\Models\Admin\State', 'states_id', 'id');
+        return $this->belongsTo('App\Models\Admin\State', 'state_id', 'id');
     }
 }

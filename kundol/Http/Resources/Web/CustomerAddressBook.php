@@ -5,6 +5,7 @@ namespace App\Http\Resources\Web;
 use App\Http\Resources\Admin\Country as CountryResource;
 use App\Http\Resources\Admin\Customer as CustomerResource;
 use App\Http\Resources\Admin\State as StateResource;
+use App\Http\Resources\Admin\City as CityResource;
 use App\Models\Admin\Customer;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -24,9 +25,9 @@ class CustomerAddressBook extends JsonResource
             'phone' => $this->phone,
             'postcode' => $this->postcode,
             'dob' => $this->dob,
-            'city' => $this->city,
             'country_id' => new CountryResource($this->country),
             'state_id' => new StateResource($this->state),
+            'city' => new CityResource($this->city),
             'lattitude' => $this->lattitude,
             'latlong' => $this->latlong,
             'longitude' => $this->longitude,

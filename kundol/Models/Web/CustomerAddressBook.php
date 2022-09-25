@@ -12,13 +12,13 @@ class CustomerAddressBook extends Model
     protected $table = 'customer_address_book';
     public $timestamps = false;
     protected $fillable = [
-        'customer_id', 'gender', 'company', 'street_address', 'suburb', 'postcode', 'dob', 'city', 'country_id', 'state_id', 'lattitude', 'longitude', 'is_default', 'phone','first_name','last_name','latlong'
+        'customer_id', 'gender', 'company', 'street_address', 'suburb', 'postcode', 'dob', 'city_id', 'country_id', 'state_id', 'lattitude', 'longitude', 'is_default', 'phone','first_name','last_name','latlong'
     ];
 
-    // public function country()
-    // {
-    //     return $this->belongsTo('App\Models\Admin\Country', 'country_id', 'id');
-    // }
+    public function country()
+    {
+        return $this->belongsTo('App\Models\Admin\Country', 'country_id', 'id');
+    }
 
     public function ScopeGetCustomerAddress($query, $customerId)
     {
@@ -26,6 +26,10 @@ class CustomerAddressBook extends Model
     }
 
     public function state()
+    {
+        return $this->belongsTo('App\Models\Admin\State', 'state_id', 'id');
+    }
+    public function city()
     {
         return $this->belongsTo('App\Models\Admin\City', 'city_id', 'id');
     }

@@ -12,7 +12,7 @@ class City extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'states_id' => $this->states_id,
+            'state_id' => $this->state_id,
             'state' => new StateResource($this->whenLoaded('state')),
         ];
     }

@@ -319,6 +319,8 @@ return [
     'shipping-address-add-address' =>'Submit',
     'shipping-address-edit-address' =>'Edit',
     'shipping-address-del-address' =>'Delete',
+    'shipping-address-select-address' =>'Select',
+
 
 
 

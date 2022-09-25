@@ -254,14 +254,17 @@
                         const clone = templ.content.cloneNode(true);
                         clone.querySelector(".shipping-address-listing-first-name").innerHTML = data.data[i].first_name;
                         clone.querySelector(".shipping-address-listing-last-name").innerHTML = data.data[i].last_name;
-                        country = state = '';
+                        country = state = city = '';
                         if(data.data[i].country_id != 'null' && data.data[i].country_id != null && data.data[i].country_id != ''){
                             country = data.data[i].country_id.country_name +', ';
                         }
                         if(data.data[i].state_id != 'null' && data.data[i].state_id != null && data.data[i].state_id != ''){
                             state = data.data[i].state_id.name +', ';
                         }
-                        clone.querySelector(".shipping-address-listing-country-state-city").innerHTML = country + state + data.data[i].city;
+                        if(data.data[i].city != 'null' && data.data[i].city != null && data.data[i].city != ''){
+                            city = data.data[i].city.name +', ';
+                        }
+                        clone.querySelector(".shipping-address-listing-country-state-city").innerHTML = country + state + city + data.data[i].postcode;
                         clone.querySelector(".shipping-address-listing-is-default").setAttribute('data-id', data.data[i].id);
                         clone.querySelector(".shipping-address-listing-is-default").setAttribute('onclick', 'isDefault(this)');
                         clone.querySelector(".shipping-address-listing-edit-btn").setAttribute('data-id', data.data[i].id);
@@ -314,7 +317,7 @@
                 dob: dob,
                 phone: phone,
                 postcode:postcode,
-                city:city,
+                city_id:city,
                 state_id:state_id,
                 country_id:country_id,
                 street_address:street_address,
@@ -377,7 +380,7 @@
             beforeSend: function() {},
             success: function(data) {
                 if (data.status == 'Success') {
-                    html = '<option value="">Select</option>';
+                    html = '<option value="">{{ trans('lables.shipping-address-select-address') }}</option>';
                     for(i=0;i<data.data.length;i++){
                         selected = '';
                         if($.trim($("#country_id_hidden").val()) != '' && $.trim($("#country_id_hidden").val()) == data.data[i].country_id){
@@ -389,7 +392,9 @@
                     $("#country_id").html(html);
                     if($.trim($("#state_id_hidden").val()) != ''){
                         $("#country_id").trigger('change');
+                        $("#state_id").trigger('change');
                     }
+
 
                 } else if (data.status == 'Error') {
                     toastr.error('{{ trans("response.some_thing_went_wrong") }}');
@@ -419,7 +424,7 @@
             beforeSend: function() {},
             success: function(data) {
                 if (data.status == 'Success') {
-                    html = '<option value="">Select</option>';
+                    html = '<option value="">{{ trans('lables.shipping-address-select-address') }}</option>';
                     for(i=0;i<data.data.length;i++){
                         selected = '';
                         if($.trim($("#state_id_hidden").val()) != '' && $.trim($("#state_id_hidden").val()) == data.data[i].id){
@@ -446,7 +451,7 @@
 
         $.ajax({
             type: 'get',
-            url: "{{ url('') }}/api/client/city?states_id="+state_id+'&getAllData=1',
+            url: "{{ url('') }}/api/client/city?state_id="+state_id+'&getAllData=1',
             headers: {
                 'Authorization': 'Bearer ' + customerToken,
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
@@ -457,7 +462,7 @@
             success: function(data) {
                 console.log(data);
                 if (data.status == 'Success') {
-                    html = '<option value="">Select</option>';
+                    html = '<option value="">{{ trans('lables.shipping-address-select-address') }}</option>';
                     for(i=0;i<data.data.length;i++){
                         selected = '';
                         if($.trim($("#city_id_hidden").val()) != '' && $.trim($("#city_id_hidden").val()) == data.data[i].id){
@@ -518,20 +523,21 @@
             },
             beforeSend: function() {},
             success: function(data) {
-                console.log(data);
-
                 if (data.status == 'Success') {
                     $("#shippingAddressForm").find("#first_name").val(data.data.first_name);
                     $("#shippingAddressForm").find("#last_name").val(data.data.last_name);
                     $("#shippingAddressForm").find("#postcode").val(data.data.postcode);
                     $("#shippingAddressForm").find("#location").val(data.data.latlong);
 
-                    country = state = '';
+                    country = state = city = '';
                     if(data.data.country_id != 'null' && data.data.country_id != null && data.data.country_id != ''){
                         country = data.data.country_id.country_id;
                     }
                     if(data.data.state_id != 'null' && data.data.state_id != null && data.data.state_id != ''){
                         state = data.data.state_id.id;
+                    }
+                    if(data.data.city != 'null' && data.data.city != null && data.data.city != ''){
+                        city = data.data.city.id;
                     }
                     countries();
                     $("#shippingAddressForm").find("#country_id_hidden").val(country);

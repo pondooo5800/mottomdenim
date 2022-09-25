@@ -314,13 +314,14 @@ return [
     'shipping-address-action' =>'เครื่องมือ',
     'shipping-address-add' =>'จัดการที่อยู่จัดส่ง',
     'shipping-address-stret-address' =>'ที่อยู่',
-    'shipping-address-country' =>'Select Country',
-    'shipping-address-state' =>'Select State',
-    'shipping-address-city' =>'City',
-    'shipping-address-postal-code' =>'Postal Code',
-    'shipping-address-add-address' =>'Submit',
+    'shipping-address-country' =>'จังหวัด',
+    'shipping-address-state' =>'อำเภอ',
+    'shipping-address-city' =>'ตำบล',
+    'shipping-address-postal-code' =>'รหัสไปรษณีย์',
+    'shipping-address-add-address' =>'บันทึก',
     'shipping-address-edit-address' =>'แก้ไข',
     'shipping-address-del-address' =>'ลบ',
+    'shipping-address-select-address' =>'เลือก',
 
 
 
