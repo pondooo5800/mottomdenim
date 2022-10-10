@@ -2,7 +2,8 @@
 @section('content')
 <!-- change password -->
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -33,7 +34,7 @@
                                 <form id="forgetForm">
 
                                     <div class="from-group mb-3">
-                                        
+
                                         <div class="input-group col-12">
                                             <input type="password" class="form-control" id="reset_password_input" placeholder="{{ trans('lables.change-password-new-password') }}">
                                         </div>
@@ -41,7 +42,7 @@
                                             <small class="password errors d-none" style="color:red"></small>
                                         </div>
 
-                                        
+
                                         <div class="input-group col-12">
                                             <input type="password" class="form-control mt-4" id="reset_confirm_password_input"
                                                     placeholder="{{ trans('lables.change-password-confirm-password') }}">
@@ -76,7 +77,7 @@
     $('#reset_password').click(function() {
         password = $('#reset_password_input').val();
         confirm_password = $('#reset_confirm_password_input').val();
-        
+
         resetPassword(password,confirm_password);
     })
 
@@ -125,3 +126,4 @@
     }
 </script>
 @endsection
+

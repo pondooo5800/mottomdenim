@@ -1,6 +1,7 @@
 <!-- Shop Page One content -->
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+
         <div class="container">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -12,7 +13,7 @@
 <section class="pro-content">
     <div class="container">
         <div class="page-heading-title">
-            <h2> {{ trans('lables.shop-shop') }} 
+            <h2> {{ trans('lables.shop-shop') }}
             </h2>
 
         </div>
@@ -169,13 +170,13 @@
 
 
 
-                        
+
                     </div>
 
                     <div class="range-slider-main">
                         <a class=" main-manu" data-toggle="collapse" data-target="#price" role="button"
                             aria-expanded="true" aria-controls="men-cloth">
-                            {{ trans('lables.shop-price') }} 
+                            {{ trans('lables.shop-price') }}
                         </a>
 
                         <div class="sub-manu collapse show multi-collapse" id="price">
@@ -225,14 +226,14 @@
                             </div>
                         </div>
                     @endforeach
-                    
+
                     <div class="range-slider-main">
                         <button class="btn btn-primary filter-from-sidebar">{{ trans('lables.shop-apply') }} </button> <a href="{{ url('/shop') }}" class="btn btn-primary">{{ trans('lables.shop-reset') }} </a>
                     </div>
                     <div class="range-slider-main">
                         <a class=" main-manu" data-toggle="collapse" href="#brands" role="button" aria-expanded="true"
                             aria-controls="men-cloth">
-                            {{ trans('lables.shop-brands') }} 
+                            {{ trans('lables.shop-brands') }}
                         </a>
                         <div class="sub-manu collapse show multi-collapse" id="brands">
                             <ul class="unorder-list">

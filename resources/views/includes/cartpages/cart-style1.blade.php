@@ -1,5 +1,6 @@
 <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -45,7 +46,7 @@
                                         <div class="row">
                                             <a href="{{ url("/shop") }}" class="btn btn-secondary swipe-to-top">
                                                 {{ trans('lables.cart-page-continue-shopping') }}</a>
-                                            <button type="button" class="btn btn-light swipe-to-top" onclick="updateCartItem()">{{ 
+                                            <button type="button" class="btn btn-light swipe-to-top" onclick="updateCartItem()">{{
                                             trans('lables.cart-page-update-cart') }}</button>
                                         </div>
 
@@ -140,7 +141,7 @@
                 <td align="right" class="caritem-discount-coupon"></td>
 
             </tr>
-            
+
             <tr class="item-price">
                 <th scope="row">{{ trans('lables.cart-page-total') }}</th>
                 <td align="right" class="caritem-grandtotal"></td>

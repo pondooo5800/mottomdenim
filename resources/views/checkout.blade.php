@@ -2,7 +2,8 @@
 @section('content')
 
     <div class="container-fuild">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" style="background-color: #fff">
+
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">{{ trans('lables.bread-crumb-home') }}</a>
@@ -526,7 +527,7 @@
                                             </p>
                                             <p class="exchange_rate" style="display: none;"></p>
                                             </div>
-                                        </div>        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -535,7 +536,7 @@
                     <div class="col-12 col-xl-3">
                         <table class="table right-table" id="cartItem-grandtotal-product-show"></table>
                         <p class="free_shipping_order_price" style="display: none; text-align:center; color: red;">
-                            {{ trans('lables.checkout-free-shipping-order-price') }} 
+                            {{ trans('lables.checkout-free-shipping-order-price') }}
                             <span class="free_shipping_order_price2">{{ getSetting()['free_shipping_order_price'] }}</span>
                             {{ trans('lables.checkout-free-shipping-order-price2') }}
                         </p>
@@ -608,7 +609,7 @@
                 <td align="right" class="shipping_tax" data_price="0">$0</td>
 
             </tr>
-                
+
             <tr class="item-price">
 
                 <th scope="row">{{ trans('lables.checkout-total') }}</th>
@@ -619,13 +620,13 @@
 
         </tbody>
 
-        
-            
-        
+
+
+
 
     </template>
 
-    
+
 
     <input type="hidden" name="total_by_weight" id="total_by_weight" class="total_by_weight" />
 
@@ -698,18 +699,18 @@
                         exchange_rate  = data.data[0].exchange_rate;
                         minimum_order_total = exchange_rate * parseFloat({{ getSetting()['minimum_order_total'] }});
                         free_shipping_order_price = exchange_rate * parseFloat({{ getSetting()['free_shipping_order_price'] }});
-                        
+
                         $(".minimum_order2").html(minimum_order_total.toFixed(2));
                         $(".free_shipping_order_price2").html(free_shipping_order_price);
-                        
+
                         $(".exchange_rate").attr('price', exchange_rate);
                     }
                 },
                 error: function(data) {},
             });
 
-            
-                    
+
+
             if (loggedIn == '1') {
                 cartItem('');
             } else {
@@ -967,7 +968,7 @@
                 success: function(data) {
                     $("#coupon_code").val(coupon_code);
                     if (data.status == 'Success') {
-                        
+
                         if (data.data.type == 'fixed') {
                             subtotal = $(".caritem_subtotal").attr('price');
                             discount = data.data.amount * data.data.currency.exchange_rate;
@@ -976,9 +977,9 @@
                             subtotal = $(".caritem_subtotal").attr('price');
                             discount = (subtotal / 100) * data.data.amount;
                             subtotal = subtotal - discount;
-                        }    
+                        }
                             if(data.data.currency != '' && data.data.currency != 'null' && data.data.currency != null){
-                                
+
                                 if(data.data.currency.symbol_position == 'left'){
                                     $(".caritem_discount_coupon").html(data.data.currency.code +''+ discount.toFixed(2));
                                     $(".caritem_grandtotal").html(data.data.currency.code +''+ subtotal.toFixed(2));
@@ -989,7 +990,7 @@
                                 $(".caritem_discount_coupon").attr('price', discount);
                             }
 
-                        
+
                         localStorage.setItem("couponCart", coupon_code);
                         toastr.success("{{ trans('lables.cart-coupon-applied') }}");
 
@@ -1417,7 +1418,7 @@
 
         });
 
-        
+
 
         $(".createOrder").click(function(e) {
             e.preventDefault();
@@ -1459,7 +1460,7 @@
 
             if (orderAmount < minimum_order_total)
             {
-                
+
                 $('.minimum_order').css('display', 'block');
 
             } else {
@@ -1543,8 +1544,8 @@
                                                 '.invalid-feedback').html(item);
                                         });
                                     } else {
-                                        var  str1 = data.message; 
-                                        str1 = parseInt(str1.replace ( /[^\d.]/g, '' ))-1; 
+                                        var  str1 = data.message;
+                                        str1 = parseInt(str1.replace ( /[^\d.]/g, '' ))-1;
                                         toastr.error('{{ trans('response.out_of_stock') }}');
                                         document.getElementById('cartItem-product-show').rows.item(str1).style.color = "red";
                                     }
@@ -1663,8 +1664,8 @@
                                     window.location.href = "{{ url('/thankyou') }}";
 
                             } else if (data.status == 'Error') {
-                                        var  str1 = data.message; 
-                                        str1 = parseInt(str1.replace ( /[^\d.]/g, '' ))-1; 
+                                        var  str1 = data.message;
+                                        str1 = parseInt(str1.replace ( /[^\d.]/g, '' ))-1;
                                         toastr.error('{{ trans('response.out_of_stock') }}');
                                         document.getElementById('cartItem-product-show').rows.item(str1).style.color = "red";
                                 //$("#pills-shipping-tab").addClass('active');
@@ -1696,7 +1697,7 @@
                         },
                     });
                 }
-            }    
+            }
 
 
         });
@@ -1725,10 +1726,10 @@
                             total_tax = 0;
                             subtotal = $(".caritem_subtotal").attr('price');
                             for (i = 0; i < data.data.length; i++) {
-                                
-                                
+
+
                                 total_tax += (subtotal / 100) * data.data[i].tax_amount;
-                                
+
                                 tax_Desctiption = 'Tax';
                                 if (data.data[i].tax != null && data.data[i].tax != 'null' && data.data[i]
                                     .tax != '') {
@@ -1738,20 +1739,20 @@
                                     html += '<tr class="tax-rows"><th scope="row">' + tax_Desctiption +
                                     '</th><td align="right" class="caritem_tax" price="' + total_tax + '">' +  $(".caritem_subtotal").attr('currency_code') + '' +
                                         total_tax.toFixed(2) + '</td></tr>';
-                                   
+
                                 } else {
                                     html += '<tr><th scope="row">' + tax_Desctiption +
                                     '</th><td align="right" class="caritem_tax" price="' + total_tax + '">' +  total_tax.toFixed(2)+''+$(".caritem_subtotal").attr('currency_code') + '</td></tr>';
                                 }
-                                
-                            }
-                            
-                            
-                                $('.tax-rows').remove();
-                                $(html).insertBefore("#test");        
-                            
 
-                            
+                            }
+
+
+                                $('.tax-rows').remove();
+                                $(html).insertBefore("#test");
+
+
+
                             caritemGrandtotal();
                         }
                     } else if (data.status == 'Error') {
@@ -1780,7 +1781,7 @@
 
         function shippingMethodisDefault() {
 
-            
+
 
             $(".shipping_tax").attr('data_price', 0);
             $.ajax({
@@ -1804,10 +1805,10 @@
                                 if (data.data.shipping_method_id == "1") {
 
                                     if ($('.total_by_weight').val() == 0) {
-                                        
+
                                         $(".shipping_tax").attr('data_price', 0);
                                         shipping = 0;
-                                    
+
                                     } else {
 
                                         $(".shipping_tax").attr('data_price', parseFloat(shipping_method_amount) * $('.total_by_weight').val());
@@ -1815,14 +1816,14 @@
 
                                     }
                                 } else {
-                                    
-                                    
+
+
                                     $(".shipping_tax").attr('data_price', shipping_method_amount);
                                     shipping = shipping_method_amount;
-                                    
+
                                 }
 
-                                
+
 
                                 if ($.trim($(".caritem_subtotal").attr('currency_position')) == 'left') {
                                     $(".shipping_tax").html($(".caritem_subtotal").attr('currency_code') + '' +
@@ -1834,7 +1835,7 @@
 
 
                                 caritemGrandtotal();
-                            }, delayInMilliseconds);    
+                            }, delayInMilliseconds);
                         }
                     } else if (data.status == 'Error') {
                         caritemGrandtotal();
@@ -1846,8 +1847,8 @@
                 },
             });
 
-            
-                                    
+
+
         }
 
         function freeShippingPrice () {
@@ -1858,7 +1859,7 @@
                 var caritem_subtotal = parseFloat($(".caritem_subtotal").attr('price')).toFixed(2);
                 var total;
 
-                
+
 
                 if (parseFloat(caritem_subtotal) > parseFloat(free_shipping_order_price))
                 {
@@ -1870,19 +1871,19 @@
                         $(".shipping_tax").html(shipping + '' + $(".caritem_subtotal").attr('currency_code'));
                     }
                     $('.free_shipping_order_price').css('display', 'none');
-                    
+
                 } else {
                     if ($.trim($(".caritem_subtotal").attr('currency_position')) == 'left') {
 
                         total = parseFloat(free_shipping_order_price) - parseFloat(caritem_subtotal);
                         $(".free_shipping_order_price2").html($(".caritem_subtotal").attr('currency_code') + '' + total.toFixed(2));
-                    
+
                     } else {
                         total = parseFloat(free_shipping_order_price) - parseFloat(caritem_subtotal);
                         $(".free_shipping_order_price2").html(total.toFixed(2) +''+$(".caritem_subtotal").attr('currency_code'));
-                    
+
                     }
-                    
+
                     $('.free_shipping_order_price').css('display', 'block');
 
                 }
@@ -1890,7 +1891,7 @@
         }
 
         function caritemGrandtotal() {
-            freeShippingPrice(); 
+            freeShippingPrice();
             couponCart = $(".caritem_discount_coupon").attr('price');
             if (couponCart == null || couponCart == '') {
                 couponCart = 0;
@@ -2262,12 +2263,12 @@
 
                                 if (orderAmount < minimum_order_total)
                                 {
-                                    
+
                                     $('.minimum_order').css('display', 'block');
                                     return false;
 
                                 } else {
-                                    
+
                                     event.preventDefault();
 
                                     var formIsInvalid = false;
@@ -2375,11 +2376,11 @@
 
             if (orderAmount < minimum_order_total)
             {
-                
+
                 $('.minimum_order').css('display', 'block');
                 return false;
 
-            } 
+            }
             paytmOrderStatus = $('#order_status_by_paytm').val();
             if (paytmOrderStatus == '') {
                 e.preventDefault();

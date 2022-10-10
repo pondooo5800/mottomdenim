@@ -14,7 +14,8 @@
 
 
   <div class="container-fuild">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="background-color: #fff">
+
         <div class="container">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>

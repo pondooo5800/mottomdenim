@@ -53,11 +53,11 @@ class CustomerAuthRepository implements CustomerAuthInterface
         $data_set = array('link' => $link);
         $message = "";
         $email = $parms['email'];
-        Mail::to($email)->send(new ForgetPassword($data_set));
+        // Mail::to($email)->send(new ForgetPassword($data_set));
 
-        // Mail::send('emails.forget-password', $data_set, function ($message) use ($email) {
-        //     $message->to($email)->subject('Forget Password');
-        // });
+        Mail::send('emails.forget-password', $data_set, function ($message) use ($email) {
+            $message->to($email)->subject('Forget Password');
+        });
         return $this->successResponseArray($link, 'Email Sent Successfully! Against this Link');
     }
 
@@ -70,17 +70,33 @@ class CustomerAuthRepository implements CustomerAuthInterface
         return $this->successResponse('', 'Password Change Successfully!');
     }
 
-
     public function changePassword(array $parms)
     {
-        
-        Customer::where('password', Hash::make($parms['current_password']))->update([
-            'password' =>$parms['new_password']
-        ]);
-        return $this->successResponse('', 'Password Change Successfully!');
+        $check_pass = Hash::check($parms['current_password'], Hash::make($parms['current_password']));
+        try {
+            if($check_pass == true){
+            Customer::where('id', Auth::id())->update(['password' => Hash::make($parms['new_password'])]);
+            return $this->successResponse('', 'Password Change Successfully!');
+            }
+        } catch (Exception $e) {
+            return $this->errorResponse();
+        }
+        // $input_current_password = $parms['current_password'];
+        // $hashed = Hash::make($parms['current_password']);
+        // $hashed_new_password = Hash::make($parms['new_password']);
+        // $id = Auth::id();
+        // dump($hashed);
+        // dump($user_id);
+        // Customer::where('password', Hash::check($input_current_password, $hashed))->update([
+        //     'password' => $hashed_new_password
+        // ]);
+        // Customer::where('password', Hash::make($parms['new_password']))->update([
+        //     'password' => $parms['new_password']
+        // ]);
+        // dd(\DB::getQueryLog());
     }
 
-    
+
 
     public function loginWithProvider($users)
     {

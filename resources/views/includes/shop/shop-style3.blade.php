@@ -1,7 +1,8 @@
 
     <!-- Shop Page One content -->
     <div class="container-fuild">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" style="background-color: #fff">
+
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">Home</a></li>
@@ -45,14 +46,14 @@
                                                         <option value="{{ $category->id }}">
                                                             {{ $category->detail[0]->category_name }}</option>
                                                     @endif
-    
+
                                                 @endforeach
                                             </select>
                                         </div>
-    
+
                                     </div>
-    
-    
+
+
                                     <div class="form-group ">
                                         <label>{{ trans('lables.shop-price') }}</label>
                                         <div class="select-control">
@@ -65,13 +66,13 @@
                                                     @else
                                                         <option value="{{ $price_range }}">{{ $price_range }}</option>
                                                     @endif
-    
+
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                                    
-    
+
+
                                     @foreach ($data['attribute'] as $key => $attribute)
                                         <div class="form-group ">
                                             <label>{{ $attribute->attribute_detail[0]->name }}</label>
@@ -98,13 +99,13 @@
                                             </div>
                                         </div>
                                     @endforeach
-    
-    
+
+
                                     <div class="form-group ">
                                         <button class="btn-secondary" type="button" id="filter">filter</button>
                                     </div>
                                 </form>
-                        
+
                                 <form class="form-inline d-flex justify-content-between">
 
                                     <div class="form-group">
@@ -142,7 +143,7 @@
                         <div class="products-area">
                             @include(isset(getSetting()['card_style']) ? 'includes.cart.product_card_'.getSetting()['card_style'] : "includes.cart.product_card_style1")
                             <div class="row shop_page_product_card">
-                                
+
                             </div>
                         </div>
                         <div class="pagination justify-content-between ">
@@ -157,7 +158,7 @@
                                         aria-expanded="false" aria-controls="{{ $category->detail[0]->category_name }}">
                                         <img class="img-fuild" src="{{ asset('gallary/'.$category->icon->name) }}">
                                         {{ $category->detail[0]->category_name }}
-    
+
                                     </a>
                                 @endif
                                 <div class="sub-manu collapse multi-collapse" id="{{ $category->detail[0]->category_name }}">
@@ -165,36 +166,36 @@
                                         @foreach ($data['category'] as $childCategory)
                                             @if ($childCategory->parent != null)
                                             @if ($childCategory->parent->id === $category->id)
-    
+
                                                 <li class="list-item">
                                                     <a class="list-link" href="{{ url('/shop?category='.$childCategory->id) }}">
                                                         <i class="fas fa-angle-right"></i>{{ $childCategory->detail[0]->category_name }}
                                                     </a>
                                                 </li>
-    
+
                                             @endif
                                             @endif
                                         @endforeach
                                     </ul>
                                 </div>
                             @endforeach
-    
-    
-    
-                            
+
+
+
+
                         </div>
-    
+
                         <div class="range-slider-main">
                             <a class=" main-manu" data-toggle="collapse" data-target="#price" role="button"
                                 aria-expanded="true" aria-controls="men-cloth">
                                 {{ trans('lables.shop-price') }}
                             </a>
-    
+
                             <div class="sub-manu collapse show multi-collapse" id="price">
                                 <ul class="unorder-list">
                                     @foreach ($data['price_range'] as $price_range)
                                         <li class="list-item">
-    
+
                                             @if (isset($_GET['price']) && $_GET['price'] == $price_range)
                                                 <a class="list-link price-range-list price-range-list-{{ $price_range }} price-active" style="cursor: pointer;"
                                                     data-price-range={{ $price_range }}>{{ $price_range }}
@@ -204,14 +205,14 @@
                                                     data-price-range={{ $price_range }}>{{ $price_range }}
                                                 </a>
                                             @endif
-    
-    
+
+
                                         </li>
                                     @endforeach
                                 </ul>
                             </div>
                         </div>
-    
+
                         @foreach ($data['attribute'] as $key => $attribute)
                             <div class="color-range-main">
                                 <h5>{{ $attribute->attribute_detail[0]->name }}</h5>
@@ -230,14 +231,14 @@
                                                         data-attribute-name="{{ $attribute->attribute_detail[0]->name }}" data-variation-id="{{ $variation->variation_detail[0]->variation_id }}"
                                                         data-variation-name={{ $variation->variation_detail[0]->name }}>{{ $variation->variation_detail[0]->name }}</span>
                                                 </li>
-    
+
                                             @endif
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
                         @endforeach
-                        
+
                         <div class="range-slider-main">
                             <button class="btn btn-primary filter-from-sidebar">{{ trans('lables.shop-apply') }}</button> <a href="{{ url('/shop') }}" class="btn btn-primary">{{ trans('lables.shop-reset') }}</a>
                         </div>
@@ -257,12 +258,12 @@
                                 </ul>
                             </div>
                         </div>
-    
+
                         <div class="img-main">
                             <a href="#"><img class="img-fluid" src="{{ asset("assets/front/images/shop/side-image.jpg") }}"></a>
-    
+
                         </div>
-    
+
                     </div>
 
                 </div>
@@ -271,3 +272,4 @@
             </div>
         </section>
     </section>
+

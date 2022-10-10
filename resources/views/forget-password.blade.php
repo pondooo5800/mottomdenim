@@ -2,11 +2,11 @@
 @section('content')
     <!-- change password -->
     <div class="container-fuild">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb"style="background-color: #fff">
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.change-password') }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.forget-password') }}</li>
                 </ol>
             </div>
         </nav>
@@ -39,7 +39,7 @@
                                                 <input type="email" class="form-control" id="forget_email"
                                                     placeholder="{{ trans('lables.forget-password-email') }}">
                                                 <br />
-                                                
+
 
                                             </div>
                                             <div class="input-group col-12">

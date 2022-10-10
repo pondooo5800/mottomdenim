@@ -326,16 +326,16 @@ return [
 
 
 
-    'change-password'=>'Change Password',
-    'change-password-current-password'=>'Current Password',
-    'change-password-new-password'=>'New Password',
-    'change-password-confirm-password'=>'Confirm Password',
+    'change-password'=>'เปลี่ยนรหัสผ่าน',
+    'change-password-current-password'=>'รหัสผ่านปัจจุบัน',
+    'change-password-new-password'=>'รหัสผ่านใหม่',
+    'change-password-confirm-password'=>'ยืนยันรหัสผ่าน',
     'change-password-access-text'=>'Access Your Account Through Your Social Networks',
 
 
-    'forget-password'=>'Forget Password',
-    'forget-password-email'=>'Email',
-    'forget-password-verify'=>"varify email",
+    'forget-password'=>'ลืมรหัสผ่าน',
+    'forget-password-email'=>'อีเมล',
+    'forget-password-verify'=>"ยืนยันอีเมล",
 
 
     'bread-crumb-home'=>"หน้าแรก",
@@ -347,7 +347,7 @@ return [
     'bread-crumb-shop-cheval'=>'Cheval',
     'bread-crumb-shop-all'=>'สินค้า',
     'bread-shopping-cart'=>'SHOPPING CART',
-    'bread-product-page'=>'Product Page',
+    'bread-product-page'=>'รายละเอียดสินค้า',
     'bread-blog'=>'บทความ',
     'bread-checkout'=>'Checkout',
     'bread-login'=>'login',

@@ -1,7 +1,8 @@
 
          <!-- Shop Page One content -->
          <div class="container-fuild">
-            <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" style="background-color: #fff">
+
                 <div class="container">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -9,17 +10,17 @@
                     </ol>
                 </div>
               </nav>
-          </div> 
+          </div>
         <section class="pro-content">
           <div class="container">
             <div class="page-heading-title">
-                <h2> {{ trans('lables.shop-shop') }} 
+                <h2> {{ trans('lables.shop-shop') }}
                 </h2>
-             
+
                 </div>
         </div>
         <section class="shop-content shop-two">
-                
+
             <div class="container">
                 <div class="row">
                   <div class="col-12 col-lg-3  d-lg-block d-xl-block right-menu">
@@ -54,13 +55,13 @@
 
 
 
-                        
+
                     </div>
 
                     <div class="range-slider-main">
                         <a class=" main-manu" data-toggle="collapse" data-target="#price" role="button"
                             aria-expanded="true" aria-controls="men-cloth">
-                            {{ trans('lables.shop-price') }} 
+                            {{ trans('lables.shop-price') }}
                         </a>
 
                         <div class="sub-manu collapse show multi-collapse" id="price">
@@ -110,14 +111,14 @@
                             </div>
                         </div>
                     @endforeach
-                  
+
                     <div class="range-slider-main">
                         <button class="btn btn-primary filter-from-sidebar">{{ trans('lables.shop-apply') }} </button> <a href="{{ url('/shop') }}" class="btn btn-primary">{{ trans('lables.shop-reset') }} </a>
                     </div>
                     <div class="range-slider-main">
                         <a class=" main-manu" data-toggle="collapse" href="#brands" role="button" aria-expanded="true"
                             aria-controls="men-cloth">
-                            {{ trans('lables.shop-brands') }} 
+                            {{ trans('lables.shop-brands') }}
                         </a>
                         <div class="sub-manu collapse show multi-collapse" id="brands">
                             <ul class="unorder-list">
@@ -151,7 +152,7 @@
                                                 <a href="javascript:void(0);" id="list_3column"><i class="fas fa-list"></i></a>
                                                 </div>
                                           </div>
-                                        </div> 
+                                        </div>
                                         <div class="col-12 col-lg-6">
                                             <form class="form-inline justify-content-end">
                                               <div class="form-group">
@@ -169,31 +170,32 @@
                                                 </div>
                                             </div>
                                             </form>
-                                        </div>  
+                                        </div>
                                     </div>
-                                  
+
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <section id="swap" class="shop-content" >
                               <div class="products-area">
                                 @include(isset(getSetting()['card_style']) ? 'includes.cart.product_card_'.getSetting()['card_style'] : "includes.cart.product_card_style1")
                                 <div class="row shop_page_product_card">
-                                    
+
                                 </div>
-                              </div> 
-                        </section>  
+                              </div>
+                        </section>
                       </div>
                       <div class="pagination justify-content-between ">
-                            
+
                       </div>
                   </div>
-           
-                                
+
+
 
                   </div>
                 </div>
-              
+
             </div>
-        </section> 
+        </section>
       </section>
+

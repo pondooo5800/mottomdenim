@@ -1,6 +1,7 @@
 
     <div class="container-fuild">
-      <nav aria-label="breadcrumb">
+      <nav aria-label="breadcrumb" style="background-color: #fff">
+
           <div class="container">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">Home</a></li>
@@ -8,14 +9,14 @@
               </ol>
           </div>
         </nav>
-    </div> 
-    
+    </div>
+
     <section class="pro-content">
       <div class="container">
         <div class="page-heading-title">
-            <h2> ABOUTS 
+            <h2> ABOUTS
             </h2>
-         
+
             </div>
     </div>
     <!-- About-us Content -->
@@ -28,9 +29,9 @@
           <div class="col-12 col-md-6">
               <div class="peragraph">
                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                   <div class="pre-info">
@@ -49,10 +50,10 @@
                 </div>
             </div>
         </div>
-       
-     
-  
-      </div>  
+
+
+
+      </div>
       <div class="container-fluid profile-div">
           <div class="container">
               <div class="media-main">
@@ -62,7 +63,7 @@
                              <img src="{{ asset('assets/front/images/about-us/profile.png') }}" alt="profile" class="rounded-circle" style="width:100px;">
                              <div class="media-body">
                                <h4>John Doe <small>Sales Executive</small></h4>
-                               <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                               <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
                              </div>
@@ -73,14 +74,14 @@
                              <img src="{{ asset('assets/front/images/about-us/profile.png') }}" alt="profile" class="rounded-circle" style="width:100px;">
                              <div class="media-body">
                                <h4>John Doe  <small>Sales Executive</small></h4>
-                               <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                               <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
                              </div>
                            </div>
                       </div>
                   </div>
-                  
+
               </div>
           </div>
       </div>
@@ -91,8 +92,8 @@
                 <div class="pro-heading-title">
                     <h2> Our Team
                     </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Morbi venenatis felis tempus feugiat maximus. Aliquam erat volutpat. 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Morbi venenatis felis tempus feugiat maximus. Aliquam erat volutpat.
                     </p>
                 </div>
               </div>
@@ -100,7 +101,7 @@
         </div>
           <div class="container">
               <div class="products-area">
-                
+
                   <div class="row">
                     <div class="col-12">
                         <div class="aboutus-carousel-js row">
@@ -108,7 +109,7 @@
                                 <div class="product">
                                   <article>
                                     <img src="{{ asset('assets/front/images/about-us/14_01_about us2.jpg') }}" class="img-fluid" alt="blogImage">
-                                  
+
                                       <div class="aboutdetail">
                                         <div class="pro-title">
                                           <h5>Senior Frontend Developer</h5>
@@ -116,7 +117,7 @@
                                           <div class="pro-entry-content">
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                             </div>
-                                      
+
                                       </div>
                                           <div class="over"></div>
                                   </article>
@@ -133,9 +134,9 @@
                                         <div class="pro-entry-content">
                                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                           </div>
-                                    
+
                                     </div>
-                                  
+
                                           <div class="over"></div>
                                   </article>
                                 </div>
@@ -144,7 +145,7 @@
                                 <div class="product">
                                   <article>
                                     <img src="{{ asset('assets/front/images/about-us/14_01_about us2.jpg') }}" class="img-fluid" alt="blogImage">
-                                  
+
                                     <div class="aboutdetail">
                                       <div class="pro-title">
                                         <h5>Senior Frontend Developer</h5>
@@ -152,9 +153,9 @@
                                         <div class="pro-entry-content">
                                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                           </div>
-                                    
+
                                     </div>
-                                  
+
                                           <div class="over"></div>
                                   </article>
                                 </div>
@@ -163,7 +164,7 @@
                                 <div class="product">
                                   <article>
                                     <img src="{{ asset('assets/front/images/about-us/14_01_about us2.jpg') }}" class="img-fluid" alt="blogImage">
-                                  
+
                                     <div class="aboutdetail">
                                       <div class="pro-title">
                                         <h5>Senior Frontend Developer</h5>
@@ -171,9 +172,9 @@
                                         <div class="pro-entry-content">
                                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                           </div>
-                                    
+
                                     </div>
-                                  
+
                                           <div class="over"></div>
                                   </article>
                                 </div>
@@ -182,7 +183,7 @@
                                 <div class="product">
                                   <article>
                                     <img src="{{ asset('assets/front/images/about-us/14_01_about us2.jpg') }}" class="img-fluid" alt="blogImage">
-                                  
+
                                     <div class="aboutdetail">
                                       <div class="pro-title">
                                         <h5>Senior Frontend Developer</h5>
@@ -190,9 +191,9 @@
                                         <div class="pro-entry-content">
                                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                           </div>
-                                    
+
                                     </div>
-                                  
+
                                           <div class="over"></div>
                                   </article>
                                 </div>
@@ -201,7 +202,7 @@
                                 <div class="product">
                                   <article>
                                     <img src="{{ asset('assets/front/images/about-us/14_01_about us2.jpg') }}" class="img-fluid" alt="blogImage">
-                                  
+
                                     <div class="aboutdetail">
                                       <div class="pro-title">
                                         <h5>Senior Frontend Developer</h5>
@@ -209,18 +210,18 @@
                                         <div class="pro-entry-content">
                                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                           </div>
-                                    
+
                                     </div>
-                                  
+
                                           <div class="over"></div>
                                   </article>
                                 </div>
                             </div>
-                          
-                        </div>  
+
+                        </div>
                     </div>
                   </div>
-                 </div> 
+                 </div>
           </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 @extends('layouts.master')
 @section('content')
     <!-- change password -->
+
     <div class="container-fuild">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb"style="background-color: #fff">
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
@@ -33,7 +34,7 @@
                                     <form id="forgetForm">
 
                                         <div class="from-group mb-3">
-                                            
+
                                             <div class="input-group col-12">
                                                 <input type="password" class="form-control " id="current_password_input" placeholder="{{ trans('lables.change-password-current-password') }}">
                                             </div>
@@ -47,7 +48,7 @@
                                             <div class="input-group col-12">
                                                 <small class="new_password errors d-none" style="color:red"></small>
                                             </div>
-    
+
                                             <div class="input-group col-12">
                                                 <input type="password" class="form-control mt-4" id="reset_confirm_password_input"
                                                         placeholder="{{ trans('lables.change-password-confirm-password') }}">
@@ -58,7 +59,7 @@
                                         </div>
                                         <div class="col-12 col-sm-12">
                                             <button type="button" id="reset_password" class="btn btn-secondary">{{ trans('lables.change-password') }}</button>
-    
+
                                         </div>
                                     </form>
                                 </div>
@@ -89,20 +90,18 @@
     loggedIn = $.trim(localStorage.getItem("customerLoggedin"));
     customerToken = $.trim(localStorage.getItem("customerToken"));
     customerId = $.trim(localStorage.getItem("customerId"));
-    
-    
+
+
     $('#reset_password').click(function() {
         current_password = $('#current_password_input').val();
         new_password = $('#reset_password_input').val();
         confirm_password = $('#reset_confirm_password_input').val();
-        
         resetPassword(current_password,new_password,confirm_password);
     })
 
 
     function resetPassword(current_password,new_password,confirm_password) {
         var url = "{{ url('') }}" + '/api/client/change_password';
-
         $.ajax({
             type: 'post',
             url: url,
@@ -119,6 +118,8 @@
             },
             beforeSend: function() {},
             success: function(data) {
+                console.log(data);
+
                 if (data.status == 'Success') {
                     $('#reset_password_input').val();
                     $('#reset_confirm_password_input').val();

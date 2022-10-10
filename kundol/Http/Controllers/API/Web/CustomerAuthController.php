@@ -40,7 +40,7 @@ class CustomerAuthController extends Controller
 
     public function resetPassword(ResetRequest $request)
     {
-        
+
         $parms = $request->all();
         return $this->CustomerAuthRepository->resetPassword($parms);
     }
@@ -69,14 +69,14 @@ class CustomerAuthController extends Controller
             $userSocial = $userSocial->userFromToken($_GET['code']);
         else
             $userSocial = $userSocial->user();
-        
+
 
         $users =   Customer::where(['email' => $userSocial->getEmail()])->first();
         if ($users) {
             return $this->CustomerAuthRepository->loginWithProvider($users);
         } else {
 
-            
+
 
             $user = Customer::create([
                 'first_name'          => $userSocial->getName(),
@@ -89,7 +89,7 @@ class CustomerAuthController extends Controller
             if($this->callFromWeb){
                 return $this->callFromWeb;
             }else{
-                
+
                 return $this->CustomerAuthRepository->loginWithProvider($user);
             }
         }
@@ -120,7 +120,7 @@ class CustomerAuthController extends Controller
         return Socialite::driver($provider)
             ->stateless()
             ->redirect();
-       
+
     }
 
     public function logout(Request $request)
