@@ -210,6 +210,7 @@
                                 var combination = '';
                                 var attribute = data.data.attribute
                                 for (var a = 0; a < attribute.length; a++) {
+                                    // console.log(a);
 
                                     if (attribute[a].attributes != null) {
 

@@ -5,7 +5,7 @@
     <a href="{{ url('/shop?category=2') }}">
 
         <div class="fullwidth-banner"
-            style="  background-repeat: no-repeat; background-size: contain;background-attachment: unset;background-image: url('{{ asset('gallary').'/'.$data['homeBanners'][0]->gallary->name }}');">
+            style="background-repeat: no-repeat; background-size: contain;background-attachment: unset;background-image: url('{{ asset('gallary').'/'.$data['homeBanners'][0]->gallary->name }}');">
 
 
             {{-- <div class="parallax-banner-text">

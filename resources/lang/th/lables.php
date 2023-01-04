@@ -60,6 +60,7 @@ return [
     'home-button-text'=>"View All Range",
 
     'home-new-arrival-title'=>'สินค้ามาใหม่',
+    'home-shop-title'=>'สินค้า / ร้านค้า',
     'home-new-arrival-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis tempus feugiat maximus.",
 
     'home-news-title'=>"NEWS & EVENTS",
@@ -140,7 +141,7 @@ return [
 
     'shop-shop'=>'Shop',
     'shop-new-arrivar'=>'สินค้ามาใหม่',
-    'shop-sell'=>'สินค้าลดราคา',
+    'shop-sell'=>'ลดราคา',
     'shop-best-seller'=>'สินค้าขายดี',
     'shop-display' => 'Display',
     'shop-category' => 'Category',
@@ -341,7 +342,7 @@ return [
     'bread-crumb-home'=>"หน้าแรก",
     'bread-crumb-shop'=>'Shop',
     'bread-crumb-shop-new-arrival'=>'สินค้ามาใหม่',
-    'bread-crumb-shop-sell'=>'สินค้าลดราคา',
+    'bread-crumb-shop-sell'=>'ลดราคา',
     'bread-crumb-shop-best-seller'=>'สินค้าขายดี',
     'bread-crumb-shop-mottom'=>'Mottom',
     'bread-crumb-shop-cheval'=>'Cheval',

@@ -90,22 +90,22 @@ $border-radius-sm:            0 !default;
 $bg-footer: #fff;
 $bg-social: $primary;
 
-@font-face { font-family: 'IBM-Plex-Sans-Thai-Regular';
+@font-face { font-family: 'FCIconic-Regular';
 
-    src: url('../../webfonts/IBM-Plex-Sans-Thai-Regular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
-     url('../../webfonts/IBM-Plex-Sans-Thai-Regular.woff?v=4.7.0') format('woff'),
-     url('../../webfonts/IBM-Plex-Sans-Thai-Regular.ttf?v=4.7.0') format('truetype'),
-      url('../../webfonts/IBM-Plex-Sans-Thai-Regular.svg?v=4.7.0#IBM-Plex-Sans-Thai-Regular') format('svg');
+    src: url('../../webfonts/FCIconic-Regular.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+     url('../../webfonts/FCIconic-Regular.woff?v=4.7.0') format('woff'),
+     url('../../webfonts/FCIconic-Regular.ttf?v=4.7.0') format('truetype'),
+      url('../../webfonts/FCIconic-Regular.svg?v=4.7.0#FCIconic-Regular') format('svg');
      font-weight: normal; font-style: normal;
      }
 
-     @font-face { font-family: 'IBM-Plex-Sans-Thai-Bold';
+     @font-face { font-family: 'FCIconic-Bold';
 
-        src: url('../../webfonts/IBM-Plex-Sans-Thai-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+        src: url('../../webfonts/FCIconic-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
 
-         url('../../webfonts/IBM-Plex-Sans-Thai-Bold.woff?v=4.7.0') format('woff'),
-         url('../../webfonts/IBM-Plex-Sans-Thai-Bold.ttf?v=4.7.0') format('truetype'),
-          url('../../webfonts/IBM-Plex-Sans-Thai-Bold.svg?v=4.7.0#/IBM-Plex-Sans-Thai-Bold') format('svg');
+         url('../../webfonts/FCIconic-Bold.woff?v=4.7.0') format('woff'),
+         url('../../webfonts/FCIconic-Bold.ttf?v=4.7.0') format('truetype'),
+          url('../../webfonts/FCIconic-Bold.svg?v=4.7.0#/FCIconic-Bold') format('svg');
          font-weight: normal; font-style: normal;
          }
 

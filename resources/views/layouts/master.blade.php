@@ -1,5 +1,5 @@
-{{-- {{ dd(getSetting()['card_style']) }} --}}
-{{-- dd ($data['currency']); --}}
+{{-- {{ dd(getSetting()) }} --}}
+{{-- {{ dd($data['language']) }} --}}
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -19,9 +19,7 @@
         href="{{ isset(getSetting()['favicon']) ? getSetting()['favicon'] : '01-fav.png' }}">
 
     <!-- Fontawesome CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Core CSS Files -->
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"> --}}
     <link rel="stylesheet" type="text/css"
@@ -74,9 +72,17 @@
               display:block;
               text-transform:uppercase;
               letter-spacing:1px;
-              font-family: IBM-Plex-Sans-Thai, sans-serif;color: #494F69;font-size: 14px;font-weight: normal
+              font-family: FCIconic;color: #494F69;font-size: 13px;font-weight: normal
             }
             .sidebar-social a:hover span.text-menu { color: #000; }
+            .facebook-social {
+                   height: 180px;
+                }
+            @media (max-width: 767px) {
+                .facebook-social {
+                   height: auto;
+                }
+            }
 
         </style>
 

@@ -18,7 +18,7 @@
           <br />
         </div>
       </div>
-      <!-- <div class="row">
+      <div class="row">
         <div class="col-12">
           <div class="gallary-categories">
             <ul
@@ -59,7 +59,7 @@
             </ul>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="row">
         <div class="col-12">
           <div
@@ -153,7 +153,7 @@
                       </div>
                       <div class="modal-body">
                         <p>
-                            คลิกในกล่องเพื่ออัปโหลดภาพ (JPG, PNG และ GIF)
+                            คลิกในกล่องเพื่ออัปโหลดภาพ (JPG, PNG และ JPEG)
                         </p>
                         <div class="avatar-upload mb-3">
                           <div class="avatar-edit">
@@ -163,7 +163,6 @@
                               accept=".png, .jpg, .jpeg"
                               @change="onFileChange"
                             />
-
                             <label for="imageUpload"> image upload </label>
                           </div>
                           <div class="avatar-preview">

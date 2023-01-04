@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('content')
 {{-- @include('includes.shop.shop-style1') --}}
-
 @include(isset(getSetting()['shop']) ? 'includes.shop.shop-'.getSetting()['shop'] : 'includes.shop.shop-style1')
 
     <style>
@@ -71,6 +70,7 @@
             if (searchinput != "")
                 url += "&searchParameter=" + searchinput;
             var appendTo = 'shop_page_product_card';
+            console.log(url);
             $.ajax({
                 type: 'get',
                 url: url,
@@ -81,6 +81,7 @@
                 },
                 beforeSend: function() {},
                 success: function(data) {
+                    // console.log(data);
                     if (data.status == 'Success') {
                         if (data.meta.last_page < page) {
                             $('.load-more-products').attr('disabled', true);
@@ -106,33 +107,6 @@
                             console.log(data);
                         for (i = 0; i < data.data.length; i++) {
                             const clone = templ.content.cloneNode(true);
-                            // if(categoryURL = 1){
-                            //     if(data.data[i].discount_percentage != 0 ){
-                            //                                     clone.querySelector(".div-class").setAttribute('style',
-                            //                                         "display: none;");
-                            //                                 }
-                            //                             }else
-                            // if(categoryURL = 2){
-                            //     if(data.data[i].discount_percentage == 0 ){
-                            //                                     clone.querySelector(".div-class").setAttribute('style',
-                            //                                         "display: none;");
-                            //                                 }
-                            //                             }
-                            // }else if (categoryURL = 2) {
-                            //     // if(data.data[i].discount_percentage  0 ){
-                            //     //                                 clone.querySelector(".div-class").setAttribute('style',
-                            //     //                                     "display: none;");
-                            //     //                             }
-                            // }
-                            // else
-                            // if(categoryURL = 2){
-                            //     if(data.data[i].discount_percentage = 0 ){
-                            //                                     clone.querySelector(".div-class").setAttribute('style',
-                            //                                         "display: none;");
-                            //                                 }                                // clone.querySelector(".div-class").setAttribute('style',
-                            // }
-
-                            // clone.querySelector(".single-text-chat-li").classList.add("bg-blue-100");
                             clone.querySelector(".div-class").classList.add('col-12');
                             if (shopStyle.split('style')[1] == 1)
                                 clone.querySelector(".div-class").classList.add('col-lg-3');
@@ -167,7 +141,18 @@
                             clone.querySelector(".quantity-left-minus").setAttribute('data-field', i);
                             clone.querySelector(".qty-input").setAttribute('id', 'quantity'+i);
                             clone.querySelector(".item-quantity").classList.add('itemqty'+i);
-
+                            if (data.data[i].product_gallary != null && data.data[i].product_gallary !=
+                                'null' && data.data[i].product_gallary != '') {
+                                if (data.data[i].product_gallary.detail != null && data.data[i].product_gallary
+                                    .detail != 'null' && data.data[i].product_gallary.detail != '') {
+                                    clone.querySelector(".product-card-image").setAttribute('src', data.data[i]
+                                        .product_gallary.detail[1].gallary_path);
+                                        if (data.data[i].product_gallary_detail.length > 1) {
+                                            clone.querySelector(".product-card-image-sub").setAttribute('src', data.data[i]
+                                            .product_gallary_detail[1].detail[1].gallary_path);
+                                        }
+                                }
+                            }
                             if (data.data[i].product_gallary != null) {
                                 if (data.data[i].product_gallary.detail != null) {
                                     clone.querySelector(".product-card-image").setAttribute('src', data.data[i]
@@ -208,19 +193,19 @@
                                         .product_price_symbol + '</span>';
                                 }
                             }  else {
-                                console.log(data.data[i].product_variable_price_symbol,"variable price");
-                                    clone.querySelector(".product-card-price").innerHTML = data.data[i].product_variable_price_symbol;
+                                if (data.data[i].product_discount_price == '' || data.data[i]
+                                    .product_discount_price == null || data.data[i].product_discount_price ==
+                                    'null') {
+                                    clone.querySelector(".product-card-price").innerHTML = data.data[i].product_price_symbol;
+
+                                } else {
+                                    clone.querySelector(".product-card-price").innerHTML = data.data[i].product_price_symbol + '<span style="border-radius: 20px;text-decoration:none;background-color: #B11818;color: white;width: 60px;text-align: center;font-size: 15px;"> %' + data.data[i].discount_percentage + '</span>';
+                                    clone.querySelector(".product-card-price-discount").innerHTML = data.data[i].product_discount_price_symbol;
+                                }
+                                // console.log(data.data[i]);
+                                //     clone.querySelector(".product-card-price").innerHTML = data.data[i].product_price_symbol;
+
                             }
-
-                            var bages = '';
-                            if(data.data[i].discount_percentage > 0)
-                                bages +='<span class="badge badge-danger">'+data.data[i].discount_percentage+'%</span>';
-                            // if(data.data[i].is_featured != "0")
-                            //     bages +='<span class="badge badge-success">Featured</span>';
-                            // if(data.data[i].new != "0")
-                            //     bages +='<span class="badge badge-info ">New</span>';
-
-                            clone.querySelector(".badges").innerHTML = bages;
 
                             if (data.data[i].product_type == 'simple') {
                                 clone.querySelector(".product-card-link").setAttribute('onclick',
@@ -246,10 +231,46 @@
                                 clone.querySelector(".add-to-card-bag").classList.add('d-none');
                                 clone.querySelector(".product-card-link").classList.remove('d-g-none');
                                 clone.querySelector(".product-card-link").classList.remove('listing-none');
-                                clone.querySelector(".product-card-link").innerHTML = 'View Detail';
+                                clone.querySelector(".product-card-link").innerHTML = '<img src="{{ asset("assets/images/add-01.png") }}"width=\"30px\" height=\"30px\">';
                                 clone.querySelector(".product-card-link").setAttribute('href', '/product/' +
                                     data.data[i].product_id + '/' + data.data[i].product_slug);
+
                             }
+                            if (data.data[i].attribute[0] != null) {
+                                var combination = '';
+                                var attribute = data.data[i].attribute[0].variations;
+
+                                for (var a = 0; a < attribute.length; a++) {
+                                    switch (attribute[a].product_variation.detail[0].name) {
+                                        case 'ขาว':
+                                        background_color = '#F8F9FA';
+                                            break;
+                                        case 'สว่าง':
+                                        background_color = '#F8F9FA';
+                                            break;
+                                        case 'น้ำเงิน':
+                                        background_color = '#30506D';
+                                            break;
+                                        case 'ยีนส์':
+                                        background_color = '#91A2BB';
+                                            break;
+                                        case 'ดำ':
+                                        background_color = '#000';
+                                            break;
+                                        background_color = '#F8F9FA';
+                                    }
+                                    combination += '<div style="margin-right: 5px;background-color:'+background_color+'; height: 15px;width: 15px;"></div>';
+                                    clone.querySelector(".pro-color").innerHTML = combination;
+                                }
+                            }
+                            if(categoryURL == 2){
+                                clone.querySelector(".display-sale").setAttribute('style',
+                                                                    "display: none;");
+                            }else{
+                                clone.querySelector(".display-sale").setAttribute('style',
+                                                                    "display: unset;");
+                            }
+
 
                             $("." + appendTo).append(clone);
                         }

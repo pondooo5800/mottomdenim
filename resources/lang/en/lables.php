@@ -60,6 +60,7 @@ return [
     'home-button-text'=>"View All Range",
 
     'home-new-arrival-title'=>"NEW ARRIVAL",
+    'home-shop-title'=>'PRODUCT / SHOP',
     'home-new-arrival-description'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis tempus feugiat maximus.",
 
     'home-news-title'=>"NEWS & EVENTS",

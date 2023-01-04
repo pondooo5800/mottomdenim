@@ -28,6 +28,7 @@
         "omnipay/braintree": "~4.0@dev",
         "omnipay/paypal": "^3.0",
         "omnipay/sagepay": "~3.0",
+        "omise/omise-php": "dev-master",
         "razorpay/razorpay": "^2.8",
         "stripe/stripe-php": "^7.85",
         "sudiptpa/omnipay-openpay": "^3.0",

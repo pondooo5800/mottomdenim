@@ -4,12 +4,12 @@
 <metadata>
 Created by FontForge 20090622 at Thu Sep 19 10:46:30 2019
  By deploy user
-Copyright 2011 The IBM-Plex-Sans-Thai Project Authors (https://github.com/JulietaUla/IBM-Plex-Sans-Thai)
+Copyright 2011 The FCIconic Project Authors (https://github.com/JulietaUla/FCIconic)
 </metadata>
 <defs>
-<font id="IBM-Plex-Sans-Thai-Regular" horiz-adv-x="0" >
+<font id="FCIconic-Regular" horiz-adv-x="0" >
   <font-face
-    font-family="IBM-Plex-Sans-Thai"
+    font-family="FCIconic"
     font-weight="400"
     font-stretch="normal"
     units-per-em="1000"

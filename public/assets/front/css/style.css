@@ -586,14 +586,14 @@
 
 @charset "UTF-8";
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Regular";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai-Regular) format("svg");
+  font-family: "FCIconic-Regular";
+  src: url(/fonts/FCIconic-Regular.eot?2bc172bd6e71a2127b151675241830a4?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Regular.woff?59e806faecbbd580934499a7649a6fc0) format("woff"), url(/fonts/FCIconic-Regular.ttf?6876de7d66f866c7cae681a52798db00) format("truetype"), url(/fonts/FCIconic-Regular.svg?ac4993229736cdbe769eda6260566891#FCIconic-Regular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Bold";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#/IBM-Plex-Sans-Thai-Bold) format("svg");
+  font-family: "FCIconic-Bold";
+  src: url(/fonts/FCIconic-Bold.eot?5b7d8e2f0929c96c0b53737d14daf4f0?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Bold.woff?f922c59e2519721ff1cd6f2016032dc8) format("woff"), url(/fonts/FCIconic-Bold.ttf?b7fd53a23a1f20c47c222736f0b515c6) format("truetype"), url(/fonts/FCIconic-Bold.svg?85afc23b31f9417900c5336ca5a1902e#/FCIconic-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -26080,7 +26080,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   z-index: 9;
 }
 .product-2x .icon-liked .badge {
-  font-family: "IBM-Plex-Sans-Thai", sans-serif;
+  font-family: "FCIconic", sans-serif;
   position: absolute;
   right: 0;
   top: -5px;
@@ -26140,7 +26140,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   z-index: 9;
 }
 .product-2x article .icon-liked .badge {
-  font-family: "IBM-Plex-Sans-Thai", sans-serif;
+  font-family: "FCIconic", sans-serif;
   position: absolute;
   right: 0;
   top: -5px;
@@ -29481,8 +29481,8 @@ article:hover .btn-hover {
 }
 .header-one .header-maxi .pro-header-right-options li > a .badge, .header-one .header-maxi .pro-header-right-options li button .badge {
   position: absolute;
-  right: -4px;
-  top: 18px;
+  right: 1px;
+  top: 8px;
   height: 16px;
   min-width: 16px;
   border-radius: 0;
@@ -40052,7 +40052,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   overflow: hidden;
 }
 .product-page .list-main .icon-liked .badge {
-  font-family: "IBM-Plex-Sans-Thai", sans-serif;
+  font-family: "FCIconic", sans-serif;
   position: absolute;
   right: -8px;
   top: -8px;
@@ -41596,14 +41596,14 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   }
 }
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Regular";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai-Regular) format("svg");
+  font-family: "FCIconic-Regular";
+  src: url(/fonts/FCIconic-Regular.eot?2bc172bd6e71a2127b151675241830a4?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Regular.woff?59e806faecbbd580934499a7649a6fc0) format("woff"), url(/fonts/FCIconic-Regular.ttf?6876de7d66f866c7cae681a52798db00) format("truetype"), url(/fonts/FCIconic-Regular.svg?ac4993229736cdbe769eda6260566891#FCIconic-Regular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Bold";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#/IBM-Plex-Sans-Thai-Bold) format("svg");
+  font-family: "FCIconic-Bold";
+  src: url(/fonts/FCIconic-Bold.eot?5b7d8e2f0929c96c0b53737d14daf4f0?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Bold.woff?f922c59e2519721ff1cd6f2016032dc8) format("woff"), url(/fonts/FCIconic-Bold.ttf?b7fd53a23a1f20c47c222736f0b515c6) format("truetype"), url(/fonts/FCIconic-Bold.svg?85afc23b31f9417900c5336ca5a1902e#/FCIconic-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -42858,7 +42858,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
     position: relative;
   }
   .product article .mobile-icons .icon-liked .badge {
-    font-family: "IBM-Plex-Sans-Thai", sans-serif;
+    font-family: "FCIconic", sans-serif;
     border-radius: 0;
     position: absolute;
     right: -10px;
@@ -42914,7 +42914,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
     position: relative;
   }
   .product article .mobile-icons .icon-liked .badge {
-    font-family: "IBM-Plex-Sans-Thai", sans-serif;
+    font-family: "FCIconic", sans-serif;
     border-radius: 0;
     position: absolute;
     right: -10px;
@@ -43075,14 +43075,14 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
   }
 }
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Regular";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Regular.eot?6917a125ae53a2faa348beadd199bed2?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.woff?17894770b98dbc9392a9a022be43039c) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Regular.ttf?3e9c7dd1555f3b70f119c1edd14d4215) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Regular.svg?d097635b543931b8fce05de7791c78c7#IBM-Plex-Sans-Thai-Regular) format("svg");
+  font-family: "FCIconic-Regular";
+  src: url(/fonts/FCIconic-Regular.eot?2bc172bd6e71a2127b151675241830a4?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Regular.woff?59e806faecbbd580934499a7649a6fc0) format("woff"), url(/fonts/FCIconic-Regular.ttf?6876de7d66f866c7cae681a52798db00) format("truetype"), url(/fonts/FCIconic-Regular.svg?ac4993229736cdbe769eda6260566891#FCIconic-Regular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "IBM-Plex-Sans-Thai-Bold";
-  src: url(/fonts/IBM-Plex-Sans-Thai-Bold.eot?75a8b0beac9cefd675b6052c6c1bde35?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.woff?0571e89d1ec655ce7fd0d6c913b4ab94) format("woff"), url(/fonts/IBM-Plex-Sans-Thai-Bold.ttf?53346d5a71199dfb92a80e9b7b8a6e09) format("truetype"), url(/fonts/IBM-Plex-Sans-Thai-Bold.svg?fb984a114508dc3a323cd1fe3f0e295d#/IBM-Plex-Sans-Thai-Bold) format("svg");
+  font-family: "FCIconic-Bold";
+  src: url(/fonts/FCIconic-Bold.eot?5b7d8e2f0929c96c0b53737d14daf4f0?#iefix&v=4.7.0) format("embedded-opentype"), url(/fonts/FCIconic-Bold.woff?f922c59e2519721ff1cd6f2016032dc8) format("woff"), url(/fonts/FCIconic-Bold.ttf?b7fd53a23a1f20c47c222736f0b515c6) format("truetype"), url(/fonts/FCIconic-Bold.svg?85afc23b31f9417900c5336ca5a1902e#/FCIconic-Bold) format("svg");
   font-weight: normal;
   font-style: normal;
 }

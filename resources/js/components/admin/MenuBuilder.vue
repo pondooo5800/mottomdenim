@@ -266,6 +266,7 @@
                 <option value="/shop">Shop</option>
                 <option value="/blog">Blogs</option>
                 <option value="/contact-us">Contact Us</option>
+                <option value="/about-us">About Us</option>
               </select>
               <small
                 class="form-text text-danger"
@@ -427,7 +428,7 @@ export default {
           Authorization: `Bearer ${token}`,
         },
       };
-      
+
       if(this.edit){
         for (var i = 0; i < this.nestableItems.length; i++) {
           console.log(this.nestableItems[i],"single menu");
@@ -498,7 +499,7 @@ export default {
       var err = {};
       var isError = false;
       console.log(this.menuObject.name.length, this.language_id.length);
-      this.menuObject.language_id = this.language_id; 
+      this.menuObject.language_id = this.language_id;
       if (this.menuObject.name.length !== this.language_id.length) {
         err.name = ["name field is required"];
         isError = true;
@@ -634,11 +635,11 @@ export default {
           this.categorys[i].parent_id == null
         ) {
            this.parent_categorys[i] = [];
-           this.parent_categorys[i][0] = this.categorys[i].id; 
-           this.parent_categorys[i][1] = this.categorys[i].detail[0].name; 
+           this.parent_categorys[i][0] = this.categorys[i].id;
+           this.parent_categorys[i][1] = this.categorys[i].detail[0].name;
 
         }
-      }  
+      }
 
       for (var j = 0; j < this.parent_categorys.length; j++) {
         var catalog = {
@@ -658,12 +659,12 @@ export default {
           language_id:[]
         };
         var childObject = [];
-        catalog.language_id = this.language_id;  
+        catalog.language_id = this.language_id;
         for (var i = 0; i < this.categorys.length; i++) {
           if (this.categorys[i].parent_id == this.parent_categorys[j][0]) {
 
             childObject.push({
-              
+
               id: Math.floor(Math.random() * 100),
               name: [
                 this.categorys[i].detail[0].name,
@@ -681,12 +682,12 @@ export default {
             });
           }
         }
-      
+
 
         catalog.children = childObject;
         console.log(catalog);
         this.nestableItems.push(catalog);
-        
+
       }
       this.updateSetting();
     },
