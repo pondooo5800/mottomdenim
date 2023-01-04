@@ -229,7 +229,7 @@ return [
     'login-first-name' => 'ชื่อ',
     'login-last-name' => 'นามสกุล',
     'login-confirm-password' => 'ยืนยันรหัสผ่าน',
-    'login-create-account' => 'สมัครใหม่',
+    'login-create-account' => 'สมัครบัญชี',
     'login-access-account' => 'Access Your Account Through Your Social Networks',
     'login-forget-password' =>'ลืมรหัสผ่าน',
     'check-me' =>'สมัครรับจดหมายข่าวของเรา',

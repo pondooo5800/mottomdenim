@@ -60,6 +60,7 @@ Route::group(['middleware' => ['general','installer']], function () {
     Route::get('/blog', 'Web\IndexController@blog');
     Route::get('/checkout', 'Web\IndexController@checkout');
     Route::get('/login', 'Web\IndexController@login');
+    Route::get('/register', 'Web\IndexController@register');
     Route::get('/compare', 'Web\IndexController@compare');
     Route::get('/orders', 'Web\IndexController@orders');
     Route::get('/orders/{id}', 'Web\IndexController@ordersDetail');

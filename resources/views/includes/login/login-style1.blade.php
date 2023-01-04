@@ -53,7 +53,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12 ">
-                                <button style="color: #B4B3B3" class="btn btn-secondary swipe-to-top" id="loginAccount">{{ trans('lables.login-login') }}</button>
+                                <button style="width: 100%; color: #B4B3B3" class="btn btn-secondary swipe-to-top" id="loginAccount">{{ trans('lables.login-login') }}</button>
                             </div>
                         </div>
                     </form>
@@ -61,16 +61,52 @@
             </div>
             <hr style="border:none;
                         border-left:1px solid hsla(200, 10%, 50%,100);
-                        height:100vh;
+                        height:40vh;
                         width:1px;">
             <div class="col-12 col-sm-12 col-md-5">
-
                 <div class="heading">
-                    <h2>
-                        {{ trans('lables.login-create-account') }}
-                    </h2>
-                    <hr>
+                    <p style="font-size: 18px;font-weight: bold;color:#494F69;">
+                        ลงทะเบียน
+                    </p>
                 </div>
+                <div class="col-12 registration-process mb-0">
+                    <p style="font-size: 14px;margin-bottom:5px;">หากคุณไม่มีบัญชี ของเว็ปไซต์ Mottom Denim</p>
+                    <p style="font-size: 14px;margin-bottom:5px;">สามารถสมัครได้ที่นี่</p>
+                </div>
+                <div class="row" style="margin-top: 27%;">
+                    <div class="col-12 ">
+                        <a href="{{ url('/register') }}" style="width: 100%; color: #B4B3B3" class="btn btn-secondary swipe-to-top" id="loginAccount">{{ trans('lables.login-create-account') }}</a>
+                    </div>
+                </div>
+
+            </div>
+            @endif
+            {{-- <div class="col-12 col-sm-12 my-5">
+                <div class="registration-socials">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-12 col-xl-6 ">
+                            {{ trans('lables.login-access-account') }}
+                        </div>
+                        <div class="col-12  col-xl-6 right">
+                            @if(getSetting()['authenticate_with_google'] == 1)
+                            <a href="{{url('/api/client/customer_login/google')}}" type="button" class="btn btn-google google-click"><i class="fab fa-google-plus-g"></i>&nbsp;Google</a>
+                            @endif
+                            @if(getSetting()['authenticate_with_facebook'] == 1)
+                            <a href="{{url('/api/client/customer_login/facebook')}}"  type="button" class="btn btn-facebook facebook-click"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</a>
+                            @endif
+                            <!-- <button type="button" class="btn btn-twitter"><i class="fab fa-twitter"></i>&nbsp;Twitter</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+            {{-- <div class="col-12 col-sm-12 col-md-5">
+                <div class="heading">
+                    <p style="font-size: 18px;font-weight: bold;color:#494F69;">
+                        ลงทะเบียน
+                    </p>
+                </div>
+
+
                 <div class="col-12 registration-process mb-0">
 
                     <form id="registerForm">
@@ -134,26 +170,8 @@
 
                     </form>
                 </div>
-            </div>
-            @endif
-            {{-- <div class="col-12 col-sm-12 my-5">
-                <div class="registration-socials">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-12 col-xl-6 ">
-                            {{ trans('lables.login-access-account') }}
-                        </div>
-                        <div class="col-12  col-xl-6 right">
-                            @if(getSetting()['authenticate_with_google'] == 1)
-                            <a href="{{url('/api/client/customer_login/google')}}" type="button" class="btn btn-google google-click"><i class="fab fa-google-plus-g"></i>&nbsp;Google</a>
-                            @endif
-                            @if(getSetting()['authenticate_with_facebook'] == 1)
-                            <a href="{{url('/api/client/customer_login/facebook')}}"  type="button" class="btn btn-facebook facebook-click"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</a>
-                            @endif
-                            <!-- <button type="button" class="btn btn-twitter"><i class="fab fa-twitter"></i>&nbsp;Twitter</button> -->
-                        </div>
-                    </div>
-                </div>
             </div> --}}
+
         </div>
     </div>
 </section>

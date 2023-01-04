@@ -152,6 +152,14 @@ class IndexController extends Controller
         return view('login', compact('data', 'setting'));
     }
 
+    public function register()
+    {
+        $homeService = new HomeService;
+        $data = $homeService->homeIndex();
+        $setting = getSetting();
+        return view('register', compact('data', 'setting'));
+    }
+
     public function blogDetail($slug)
     {
 

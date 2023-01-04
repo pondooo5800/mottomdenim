@@ -238,6 +238,7 @@
                             }
                             if (data.data[i].attribute[0] != null) {
                                 var combination = '';
+                                var background_color = '';
                                 var attribute = data.data[i].attribute[0].variations;
 
                                 for (var a = 0; a < attribute.length; a++) {
