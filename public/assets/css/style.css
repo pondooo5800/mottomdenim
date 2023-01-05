@@ -2753,7 +2753,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #B4B3B3;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -22352,8 +22352,8 @@ div.equal:active {
   text-transform: uppercase;
 }
 
-/* This for loop creates the 	necessary css animation names
-Due to the split circle of progress-left and progress right, we must use the animations on each side.
+/* This for loop creates the 	necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
 */
 .progress[data-percentage="10"] .progress-right .progress-bar {
   -webkit-animation: loading-1 1.5s linear forwards;
