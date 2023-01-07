@@ -25478,7 +25478,7 @@ nav[aria-label=breadcrumb] .breadcrumb .active::before {
 
 .disabled-ratings>label:before {
     margin: 2px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: "Font Awesome 5 Free";
     display: inline-block;
     content: "\f005";
@@ -31394,7 +31394,7 @@ article:hover .btn-hover {
     position: relative;
     display: inline-block;
     list-style: none;
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 .header-one .header-maxi .pro-header-right-options li .cart-left {
@@ -31728,13 +31728,14 @@ article:hover .btn-hover {
 
 .header-one .header-navbar nav .navbar-collapse ul .nav-item .nav-link {
     font-family: "FCIconic", sans-serif;
-    font-size: 0.875rem;
+    font-size: 0.975rem;
     color: #494F69;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     padding-right: 10px;
     padding-left: 10px;
     text-transform: uppercase;
+    letter-spacing: unset;
 }
 
 .header-one .header-navbar nav .navbar-collapse ul .nav-item .nav-link:hover {
@@ -43685,9 +43686,9 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .product-page .price {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #000;
+    color: #494F69;
     line-height: 1;
 }
 

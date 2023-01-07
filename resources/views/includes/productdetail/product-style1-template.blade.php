@@ -16,14 +16,18 @@
       <div class="col-12 col-lg-6">
         <div class="row">
           <div class="col-12 col-md-12">
-            <h2 class="pro-title"></h2>
+            <div class="pro-rating">
+                <fieldset class="disabled-ratings overall-rating display-rating">
+                </fieldset>
+                {{-- <a href="#review" class="btn-link review-count"></a> --}}
+              </div>
+              <div class="buttons">
+                <button type="button" class="btn  btn-link wishlist-icon" style="padding-left: 0;font-size: 20px;"><i class="fa fa-heart-o"></i></button>
+              </div>
+              <br>
+            <h4 class="pro-title" style="color: #494F69"></h4>
 
             <div class="price product-card-price">
-            </div>
-            <div class="pro-rating">
-              <fieldset class="disabled-ratings overall-rating display-rating">
-              </fieldset>
-              <a href="#review" class="btn-link review-count"></a>
             </div>
 
             <div class="pro-infos">
@@ -32,6 +36,10 @@
               <input type="hidden" id="product_combination_id" />
             </div>
 
+            <div class="row">
+                <p  style="color:#494F69;font-size: 15px;">ขนาด</p>
+                <p style="text-decoration-line: underline;color:#494F69;font-size: 15px;">รายละเอียด</p>
+            </div>
             <div class="pro-options">
 
             </div>
@@ -54,18 +62,6 @@
 
             </div>
             <div class="pro-sub-buttons">
-              <div class="buttons">
-                <button type="button" class="btn  btn-link wishlist-icon" style="padding-left: 0;"><i class="fas fa-heart"></i>เพิ่มในรายการที่ต้องการ</button>
-                {{-- <button type="button" class="btn btn-link compare-icon"><i class="fas fa-align-right"></i>Add to Compare</button> --}}
-              </div>
-              <!-- AddToAny BEGIN -->
-              <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                <a class="a2a_button_facebook"></a>
-                {{-- <a class="a2a_button_twitter"></a>
-                <a class="a2a_button_email"></a> --}}
-              </div>
-              <script async src="https://static.addtoany.com/menu/page.js"></script>
-              <!-- AddToAny END -->
 
             </div>
 

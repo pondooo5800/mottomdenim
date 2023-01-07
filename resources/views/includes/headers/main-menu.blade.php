@@ -97,7 +97,7 @@
         @endif
 
         <li class="nav-item">
-          <a class="nav-link " href="{{$link}}">
+          <a class="nav-link" href="{{$link}}">
                 <?php $index = 0; ?>
                 @if(isset($menu[$menuloop]['language_id']))
                   @php $index = array_search($data['selectedLenguage'],$menu[$menuloop]['language_id']) @endphp
@@ -138,4 +138,3 @@
         @endforeach
         @endif
       </ul>
-  

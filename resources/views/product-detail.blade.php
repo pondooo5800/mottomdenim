@@ -250,9 +250,9 @@
 
                         }
                         if (data.data.reviews !== null) {
-                            clone.querySelector(".review-count").innerHTML = data.data.reviews.length +
-                                " รีวิว";
-                            rating = '';
+                            // clone.querySelector(".review-count").innerHTML = data.data.reviews.length +
+                            //     " รีวิว";
+                            // rating = '';
                             sum = 0;
                             for (review = 0; review < data.data.reviews.length; review++) {
                                 sum = +sum + +data.data.reviews[review].rating;
