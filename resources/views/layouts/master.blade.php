@@ -669,6 +669,7 @@
                             clone1.querySelector(".top-cart-product-total").innerHTML = total_price;
                             $(".top-cart-product-show").append(clone1);
                             $(".total-menu-cart-product-count").html(data.data.length);
+                            $(".total-product-count").html("(" + data.data.length+ ")");
                         } else {
                             $(".top-cart-product-show").html('{{ trans('lables.header-emptycart') }}');
                         }
@@ -841,17 +842,41 @@
                                             clone.querySelector(".cartItem-image").setAttribute('alt', data
                                                 .data[i].combination[k].gallary.gallary_name);
                                             name = data.data[i].product_detail[0].title;
+                                            clone.querySelector(".cartItem-name").innerHTML = name;
+                                            size = '';
+                                            bg_color = '';
+                                            background_color = '';
                                             for (loop = 0; loop < data.data[i].product_combination
                                                 .length; loop++) {
-                                                if (data.data[i].product_combination.length - 1 == loop) {
-                                                    name += data.data[i].product_combination[loop].variation
+                                                if (data.data[i].product_combination.length - 2 == loop) {
+                                                    size += data.data[i].product_combination[loop].variation
                                                         .detail[0].name;
-                                                } else {
-                                                    name += data.data[i].product_combination[loop].variation
-                                                        .detail[0].name + '-';
                                                 }
+                                                else {
+                                                    switch (data.data[i].product_combination[loop].variation.detail[1].name) {
+                                                        case 'ขาว':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'สว่าง':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'น้ำเงิน':
+                                                        background_color = '#30506D';
+                                                            break;
+                                                        case 'ยีนส์':
+                                                        background_color = '#91A2BB';
+                                                            break;
+                                                        case 'ดำ':
+                                                        background_color = '#000';
+                                                            break;
+                                                        background_color = '#000';
+                                                    }
+                                                    bg_color += '<div style="margin-right: 5px;background-color:'+background_color+'; height: 15px;width: 15px;"></div>';
+                                                }
+
                                             }
-                                            clone.querySelector(".cartItem-name").innerHTML = name;
+                                            clone.querySelector(".cartItem-size").innerHTML = size;
+                                            clone.querySelector(".cartItem-color").innerHTML = bg_color;
                                         }
                                         k = data.data[i].combination.length;
                                     } else {}
@@ -883,10 +908,8 @@
                                 .currency != null) {
                                 if (data.data[i].currency.symbol_position == 'left') {
                                     sum = +data.data[i].qty * +discount_price;
-                                    clone.querySelector(".cartItem-total").innerHTML = data.data[i].currency
-                                        .code + ' ' + sum.toFixed(2);
-                                    clone.querySelector(".cartItem-price").innerHTML = data.data[i].currency
-                                        .code + ' ' + discount_price.toFixed(2);
+                                    clone.querySelector(".cartItem-total").innerHTML ='<span style="color: #333333;font-size:15px;font-family:FCIconic-Medium;">'+sum.toLocaleString()+ 'THB</span>'
+                                    clone.querySelector(".cartItem-price").innerHTML = '<span style="color: #333333;font-size:15px;font-family:FCIconic-Light;">'+discount_price.toLocaleString()+ 'THB</span>';
                                 } else {
                                     sum = +data.data[i].qty * +discount_price;
                                     clone.querySelector(".cartItem-total").innerHTML = sum.toFixed(2) + ' ' +
@@ -910,12 +933,12 @@
                             total_price = total_price + (discount_price * data.data[i].qty);
 
 
-                            if ($.trim(data.data[i].category_detail[0].category_detail) != '' && $.trim(data
-                                    .data[i].category_detail[0].category_detail) != 'null' && $.trim(data.data[
-                                    i].category_detail[0].category_detail) != null) {
-                                clone.querySelector(".cartItem-category-name").innerHTML = data.data[i]
-                                    .category_detail[0].category_detail.detail[0].name;
-                            }
+                            // if ($.trim(data.data[i].category_detail[0].category_detail) != '' && $.trim(data
+                            //         .data[i].category_detail[0].category_detail) != 'null' && $.trim(data.data[
+                            //         i].category_detail[0].category_detail) != null) {
+                            //     clone.querySelector(".cartItem-category-name").innerHTML = data.data[i]
+                            //         .category_detail[0].category_detail.detail[0].name;
+                            // }
                             clone.querySelector(".cartItem-remove").setAttribute('data-id', data.data[i]
                                 .product_id);
                             clone.querySelector(".cartItem-remove").setAttribute('data-combination-id', data

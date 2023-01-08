@@ -153,7 +153,7 @@ return [
 
 
     'cart-add'=>'ใส่ในรถเข็น',
-    'cart-page-shopping-cart'=>'Shopping Cart',
+    'cart-page-shopping-cart'=>'ตะกร้าสินค้า',
     'cart-page-apply'=>'Apply',
     'cart-page-continue-shopping'=>'CONTINUE SHOPPING',
     'cart-page-update-cart'=>'UPDATE CART',
@@ -347,7 +347,7 @@ return [
     'bread-crumb-shop-mottom'=>'Mottom',
     'bread-crumb-shop-cheval'=>'Cheval',
     'bread-crumb-shop-all'=>'สินค้า',
-    'bread-shopping-cart'=>'SHOPPING CART',
+    'bread-shopping-cart'=>'ตะกร้าสินค้า',
     'bread-product-page'=>'รายละเอียดสินค้า',
     'bread-blog'=>'บทความ',
     'bread-checkout'=>'Checkout',

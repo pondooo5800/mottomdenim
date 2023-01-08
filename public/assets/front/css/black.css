@@ -44102,7 +44102,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 .cart-page-one .top-table tbody tr {
     background-color: #fff;
     align-items: center;
-    border: 2px solid #dee2e6;
+    /* border: 2px solid #dee2e6; */
     margin-bottom: 30px;
 }
 
@@ -44149,7 +44149,7 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 
 .cart-page-one .right-table {
     background-color: #fff;
-    border: 2px solid #dee2e6;
+    /* border: 2px solid #dee2e6; */
     margin-bottom: 30px;
 }
 

@@ -241,7 +241,9 @@
     </div>
     <hr style="border-color: #494F69">
     <div class="container" style="max-width:1300px!important;">
-        <label style="border-bottom: 1px solid #494F69;font-size: 14px;color: #494F69">นโยบายการคืนสินค้า</label>&nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="{{url('/refund')}}">
+            <span style="border-bottom: 1px solid #494F69;font-size: 14px;color: #494F69">นโยบายการคืนสินค้า</span>&nbsp; &nbsp; &nbsp; &nbsp;
+        </a>
         <label style="font-size: 14px;color: #494F69">ส่งฟรีเมื่อช้อปครบ 990 บาท</label>&nbsp; &nbsp; &nbsp; &nbsp;
         <label style="font-size: 14px;color: #494F69">บริการเก็บเงินปลายทางแบรนด์</label>
     </div>

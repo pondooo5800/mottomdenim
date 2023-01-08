@@ -12,8 +12,9 @@
 <section class="pro-content">
     <div class="container">
         <div class="page-heading-title">
-            <h2>{{ trans('lables.cart-page-shopping-cart') }}</h2>
-
+            <h4 style="font-weight: bold;color: #494F69;">{{ trans('lables.cart-page-shopping-cart') }}
+                <span style="font-family: 'FCIconic-Bold';color: #494F69;" class="badge total-product-count">(0)</span>
+            </h4>
         </div>
     </div>
 
@@ -24,30 +25,19 @@
             <div class="row">
                 <div class="col-12 col-sm-12 cart-area cart-page-one">
                     <div class="row">
-                        <div class="col-12 col-lg-9">
+                        <div class="col-12 col-lg-8">
                             <table class="table top-table" id="cartItem-product-show">
 
                             </table>
 
                             <div class="col-12 col-lg-12 mb-4">
 
-                                <div class="row justify-content-between click-btn">
-                                    <div class="col-12 col-lg-4">
+                                <div class="row click-btn">
+
+                                    <div class="col-12 align-right">
                                         <div class="row">
-                                            <div class="input-group">
-                                                <input type="text" id="coupon_code" class="form-control" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="coupon-code">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-secondary swipe-to-top" type="button" onclick="couponCartItem()" id="coupon-code">{{ trans('lables.cart-page-apply') }}</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-7 align-right">
-                                        <div class="row">
-                                            <a href="{{ url("/shop") }}" class="btn btn-secondary swipe-to-top">
-                                                {{ trans('lables.cart-page-continue-shopping') }}</a>
-                                            <button type="button" class="btn btn-light swipe-to-top" onclick="updateCartItem()">{{
-                                            trans('lables.cart-page-update-cart') }}</button>
+                                            <button type="button" class="btn btn-light swipe-to-top" onclick="updateCartItem()">
+                                                อัพเดทสินค้า</button>
                                         </div>
 
 
@@ -56,12 +46,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-4">
                             <table class="table right-table" id="cartItem-grandtotal-product-show">
 
                             </table>
-                            <a href="{{url('/checkout')}}">
-                                <button class="btn btn-secondary swipe-to-top m-btn col-12">{{ trans('lables.cart-page-proceed-to-checkout') }}</button>
+                            {{-- <a href="{{url('/checkout')}}"> --}}
+                            <a href="#">
+                                <button style="margin-bottom: 10px;background-color: #333333;height: 50px;" class="btn btn-secondary swipe-to-top m-btn col-12">ยอดชำระ</button>
+                            </a>
+                            <a href="{{url('/shop')}}">
+                                <button style="background-color: #fff;height: 50px;font-size:15px" class="btn m-btn col-12">เลือกซื้อเพิ่มเติม</button>
                             </a>
                         </div>
                     </div>
@@ -75,26 +69,53 @@
     <template id="cartItem-Template">
         <tbody>
             <tr class="d-flex cartItem-row">
-                <td class="col-12 col-md-2">
-                    <img class="img-fluid cartItem-image" src="" />
+                <td class="col-12 col-md-3">
+                    <img style="height: 220px;" class="img-fluid cartItem-image" src="" />
                 </td>
-                <td class="col-12 col-md-4 item-detail-left">
-                    <div class="item-detail">
-                        <span class="cartItem-category-name"></span>
-                        <h4 class="cartItem-name">
-                        </h4>
+                <td class="col-12 col-md-9 item-detail-left" style="flex-direction: column;align-items: start">
+                    <div class="item-detail text-left" style="width: 100%">
+                        <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;" class="cartItem-name"></h4>
+                        <div class="row">
+                            <div class="col-3">
+                                <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;"> ขนาด</h4>
+                                <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;"> สี</h4>
+                                <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;"> ราคาต่อหน่วย</h4>
+                                <h4 style="padding-top:5px;color:#333333; font-size: 15px;margin-bottom: 10px;"> จำนวน</h4>
+                            </div>
+                            <div class="col">
+                                <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;"class="cartItem-size"></h4>
+                                <h4 style="color:#333333; font-size: 15px;margin-bottom: 10px;"class="cartItem-color"></h4>
+                                <div class="item-price cartItem-price" style="margin-bottom: 5px;"></div>
+                                <div style="margin-bottom: 10px;width: 120px;" class="input-group">
+                                    <button style="background-color: #fff;height: 30px;
+                                    border-right-color: #fff;height: 30px;" type="button" value="quantity" class="input-group-text quantity-left-minus cartItem-qty-2" data-type="minus" data-field="">
+                                        <span class="fas fa-minus"></span>
+                                    </button>
+                                    <input style="border-right-color: #fff;border-left-color: #fff;text-align: center;height:30px;" type="text" id="quantity2" name="quantity" class="form-control cartItem-qty">
+                                    <button style=" background-color: #fff;border-left-color: #fff;height: 30px;" type="button" value="quantity" class="input-group-text quantity-right-plus cartItem-qty-1" data-type="plus" data-field="">
+                                        <span class="fas fa-plus"></span>
+                                    </button>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-3" >
+                                <h4 style="color:#333333; font-size: 20px;margin-top: 4px;"> ราคา</h4>
+                                <div class="item-controls">
+                                    <button style="padding: 0 0px;border: 0px solid #fff;" type="button" class="btn cartItem-remove">
+                                        <span style="font-size: 15px;text-decoration-line: underline;color: #E80C0C">ลบ</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="align-middle item-total cartItem-total"></div>
+                            </div>
+                          </div>
                         <div class="item-attributes"></div>
-                        <div class="item-controls">
-                            {{-- <button type="button" class="btn">
-                                <span class="fas fa-pencil-alt"></span>
-                            </button> --}}
-                            <button type="button" class="btn cartItem-remove">
-                                <span class="fas fa-times"></span>
-                            </button>
-                        </div>
+
                     </div>
                 </td>
-                <td class="item-price col-12 col-md-2 cartItem-price"></td>
+                {{-- <td class="item-price col-12 col-md-2 cartItem-price"></td>
                 <td class="col-12 col-md-2">
                     <div class="input-group item-quantity">
 
@@ -116,7 +137,7 @@
 
                     </div>
                 </td>
-                <td class="align-middle item-total col-12 col-md-2 cartItem-total" align="center"></td>
+                <td class="align-middle item-total col-12 col-md-2 cartItem-total" align="center"></td> --}}
             </tr>
         </tbody>
     </template>
@@ -126,29 +147,25 @@
 
         <thead>
             <tr>
-                <th scope="col" colspan="2" align="center">{{ trans('lables.cart-page-order-summary') }}</th>
+                <th style="color: #333333;font-size: 15px;" scope="col" colspan="2" align="left">ยอดชำระ</th>
 
             </tr>
         </thead>
         <tbody>
-            <tr>
+            {{-- ซ่อนชั่วคราว --}}
+            <tr style="display: none;">
                 <th scope="row">{{ trans('lables.cart-page-subtotal') }}</th>
                 <td align="right" class="caritem-subtotal"></td>
-
             </tr>
-            <tr>
+              {{-- ซ่อนชั่วคราว --}}
+            <tr style="display: none;">
                 <th scope="row">{{ trans('lables.cart-page-discount') }}</th>
                 <td align="right" class="caritem-discount-coupon"></td>
-
             </tr>
 
             <tr class="item-price">
-                <th scope="row">{{ trans('lables.cart-page-total') }}</th>
-                <td align="right" class="caritem-grandtotal"></td>
-
+                <td align="left" class="caritem-grandtotal"></td>
             </tr>
-
-
         </tbody>
 
 
