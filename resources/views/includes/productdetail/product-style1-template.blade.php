@@ -72,8 +72,7 @@
                                 </span>
                             </div>
                             <button style="margin-right: 10%;width: 120px;height: 30px;border-radius: 50px;font-size:14px;" type="button" class="btn-secondary add-to-cart">เพิ่มในตะกร้า</button>
-                            <button style="background-color:#30506D;width: 120px;height: 30px;border-radius: 50px;font-size:14px;" type="button" class="btn-info add-to-cart">สั่งซื้อสินค้า</button>
-
+                            <button  onclick="window.location.href='{{url('cart')}}'" style="background-color:#30506D;width: 120px;height: 30px;border-radius: 50px;font-size:14px;" type="button" class="btn-info add-to-cart">สั่งซื้อสินค้า</button>
                         </div>
                         <div class="pro-sub-buttons">
 
