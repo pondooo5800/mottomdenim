@@ -239,8 +239,12 @@
                             if (data.data[i].attribute[0] != null) {
                                 var combination = '';
                                 var background_color = '';
-                                var attribute = data.data[i].attribute[0].variations;
-
+                                var attribute = '';
+                                if (data.data[i].attribute[0].attributes.detail[0].name == 'ขนาด') {
+                                    var attribute = data.data[i].attribute[1].variations;
+                                }else{
+                                    var attribute = data.data[i].attribute[0].variations;
+                                }
                                 for (var a = 0; a < attribute.length; a++) {
                                     switch (attribute[a].product_variation.detail[0].name) {
                                         case 'ขาว':
@@ -258,7 +262,7 @@
                                         case 'ดำ':
                                         background_color = '#000';
                                             break;
-                                        background_color = '#F8F9FA';
+                                        background_color = '#000';
                                     }
                                     combination += '<div style="margin-right: 5px;background-color:'+background_color+'; height: 15px;width: 15px;"></div>';
                                     clone.querySelector(".pro-color").innerHTML = combination;
