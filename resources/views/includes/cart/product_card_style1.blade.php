@@ -51,7 +51,7 @@
                         }
                 </style>
                 <div class="content  content-relative">
-                    <div class="thumb" >
+                    <div class="thumb" style="height: 400px;">
                         <div class="mobile-icons d-lg-none d-xl-none">
                             <div class="icons">
                                 <div class="icon-liked">
@@ -67,8 +67,12 @@
                         </div>
                         <div class="img-add-cart">
                             <div class="figure">
-                                <img class="image-main img-fluid product-card-image " src="">
-                                <img class="image-hover img-fluid product-card-image-sub" src="">
+                                <img class="image-main img-fluid product-card-image " src=""style="    width: 100%;
+                                height: 400px;
+                                object-fit: fill;">
+                                <img class="image-hover img-fluid product-card-image-sub" src=""style="    width: 100%;
+                                height: 400px;
+                                object-fit: fill;">
                               </div>
                         </div>
                     </div>
@@ -129,13 +133,13 @@
 
                     <?php } else{ ?>
                         <div class="display-sale">
-                        <div class="d-flex justify-content-between"style="padding-top: 10px;text-align: end;">
+                        <div class="d-flex justify-content-between"style="padding-top: 10px;">
                             <p style="font-size: 13px;color:#494F69!important;" class="title text-start">
                                 <a href="javascript:void(0)"class="product-card-name"></a>
                             </p>
 
-                        <div class="col-6">
-                            <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
+                            <div class="col-6" style="text-align: end">
+                                <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
                             data-placement="bottom" title="" data-original-title="Wishlist">
                             <span class="align-middle"> <i style="font-size: 18px" class="far fa-heart"></i></span>
 

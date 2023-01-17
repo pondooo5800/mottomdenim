@@ -240,7 +240,7 @@
                                 var combination = '';
                                 var background_color = '';
                                 var attribute = '';
-                                if (data.data[i].attribute[0].attributes.detail[0].name == 'ขนาด') {
+                                if (data.data[i].attribute[0].attributes.detail[0].name == 'ขนาด'|| data.data[i].attribute[0].attributes.detail[0].name == 'Size') {
                                     var attribute = data.data[i].attribute[1].variations;
                                 }else{
                                     var attribute = data.data[i].attribute[0].variations;
@@ -250,20 +250,42 @@
                                         case 'ขาว':
                                         background_color = '#F8F9FA';
                                             break;
+                                        case 'WHITE':
+                                        background_color = '#F8F9FA';
+                                            break;
                                         case 'สว่าง':
+                                        background_color = '#F8F9FA';
+                                            break;
+                                        case 'LIGHT':
                                         background_color = '#F8F9FA';
                                             break;
                                         case 'น้ำเงิน':
                                         background_color = '#30506D';
                                             break;
+                                        case 'BLUE':
+                                        background_color = '#30506D';
+                                            break;
                                         case 'ยีนส์':
+                                        background_color = '#91A2BB';
+                                            break;
+                                        case 'JEANS':
                                         background_color = '#91A2BB';
                                             break;
                                         case 'ดำ':
                                         background_color = '#000';
                                             break;
+                                        case 'BLACK':
+                                        background_color = '#000';
+                                            break;
+                                        case 'มืด':
+                                        background_color = '#000';
+                                            break;
+                                        case 'DARK':
+                                        background_color = '#000';
+                                            break;
                                         background_color = '#000';
                                     }
+
                                     combination += '<div style="margin-right: 5px;background-color:'+background_color+'; height: 15px;width: 15px;"></div>';
                                     clone.querySelector(".pro-color").innerHTML = combination;
                                 }

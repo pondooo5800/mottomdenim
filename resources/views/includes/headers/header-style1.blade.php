@@ -55,10 +55,10 @@
                         <form class="form-inline">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <button class="btn" data-toggle="tooltip" data-placement="bottom" title="ค้นหา">
+                                    <button class="btn" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.header-search-products') }}">
                                         <i style="font-size: 18px;color: #494F69" class="fas fa-search"></i></button>
                                  </span>
-                                <input autocomplete="off" style="color:#494F69;border: none;border-bottom: 2px solid #494F69ed;" type="search" placeholder="ค้นหา" name="search" class="form-control">
+                                <input autocomplete="off" style="color:#494F69;border: none;border-bottom: 2px solid #494F69ed;" type="search" placeholder="{{ trans('lables.header-search-products') }}" name="search" class="form-control">
                             </div>
                         </form>
                         {{-- <div class="auth-login">
@@ -242,10 +242,10 @@
     <hr style="border-color: #494F69">
     <div class="container" style="max-width:1300px!important;">
         <a href="{{url('/refund')}}">
-            <span style="border-bottom: 1px solid #494F69;font-size: 14px;color: #494F69">นโยบายการคืนสินค้า</span>&nbsp; &nbsp; &nbsp; &nbsp;
+            <span style="border-bottom: 1px solid #494F69;font-size: 14px;color: #494F69"> {{ trans('lables.home-servics-policy') }}</span>&nbsp; &nbsp; &nbsp; &nbsp;
         </a>
-        <label style="font-size: 14px;color: #494F69">ส่งฟรีเมื่อช้อปครบ 990 บาท</label>&nbsp; &nbsp; &nbsp; &nbsp;
-        <label style="font-size: 14px;color: #494F69">บริการเก็บเงินปลายทางแบรนด์</label>
+        <label style="font-size: 14px;color: #494F69">{{ trans('lables.home-servics-by-free') }}</label>&nbsp; &nbsp; &nbsp; &nbsp;
+        <label style="font-size: 14px;color: #494F69">{{ trans('lables.home-servics-cash') }}</label>
     </div>
 
 

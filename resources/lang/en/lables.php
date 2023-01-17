@@ -126,6 +126,16 @@ return [
     'footer-instagram' => 'Instagram',
     'check-me' =>'Check me out',
 
+    'footer-new-arrivar'=>'NEW ARRIVA',
+    'footer-event'=>"EVENT",
+    'footer-about-us'=>"ABOUT US",
+    'footer-contact-us'=>"CONTACT US",
+    'footer-sale'=>"SALE ITEMS",
+    'footer-join-us'=>"Join Us",
+    'footer-get-discount'=>"Register get discount",
+    'footer-fullname'=>"Full Name",
+    'footer-email'=>"EMAIL",
+    'footer-button-register'=>"Register",
 
 
 
@@ -359,6 +369,11 @@ return [
     'contact-email' => 'Email',
     'contact-phone' => 'Phone',
     'contact-message' => 'Message',
+
+    'home-servics-policy'=>"Return Policy",
+    'home-servics-by-free'=>"Buy ฿990, get FREE shipping",
+    'home-servics-cash'=>"Cash On Delivery Support",
+
 
 
 ];

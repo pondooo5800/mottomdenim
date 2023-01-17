@@ -45,7 +45,7 @@ return [
     'header-total' => 'Total',
     'header-checkout' => 'Checkout',
     'header-view-cart' => 'View Cart',
-    'header-search-products' => 'Search',
+    'header-search-products' => 'ค้นหา',
     'header-call-us-now' => 'Call Us Now',
     'header-free-shipping' => 'Free Shipping',
     'header-over-order' => 'On order over $99',
@@ -368,5 +368,19 @@ return [
     'contact-phone' => 'Phone',
     'contact-message' => 'Message',
 
+    'home-servics-policy'=>"นโยบายการคืนสินค้า",
+    'home-servics-by-free'=>"ส่งฟรีเมื่อช้อปครบ 990 บาท",
+    'home-servics-cash'=>"บริการเก็บเงินปลายทางแบรนด์",
+
+    'footer-new-arrivar'=>'สินค้าใหม่',
+    'footer-event'=>"อีเว้นท์",
+    'footer-about-us'=>"เกี่ยวกับ",
+    'footer-contact-us'=>"ติดต่อ",
+    'footer-sall'=>"ลดราคา",
+    'footer-join-us'=>"ร่วมกับเรา",
+    'footer-get-discount'=>"สมัครเพื่อรับส่วนลด",
+    'footer-fullname'=>"ขื่อ - นามสกุล",
+    'footer-email'=>"อีเมล",
+    'footer-button-register'=>"สมัครสมาชิก",
 
 ];

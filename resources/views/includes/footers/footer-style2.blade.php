@@ -9,13 +9,13 @@
                 <div class="container">
                     <div class="row">
                         <ul class="links-list pl-0">
-                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/shop?category=1') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.shop-new-arrivar') }}">{{ trans('lables.shop-new-arrivar') }}</a> </li>
+                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/shop?category=1') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-new-arrivar') }}">{{ trans('lables.footer-new-arrivar') }}</a> </li>
                             <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/shop') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.home-shop-title') }}">{{ trans('lables.home-shop-title') }}</a> </li>
-                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/blog') }}" data-toggle="tooltip" data-placement="left" title="อีเว้นท์">อีเว้นท์</a> </li>
-                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/about-us') }}" data-toggle="tooltip" data-placement="left" title="เกี่ยวกับ">เกี่ยวกับ</a> </li>
-                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/contact-us') }}" data-toggle="tooltip" data-placement="left" title="ติดต่อ">ติดต่อ</a> </li>
+                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/blog') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-event') }}">{{ trans('lables.footer-event') }}</a> </li>
+                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/about-us') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-about-us') }}">{{ trans('lables.footer-about-us') }}</a> </li>
+                            <li> <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/contact-us') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-contact-us') }}">{{ trans('lables.footer-contact-us') }}</a> </li>
                             <li>
-                                <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/shop?category=2') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.shop-sell') }}">{{ trans('lables.shop-sell') }} </a>
+                                <a style="color: #B4B3B3;font-weight:normal;font-size: 15px;" href="{{ url('/shop?category=2') }}" data-toggle="tooltip" data-placement="left" title="{{ trans('lables.footer-sale') }}">{{ trans('lables.footer-sale') }} </a>
                             </li>
                         </ul>
                     </div>
@@ -39,21 +39,21 @@
               <div class="socials">
                         <div class="row">
                             <div class="col-12">
-                                <h4 style="font-weight:normal;color:#B4B3B3">ร่วมกับเรา</h4>
-                                <span style="font-size:15px;color:#B4B3B3">สมัครเพื่อรับส่วนลด</span>
+                                <h4 style="font-weight:normal;color:#B4B3B3">{{ trans('lables.footer-join-us') }}</h4>
+                                <span style="font-size:15px;color:#B4B3B3">{{ trans('lables.footer-get-discount') }}</span>
                                 <br>
                                 <br>
                                 <form id="registerForm">
                                     <div class="row">
                                         <div class="from-group mb-3 col-12 col-md-6">
                                             <div class="input-group">
-                                                <input style="background-color: #F4F4F4;border-radius: 50px;" type="text" class="form-control" id="registerFirstName" placeholder="ชื่อ นามสกุล">
+                                                <input style="background-color: #F4F4F4;border-radius: 50px;" type="text" class="form-control" id="registerFirstName" placeholder="{{ trans('lables.footer-fullname') }}">
                                             </div>
                                             <small class="first_name errors d-none" style="color:red"></small>
                                         </div>
                                         <div class="from-group mb-3 col-12 col-md-6">
                                             <div class="input-group">
-                                                <input style=" background-color: #F4F4F4;border-radius: 50px;" type="text" class="form-control" id="registerLastName" placeholder="อีเมล">
+                                                <input style=" background-color: #F4F4F4;border-radius: 50px;" type="text" class="form-control" id="registerLastName" placeholder="{{ trans('lables.footer-email') }}">
                                             </div>
                                             <small class="last_name errors d-none" style="color:red"></small>
                                         </div>
@@ -61,7 +61,7 @@
 
                                     <div class="row">
                                         <div class="col-12" style="text-align: end">
-                                            <button style="background-color: #000;font-weight: normal" class="btn btn-light swipe-to-top" id="createAccount">สมัครสมาชิก</button>
+                                            <button style="background-color: #000;font-weight: normal" class="btn btn-light swipe-to-top" id="createAccount">{{ trans('lables.footer-button-register') }}</button>
                                         </div>
                                     </div>
                                 </form>
