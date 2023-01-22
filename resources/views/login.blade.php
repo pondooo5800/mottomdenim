@@ -3,7 +3,6 @@
 @include(isset(getSetting()['login']) ? 'includes.login.login-'.getSetting()['login'] : 'includes.login.login-style1')
 
 @endsection
-<?php /*
 @section('script')
 <script>
     loggedIn = $.trim(localStorage.getItem("customerLoggedin"));
@@ -192,4 +191,3 @@
     }
 </script>
 @endsection
-*/?>

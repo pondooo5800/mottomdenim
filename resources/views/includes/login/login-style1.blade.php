@@ -66,16 +66,16 @@
             <div class="col-12 col-sm-12 col-md-5">
                 <div class="heading">
                     <p style="font-size: 18px;font-weight: bold;color:#494F69;">
-                        ลงทะเบียน
+                        {{ trans('lables.login-sign-up') }}
                     </p>
                 </div>
                 <div class="col-12 registration-process mb-0">
-                    <p style="font-size: 14px;margin-bottom:5px;">หากคุณไม่มีบัญชี ของเว็ปไซต์ Mottom Denim</p>
-                    <p style="font-size: 14px;margin-bottom:5px;">สามารถสมัครได้ที่นี่</p>
+                    <p style="font-size: 14px;margin-bottom:5px;">{{ trans('lables.login-sign-up-detail-1') }}</p>
+                    <p style="font-size: 14px;margin-bottom:5px;">{{ trans('lables.login-sign-up-detail-2') }}</p>
                 </div>
                 <div class="row" style="margin-top: 27%;">
                     <div class="col-12 ">
-                        <a href="{{ url('/register') }}" style="width: 100%; color: #B4B3B3" class="btn btn-secondary swipe-to-top" id="loginAccount">{{ trans('lables.login-create-account') }}</a>
+                        <a href="{{ url('/register') }}" style="width: 100%; color: #B4B3B3" class="btn btn-secondary swipe-to-top" id="">{{ trans('lables.login-create-account') }}</a>
                     </div>
                 </div>
 

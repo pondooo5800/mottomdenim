@@ -61,12 +61,12 @@
                                 <input autocomplete="off" style="color:#494F69;border: none;border-bottom: 2px solid #494F69ed;" type="search" placeholder="{{ trans('lables.header-search-products') }}" name="search" class="form-control">
                             </div>
                         </form>
-                        {{-- <div class="auth-login">
-                            <a href="{{ url('/profile') }}">
+                        <div class="auth-login">
+                            <a href="{{ url('/profile') }}" style="font-size:14px;font-weight:normal; padding-right: 0;color: #494F69;">
                                 {{ trans('lables.header-my-account') }}
                             </a>
-                        </div> --}}
-                        <li>
+                        </div>
+                        <li class="without-auth-login">
                             <a href="{{ url('/login') }}"style="font-size:14px;font-weight:normal; padding-right: 0;color: #494F69;">
                                 {{ trans('lables.login-login') }}
                             </a>

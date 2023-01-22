@@ -230,6 +230,8 @@ return [
     'checkout-location-placeholder'=>'Please enter your location or click here to open map',
 
     'login-sign-up' => 'Sign Up',
+    'login-sign-up-detail-1' => 'If you do not have an account of the Mottom Denim website',
+    'login-sign-up-detail-2' => 'Can apply here',
     'login-login' => 'Login',
     'login-email' =>'Email Address',
     'login-password' => 'Password',
@@ -327,10 +329,16 @@ return [
     'shipping-address-state' =>'Select State',
     'shipping-address-city' =>'City',
     'shipping-address-postal-code' =>'Postal Code',
+    'shipping-address-country_multiple' =>'Country',
+    'shipping-address-num-phone' =>'+66',
+    'shipping-address-phone' =>'Phone',
     'shipping-address-add-address' =>'Submit',
     'shipping-address-edit-address' =>'Edit',
     'shipping-address-del-address' =>'Delete',
-    'shipping-address-select-address' =>'Select',
+    'shipping-address-select-address' =>'Province',
+    'shipping-address-select-district' =>'District',
+    'checkout-news'=>"I accept the terms from Mottom in my email",
+    'checkout-confrem'=>"I accept the privacy statement",
 
 
 

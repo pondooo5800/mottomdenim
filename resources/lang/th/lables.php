@@ -29,7 +29,7 @@ return [
     'header-login-register' => 'Login/Register',
     'header-login' => 'Login',
     'header-register' => 'Register',
-    'header-my-account' => 'My Account',
+    'header-my-account' => 'บัญชี',
     'header-profile' => 'Profile',
     'header-wishlist' => 'Wishlist',
     'header-compare' => 'Compare',
@@ -221,7 +221,9 @@ return [
     'checkout-location' => 'Location',
     'checkout-location-placeholder'=>'Please enter your location or click here to open map',
 
-    'login-sign-up' => 'Sign Up',
+    'login-sign-up' => 'ลงทะเบียน',
+    'login-sign-up-detail-1' => 'หากคุณไม่มีบัญชี ของเว็ปไซต์ Mottom Denim',
+    'login-sign-up-detail-2' => 'สามารถสมัครได้ที่นี่',
     'login-login' => 'เข้าสู่ระบบ',
     'login-email' =>'อีเมล',
     'login-password' => 'รหัสผ่าน',
@@ -251,7 +253,7 @@ return [
     'profile-gender' => 'เพศ',
     'profile-select-male' => 'ชาย',
     'profile-select-female' => 'หญิง',
-    'profile-dob' => 'วันเกิด',
+    'profile-dob' => 'วัน เดือน ปี เกิด',
     'profile-phone' => 'โทรศัพท์',
     'profile-update' => 'อัปเดต',
     'profile-date-check' => 'อายุต้องไม่ต่ำกว่า 17 ปีขึ้นไปเพื่อใช้เว็บไซต์นี้ !',
@@ -319,10 +321,17 @@ return [
     'shipping-address-state' =>'อำเภอ',
     'shipping-address-city' =>'ตำบล',
     'shipping-address-postal-code' =>'รหัสไปรษณีย์',
+    'shipping-address-country_multiple' =>'ประเทศ',
+    'shipping-address-num-phone' =>'+66',
+    'shipping-address-phone' =>'เบอร์โทรศัพท์',
     'shipping-address-add-address' =>'บันทึก',
     'shipping-address-edit-address' =>'แก้ไข',
     'shipping-address-del-address' =>'ลบ',
-    'shipping-address-select-address' =>'เลือก',
+    'shipping-address-select-address' =>'จังหวัด',
+    'shipping-address-select-district' =>'อำเภอ',
+    'checkout-news'=>"ฉันยอมรับข่าวสารจาก Mottom ทางอีเมลของฉัน",
+    'checkout-confrem'=>"ฉันยอมรับ คำชี้แจงความเป็นส่วนตัว",
+
 
 
 
