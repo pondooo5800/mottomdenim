@@ -160,13 +160,21 @@ class IndexController extends Controller
         return view('register', compact('data', 'setting'));
     }
 
-    public function blogDetail($slug)
-    {
+    // public function blogDetail($slug)
+    // {
 
+    //     $homeService = new HomeService;
+    //     $data = $homeService->homeIndex();
+    //     $setting = getSetting();
+    //     return view('blog.blog-detail', compact('data', 'setting', 'slug'));
+    // }
+    public function blogDetail()
+    {
         $homeService = new HomeService;
         $data = $homeService->homeIndex();
         $setting = getSetting();
-        return view('blog.blog-detail', compact('data', 'setting', 'slug'));
+
+        return view('blog.blog-detail', compact('data', 'setting'));
     }
 
     public function blog()

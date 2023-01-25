@@ -392,4 +392,5 @@ return [
     'footer-email'=>"อีเมล",
     'footer-button-register'=>"สมัครสมาชิก",
 
+    'page-header-blog'=>'อีเว้นท์',
 ];

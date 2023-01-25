@@ -56,7 +56,8 @@ Route::group(['middleware' => ['general','installer']], function () {
     Route::get('/shop', 'Web\IndexController@shop');
     Route::get('/shop_new_arrival', 'Web\IndexController@shop_new_arrival');
     Route::get('/cart', 'Web\IndexController@cartPage');
-    Route::get('/blog-detail/{slug}', 'Web\IndexController@blogDetail');
+    // Route::get('/blog-detail/{slug}', 'Web\IndexController@blogDetail');
+    Route::get('/blog-detail', 'Web\IndexController@blogDetail');
     Route::get('/blog', 'Web\IndexController@blog');
     Route::get('/checkout', 'Web\IndexController@checkout');
     Route::get('/login', 'Web\IndexController@login');
@@ -99,7 +100,8 @@ Route::group(['middleware' => ['general','installer']], function () {
     Route::get('/shop', 'Web\IndexController@shop');
     Route::get('/shop_new_arrival', 'Web\IndexController@shop_new_arrival');
     Route::get('/cart', 'Web\IndexController@cartPage');
-    Route::get('/blog-detail/{slug}', 'Web\IndexController@blogDetail');
+    // Route::get('/blog-detail/{slug}', 'Web\IndexController@blogDetail');
+    Route::get('/blog-detail', 'Web\IndexController@blogDetail');
     Route::get('/blog', 'Web\IndexController@blog');
     Route::get('/checkout', 'Web\IndexController@checkout');
     Route::get('/login', 'Web\IndexController@login');

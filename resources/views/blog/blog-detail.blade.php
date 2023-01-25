@@ -1,211 +1,89 @@
 @extends('layouts.master')
 @section('content')
-    <div class="container-fuild">
-        <nav aria-label="breadcrumb" style="background-color: #fff">
-
-            <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./">{{ trans('lables.bread-crumb-home') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ trans('lables.bread-blog') }}</li>
-                </ol>
-            </div>
-        </nav>
+<div class="container">
+    <div class="page-heading-title" style="text-align: center">
+        <p style="font-size: 25px;font-weight: normal; color: #494F69">{{ trans('lables.page-header-blog') }}</p>
     </div>
-    <section class="pro-content">
-        <div class="container">
-            <div class="page-heading-title">
-                <h2 class="blog_name">
-                </h2>
+</div>
+<br>
+<section class="pro-content" style="padding-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="row justify-content-center">
+                    <div class="select-control">
+                        <select style="width: 160px;" class="form-control">
+                            <option value="">สัปดาห์นี้</option>
+                        </select>
+                    </div>
+                    <div style="padding-left: 10px;padding-right: 10px;"></div>
 
+                    <div class="select-control">
+                        <select style="width: 160px;" class="form-control">
+                            <option value="">Bangkok,Thailand</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Site Content -->
-        <section class="blog-content">
-            <div class="container">
-
-                <div class="blog-area">
-
-                    <div class="row">
-
-                        <div class="col-12 col-lg-8">
-                            <div class="row">
-                                <div class="col-12 col-sm-12">
-                                    <div class="blog blog-detail">
-
-
-
-                                    </div>
-                                </div>
-
+    </div>
+    <br>
+    <!-- Site Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img style="width: 100%; height: auto;object-fit: unset;"
+                            src="{{ asset('assets/images/mask_group.png') }}" class="img-fluid" />
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
                             </div>
-                        </div>
-
-
-                        <div class="col-12 col-lg-4  d-lg-block d-xl-block blog-menu">
-                            <div class="right-menu-categories category-div category-list">
-
-                            </div>
-                            <div class="category-div featured-blog">
-
-                            </div>
-                            <div class="category-div">
-
-                                <ul class="socials">
-                                    @if (isset(getSetting()['facebook_url']) && !empty(getSetting()['facebook_url']))
-                                    <li><a href="{{isset(getSetting()['facebook_url']) ? getSetting()['facebook_url'] : '#' }}" class="fab fb fa-facebook-square" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-facebook') }}"></a></li>
-                                    @endif
-                                    @if (isset(getSetting()['twitter_url']) && !empty(getSetting()['facebook_url']) )
-                                    <li><a href="{{isset(getSetting()['twitter_url']) ? getSetting()['twitter_url'] : '#' }}" class="fab tw fa-twitter-square" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-twitter') }}"></a></li>
-                                    @endif
-                                    @if (isset(getSetting()['google_url']) && !empty(getSetting()['facebook_url']) )
-                                    <li><a href="{{isset(getSetting()['google_url']) ? getSetting()['google_url'] : '#' }}" class="fab sk fa-google" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-google') }}"></a></li>
-                                    @endif
-                                    @if (isset(getSetting()['linkedin_url']) && !empty(getSetting()['facebook_url']))
-                                    <li><a href="{{isset(getSetting()['google_url']) ? getSetting()['linkedin_url'] : '#' }}" class="fab In fa-linkedin" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-linkedin') }}"></a></li>
-                                    @endif
-                                    @if (isset(getSetting()['instagram_url']) && !empty(getSetting()['facebook_url']))
-                                    <li><a href="{{isset(getSetting()['instagram_url']) ? getSetting()['instagram_url'] : '#' }}" class="fab ig fa-instagram" data-toggle="tooltip" data-placement="bottom" title="{{ trans('lables.footer-instagram') }}"></a></li>
-                                    @endif
-                                </ul>
-                            </div>
-
-
-                        </div>
                     </div>
+                    <div class="card-body" style="position: absolute;bottom:0;align-self: center;">
+                        <h6 style="color: #fff;text-align: center" class="card-title">Bangkok Fashion Week SS23: Denim
+                            Highlights
+                        </h6>
+                        <p class="card-text" style="color: #fff;text-align: center">
+                            Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.
+                        </p>
+                    </div>
+            </div>
 
+        </div>
+        <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 text-center">
+                        <p style="font-size: 14px;margin-bottom:5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img style="width: 100%; height: auto;object-fit: unset;"
+                                src="{{ asset('assets/images/Mask-evet.png') }}" class="img-fluid" />
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
+                                </div>
+                        </div>
+                        <div class="card-body" style="position: absolute;bottom:0;align-self: center;">
+                            <h6 style="color: #fff;text-align: center" class="card-title">Bangkok Fashion Week SS23: Denim
+                                Highlights
+                            </h6>
+                            <p class="card-text" style="color: #fff;text-align: center">
+                                Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's content.
+                            </p>
+                        </div>
                 </div>
 
             </div>
-            </div>
-        </section>
     </section>
-
-
-@endsection
-@section('script')
-    <script>
-        var slug = "{{ $slug }}";
-        var language_id = localStorage.getItem('languageId');
-        $(document).ready(function() {
-            fetchBlogs();
-            fetchBlogCategories();
-            fetchFeaturedBlogs();
-        });
-
-
-        function fetchBlogs() {
-            $.ajax({
-                type: 'get',
-                url: "{{ url('') }}" + '/api/client/blog_news?slug=' + slug + '&language_id=' + language_id +
-                    '&getGallaryDetail=1&getBlogCategory=1',
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                    clientid: "{{ isset(getSetting()['client_id']) ? getSetting()['client_id'] : '' }}",
-                    clientsecret: "{{ isset(getSetting()['client_secret']) ? getSetting()['client_secret'] : '' }}",
-                },
-                beforeSend: function() {},
-                success: function(data) {
-
-                    if (data.status == 'Success') {
-                        var blogContent = '';
-                        if (typeof data.data[0] !== undefined) {
-                            $('.blog_name').html(data.data[0].detail[0].name);
-
-
-                            blogContent +=
-                                '<div class="blog-thumbnail"><span class="date-tag badge blog-date">' + data
-                                .data[0].date + '</span>';
-                            blogContent += '<a href="javascript:void(0)"><img class="img-thumbnail blog-image" src="/gallary/' +
-                                data.data[0].gallary.gallary_name + '" width="100%"></a></div>';
-
-
-                            blogContent += '<h5 class="post-title"><a href="" class="blog-category-link">' +
-                                data.data[0].category.blog_detail[0].name + '</a></h5>';
-                            blogContent += '<p class="blog-title">' + data.data[0].detail[0].name +
-                                '</small></p>';
-                            blogContent += '<span class="blog-description">' + data.data[0].detail[0]
-                                .description + '</span>';
-                        } else {
-                            blogContent = 'no content';
-                        }
-                        $('.blog-detail').html(blogContent);
-                    }
-                },
-                error: function(data) {},
-            });
-        }
-
-
-
-        function fetchBlogCategories() {
-            $.ajax({
-                type: 'get',
-                url: "{{ url('') }}" + '/api/client/blog_category?getGallaryDetail=1&language_id=' +
-                    language_id + '&getDetail=1',
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                    clientid: "{{ isset(getSetting()['client_id']) ? getSetting()['client_id'] : '' }}",
-                    clientsecret: "{{ isset(getSetting()['client_secret']) ? getSetting()['client_secret'] : '' }}",
-                },
-                beforeSend: function() {},
-                success: function(data) {
-
-                    if (data.status == 'Success') {
-                        var blogCategory = '';
-                        if (data.data.length > 0) {
-                            for(var i= 0; i < data.data.length ; i ++){
-                                blogCategory +='<a class="main-manu" href="/blog?category='+data.data[i].blog_category_slug+'">';
-                                blogCategory += '<img class="img-fuild" src="/gallary/' +
-                                data.data[i].blog_category_gallary_id.gallary_name + '">';
-                                blogCategory += '<span> '+data.data[i].blog_detail[0].name+'</span </a>';
-                            }
-                        } else {
-                            blogCategory = 'no content';
-                        }
-                        $('.category-list').html(blogCategory);
-                    }
-                },
-                error: function(data) {},
-            });
-        }
-
-        function fetchFeaturedBlogs(page) {
-            var url = "{{ url('') }}" + '/api/client/blog_news?limit=13&getGallaryDetail=1&getBlogCategory=1&is_featured=1&language_id='+language_id;
-            $.ajax({
-                type: 'get',
-                url: url,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                    clientid: "{{ isset(getSetting()['client_id']) ? getSetting()['client_id'] : '' }}",
-                    clientsecret: "{{ isset(getSetting()['client_secret']) ? getSetting()['client_secret'] : '' }}",
-                },
-                beforeSend: function() {},
-                success: function(data) {
-
-                    if (data.status == 'Success') {
-                        var featuredBlogs = '';
-                        for (i = 0; i < data.data.length; i++) {
-                            featuredBlogs += '<div class="media">';
-                            featuredBlogs += '<div class="media-img">';
-                            featuredBlogs += '<img src="/gallary/'+data.data[i].gallary.gallary_name+'">';
-                            featuredBlogs += '</div>';
-                            featuredBlogs += '<div class="media-body">';
-                            featuredBlogs += '<h5>'+data.data[i].detail[0]
-                                    .name+'</h5>';
-                            featuredBlogs += '<div class="post-date">';
-                            featuredBlogs += '<i class="fa fa-calendar" aria-hidden="true"></i>';
-                            featuredBlogs += '<a href="javascript:void(0)">'+data.data[i].date+'</a>';
-                            featuredBlogs += '</div>';
-
-                            featuredBlogs += '</div>';
-                            featuredBlogs += '</div>';
-                        }
-                        $('.featured-blog').html(featuredBlogs);
-                    }
-                },
-                error: function(data) {},
-            });
-        }
-    </script>
+</section>
 @endsection

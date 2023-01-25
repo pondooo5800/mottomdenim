@@ -382,6 +382,7 @@ return [
     'home-servics-by-free'=>"Buy ฿990, get FREE shipping",
     'home-servics-cash'=>"Cash On Delivery Support",
 
+    'page-header-blog'=>'Event',
 
 
 ];
