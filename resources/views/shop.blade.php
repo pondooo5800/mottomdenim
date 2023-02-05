@@ -234,7 +234,8 @@
                                 clone.querySelector(".product-card-link").innerHTML = '<img src="{{ asset("assets/images/add-01.png") }}"width=\"30px\" height=\"30px\">';
                                 clone.querySelector(".product-card-link").setAttribute('href', '/product/' +
                                     data.data[i].product_id + '/' + data.data[i].product_slug);
-
+                                clone.querySelector(".product-img-link").setAttribute('href', '/product/' +
+                                    data.data[i].product_id + '/' + data.data[i].product_slug);
                             }
                             if (data.data[i].attribute[0] != null) {
                                 var combination = '';

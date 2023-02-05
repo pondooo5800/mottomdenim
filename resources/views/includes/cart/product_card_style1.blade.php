@@ -50,60 +50,36 @@
                           opacity: 1;
                         }
                 </style>
-                <div class="content  content-relative">
-                    <div class="thumb" style="height: 400px;">
-                        <div class="mobile-icons d-lg-none d-xl-none">
-                            <div class="icons">
-                                <div class="icon-liked">
-                                    <a href="javascript:void(0)" class="icon active wishlist-icon-2">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
+                    <div class="content  content-relative">
+                        <div class="thumb" style="height: 400px;">
+                            <div class="mobile-icons d-lg-none d-xl-none">
+                                <div class="icons">
+                                    <div class="icon-liked">
+                                        <a href="javascript:void(0)" class="icon active wishlist-icon-2">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="icon quick-view-icon" data-toggle="modal" data-target="#quickViewModal"><i
+                                            class="fas fa-eye"></i></div>
+                                    <a href="javascript:void(0)" class="icon compare-icon"><i class="fas fa-align-right"
+                                            data-fa-transform="rotate-90"></i></a>
                                 </div>
-                                <div class="icon quick-view-icon" data-toggle="modal" data-target="#quickViewModal"><i
-                                        class="fas fa-eye"></i></div>
-                                <a href="javascript:void(0)" class="icon compare-icon"><i class="fas fa-align-right"
-                                        data-fa-transform="rotate-90"></i></a>
                             </div>
-                        </div>
-                        <div class="img-add-cart">
-                            <div class="figure">
-                                <img class="image-main img-fluid product-card-image " src=""style="    width: 100%;
-                                height: 400px;
-                                object-fit: fill;">
-                                <img class="image-hover img-fluid product-card-image-sub" src=""style="    width: 100%;
-                                height: 400px;
-                                object-fit: fill;">
-                              </div>
-                        </div>
-                    </div>
-                    <?php if (empty($categoryURL) && empty($shopURL)) { ?>
-                        <div class="display-sale">
-                        <div class="d-flex justify-content-between" style="padding-top: 10px">
-                            <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
-                            data-placement="bottom" title="" data-original-title="Wishlist">
-                            <i style="font-size: 18px" class="far fa-heart"></i>
+                             <a class="product-img-link" href="javascript:void(0)">
+                                <div class="img-add-cart">
+                                    <div class="figure">
+                                        <img class="image-main img-fluid product-card-image " src=""style="    width: 100%;
+                                        height: 400px;
+                                        object-fit: fill;">
+                                        <img class="image-hover img-fluid product-card-image-sub" src=""style="    width: 100%;
+                                        height: 400px;
+                                        object-fit: fill;">
+                                    </div>
+                                </div>
                             </a>
-                                <a class="product-card-link" href="javascript:void(0)"><img
-                                        style="width: 30px;height: 30px;"
-                                        src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
-                                        style="width:42px;height:42px;"></a>
                         </div>
-                        </div>
-                        <p style="font-size: 13px;color:#494F69!important;" class="title text-center"><a href="javascript:void(0)"
-                                class="product-card-name"></a></p>
-                        <p class="para product-card-desc"></p>
-                        <div style="font-size: 15px;color: #494F69" class="price product-card-price">
-                        </div>
-                        <br>
-                        <div class="row justify-content-center" style="margin-left: 0px;margin-right: 0px">
-                            <div class="pro-color d-flex justify-content-start">
-
-                            </div>
-                        </div>
-
-
-                    <?php } elseif($categoryURL == 2){ ?>
-                        <div class="display-sale">
+                        <?php if (empty($categoryURL) && empty($shopURL)) { ?>
+                            <div class="display-sale">
                             <div class="d-flex justify-content-between" style="padding-top: 10px">
                                 <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
                                 data-placement="bottom" title="" data-original-title="Wishlist">
@@ -114,58 +90,84 @@
                                             src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
                                             style="width:42px;height:42px;"></a>
                             </div>
-
-                        </div>
-                        <p style="margin-bottom: 5px;font-size: 13px;" class="title text-center">
-                            <a style="font-weight:normal;color:#494F69!important; " href="javascript:void(0)"class="product-card-name"></a>
-                        </p>
-                        <p class="para product-card-desc"></p>
-                        <div style="margin-bottom: 5px;font-size: 13px;color: #7F7E7F" class="price product-card-price">
-                        </div>
-                        <div style="margin-bottom: 5px;font-size: 15px;color: #B11818" class="price product-card-price-discount">
-                        </div>
-                        <br>
-                        <div class="row justify-content-center" style="margin-left: 0px;margin-right: 0px;display: none;">
-                            <div class="pro-color d-flex justify-content-start">
-
                             </div>
-                        </div>
+                            <p style="font-size: 13px;color:#494F69!important;" class="title text-center"><a href="javascript:void(0)"
+                                    class="product-card-name"></a></p>
+                            <p class="para product-card-desc"></p>
+                            <div style="font-size: 15px;color: #494F69" class="price product-card-price">
+                            </div>
+                            <br>
+                            <div class="row justify-content-center" style="margin-left: 0px;margin-right: 0px">
+                                <div class="pro-color d-flex justify-content-start">
 
-                    <?php } else{ ?>
-                        <div class="display-sale">
-                        <div class="d-flex justify-content-between"style="padding-top: 10px;">
-                            <p style="font-size: 13px;color:#494F69!important;" class="title text-start">
-                                <a href="javascript:void(0)"class="product-card-name"></a>
-                            </p>
+                                </div>
+                            </div>
 
-                            <div class="col-6" style="text-align: end">
-                                <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
-                            data-placement="bottom" title="" data-original-title="Wishlist">
-                            <span class="align-middle"> <i style="font-size: 18px" class="far fa-heart"></i></span>
 
-                            </a>
-                                <a class="product-card-link" href="javascript:void(0)"><img
-                                        style="width: 30px;height: 30px;"
-                                        src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
-                                        style="width:42px;height:42px;"></a>
-                        </div>
-                        </div>
-                        </div>
-                        <p class="para product-card-desc"></p>
-                        <div class="row"style="text-align: end;">
-                            <div class="col-6">
-                                <div style="font-size: 15px;color: #494F69" class="price product-card-price justify-content-start">
+                        <?php } elseif($categoryURL == 2){ ?>
+                            <div class="display-sale">
+                                <div class="d-flex justify-content-between" style="padding-top: 10px">
+                                    <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
+                                    data-placement="bottom" title="" data-original-title="Wishlist">
+                                    <i style="font-size: 18px" class="far fa-heart"></i>
+                                    </a>
+                                        <a class="product-card-link" href="javascript:void(0)"><img
+                                                style="width: 30px;height: 30px;"
+                                                src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
+                                                style="width:42px;height:42px;"></a>
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="row justify-content-start" style="margin-left: 0px;margin-right: 0px">
-                            <div class="pro-color d-flex justify-content-start">
+                            <p style="margin-bottom: 5px;font-size: 13px;" class="title text-center">
+                                <a style="font-weight:normal;color:#494F69!important; " href="javascript:void(0)"class="product-card-name"></a>
+                            </p>
+                            <p class="para product-card-desc"></p>
+                            <div style="margin-bottom: 5px;font-size: 13px;color: #7F7E7F" class="price product-card-price">
                             </div>
-                        </div>
-                    <?php } ?>
+                            <div style="margin-bottom: 5px;font-size: 15px;color: #B11818" class="price product-card-price-discount">
+                            </div>
+                            <br>
+                            <div class="row justify-content-center" style="margin-left: 0px;margin-right: 0px;display: none;">
+                                <div class="pro-color d-flex justify-content-start">
 
-                </div>
+                                </div>
+                            </div>
+
+                        <?php } else{ ?>
+                            <div class="display-sale">
+                            <div class="d-flex justify-content-between"style="padding-top: 10px;">
+                                <p style="font-size: 13px;color:#494F69!important;" class="title text-start">
+                                    <a href="javascript:void(0)"class="product-card-name"></a>
+                                </p>
+
+                                <div class="col-6" style="text-align: end">
+                                    <a href="javascript:void(0)" class="icon heart wishlist-icon" data-toggle="tooltip"
+                                data-placement="bottom" title="" data-original-title="Wishlist">
+                                <span class="align-middle"> <i style="font-size: 18px" class="far fa-heart"></i></span>
+
+                                </a>
+                                    <a class="product-card-link" href="javascript:void(0)"><img
+                                            style="width: 30px;height: 30px;"
+                                            src="{{ asset('assets/images/add-01.png') }}" alt="add to cart"
+                                            style="width:42px;height:42px;"></a>
+                            </div>
+                            </div>
+                            </div>
+                            <p class="para product-card-desc"></p>
+                            <div class="row"style="text-align: end;">
+                                <div class="col-6">
+                                    <div style="font-size: 15px;color: #494F69" class="price product-card-price justify-content-start">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row justify-content-start" style="margin-left: 0px;margin-right: 0px">
+                                <div class="pro-color d-flex justify-content-start">
+                                </div>
+                            </div>
+                        <?php } ?>
+
+                    </div>
 
 
 
