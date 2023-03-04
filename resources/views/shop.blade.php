@@ -104,7 +104,6 @@
 
                         $('.pagination').html(pagination);
                         const templ = document.getElementById("product-card-template");
-                            console.log(data);
                         for (i = 0; i < data.data.length; i++) {
                             const clone = templ.content.cloneNode(true);
                             clone.querySelector(".div-class").classList.add('col-12');

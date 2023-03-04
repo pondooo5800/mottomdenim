@@ -165,6 +165,7 @@ return [
     'cart-page-apply'=>'Apply',
     'cart-page-continue-shopping'=>'CONTINUE SHOPPING',
     'cart-page-update-cart'=>'UPDATE CART',
+    'cart-page-total-cart'=>'PAYMENT AMOUNT',
     'cart-page-proceed-to-checkout'=>'PROCEED TO CHECKOUT',
     'cart-page-order-summary'=>'Order Summary',
     'cart-page-subtotal'=>'Subtotal',
@@ -184,6 +185,7 @@ return [
     'checkout-checkout'=>'CHECKOUT',
     'checkout-shipping-address'=>'Shipping Address',
     'checkout-billing-address'=>'Billing Address',
+    'checkout-text-destination'=>'Destination Address',
     'checkout-shipping-method'=>'Shipping Methods',
     'checkout-order-detail'=>'Order Details',
 

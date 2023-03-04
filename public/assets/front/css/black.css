@@ -15470,7 +15470,7 @@ pre code {
 .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6;
+    /* border-top: 1px solid #dee2e6; */
 }
 
 .table thead th {
@@ -18179,9 +18179,10 @@ input[type=button].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    color: #495057;
-    background-color: #fafafa;
-    border-color: #dee2e6 #dee2e6 #fafafa;
+    color: #494F69;
+    background-color: #fff;
+    border-color: #fff #fff #494F69;
+    border-bottom-width: 3px;
 }
 
 .nav-tabs .dropdown-menu {
@@ -31555,7 +31556,7 @@ article:hover .btn-hover {
 }
 
 .header-one .header-maxi .pro-header-right-options .dropdown .dropdown-menu .shopping-cart-items .item-summary {
-    font-family: "Roboto", sans-serif;
+    font-family: "FCIconic", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #000;
@@ -44810,8 +44811,8 @@ a.carousel-control-next.btn-secondary.swipe-to-top:focus {
 
 .checkout-area .right-table {
     margin: 0;
-    background-color: #fff;
-    border: 2px solid #dee2e6;
+    background-color: #F9F8F8;
+    /* border: 2px solid #dee2e6; */
     margin-bottom: 30px;
 }
 

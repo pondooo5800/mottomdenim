@@ -1,9 +1,8 @@
 @extends('layouts.master')
 @section('content')
 
-    <div class="container-fuild">
+    {{-- <div class="container-fuild">
         <nav aria-label="breadcrumb" style="background-color: #fff">
-
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">{{ trans('lables.bread-crumb-home') }}</a>
@@ -12,23 +11,34 @@
                 </ol>
             </div>
         </nav>
-    </div>
+    </div> --}}
+
+<!-- Tabs -->
+<br>
+<section id="tabs">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 ">
+				<nav>
+					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="pills-shipping-tab" data-toggle="tab" href="#pills-shipping" role="tab" aria-controls="pills-shipping" aria-selected="true">{{ trans('lables.checkout-shipping-address') }}</a>
+						<a class="nav-item nav-link" id="pills-order-tab" data-toggle="tab" href="#pills-order" role="tab" aria-controls="pills-order" aria-selected="false">{{ trans('lables.checkout-shipping-method') }}</a>
+						<a class="nav-item nav-link" id="pills-confirm-tab" data-toggle="tab" href="#pills-confirm" role="tab" aria-controls="pills-confirm" aria-selected="false">{{ trans('lables.checkout-order-detail') }}</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./Tabs -->
     <section class="pro-content">
-        <div class="container">
-            <div class="page-heading-title">
-                <h2> {{ trans('lables.checkout-checkout') }} </h2>
-
-            </div>
-        </div>
-        <!-- checkout Content -->
         <section class="checkout-area">
-
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-xl-9">
+                    <div class="col-12 col-xl-5">
                         <div class="row">
                             <div class="checkout-module">
-                                <ul class="nav nav-pills checkoutd-nav mb-3" id="pills-tab" role="tablist">
+                                {{-- <ul class="nav nav-pills checkoutd-nav mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link  active" id="pills-shipping-tab" data-toggle="pill"
                                             href="#pills-shipping" role="tab" aria-controls="pills-shipping"
@@ -36,40 +46,34 @@
                                                 class="d-none d-lg-flex">{{ trans('lables.checkout-shipping-address') }}</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link " id="pills-billing-tab" data-toggle="pill"
-                                            href="#pills-billing" role="tab" aria-controls="pills-billing"
+                                        <a class="nav-link " id="pills-confirm-tab" data-toggle="pill"
+                                            href="#pills-confirm" role="tab" aria-controls="pills-confirm"
                                             aria-selected="false"><span class="d-flex d-lg-none">2</span><span
                                                 class="d-none d-lg-flex">{{ trans('lables.checkout-billing-address') }}</span></a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                    <a class="nav-link " id="pills-method-tab" data-toggle="pill" href="#pills-method" role="tab" aria-controls="pills-method" aria-selected="false"><span class="d-flex d-lg-none">3</span><span class="d-none d-lg-flex">{{ trans('lables.checkout-shipping-method') }}</span></a>
-                                </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link " id="pills-order-tab" data-toggle="pill"
                                             href="#pills-order" role="tab" aria-controls="pills-order"
                                             aria-selected="false"><span class="d-flex d-lg-none">4</span><span
                                                 class="d-none d-lg-flex">{{ trans('lables.checkout-order-detail') }}</span></a>
                                     </li>
-                                </ul>
+                                </ul> --}}
 
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="pills-shipping" role="tabpanel"
                                         aria-labelledby="pills-shipping-tab">
+                                        <p style="font-size: 18px;font-weight: bold">{{ trans('lables.checkout-text-destination') }}</p>
                                         <form>
                                             <div class="form-row">
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-first-name') }}</label>
                                                     <div class="input-group ">
-
                                                         <input type="text" class="form-control" id="delivery_first_name"
                                                             placeholder="{{ trans('lables.checkout-first-name') }}">
                                                         <div class="invalid-feedback"></div>
                                                     </div>
                                                 </div>
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-last-name') }}</label>
                                                     <div class="input-group ">
-
                                                         <input type="text" class="form-control" id="delivery_last_name"
                                                             placeholder="{{ trans('lables.checkout-last-name') }}">
                                                         <div class="invalid-feedback"></div>
@@ -78,33 +82,19 @@
                                             </div>
                                             <div class="form-row">
                                                 {{-- {{dd(getSetting()['is_deliveryboyapp_purchased'])}} --}}
-
-                                                <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-address') }}</label>
+                                                <div class="from-group col-md-12">
                                                     <div class="input-group ">
-
                                                         <input type="text" class="form-control"
                                                             id="delivery_street_aadress"
                                                             placeholder="{{ trans('lables.checkout-address') }}">
                                                         <div class="invalid-feedback"></div>
                                                     </div>
                                                 </div>
-                                                <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-city-name') }}</label>
-                                                    <div class="input-group">
-
-                                                        <input type="text" class="form-control" id="delivery_city"
-                                                            placeholder="City">
-                                                        <div class="invalid-feedback"></div>
-                                                    </div>
-                                                </div>
-
                                             </div>
+                                            <br>
                                             <div class="form-row">
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-country-name') }}</label>
                                                     <div class="input-group select-control">
-
                                                         <select class="form-control" id="delivery_country"
                                                             onchange="states1()">
                                                         </select>
@@ -112,23 +102,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-state-name') }}</label>
                                                     <div class="input-group select-control">
-
                                                         <select class="form-control" id="delivery_state">
-
                                                         </select>
                                                         <div class="invalid-feedback"></div>
                                                     </div>
                                                 </div>
-
-
                                             </div>
 
                                             <div class="form-row">
-
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-postal-code') }}</label>
                                                     <div class="input-group">
 
                                                         <input type="text" class="form-control" id="delivery_postcode"
@@ -137,7 +120,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="from-group col-md-6 mb-3">
-                                                    <label for="">{{ trans('lables.checkout-phone') }}</label>
                                                     <div class="input-group">
 
                                                         <input type="text" class="form-control" id="delivery_phone"
@@ -163,19 +145,33 @@
                                                 @endif
 
                                             </div>
-
+<br>
                                             <div class="col-12 col-sm-12">
-                                                <div class="row">
-
-                                                    <a data-toggle="pill" href="#pills-billing"
+                                                <div class="row" style="justify-content: space-between">
+                                                    <a href="{{url('/cart')}}" class="btn m-btn" style="color: #7F7E7F">
+                                                        < กลับไปที่ตะกร้า
+                                                    </a>
+                                                    <a data-toggle="pill" href="#pills-confirm"
                                                         class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                                 </div>
                                             </div>
                                         </form>
+                                        <br>
+                                        <hr>
+                                        <div class="col-12 col-sm-12">
+                                            <div class="row" style="justify-content: space-between">
+                                                <a href="{{url('/refund')}}" class="btn m-btn" style="color: #7F7E7F;font-weight: normal;">
+                                                    {{ trans('lables.home-servics-policy') }}
+                                                </a>
+                                                <a href="{{url('#')}}" class="btn m-btn" style="color: #7F7E7F;font-weight: normal;">
+                                                    เงื่อนไขการให้บริการ
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-billing" role="tabpanel"
-                                        aria-labelledby="pills-billing-tab">
-                                        <form>
+                                    <div class="tab-pane fade" id="pills-confirm" role="tabpanel"
+                                        aria-labelledby="pills-confirm-tab">
+                                        {{-- <form>
 
                                             <div class="form-row">
                                                 <div class="from-group col-md-6 mb-3">
@@ -287,14 +283,14 @@
                                                         class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                     {{-- <div class="tab-pane fade" id="pills-method" role="tabpanel" aria-labelledby="pills-method-tab">
 
 
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
-                                            <a data-toggle="pill" href="#pills-billing" class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
+                                            <a data-toggle="pill" href="#pills-confirm" class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
 
                                             <a data-toggle="pill" href="#pills-order" class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                         </div>
@@ -308,9 +304,7 @@
                                     <input type="hidden" id="billing_country_hidden" />
                                     <div class="tab-pane fade" id="pills-order" role="tabpanel"
                                         aria-labelledby="pills-order-tab">
-                                        <table class="table top-table" id="cartItem-product-show">
-                                        </table>
-                                        <div class="col-12 col-sm-12">
+                                        {{-- <div class="col-12 col-sm-12">
                                             <div class="row">
                                                 <div class="heading">
                                                     <h4>{{ trans('lables.checkout-order-notes-title') }}</h4>
@@ -324,7 +318,7 @@
                                                 </div>
                                             </div>
 
-                                        </div>
+                                        </div> --}}
                                         <div class="col-12 col-sm-12 ">
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -533,14 +527,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-3">
+                    <div class="col-12 col-xl-7" style="background-color: #F9F8F8;" >
+                        <table style="margin-top: 30px;" class="table top-table" id="cartItem-product-show"></table>
+                        <hr>
+                        <div class="input-group ">
+                            <input type="text" class="form-control" placeholder="ใส่รหัสส่วนลด" aria-label="Coupon Code" aria-describedby="coupon-code">
+                            <div class="input-group-append">
+                              <button style="background-color: #D9D9D9;border-color: #D9D9D9" class="btn  btn-secondary swipe-to-top"  type="button" id="coupon-code">APPLY</button>
+                              {{-- <button class="swipe-to-top btn-block btn btn-danger"  id="removeCoupon" value="Remove Coupon">APPLY</button> --}}
+                            </div>
+                          </div>
                         <table class="table right-table" id="cartItem-grandtotal-product-show"></table>
                         <p class="free_shipping_order_price" style="display: none; text-align:center; color: red;">
                             {{ trans('lables.checkout-free-shipping-order-price') }}
                             <span class="free_shipping_order_price2">{{ getSetting()['free_shipping_order_price'] }}</span>
                             {{ trans('lables.checkout-free-shipping-order-price2') }}
                         </p>
-                        <input type="button" class="swipe-to-top btn-block btn btn-danger" id="removeCoupon" value="Remove Coupon" />
                     </div>
                 </div>
             </div>
@@ -548,72 +550,83 @@
         </section>
 
     </section>
+    <style>
+    .item {
+        position:relative;
+        display:inline-block;
+    }
+    .notify-badge{
+        position: absolute;
+        left:-10px;
+        top:-10px;
+        background:#000;
+        text-align: center;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+        color:white;
+        padding:5px 10px;
+        font-size:14px;
+    }
+    </style>
     <template id="cartItem-Template">
         <tbody>
             <tr class="d-flex cartItem-row">
-                <td class="col-12 col-md-2">
-                    <img class="img-fluid cartItem-image" src="images/product_images/product_image_6.png" />
+                <td class="col-12 col-md-3">
+                    <div class="item">
+                            <span class="notify-badge cartItem-qty-badge"></span>
+                            <img class="img-fluid cartItem-image" src="images/product_images/product_image_6.png" />
+                    </div>
                 </td>
                 <td class="col-12 col-md-4 item-detail-left">
                     <div class="item-detail">
-                        <span class="cartItem-category-name"></span>
-                        <h4 class="cartItem-name">
+                        <h4 style="font-size: 16px" class="cartItem-category-name"></h4>
+                        <h4 style="font-size: 16px;font-weight: normal;" class="cartItem-name">
+                        </h4>
+                        <h4 style="font-size: 16px;font-weight: normal;" class="cartItem-color-name">
                         </h4>
                         <div class="item-attributes"></div>
                         <div class="item-controls">
-                            {{-- <button type="button" class="btn">
-                                <span class="fas fa-pencil-alt"></span>
-                            </button> --}}
                             <button type="button" class="btn cartItem-remove" style="display: none;">
                                 <span class="fas fa-times"></span>
                             </button>
                         </div>
                     </div>
                 </td>
-                <td class="item-price col-12 col-md-2 cartItem-price"></td>
-                <td class="col-12 col-md-2">
+                <td class="col-12 col-md-2"></td>
+                {{-- <td class="col-12 col-md-2">
                     <div class="input-group item-quantity">
-
                         <input type="text" id="quantity2" name="quantity" disabled class="form-control cartItem-qty">
-
-
                     </div>
-                </td>
-                <td class="align-middle item-total col-12 col-md-2 cartItem-total" align="center"></td>
+                </td> --}}
+                <td style="font-size: 16px;font-weight: normal;" class="align-middle item-total col-12 col-md-3 cartItem-total" align="right"></td>
             </tr>
         </tbody>
     </template>
 
     <template id="cartItem-grandtotal-template">
-
-        <thead>
-            <tr>
-                <th scope="col" colspan="2" align="center">{{ trans('lables.checkout-order-summary') }}</th>
-
-            </tr>
-        </thead>
         <tbody>
             <tr>
                 <th scope="row">{{ trans('lables.checkout-subtotal') }}</th>
-                <td align="right" class="caritem_subtotal">$0</td>
+                <td align="right" class="caritem_subtotal">0</td>
 
             </tr>
             <tr>
                 <th scope="row">{{ trans('lables.checkout-discount') }}</th>
-                <td align="right" class="caritem_discount_coupon">$0</td>
+                <td align="right" class="caritem_discount_coupon">0 THB</td>
 
             </tr>
             <template id="test"></template>
             <tr>
                 <th scope="row">{{ trans('lables.checkout-shipping') }}</th>
-                <td align="right" class="shipping_tax" data_price="0">$0</td>
+                <td align="right" class="shipping_tax" data_price="0">0 THB</td>
 
             </tr>
 
             <tr class="item-price">
 
                 <th scope="row">{{ trans('lables.checkout-total') }}</th>
-                <td align="right" class="caritem_grandtotal">$0</td>
+                <td align="right" class="caritem_grandtotal">0</td>
 
             </tr>
 
@@ -811,22 +824,24 @@
                                 if (data.data[i].currency.symbol_position == 'left') {
                                     sum = +data.data[i].qty * +discount_price;
                                     clone.querySelector(".cartItem-total").innerHTML = data.data[i].currency
-                                        .code + '' + sum.toFixed(2);
-                                    clone.querySelector(".cartItem-price").innerHTML = data.data[i].currency
-                                        .code + '' + discount_price;
+                                        .code + '' + sum.toFixed(2) + ' ' + "THB";
+                                    // clone.querySelector(".cartItem-price").innerHTML = data.data[i].currency
+                                    //     .code + '' + discount_price;
                                 } else {
                                     sum = +data.data[i].qty * +discount_price;
-                                    clone.querySelector(".cartItem-total").innerHTML = sum.toFixed(2) + '' + data.data[i]
-                                        .currency.code;
-                                    clone.querySelector(".cartItem-price").innerHTML = discount_price + '' +
-                                        data.data[i]
-                                        .currency.code;
+                                    clone.querySelector(".cartItem-total").innerHTML = sum.toFixed(2) + ' ' + "THB";
+                                    // clone.querySelector(".cartItem-price").innerHTML = discount_price + '' +
+                                    //     data.data[i]
+                                    //     .currency.code;
                                 }
                             } else {
-                                clone.querySelector(".cartItem-price").innerHTML = discount_price;
+                                // clone.querySelector(".cartItem-price").innerHTML = discount_price;
                             }
-                            clone.querySelector(".cartItem-qty").value = +data.data[i].qty;
-                            clone.querySelector(".cartItem-qty").setAttribute('id', 'quantity' + i);
+                            // clone.querySelector(".cartItem-qty").value = +data.data[i].qty;
+
+                            // clone.querySelector(".cartItem-qty").setAttribute('id', 'quantity' + i);
+
+                            clone.querySelector(".cartItem-qty-badge").innerHTML = data.data[i].qty;
 
                             total_price = total_price + (discount_price * data.data[i].qty);
 
@@ -835,8 +850,11 @@
                                     .data[i].category_detail[0].category_detail) != 'null' && $.trim(data.data[
                                     i].category_detail[0].category_detail) != null) {
                                 clone.querySelector(".cartItem-category-name").innerHTML = data.data[i]
-                                    .category_detail[0].category_detail.detail[0].name;
+                                    .combination[0].sku;
+                                clone.querySelector(".cartItem-color-name").innerHTML = data.data[i]
+                                    .product_combination[1].variation.detail[0].name;
                             }
+                            console.log(data.data[i]);
                             clone.querySelector(".cartItem-remove").setAttribute('data-id', data.data[i]
                                 .product_id);
                             clone.querySelector(".cartItem-remove").setAttribute('data-combination-id', data
@@ -857,8 +875,7 @@
                             if (data.data[i].currency != '' && data.data[i].currency != 'null' && data.data[i]
                                 .currency != null) {
                                 if (data.data[i].currency.symbol_position == 'left') {
-                                    clone1.querySelector(".caritem_subtotal").innerHTML = data.data[i].currency
-                                        .code + '' + total_price.toFixed(2);
+                                    clone1.querySelector(".caritem_subtotal").innerHTML = total_price.toFixed(2)+ ' ' + "THB";
                                     clone1.querySelector(".caritem_subtotal").setAttribute('price',
                                         total_price);
                                     clone1.querySelector(".caritem_subtotal").setAttribute('currency_position',
@@ -868,7 +885,7 @@
                                     clone1.querySelector(".caritem_subtotal").setAttribute('price-symbol', data
                                         .data[i].currency.code + '' + total_price);
                                     clone1.querySelector(".caritem_grandtotal").innerHTML = data.data[i]
-                                        .currency.code + '' + total_price.toFixed(2);
+                                        .currency.code + '' + total_price.toFixed(2)+ ' ' + "THB";
                                     clone1.querySelector(".shipping_tax").setAttribute('data_price', '0');
                                 } else {
                                     clone1.querySelector(".caritem_subtotal").innerHTML = total_price.toFixed(2) + '' +
@@ -876,10 +893,9 @@
                                     clone1.querySelector(".caritem_subtotal").setAttribute('price',
                                         total_price);
                                     clone1.querySelector(".shipping_tax").setAttribute('data_price', '0');
-                                    clone1.querySelector(".caritem_subtotal").setAttribute('price-symbol', data
-                                        .data[i].currency.code + '' + total_price);
+                                    clone1.querySelector(".caritem_subtotal").setAttribute('price-symbol', total_price)+ ' ' + "THB";
                                     clone1.querySelector(".caritem_grandtotal").innerHTML = total_price.toFixed(
-                                        2) + '' + data.data[i].currency.code;
+                                        2) + ' ' + "THB";
                                 }
                             }
                             $("#cartItem-grandtotal-product-show").html('');
@@ -982,7 +998,7 @@
 
                                 if(data.data.currency.symbol_position == 'left'){
                                     $(".caritem_discount_coupon").html(data.data.currency.code +''+ discount.toFixed(2));
-                                    $(".caritem_grandtotal").html(data.data.currency.code +''+ subtotal.toFixed(2));
+                                    $(".caritem_grandtotal").html(subtotal.toFixed(2));
                                 } else {
                                     $(".caritem_discount_coupon").html(discount.toFixed(2) +''+ data.data.currency.code);
                                     $(".caritem_grandtotal").html(subtotal.toFixed(2) +''+ data.data.currency.code);
@@ -1084,7 +1100,7 @@
                 beforeSend: function() {},
                 success: function(data) {
                     if (data.status == 'Success') {
-                        html = '<option value="">Select</option>';
+                        html = '<option value="">จังหวัด</option>';
                         for (i = 0; i < data.data.length; i++) {
                             selected = '';
                             if ($.trim($("#billing_country_hidden").val()) != '' && $.trim($(
@@ -1552,8 +1568,8 @@
                                     // $("#pills-shipping-tab").addClass('active');
                                     // $("#pills-shipping").addClass('show active');
 
-                                    // $("#pills-billing-tab").removeClass('active');
-                                    // $("#pills-billing").removeClass('show active');
+                                    // $("#pills-confirm-tab").removeClass('active');
+                                    // $("#pills-confirm").removeClass('show active');
 
                                     // $("#pills-method-tab").removeClass('active');
                                     // $("#pills-method").removeClass('show active');
@@ -1685,8 +1701,8 @@
                             $("#pills-shipping-tab").addClass('active');
                             $("#pills-shipping").addClass('show active');
 
-                            $("#pills-billing-tab").removeClass('active');
-                            $("#pills-billing").removeClass('show active');
+                            $("#pills-confirm-tab").removeClass('active');
+                            $("#pills-confirm").removeClass('show active');
 
                             $("#pills-method-tab").removeClass('active');
                             $("#pills-method").removeClass('show active');
@@ -2483,8 +2499,8 @@
                         $("#pills-shipping-tab").addClass('active');
                         $("#pills-shipping").addClass('show active');
 
-                        $("#pills-billing-tab").removeClass('active');
-                        $("#pills-billing").removeClass('show active');
+                        $("#pills-confirm-tab").removeClass('active');
+                        $("#pills-confirm").removeClass('show active');
 
                         $("#pills-method-tab").removeClass('active');
                         $("#pills-method").removeClass('show active');

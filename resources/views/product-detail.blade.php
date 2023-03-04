@@ -203,86 +203,169 @@
                                     .product_price_symbol + '</span>';
                             }
                         } else {
-                            if (data.data.product_combination != null) {
-                                clone.querySelector(".product-card-price").innerHTML = data.data
-                                    .product_combination[0].product_price_symbol;
-                            }
-                            if (data.data.attribute != null) {
-                                var combination = '';
-                                var background_color = '';
-                                if (data.data.attribute[0].attributes.detail[0].name == 'ขนาด') {
-                                    var attribute = data.data.attribute[0];
-                                    var attribute_color = data.data.attribute[1];
-                                }else{
-                                    var attribute = data.data.attribute[1];
-                                    var attribute_color = data.data.attribute[0];
-                                }
-
-                                if (attribute.variations != null) {
-                                    combination += '<ul class="variations" style="padding-left:0px;">';
-                                    for (var v = 0; v < attribute.variations
-                                        .length; v++) {
-                                        combination +=
-                                            '<li style="background-color: #F9F8F8;width: 30px;color: #494F69;" class="btn size-btn variation_list_item attribute_' +
-                                            attribute.attributes.detail[0].name.split(' ').join(
-                                                '_') + '_div  ' + attribute.variations[v]
-                                            .product_variation.detail[0].name + '-' + attribute
-                                            .attributes.detail[0].name.split(' ').join('_') +
-                                            '" data-attribute-id="' + attribute.attributes
-                                            .attribute_id + '" data-attribute-name="' + attribute
-                                            .attributes.detail[0].name + '" data-variation-id="' +
-                                            attribute.variations[v]
-                                            .product_variation.id + '" data-variation-name="' +
-                                            attribute.variations[v]
-                                            .product_variation.detail[0].name + '">' + attribute
-                                            .variations[v]
-                                            .product_variation.detail[0].name + '</li>';
+                            if (data.data.product_discount_price == '' || data.data
+                                .product_discount_price == null || data.data.product_discount_price ==
+                                'null') {
+                                    if (data.data.product_combination != null) {
+                                        clone.querySelector(".product-card-price").innerHTML = data.data
+                                            .product_combination[0].product_price_symbol;
                                     }
-                                    combination += '</ul>';
-                                    // เลืิอกสี
-                                    combination += '<ul class="variations" style="padding-left:0px;">';
-                                    for (var v = 0; v < attribute_color.variations
-                                        .length; v++) {
-                                            switch (attribute_color.variations[v].product_variation.detail[0].name) {
-                                                case 'ขาว':
-                                                background_color = '#F8F9FA';
-                                                    break;
-                                                case 'สว่าง':
-                                                background_color = '#F8F9FA';
-                                                    break;
-                                                case 'น้ำเงิน':
-                                                background_color = '#30506D';
-                                                    break;
-                                                case 'ยีนส์':
-                                                background_color = '#91A2BB';
-                                                    break;
-                                                case 'ดำ':
-                                                background_color = '#000';
-                                                    break;
-                                                case 'มืด':
-                                                background_color = '#000';
-                                                    break;
+                                    if (data.data.attribute != null) {
+                                        var combination = '';
+                                        var background_color = '';
+                                        if (data.data.attribute[0].attributes.detail[0].name == 'ขนาด') {
+                                            var attribute = data.data.attribute[0];
+                                            var attribute_color = data.data.attribute[1];
+                                        }else{
+                                            var attribute = data.data.attribute[1];
+                                            var attribute_color = data.data.attribute[0];
+                                        }
+
+                                        if (attribute.variations != null) {
+                                            combination += '<ul class="variations" style="padding-left:0px;">';
+                                            for (var v = 0; v < attribute.variations
+                                                .length; v++) {
+                                                combination +=
+                                                    '<li style="background-color: #F9F8F8;width: 30px;color: #494F69;" class="btn size-btn variation_list_item attribute_' +
+                                                    attribute.attributes.detail[0].name.split(' ').join(
+                                                        '_') + '_div  ' + attribute.variations[v]
+                                                    .product_variation.detail[0].name + '-' + attribute
+                                                    .attributes.detail[0].name.split(' ').join('_') +
+                                                    '" data-attribute-id="' + attribute.attributes
+                                                    .attribute_id + '" data-attribute-name="' + attribute
+                                                    .attributes.detail[0].name + '" data-variation-id="' +
+                                                    attribute.variations[v]
+                                                    .product_variation.id + '" data-variation-name="' +
+                                                    attribute.variations[v]
+                                                    .product_variation.detail[0].name + '">' + attribute
+                                                    .variations[v]
+                                                    .product_variation.detail[0].name + '</li>';
                                             }
-                                        combination +=
-                                            '<li class="btn size-btn variation_list_item attribute_' +
-                                            attribute_color.attributes.detail[0].name.split(' ').join(
-                                                '_') + '_div  ' + attribute_color.variations[v]
-                                            .product_variation.detail[0].name + '-' + attribute_color
-                                            .attributes.detail[0].name.split(' ').join('_') +
-                                            '" data-attribute-id="' + attribute_color.attributes
-                                            .attribute_id + '" data-attribute-name="' + attribute_color
-                                            .attributes.detail[0].name + '" data-variation-id="' +
-                                            attribute_color.variations[v]
-                                            .product_variation.id + '" data-variation-name="' +
-                                            attribute_color.variations[v]
-                                            .product_variation.detail[0].name + '"><div style="background-color:'+background_color+'; height: 20px;width: 20px;"></div></li>';
+                                            combination += '</ul>';
+                                            // เลืิอกสี
+                                            combination += '<ul class="variations" style="padding-left:0px;">';
+                                            for (var v = 0; v < attribute_color.variations
+                                                .length; v++) {
+                                                    switch (attribute_color.variations[v].product_variation.detail[0].name) {
+                                                        case 'ขาว':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'สว่าง':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'น้ำเงิน':
+                                                        background_color = '#30506D';
+                                                            break;
+                                                        case 'ยีนส์':
+                                                        background_color = '#91A2BB';
+                                                            break;
+                                                        case 'ดำ':
+                                                        background_color = '#000';
+                                                            break;
+                                                        case 'มืด':
+                                                        background_color = '#000';
+                                                            break;
+                                                    }
+                                                combination +=
+                                                    '<li class="btn size-btn variation_list_item attribute_' +
+                                                    attribute_color.attributes.detail[0].name.split(' ').join(
+                                                        '_') + '_div  ' + attribute_color.variations[v]
+                                                    .product_variation.detail[0].name + '-' + attribute_color
+                                                    .attributes.detail[0].name.split(' ').join('_') +
+                                                    '" data-attribute-id="' + attribute_color.attributes
+                                                    .attribute_id + '" data-attribute-name="' + attribute_color
+                                                    .attributes.detail[0].name + '" data-variation-id="' +
+                                                    attribute_color.variations[v]
+                                                    .product_variation.id + '" data-variation-name="' +
+                                                    attribute_color.variations[v]
+                                                    .product_variation.detail[0].name + '"><div style="background-color:'+background_color+'; height: 20px;width: 20px;"></div></li>';
+                                            }
+                                            combination += '</ul>';
+                                        }
+                                        clone.querySelector(".pro-options").innerHTML = combination;
+
                                     }
-                                    combination += '</ul>';
-                                }
-                                clone.querySelector(".pro-options").innerHTML = combination;
+                            } else {
+                                clone.querySelector(".product-card-price").innerHTML = data.data
+                                    .product_discount_price_symbol + '<span>' + data.data
+                                    .product_price_symbol + '</span>';
+                                    if (data.data.attribute != null) {
+                                        var combination = '';
+                                        var background_color = '';
+                                        if (data.data.attribute[0].attributes.detail[0].name == 'ขนาด') {
+                                            var attribute = data.data.attribute[0];
+                                            var attribute_color = data.data.attribute[1];
+                                        }else{
+                                            var attribute = data.data.attribute[1];
+                                            var attribute_color = data.data.attribute[0];
+                                        }
+
+                                        if (attribute.variations != null) {
+                                            combination += '<ul class="variations" style="padding-left:0px;">';
+                                            for (var v = 0; v < attribute.variations
+                                                .length; v++) {
+                                                combination +=
+                                                    '<li style="background-color: #F9F8F8;width: 30px;color: #494F69;" class="btn size-btn variation_list_item attribute_' +
+                                                    attribute.attributes.detail[0].name.split(' ').join(
+                                                        '_') + '_div  ' + attribute.variations[v]
+                                                    .product_variation.detail[0].name + '-' + attribute
+                                                    .attributes.detail[0].name.split(' ').join('_') +
+                                                    '" data-attribute-id="' + attribute.attributes
+                                                    .attribute_id + '" data-attribute-name="' + attribute
+                                                    .attributes.detail[0].name + '" data-variation-id="' +
+                                                    attribute.variations[v]
+                                                    .product_variation.id + '" data-variation-name="' +
+                                                    attribute.variations[v]
+                                                    .product_variation.detail[0].name + '">' + attribute
+                                                    .variations[v]
+                                                    .product_variation.detail[0].name + '</li>';
+                                            }
+                                            combination += '</ul>';
+                                            // เลืิอกสี
+                                            combination += '<ul class="variations" style="padding-left:0px;">';
+                                            for (var v = 0; v < attribute_color.variations
+                                                .length; v++) {
+                                                    switch (attribute_color.variations[v].product_variation.detail[0].name) {
+                                                        case 'ขาว':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'สว่าง':
+                                                        background_color = '#F8F9FA';
+                                                            break;
+                                                        case 'น้ำเงิน':
+                                                        background_color = '#30506D';
+                                                            break;
+                                                        case 'ยีนส์':
+                                                        background_color = '#91A2BB';
+                                                            break;
+                                                        case 'ดำ':
+                                                        background_color = '#000';
+                                                            break;
+                                                        case 'มืด':
+                                                        background_color = '#000';
+                                                            break;
+                                                    }
+                                                combination +=
+                                                    '<li class="btn size-btn variation_list_item attribute_' +
+                                                    attribute_color.attributes.detail[0].name.split(' ').join(
+                                                        '_') + '_div  ' + attribute_color.variations[v]
+                                                    .product_variation.detail[0].name + '-' + attribute_color
+                                                    .attributes.detail[0].name.split(' ').join('_') +
+                                                    '" data-attribute-id="' + attribute_color.attributes
+                                                    .attribute_id + '" data-attribute-name="' + attribute_color
+                                                    .attributes.detail[0].name + '" data-variation-id="' +
+                                                    attribute_color.variations[v]
+                                                    .product_variation.id + '" data-variation-name="' +
+                                                    attribute_color.variations[v]
+                                                    .product_variation.detail[0].name + '"><div style="background-color:'+background_color+'; height: 20px;width: 20px;"></div></li>';
+                                            }
+                                            combination += '</ul>';
+                                        }
+                                        clone.querySelector(".pro-options").innerHTML = combination;
+
+                                    }
 
                             }
-
                         }
                         if (data.data.reviews !== null) {
                             // clone.querySelector(".review-count").innerHTML = data.data.reviews.length +
@@ -394,8 +477,17 @@
                                 product_combination_id = data.data.product_combination[i]
                                     .product_combination_id;
                                 $("#product_combination_id").val(product_combination_id);
-                                price = data.data.product_combination[i].product_price_symbol;
+                                    if (data.data.product_discount_price == '' || data.data
+                                        .product_discount_price == null || data.data.product_discount_price ==
+                                        'null') {
+                                             price = data.data.product_combination[i].product_price_symbol;
+                                    } else {
+                                        price = data.data.product_discount_price_symbol + '<span>' + data.data.product_price_symbol + '</span>';
+                                    }
+
+
                                 $(".product-card-price").html(price);
+
 
                                 if (data.data.product_combination[i].gallary != null) {
                                     gallary = data.data.product_combination[i].gallary.gallary_name;

@@ -37,7 +37,8 @@
                                     <div class="col-12 align-right">
                                         <div class="row">
                                             <button type="button" class="btn btn-light swipe-to-top" onclick="updateCartItem()">
-                                                อัพเดทสินค้า</button>
+                                                {{ trans('lables.cart-page-update-cart') }}
+                                            </button>
                                         </div>
 
 
@@ -51,11 +52,11 @@
 
                             </table>
                             {{-- <a href="{{url('/checkout')}}"> --}}
-                            <a href="#">
-                                <button style="margin-bottom: 10px;background-color: #333333;height: 50px;" class="btn btn-secondary swipe-to-top m-btn col-12">ยอดชำระ</button>
+                            <a href="{{url('/checkout')}}">
+                                <button style="margin-bottom: 10px;background-color: #333333;height: 50px;" class="btn btn-secondary swipe-to-top m-btn col-12">{{ trans('lables.cart-page-total-cart') }}</button>
                             </a>
                             <a href="{{url('/shop')}}">
-                                <button style="background-color: #fff;height: 50px;font-size:15px" class="btn m-btn col-12">เลือกซื้อเพิ่มเติม</button>
+                                <button style="background-color: #fff;height: 50px;font-size:15px" class="btn m-btn col-12"> {{ trans('lables.cart-page-continue-shopping') }} </button>
                             </a>
                         </div>
                     </div>
