@@ -24,11 +24,11 @@
         "league/omnipay": "^3.2",
         "milon/barcode": "^8.0",
         "mollie/laravel-mollie": "^2.0",
+        "omise/omise-php": "^2.16",
         "omnipay/authorizenet": "3.x@dev",
         "omnipay/braintree": "~4.0@dev",
         "omnipay/paypal": "^3.0",
         "omnipay/sagepay": "~3.0",
-        "omise/omise-php": "dev-master",
         "razorpay/razorpay": "^2.8",
         "stripe/stripe-php": "^7.85",
         "sudiptpa/omnipay-openpay": "^3.0",
@@ -45,7 +45,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     },
     "extra": {
         "laravel": {

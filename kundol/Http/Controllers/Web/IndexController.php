@@ -32,6 +32,9 @@ use Illuminate\Support\Facades\Log;
 use Mollie\Laravel\Facades\Mollie;
 use Illuminate\Support\Facades\Http;
 
+use OmiseCharge;
+use OmiseSource;
+
 class IndexController extends Controller
 {
     public function getcall()
@@ -811,4 +814,327 @@ class IndexController extends Controller
         \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
     }
+    public function omise($id = '',$price = '')
+    {
+        return view('omise', compact('id','price'));
+    }
+    public function store(Request $request)
+    {
+        // dd($_REQUEST);
+
+        if(!empty($_REQUEST['omiseToken'])){
+            $key_token = $_REQUEST['omiseToken'];
+            $url = 'https://api.omise.co/charges';
+            $type_omise = 1;
+            $amount = $request->post('amount').'00';
+        }else if(!empty($_REQUEST['omiseSource'])){
+            $key_token = $_REQUEST['omiseSource'];
+            $url = 'https://api.omise.co/sources/'.$key_token;
+            $type_omise = 2;
+            $amount = $request->post('amount').'00';
+        }
+
+        if(!empty($type_omise)){
+
+            switch ($type_omise){ //Card
+                case(1):
+                    $charge = OmiseCharge::create(array(
+                        'amount' => $amount,
+                        'currency' => 'thb',
+                        'card' =>  $key_token,
+                    ));
+                break;
+                case(2): //PromtPay
+                        /* เรียกใช้ Source API กับ Charge API เหมาะกับใช้ Payment type (รูปแบบชำระอื่นๆ) */
+                         $source = OmiseSource::create(array(
+                            'amount' => $amount,
+                            'currency' => 'THB',
+                            'type' => 'promptpay'
+                        ));
+
+                        $return_uri = $this->omise(); // ในขั้นตอนนี้ให้สร้าง topup_id สำหรับอ้างอิงไว้ใช้ในขั้นตอนต่อไป อาจจะใช้เป็น order id ก็ได้ ประมาณว่า order นี้กำลังจะชำระเงิน
+                        // dd($return_uri);
+                        // $charge = OmiseCharge::retrieve($source['id']);
+
+
+                              //   var_dump($source);exit();
+                      /* เรียกใช้ Source API*/
+                       $charge2 = OmiseCharge::create(array(
+                        'amount' => $amount,
+                                                               'currency' => 'THB',
+                                                               'return_uri' => $return_uri,
+                                                               'source' => $source['id'],
+                                                   ));
+                                                //    dd($charge2);
+
+                    //                             //    dd($charge2);
+                    //     //  $_SESSION['charge_id'] = $charge2['id'];
+                    //     // var_dump($charge2['source']['scannable_code']['image']['download_uri']);exit();
+                         $img_qr = $charge2['source']['scannable_code']['image']['download_uri'];
+                       if($charge2['status'] == 'successful'){
+                                       echo "
+                                       <img style=' height: 100%;
+                                       width: 30%;
+                                       display: block;
+                                       margin-left: auto;
+                                       margin-right: auto;' src='".$img_qr."'  >";
+                       }else if($charge2['status'] == 'pending'){
+                                 echo "<img style=' height: 100%;
+                                 width: 30%;
+                                 display: block;
+                                 margin-left: auto;
+                                 margin-right: auto;'  src='".$img_qr."'  >";
+                               header( "location: ".$charge2['authorize_uri'] );
+                                exit(0);
+                       }
+
+                break;
+            }
+            $status =  $charge['status'];
+            $uri = url('thankyou');
+            $uri_errot = url('checkout');
+            if ($status == 'successful') {
+               echo'<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+               echo'<script>
+               setTimeout(function() {
+                        swal({
+                            title: "ชำระเงินสำเร็จ",
+                            text: "ดำเนินการชำระเงินเรียบร้อย",
+                            type: "success"
+                        }, function() {
+                            window.location = "'.$uri.'";
+                        });
+                    }, 1000);
+                </script>';
+            }else{
+                echo'<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+                echo'<script>
+                setTimeout(function() {
+                         swal({
+                             title: "พบข้อผิดพลาด",
+                             text: "โปรดดำเนินการใหม่อีกครั้ง",
+                             type: "error"
+                         }, function() {
+                            window.location = "'.$uri_errot.'";
+                         });
+                     }, 1000);
+                 </script>';
+            }
+    }
+
+        // $charge = OmiseCharge::create(array(
+        //     'amount' => $request->post('amount').'00',
+        //     'currency' => 'thb',
+        //     'card' => $_POST["omiseToken"]
+        // ));
+        // dd($charge);
+
+
+        // echo($charge['status']);
+
+        // print('<pre>');
+        // print_r($charge);
+        // print('</pre>');
+
+        // $source = OmiseSource::create(array(
+        //     'amount' => $request->post('amount').'00',
+        //     'currency' => 'thb',
+        //     'type' => 'promptpay'
+        //   ));
+        // $postData = $request->post();
+
+        // $charge = OmiseCharge::create(array(
+        //   'amount' => $request->post('amount').'00',
+        //   'currency' => 'thb',
+        //   'type'=>'promptpay',
+        // //   'card' => $_POST["omiseToken"]
+        // ));
+
+        // echo($source['status']);
+
+        // print('<pre>');
+        // print_r($source);
+        // print('</pre>');
+        // die();
+    }
+    // public function store(Request $request)
+    // {
+
+    //     $charge = OmiseCharge::create(array(
+    //         'amount' => $request->post('amount').'00',
+    //         'currency' => 'thb',
+    //         'card' => $_POST["omiseToken"]
+    //     ));
+    //     dd($charge);
+
+
+    //     echo($charge['status']);
+
+    //     print('<pre>');
+    //     print_r($charge);
+    //     print('</pre>');
+
+    //     // $source = OmiseSource::create(array(
+    //     //     'amount' => $request->post('amount').'00',
+    //     //     'currency' => 'thb',
+    //     //     'type' => 'promptpay'
+    //     //   ));
+    //     // $postData = $request->post();
+
+    //     // $charge = OmiseCharge::create(array(
+    //     //   'amount' => $request->post('amount').'00',
+    //     //   'currency' => 'thb',
+    //     //   'type'=>'promptpay',
+    //     // //   'card' => $_POST["omiseToken"]
+    //     // ));
+
+    //     // echo($source['status']);
+
+    //     // print('<pre>');
+    //     // print_r($source);
+    //     // print('</pre>');
+    //     // die();
+    // }
+    public function charge(Request $request)
+    {
+        // print('<pre>');
+        // print_r($request->post());
+        // print('</pre>');
+        // die();
+        $source       = $request->post('omiseSource'); // omiseToken จะถูกส่งมาอัตโนมัติผ่าน omise form
+
+        $money        = $request->post('money');
+
+        $currencyCode = 764;
+
+        $amount_conv  = $money * 100; //จำนวนเงิน 300 ต้องระบุเป็น 30000 หรือ คูณด้วย 100
+
+
+
+        // $return_uri = base_url("omise/check/".$topup_id); // ในขั้นตอนนี้ให้สร้าง topup_id สำหรับอ้างอิงไว้ใช้ในขั้นตอนต่อไป อาจจะใช้เป็น order id ก็ได้ ประมาณว่า order นี้กำลังจะชำระเงิน
+
+
+        $source = OmiseSource::create([
+
+            'amount'     => $amount_conv,
+
+            'currency'   => "THB",
+
+            'type' => 'promptpay',
+
+
+        ]);
+
+        $return_uri = $this->check($source['id']); // ในขั้นตอนนี้ให้สร้าง topup_id สำหรับอ้างอิงไว้ใช้ในขั้นตอนต่อไป อาจจะใช้เป็น order id ก็ได้ ประมาณว่า order นี้กำลังจะชำระเงิน
+        // dd($return_uri);
+
+        $charge = OmiseCharge::create([
+
+            'amount'     => $amount_conv,
+
+            'currency'   => "THB",
+
+            'return_uri' => $return_uri,
+
+            'type' => 'promptpay',
+
+            'source' => $source['id'],
+
+
+        ]);
+
+
+
+
+        $charge_id = $charge['id'];
+
+        $authorize_uri = $charge['authorize_uri'];
+
+
+
+        // จังหวะนี้สำคัญ ก่อนที่จะ redirect ไปจากหน้านี้ ให้บันทึก topup_id และ charge_id ไว้ในฐานข้อมูลของเรา
+
+        // เพื่อใช้อ้างอิงว่า transaction นี้ สำเร็จ หรือ ไม่สำเร็จ
+
+
+
+        redirect($authorize_uri,'refresh'); // เราจะรีไปยังหน้าการยืนยันตัวตนผ่านระบบ OTP ของธนาคารนั้น ๆ
+
+    }
+
+
+
+    public function check($topup){
+
+        sleep(5); // เพื่อรอให้ Omise ทำงานสมบูรณ์ก่อน
+
+
+
+        // ใช้ topup_id คิวรี่หา charge_id แล้วใช้หาค่า status ว่า transaction นี้สำเร็จหรือไม่สำเร็จ
+
+        // $charge = OmiseCharge::retrieve($topup['id']);
+        $charge = OmiseCharge::retrieve("chrg_test_4xso2s8ivdej29pqnhz");
+        dd($charge);
+
+        if($charge['status'] === 'successful') {
+
+           // เงินเข้าบัญชีเรียบร้อยแล้ว
+
+        }else{
+
+           // อาจจะ failed หรือ pending อยู่
+
+        }
+
+//         $url = 'https://api.omise.co/charges';
+//         //$url = 'https://api.omise.co/sources/'.$_REQUEST['soure'];
+//          // $charge = OmiseCharge::retrieve($charge_id);
+//         $event = OmiseCharge::retrieve($charge_id);
+//         echo $charge_id.'<br>';
+// dd();
+//         // dd($event);
+
+//     //    var_dump($event);exit();
+//         if($event["source"]["charge_status"] == 'successful'){
+//              header( "location: ".$event['authorize_uri']);
+//              exit(0);
+//         }else{
+//              $img_qr = $event['source']['scannable_code']["image"]["download_uri"];
+//             $aa = $event['return_uri'];
+//             echo "<img src='".$img_qr."' style='width:600px;height:600px;' ><br><a href='./index.html' >กลับหน้าหลัก</a>";
+//             exit(0);
+//         }
+
+        // sleep(5); // เพื่อรอให้ Omise ทำงานสมบูรณ์ก่อน
+        // // dd($charge_id);
+        // // $ref_id = $request->post("ref_id");
+
+        // // ใช้ topup_id คิวรี่หา charge_id แล้วใช้หาค่า status ว่า transaction นี้สำเร็จหรือไม่สำเร็จ
+        // $charge = OmiseCharge::retrieve($charge_id);
+        // if($charge['status'] === 'successful') {
+        //    echo "เงินเข้าบัญชีเรียบร้อยแล้ว";
+        // }else{
+        //    echo "failed";
+
+        //    // อาจจะ failed หรือ pending อยู่
+        // }
+
+//         $charge = OmiseCharge::retrieve($topup_id);
+// dd($charge);
+//         if($charge['status'] === 'successful') {
+
+//            // เงินเข้าบัญชีเรียบร้อยแล้ว
+
+//         }else{
+
+//            // อาจจะ failed หรือ pending อยู่
+
+//         }
+
+    }
+
 }

@@ -176,29 +176,29 @@ return [
 
     'checkout-checkout'=>'CHECKOUT',
     'checkout-shipping-address'=>'การขนส่ง',
-    'checkout-billing-address'=>'Billing Address',
+    'checkout-billing-address'=>'ที่อยู่',
     'checkout-text-destination'=>'ที่อยู่ขนส่ง',
     'checkout-shipping-method'=>'การชำระเงิน',
-    'checkout-order-detail'=>'ยืนยันข้อมูล',
+    'checkout-order-detail'=>'ที่อยู่เรียกเก็บเงิน',
 
 
     'checkout-first-name'=>'ชื่อ',
     'checkout-last-name'=>'นามสกุล',
     'checkout-address'=>'ที่อยู่สำหรับจัดส่ง',
-    'checkout-country-name'=>'Country Name',
-    'checkout-state-name'=>'State Name',
-    'checkout-city-name'=>'City Name',
+    'checkout-country-name'=>'อำเภอ',
+    'checkout-state-name'=>'อำเภอ',
+    'checkout-city-name'=>'ตำบล',
     'checkout-postal-code'=>'รหัสไปรษณีย์',
     'checkout-phone'=>'เบอร์โทรศัพท์',
 
 
-    'checkout-billing-first-name'=>'First Name',
-    'checkout-billing-last-name'=>'Last Name',
-    'checkout-billing-country-name'=>'Country Name',
-    'checkout-billing-state-name'=>'State Name',
-    'checkout-billing-city-name'=>'City Name',
-    'checkout-billing-postal-code'=>'Postal Code',
-    'checkout-billing-phone'=>'Phone',
+    'checkout-billing-first-name'=>'ชื่อ',
+    'checkout-billing-last-name'=>'นามสกุล',
+    'checkout-billing-country-name'=>'จังหวัด',
+    'checkout-billing-state-name'=>'อำเภอ',
+    'checkout-billing-city-name'=>'ตำบล',
+    'checkout-billing-postal-code'=>'รหัสไปรษณีย์',
+    'checkout-billing-phone'=>'เบอร์โทรศัพท์',
     'shipping-address-latlong'=>'Lat/Lng',
     'checkout-continue'=>'ถัดไป',
     'checkout-back'=>'Back',
@@ -209,7 +209,7 @@ return [
     'checkout-order-notes-title'=>'Order Notes & Summary',
     'checkout-order-notes-description'=>'Please write notes of your
     order',
-    'checkout-payment-method-title'=>'ช่องทางการชำระเงิน',
+    'checkout-payment-method-title'=>'ชำระเงิน',
     'checkout-payment-method-description'=>'Shipping Methods',
 
 
@@ -219,7 +219,7 @@ return [
     'checkout-total'=>'ยอดชำระคำสั่งซื้อ',
     'checkout-shipping'=>'ค่าจัดส่ง',
     'checkout-tax'=>"Tax",
-    'checkout-same-ship-bill-address-text'=>'Same shipping and billing address.',
+    'checkout-same-ship-bill-address-text'=>'ที่อยู่จัดส่งและเรียกเก็บเงินเดียวกัน',
     'checkout-location' => 'Location',
     'checkout-location-placeholder'=>'Please enter your location or click here to open map',
 
@@ -387,7 +387,7 @@ return [
     'footer-event'=>"อีเว้นท์",
     'footer-about-us'=>"เกี่ยวกับ",
     'footer-contact-us'=>"ติดต่อ",
-    'footer-sall'=>"ลดราคา",
+    'footer-sale'=>"ลดราคา",
     'footer-join-us'=>"ร่วมกับเรา",
     'footer-get-discount'=>"สมัครเพื่อรับส่วนลด",
     'footer-fullname'=>"ขื่อ - นามสกุล",

@@ -17,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 // if(!file_exists(storage_path('installed'))){
 // 	return redirect('/install');
 // }
+Route::get('omise/{order_id}/{order_price}', 'Web\IndexController@omise');
+// Route::get('omiseIndex/', 'Web\IndexController@omiseIndex');
 
+// Route::get('/omise', 'Web\IndexController@omise');
+Route::post('/add', 'Web\IndexController@store')->name('addDepartment');
+Route::post('/charge', 'Web\IndexController@charge')->name('addCharge');
 
 
 Route::get('contact-us-email', function () {
@@ -51,7 +56,6 @@ Route::any('admin/{all}', function () {
 Route::group(['middleware' => ['general','installer']], function () {
 
     Route::get('/', 'Web\IndexController@index');
-
     Route::get('/product/{id}/{slug}', 'Web\IndexController@productDetail');
     Route::get('/shop', 'Web\IndexController@shop');
     Route::get('/shop_new_arrival', 'Web\IndexController@shop_new_arrival');

@@ -13762,6 +13762,7 @@ body {
     color: #111;
     text-align: left;
     background-color: #fafafa;
+    letter-spacing: -0.3px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -39010,6 +39011,7 @@ body[dir=rtl] .header-mobile .header-navbar .form-inline .search .btn-secondary 
     padding-right: 10px;
     padding-left: 10px;
     text-transform: uppercase;
+    letter-spacing: -0.3px;
 }
 
 .sticky-header .header-sticky-inner nav .navbar-collapse ul .nav-item .nav-link .badge {

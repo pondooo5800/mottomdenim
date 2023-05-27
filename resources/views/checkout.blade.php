@@ -22,8 +22,8 @@
 				<nav>
 					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 						<a class="nav-item nav-link active" id="pills-shipping-tab" data-toggle="tab" href="#pills-shipping" role="tab" aria-controls="pills-shipping" aria-selected="true">{{ trans('lables.checkout-shipping-address') }}</a>
+                        <a class="nav-item nav-link" id="pills-billing-tab" data-toggle="tab" href="#pills-billing" role="tab" aria-controls="pills-billing" aria-selected="false">{{ trans('lables.checkout-order-detail') }}</a>
 						<a class="nav-item nav-link" id="pills-order-tab" data-toggle="tab" href="#pills-order" role="tab" aria-controls="pills-order" aria-selected="false">{{ trans('lables.checkout-shipping-method') }}</a>
-						<a class="nav-item nav-link" id="pills-confirm-tab" data-toggle="tab" href="#pills-confirm" role="tab" aria-controls="pills-confirm" aria-selected="false">{{ trans('lables.checkout-order-detail') }}</a>
 					</div>
 				</nav>
 			</div>
@@ -46,8 +46,8 @@
                                                 class="d-none d-lg-flex">{{ trans('lables.checkout-shipping-address') }}</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link " id="pills-confirm-tab" data-toggle="pill"
-                                            href="#pills-confirm" role="tab" aria-controls="pills-confirm"
+                                        <a class="nav-link " id="pills-billing-tab" data-toggle="pill"
+                                            href="#pills-billing" role="tab" aria-controls="pills-billing"
                                             aria-selected="false"><span class="d-flex d-lg-none">2</span><span
                                                 class="d-none d-lg-flex">{{ trans('lables.checkout-billing-address') }}</span></a>
                                     </li>
@@ -92,6 +92,7 @@
                                                 </div>
                                             </div>
                                             <br>
+                                            <input type="hidden" class="form-control" id="delivery_city" value="null">
                                             <div class="form-row">
                                                 <div class="from-group col-md-6 mb-3">
                                                     <div class="input-group select-control">
@@ -151,7 +152,7 @@
                                                     <a href="{{url('/cart')}}" class="btn m-btn" style="color: #7F7E7F">
                                                         < กลับไปที่ตะกร้า
                                                     </a>
-                                                    <a data-toggle="pill" href="#pills-confirm"
+                                                    <a data-toggle="pill" href="#pills-billing"
                                                         class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                                 </div>
                                             </div>
@@ -169,9 +170,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-confirm" role="tabpanel"
-                                        aria-labelledby="pills-confirm-tab">
-                                        {{-- <form>
+                                    <div class="tab-pane fade" id="pills-billing" role="tabpanel"
+                                        aria-labelledby="pills-billing-tab">
+                                        <form>
+                                            <p style="font-size: 18px;font-weight: bold">{{ trans('lables.checkout-order-detail') }}</p>
 
                                             <div class="form-row">
                                                 <div class="from-group col-md-6 mb-3">
@@ -228,16 +230,17 @@
                                                         <div class="invalid-feedback"></div>
                                                     </div>
                                                 </div>
-                                                <div class="from-group col-md-6 mb-3">
+                                                <input type="hidden" class="form-control" id="billing_city"value="null">
+                                                {{-- <div class="from-group col-md-6 mb-3">
                                                     <label
                                                         for="">{{ trans('lables.checkout-billing-city-name') }}</label>
                                                     <div class="input-group">
 
                                                         <input type="text" class="form-control" id="billing_city"
-                                                            placeholder="City">
+                                                            placeholder="">
                                                         <div class="invalid-feedback"></div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
 
@@ -274,23 +277,32 @@
                                                     <small id="checkboxHelp" class="form-text text-muted"></small>
                                                 </div>
                                             </div>
-
+                                            <br>
                                             <div class="col-12 col-sm-12">
+                                                <div class="row" style="justify-content: space-between">
+                                                    <a data-toggle="pill" href="#pills-shipping"
+                                                    class="btn btn-light swipe-to-top cta">ย้อนกลับ</a>
+                                                    <a data-toggle="pill" href="#pills-order"
+                                                    class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
+                                                </div>
+                                            </div>
+
+                                            {{-- <div class="col-12 col-sm-12">
                                                 <div class="row">
                                                     <a data-toggle="pill" href="#pills-shipping"
                                                         class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
-                                                    <a data-toggle="pill" href="#pills-order"
+                                                    <a data-toggle="pill" href="#pills-billing"
                                                         class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                                 </div>
-                                            </div>
-                                        </form> --}}
+                                            </div> --}}
+                                        </form>
                                     </div>
                                     {{-- <div class="tab-pane fade" id="pills-method" role="tabpanel" aria-labelledby="pills-method-tab">
 
 
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
-                                            <a data-toggle="pill" href="#pills-confirm" class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
+                                            <a data-toggle="pill" href="#pills-billing" class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
 
                                             <a data-toggle="pill" href="#pills-order" class="btn btn-secondary swipe-to-top cta">{{ trans('lables.checkout-continue') }}</a>
                                         </div>
@@ -326,12 +338,14 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <form id="paymentForm" class="d-block">
-
+                                                        {{-- <input class="form-check-input payment_method"  type="text" name="payment_method" value="cod"> --}}
+                                                        <input class="form-check-input " type="hidden" id="inlineCheckbox4" value="cod" name="payment_method">
                                                         {{-- <label for="exampleFormControlTextarea1" style="width:100%; margin-bottom:30px;">{{ trans('lables.checkout-payment-method-description') }}</label> --}}
-                                                        @foreach ($payment_method as $payment_methods)
+                                                        {{-- @foreach ($payment_method as $payment_methods)
                                                             <div class="form-group">
                                                                 <input class="form-check-input payment_method "
-                                                                    type="radio"
+                                                                checked
+                                                                    type="hidden"
                                                                     id="inlineCheckbox{{ $payment_methods->id }}"
                                                                     value="{{ $payment_methods->payment_method }}"
                                                                     name="payment_method">
@@ -339,7 +353,7 @@
                                                                     for="inlineCheckbox{{ $payment_methods->id }}">{{ $payment_methods->title }}</label>
                                                             </div>
 
-                                                        @endforeach
+                                                        @endforeach --}}
                                                     </form>
                                                 </div>
                                             </div>
@@ -506,14 +520,53 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-12">
-                                            <div class="row">
-                                                <a data-toggle="pill" href="#pills-method"
-                                                    class="btn btn-light swipe-to-top cta">{{ trans('lables.checkout-back') }}</a>
-                                                <button type="submit"
-                                                    class="btn btn-secondary swipe-to-top createOrder">{{ trans('lables.checkout-continue') }}</button>
+
+                                        {{-- <?php $amount = 300 ?>
+                                        <form name="checkoutForm" method="POST" action="{{ route('addDepartment') }}">
+                                            @csrf
+                                            <input type="hidden" name="amount" value="<?php echo $amount?>">
+                                            <p><button type="submit" id="checkout-button-1">Checkout Button number 1 !</button></p>
+                                            <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+                                            data-key="pkey_test_5vuc5ef7isx31v174y5"
+                                            data-image="http://bit.ly/customer_image"
+                                            data-frame-label="Merchant site name"
+                                            data-button-label="Pay now"
+                                            data-submit-label="Submit"
+                                            data-location="no"
+                                            data-amount="<?php echo $amount ?>00"
+                                            data-currency="thb"
+                                            data-locale="TH"
+                                            >
+                                          </script>
+                                          <script type="text/javascript" src="https://cdn.omise.co/omise.js"></script>
+                                          <script type="text/javascript">
+                                            // Set default parameters
+                                            OmiseCard.configure({
+                                              publicKey: 'pkey_test_5vuc5ef7isx31v174y5',
+                                              image: 'https://cdn.omise.co/assets/dashboard/images/omise-logo.png',
+                                              frameLabel: 'Mottomdenim',
+                                            });
+
+                                            // Configuring your own custom button
+                                            OmiseCard.configureButton('#checkout-button-1', {
+                                              buttonLabel: 'PAY Now 4,500 Baht',
+                                              submitLabel: 'PAY NOW',
+                                              otherPaymentMethods: 'promptpay'
+                                              amount: 450000
+                                            });
+                                            // Then, attach all of the config and initiate it by 'OmiseCard.attach();' method
+                                            OmiseCard.attach();
+                                          </script>
+                                        </form> --}}
+                                        <br>
+                                            <div class="col-12 col-sm-12">
+                                                <div class="row" style="justify-content: space-between">
+                                                    <a data-toggle="pill" href="#pills-billing"
+                                                    class="btn btn-light swipe-to-top cta">ย้อนกลับ</a>
+                                                    <button type="submit"
+                                                    class="btn btn-secondary swipe-to-top createOrder">ชำระเงิน</button>
+                                                </div>
                                             </div>
-                                        </div>
                                         <div class="col-12 col-sm-12">
                                             <div class="row">
                                             <p class="minimum_order" style="display: none; color: red; margin-top: 10px;">
@@ -530,13 +583,13 @@
                     <div class="col-12 col-xl-7" style="background-color: #F9F8F8;" >
                         <table style="margin-top: 30px;" class="table top-table" id="cartItem-product-show"></table>
                         <hr>
-                        <div class="input-group ">
+                        {{-- <div class="input-group ">
                             <input type="text" class="form-control" placeholder="ใส่รหัสส่วนลด" aria-label="Coupon Code" aria-describedby="coupon-code">
                             <div class="input-group-append">
                               <button style="background-color: #D9D9D9;border-color: #D9D9D9" class="btn  btn-secondary swipe-to-top"  type="button" id="coupon-code">APPLY</button>
-                              {{-- <button class="swipe-to-top btn-block btn btn-danger"  id="removeCoupon" value="Remove Coupon">APPLY</button> --}}
+                              <button class="swipe-to-top btn-block btn btn-danger"  id="removeCoupon" value="Remove Coupon">APPLY</button>
                             </div>
-                          </div>
+                          </div> --}}
                         <table class="table right-table" id="cartItem-grandtotal-product-show"></table>
                         <p class="free_shipping_order_price" style="display: none; text-align:center; color: red;">
                             {{ trans('lables.checkout-free-shipping-order-price') }}
@@ -681,6 +734,7 @@
     <script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
+        console.log($.trim(localStorage.getItem("couponCart")));
         languageId = $.trim(localStorage.getItem("languageId"));
         cartSession = $.trim(localStorage.getItem("cartSession"));
         if (cartSession == null || cartSession == 'null') {
@@ -1362,75 +1416,78 @@
         });
 
         $(".payment_method").click(function() {
-            payment_method = $.trim($(".payment_method:checked").val());
+            alert();
+            // payment_method = $("#inlineCheckbox4").val();
+
+            // alert(payment_method);
             // alert(paytm);
-            if (payment_method == 'stripe' ||
-                payment_method == 'paypal' ||
-                payment_method == 'authorize_net' ||
+            // if (payment_method == 'stripe' ||
+            //     payment_method == 'paypal' ||
+            //     payment_method == 'authorize_net' ||
 
-                payment_method == 'sagepay' ||
-                payment_method == 'openpay') {
-                $(".stripe_payment").removeClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").removeClass('d-none')
-                $(".braintree_payment").addClass('d-none');
-                $('.paytm').addClass('d-none');
-                return;
-            }
+            //     payment_method == 'sagepay' ||
+            //     payment_method == 'openpay') {
+            //     $(".stripe_payment").removeClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none')
+            //     $(".braintree_payment").addClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            //     return;
+            // }
 
 
-            if (payment_method == 'paytm') {
-                $(".braintree_payment").addClass('d-none');
-                $(".stripe_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").addClass('d-none');
-                $('.paytm').removeClass('d-none');
-            }
+            // if (payment_method == 'paytm') {
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").addClass('d-none');
+            //     $('.paytm').removeClass('d-none');
+            // }
 
-            if (payment_method == 'braintree') {
-                $(".braintree_payment").removeClass('d-none');
-                $(".stripe_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").addClass('d-none');
-                $('.paytm').addClass('d-none');
-            }
-            if (payment_method == 'banktransfer') {
-                $(".bank_transfer").removeClass('d-none');
-                $(".stripe_payment").addClass('d-none');
-                $(".braintree_payment").addClass('d-none');
-                $(".createOrder").removeClass('d-none')
-                $('.paytm').addClass('d-none');
+            // if (payment_method == 'braintree') {
+            //     $(".braintree_payment").removeClass('d-none');
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").addClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            // }
+            // if (payment_method == 'banktransfer') {
+            //     $(".bank_transfer").removeClass('d-none');
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none')
+            //     $('.paytm').addClass('d-none');
 
-            }
-            if (payment_method == 'cod') {
-                $(".stripe_payment").addClass('d-none');
-                $(".braintree_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").removeClass('d-none');
-                $('.paytm').addClass('d-none');
-            }
-            if (payment_method == 'razorpay') {
-                $(".stripe_payment").addClass('d-none');
-                $(".braintree_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").removeClass('d-none');
-                $('.paytm').addClass('d-none');
-            }
-            if (payment_method == 'mollie') {
-                $(".stripe_payment").addClass('d-none');
-                $(".braintree_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").removeClass('d-none');
-                $('.paytm').addClass('d-none');
-            }
+            // }
+            // if (payment_method == 'cod') {
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            // }
+            // if (payment_method == 'razorpay') {
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            // }
+            // if (payment_method == 'mollie') {
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            // }
 
-            if (payment_method == 'paystack') {
-                $(".stripe_payment").addClass('d-none');
-                $(".braintree_payment").addClass('d-none');
-                $(".bank_transfer").addClass('d-none');
-                $(".createOrder").removeClass('d-none');
-                $('.paytm').addClass('d-none');
-            }
+            // if (payment_method == 'paystack') {
+            //     $(".stripe_payment").addClass('d-none');
+            //     $(".braintree_payment").addClass('d-none');
+            //     $(".bank_transfer").addClass('d-none');
+            //     $(".createOrder").removeClass('d-none');
+            //     $('.paytm').addClass('d-none');
+            // }
 
         });
 
@@ -1460,7 +1517,7 @@
             order_notes = $("#order_notes").val();
             coupon_code = $.trim(localStorage.getItem("couponCart"));
 
-            payment_method = $(".payment_method:checked").val();
+            payment_method = 'cod';
             cc_number = $("#cc_number").val();
             cc_expiry_month = $("#cc_expiry_month").val();
             cc_expiry_year = $("#cc_expiry_year").val();
@@ -1568,8 +1625,8 @@
                                     // $("#pills-shipping-tab").addClass('active');
                                     // $("#pills-shipping").addClass('show active');
 
-                                    // $("#pills-confirm-tab").removeClass('active');
-                                    // $("#pills-confirm").removeClass('show active');
+                                    // $("#pills-billing-tab").removeClass('active');
+                                    // $("#pills-billing").removeClass('show active');
 
                                     // $("#pills-method-tab").removeClass('active');
                                     // $("#pills-method").removeClass('show active');
@@ -1677,7 +1734,9 @@
                                         },
                                     });
                                 } else
-                                    window.location.href = "{{ url('/thankyou') }}";
+                                    window.location.href = "{{ url('/omise') }}" + "/" + data
+                                        .data.order_id + "/" + orderAmount;
+                                    // window.location.href = "{{ url('/thankyou') }}";
 
                             } else if (data.status == 'Error') {
                                         var  str1 = data.message;
@@ -1701,8 +1760,8 @@
                             $("#pills-shipping-tab").addClass('active');
                             $("#pills-shipping").addClass('show active');
 
-                            $("#pills-confirm-tab").removeClass('active');
-                            $("#pills-confirm").removeClass('show active');
+                            $("#pills-billing-tab").removeClass('active');
+                            $("#pills-billing").removeClass('show active');
 
                             $("#pills-method-tab").removeClass('active');
                             $("#pills-method").removeClass('show active');
@@ -2499,8 +2558,8 @@
                         $("#pills-shipping-tab").addClass('active');
                         $("#pills-shipping").addClass('show active');
 
-                        $("#pills-confirm-tab").removeClass('active');
-                        $("#pills-confirm").removeClass('show active');
+                        $("#pills-billing-tab").removeClass('active');
+                        $("#pills-billing").removeClass('show active');
 
                         $("#pills-method-tab").removeClass('active');
                         $("#pills-method").removeClass('show active');
